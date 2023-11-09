@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>UTI</title>
+	<meta content="" name="descri ption">
+	<meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+ <link href="../assets/css_1/style.css" rel="stylesheet"> 
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+
+
+		<section class="section dashboard">
+  <div class="bg-white p-3 border">
+  <div class="row">
+     <div class="col-md-8">
+      <h5>SUBBROKER Master</h5>
+      </div>
+      <hr>
+      <div class="col-md-12">
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <!-- div -->
+          <div class="row">
+            <div class="col-md-12">
+              <!-- <a href="../master/bulk-upload-subbroker.html" class="btn btn-primary " style=" width: auto; border: none;">Bulk Upload + </a> -->
+              <a href="../master/add_record_subbroken.html" class="btn btn-primary " style=" width: auto;  border: none ">Add Record +</a>
+            </div>
+         
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade  " id="total" role="tabpanel" aria-labelledby="total-tab">
+              <div class="overflowemail">
+                <div class="mt-2" style="width: 150px;">
+                  <h3 class="mb-4">Upload File </h3>
+                  <input type="file" class="hsag">
+                  <button class="xyz " style="border-radius: 5px;">Upload</button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+              <div class="col-md-12 mt-2">
+                <div class="row">
+                  <div class="col-md-6  ">
+                    <label class="mt-4">KRV_Code</label>
+                    <input type="text " placeholder="ARN-29742" class="form-control mt-2">
+                    <label class="mt-4">Channel_code</label>
+                    <input type="text " placeholder="RTL" class="form-control mt-2">
+                    <label class="mt-4">NEW_BR_CODE</label>
+                    <input type="text " placeholder="119" class="form-control mt-2">
+                    <label class="mt-4">REGION_CODE</label>
+                    <input type="text " placeholder="NORH" class="form-control mt-2">
+                    <label class="mt-4">NAME</label>
+                    <input type="text " placeholder="DEUTSCHE BANK" class="form-control mt-2">
+                    <label class="mt-4">MULTI_CITY FLAG</label>
+                    <input type="text " placeholder="E" class="form-control mt-2">
+                    <label class="mt-4">CATEGORY</label>
+                    <input type="text " placeholder="BANKS" class="form-control mt-2">
+                    <label class="mt-4">ZONE</label>
+                    <input type="text " placeholder="WEST" class="form-control mt-2">
+                    <label class="mt-4">ARN_GROUP_NAME</label>
+                    <input type="text " placeholder="Deutsche Bank" class="form-control mt-2">
+                    <label class="mt-4">SUB_CHANNEL</label>
+                    <input type="text " placeholder="E-ARN" class="form-control mt-2">
+
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <label class="mt-4">VALID_FROM</label>
+                    <input type="text " placeholder="01-10-2021" class="form-control mt-2">
+                    <label class="mt-4">VALID_UPTO</label>
+                    <input type="text " placeholder="30-12-9999" class="form-control mt-2">
+                    <label class="mt-4">CREATION_DT</label>
+                    <input type="text " placeholder="01-07-2019" class="form-control mt-2">
+                    <label class="mt-4">LSTUPDDT</label>
+                    <input type="text " placeholder="25-07-2019" class="form-control mt-2">
+                    <label class="mt-4">ACTIVE_FLAG</label>
+                    <input type="text " placeholder="Y" class="form-control mt-2">
+                    <label class="mt-4">OWNER_TYPE</label>
+                    <input type="text " placeholder="" class="form-control mt-2">
+                    <label class="mt-4">UFC_CODE</label>
+                    <input type="text " placeholder="119" class="form-control mt-2">
+                    <label class="mt-4">PRM_CODE</label>
+                    <input type="text " placeholder="" class="form-control mt-2">
+                    <label class="mt-4">CHANNEL_GROUP</label>
+                    <input type="text " placeholder="BNND" class="form-control mt-2">
+                    <button class="btu">submit</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 mt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <input type="text" class="form-control">
+      </div>
+      <div class="col-md-3">
+        <select class="form-select" id="select1">
+          <option>Select Quarter</option>
+          <option value="202353">2022-23-Q1</option>
+          <option value="202354">2022-23-Q2</option>
+          <option value="202355">2022-23-Q3</option>
+          <option value="202356">2022-23-Q4</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select class="form-select" id="select2">
+          <option>BRANCH_CODE</option>
+          <option value="202353">All</option>
+          <option value="202354">E145678</option>
+          <option value="202355">PUNB8002011</option>
+          <option value="202356">PUNB8002045</option>
+          <option value="202357">PUNB8002068</option>
+          <option value="202358">PUNB8002025</option>
+          <option value="202359">PUNB8002078</option>
+          <option value="202360">PUNB8002036</option>
+          <option value="202361">PUNB8002025</option>
+          <option value="202362">PUNB8002057</option>
+        </select>
+        <td><a href="#" id="btn_search1" name="btnsearch" class="btn btn-primary w-30" style="    position: relative;
+          top: -31px;
+          left: 81px;">Search</a></td>
+      </div>
+      <div class="col-md-3">
+        <div class="dropdown pull-right">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa fa-solid fa-download"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><button class="dropdown-item" type="button">PDF</button></li>
+            <li><button class="dropdown-item" type="button">Excel</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div><hr>
+
+  <!-- Modal -->
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="position: relative; top: -22px;">File Name:ARN</h4>
+          <h4 style="position: relative;
+            bottom: -1px;
+            left: -130px;
+        ">Column Count:5</h4>
+          <h4 style="position: relative;
+            top: 20px;
+            left: -263px;">Row Count:4</h4><button
+            style="border-radius: 9px;background-color:#193984;color: white ;">upload</button>
+        </div>
+
+        <div class="modal-body" style="overflow: scroll;">
+
+          <table>
+            <tr>
+              <th class="abc">KRV_CODE</th>
+              <th class="abc">CHANNEL_CODE</th>
+              <th class="abc">NEW_BR_CODE</th>
+              <th class="abc">REGION_CODE</th>
+              <th class="abc">NAME</th>
+              <th class="abc">MULTICITY FLAG</th>
+              <th class="abc">CATEGORY</th>
+              <th class="abc">ZONE</th>
+              <th class="abc">ARN_GROUP_NAME</th>
+              <th class="abc">SUB_CHANNEL</th>
+              <th class="abc">VALID_FROM</th>
+              <th class="abc">VALID_UPTO</th>
+              <th class="abc">CREATION_DT</th>
+              <th class="abc">LSTUPDDT</th>
+              <th class="abc">ACTIVE_FLAG</th>
+              <th class="abc">UFC_CODE</th>
+              
+
+            </tr>
+
+            <tr>
+              <td class="cde">ARN-29742</td>
+              <td class="cde">RTL</td>
+              <td class="cde"> 119</td>
+              <td class="cde">NORH </td>
+              <td class="cde">DEUTSCHE BANK</td>
+              <td class="cde">E</td>
+              <td class="cde">BANKS</td>
+              <td class="cde">WEST</td>
+              <td class="cde">Deutsche Bank</td>
+              <td class="cde">E-ARN</td>
+              <td class="cde">01-10-2021</td>
+              <td class="cde">30-12-9999</td>
+              <td class="cde">01-07-2019</td>
+              <td class="cde">25-07-2019</td>
+              <td class="cde">Y</td>
+              <td class="cde">119</td>
+              
+            </tr>
+
+
+
+
+
+            <tr>
+              <td class="cde"> ARN-47629</td>
+              <td class="cde">RTL</td>
+              <td class="cde"> 119</td>
+              <td class="cde">MUMB </td>
+              <td class="cde">BARCLAYS BANK PLC</td>
+              <td class="cde">Y</td>
+              <td class="cde"> ND</td>
+              <td class="cde">WEST</td>
+              <td class="cde"> Barclays</td>
+              <td class="cde">M-ARN</td>
+              <td class="cde"> 01-10-2021</td>
+              <td class="cde">30-12-9999</td>
+              <td class="cde">16-11-2021</td>
+              <td class="cde">08-12-2021</td>
+              <td class="cde">Y</td>
+              <td class="cde">119</td>
+            </tr>
+
+
+
+            <tr>
+              <td class="cde"> ARN-49707</td>
+              <td class="cde">RTL</td>
+              <td class="cde"> 117</td>
+              <td class="cde"> NORH </td>
+              <td class="cde"> RELIGARE WEALTH</td>
+              <td class="cde">E</td>
+              <td class="cde"> ND</td>
+              <td class="cde"></td>
+              <td class="cde"> Religare</td>
+              <td class="cde"> E-ARN</td>
+              <td class="cde"> 01-10-2021</td>
+              <td class="cde"> 30-12-9999</td>
+              <td class="cde">01-07-2019</td>
+              <td class="cde"> 25-07-2019</td>
+              <td class="cde">Y</td>
+              <td class="cde">117</td>
+            </tr>
+
+
+            <tr>
+              <td class="cde"> ARN-79711</td>
+              <td class="cde">RTL</td>
+              <td class="cde">400 </td>
+              <td class="cde">NORT </td>
+              <td class="cde"> RELIGARE MARKETINGS</td>
+              <td class="cde">Y</td>
+              <td class="cde"> ND</td>
+              <td class="cde">NORTH </td>
+              <td class="cde"> Barclays</td>
+              <td class="cde">M-ARN</td>
+              <td class="cde"> 01-10-2021</td>
+              <td class="cde">30-12-9999</td>
+              <td class="cde">16-11-2021</td>
+              <td class="cde">08-12-2021</td>
+              <td class="cde">Y</td>
+              <td class="cde">119</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row pt-2">
+
+    <div class="col-md-6 row mb-3">
+      <!-- <tr>
+          <th scope="col"><b>Show</b> <i class="fa fa-solid"></i></th>
+          <td>
+            
+            </td> -->
+      <div class="col-md-3" style="display: flex; margin-top: 30px;">
+        <label>Show</label>
+        <select class="form-select" id="records" style="margin-left: 10px;">
+          <option>50</option>
+          <option>100</option>
+          <option>200</option>
+          <option>All</option>
+        </select> <b> entries</b>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-6" style=" margin-top: 30px;">
+        <!-- <label>Maker</label> -->
+
+        <div class="selectBox form-control" style="    position: relative;
+        top: -12px;" onclick="showCheckboxes1()">
+
+          <select class="custom-select border-bottom form-control-plaintext">
+
+            <option>Column </option>
+
+          </select>
+
+          <div class="overSelect"></div>
+
+        </div>
+
+        <div id="checkboxes1"  class="checkstyle" style="overflow: scroll;">
+
+          <label><input type="checkbox" id="select-all2">Select All</label>
+          <label for="onem">
+
+            <input type="checkbox" id="onem" name="master2" onclick="myFunction()" />
+
+            ARNNO</label>
+
+          <label for="twom">
+            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+            SUBBROKER_CODE</label>
+          <label for="twom">
+            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+            CHANNEL_CODE</label>
+          <label for="twom">
+            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+            REGION_CODE</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+  
+              KRV_CODE</label>
+              <label for="twom">
+                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+    
+                VALID_FROM</label>
+                <label for="twom">
+                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+      
+                  VALID_UPTO</label>
+                  <label for="twom">
+                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+        
+                    LST_UPDDT</label>
+                    <label for="twom">
+                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                      ZONE</label>
+            
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+            
+                        UFC_CODE</label>
+            
+                        <label for="twom">
+                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+              
+                          UFC_LOCATION</label>
+                  
+                          <label for="twom">
+                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                
+                            CREATION_DT</label>
+                    
+                           
+                      
+                              
+            
+                          </div>
+      </div>
+    </div>
+      <div class="overflow-auto">
+        <table class="table small border">
+          <tr class="bg-primary text-white">
+            <th scope="col">ARNNO</th>
+            <th scope="col">SUBBROKER_CODE</th>
+            <th scope="col">CHANNEL_CODE</th>
+            <th scope="col">REGION_CODE</th>
+            <!-- <th scope="col">UFC_CODE</th> -->
+            <!-- <th scope="col">RMCODE</th> not required, will be part of mapping-->
+            <!-- <th scope="col">PINCODE</th> not required-->
+            <th scope="col">KRV_CODE</th>
+            <th scope="col">VALID_FROM</th>
+            <th scope="col">VALID_UPTO</th>
+            <th scope="col">LST_UPDDT</th>
+            <th scope="col">ZONE</th>
+            <!-- <th scope="col">EUIN_BCODE</th> not required-->
+            <th scope="col">UFC_CODE</th>
+            <!-- <th scope="col">SAP_REGION_CODE</th> no display but db require-->
+            <!-- <th scope="col">SAP_ZONE_CODE</th> no display but db require-->
+            <th scope="col">UFC_LOCATION</th> <!--new added-->
+            <th scope="col">CREATION_DT</th>
+            <th scope="col">CREATION_SERV_REQ</th>
+            <th scope="col">LSTUPD_SERV_REQ</th>
+            <th scope="col">LSTUPDUSER</th>
+            <th scope="col">CREATION_TICKET_ID</th>
+            <th scope="col">LSTUPD_TICKET_ID</th>
+            <th scope="col">LSTUPDDT</th>
+            <th scope="col">CREATION_DT</th>
+            <th class="col">ACTION</th>
+           
+          </tr>
+           <tr>
+            <td>ARN-0019</td>
+            <td>4277</td>
+            <td>RTL</td>
+            <td>BNND_BANG</td>
+            
+            <!-- <td>4334</td> -->
+            <!-- <td>0</td> -->
+            <td>ARN-0019</td>
+            <td>30-12-9999</td>
+            <td>01-04-2022</td>
+           
+            <td></td>
+            <td>SOUTH</td>
+            <!-- <td></td> -->
+            <td>303</td>
+            <!-- <td></td>
+            <td></td> -->
+            <td>NA</td>
+            <td>28-05-2022  15:40:45</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <div class="dropdown">
+                <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class=""></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="../master/edit-subbroker-master.html">Edit</a></li>
+                  <li><a class="dropdown-item" href="../master/close-subbroker-master.html">Close</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+
+            <td>ARN-0019</td>
+            <td>2044</td>
+            <td>RTL</td>
+            <td>BNND_BANG</td>
+            
+            <!-- <td>4334</td> -->
+            <!-- <td>0</td> -->
+            <td>ARN-0019</td>
+            <td>30-12-9999</td>
+            <td>01-04-2022</td>
+           
+            <td></td>
+            <td>SOUTH</td>
+            <!-- <td></td> -->
+            <td>303</td>
+            <!-- <td></td>
+            <td></td> -->
+            <td>NA</td>
+            <td>28-05-2022  15:40:45</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <div class="dropdown">
+                <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class=""></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="../master/edit-subbroker-master.html">Edit</a></li>
+                  <li><a class="dropdown-item" href="../master/close-subbroker-master.html">Close</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            
+            
+            <td>ARN-0005</td>
+            <td>1747</td>
+            <td>RTL</td>
+            <td>BNND_BANG</td>
+           
+            <!-- <td>3967</td> -->
+            <!-- <td>0</td> -->
+            <td>ARN-0005</td>
+            <td>30-12-9999</td>
+            <td>01-04-2022</td>
+           
+            <td></td>
+            <td>SOUTH</td>
+            <!-- <td></td> -->
+            <td>303</td>
+           
+            <td>NA</td>
+            <td>28-05-2022  15:40:45</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <div class="dropdown">
+                <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class=""></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="../master/edit-subbroker-master.html">Edit</a></li>
+                  <li><a class="dropdown-item" href="../master/close-subbroker-master.html">Close</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>ARN-0155</td>
+            <td>72008</td>
+            <td>RTL</td>
+            <td>GUJR</td>
+            <td>ARN-0155</td>
+            <td>30-12-9999</td>
+            <td>01-07-2022</td>
+          
+            <td></td>
+            <td>WEST</td>
+            <!-- <td></td> -->
+            <td>101</td>
+            <!-- <td></td>
+            <td></td> -->
+            <td>NA</td>
+            <td>22-08-2022  11:31:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <div class="dropdown">
+                <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class=""></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="../master/edit-subbroker-master.html">Edit</a></li>
+                  <li><a class="dropdown-item" href="../master/close-subbroker-master.html">Close</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+ 
+            <td>ARN-0155</td>
+            <td>72103</td>
+            <td>RTL</td>
+            <td>GUJR</td>
+           
+            <!-- <td>4146</td> -->
+            <!-- <td>0</td> -->
+            <td>ARN-0155</td>
+            <td>30-12-9999</td>
+            <td>01-07-2022</td>
+           
+            <td></td>
+            <td>WEST</td>
+            <!-- <td></td> -->
+            <td>101</td>
+            <!-- <td></td>
+            <td></td> -->
+            <td>NA</td>
+            <td>22-08-2022  11:31:15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <div class="dropdown">
+                <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class=""></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="../master/edit-subbroker-master.html">Edit</a></li>
+                  <li><a class="dropdown-item" href="../master/close-subbroker-master.html">Close</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+<footer id="footer" class="footer">
+  <div class="copyright">
+      &copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+          var d = new Date();
+          yr = d.getFullYear();
+          document.write(yr); cPrev = -1;
+          function sortBy(c) {
+              rows = document.getElementById("sortable").rows.length;
+              columns = document.getElementById("sortable").rows[0].cells.length;
+              arrTable = [...Array(rows)].map(e => Array(columns));
+
+              for (ro = 0; ro < rows; ro++) {
+                  for (co = 0; co < columns; co++) {
+                      arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                  }
+              }
+
+              th = arrTable.shift();
+
+              if (c !== cPrev) {
+                  arrTable.sort(
+                      function (a, b) {
+                          if (a[c] === b[c]) {
+                              return 0;
+                          } else {
+                              return (a[c] < b[c]) ? -1 : 1;
+                          }
+                      }
+                  );
+              } else {
+                  arrTable.reverse();
+              }
+
+              cPrev = c;
+
+              arrTable.unshift(th);
+
+              for (ro = 0; ro < rows; ro++) {
+                  for (co = 0; co < columns; co++) {
+                      document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                  }
+              }
+          }
+                // toggle script
+
+
+var  innerSidebar = function(){
+
+$('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+// toggle script
+      </script>
+      . All Rights Reserved
+  </div>
+</footer>
+
+
+<!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+<script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+<!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+<script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+<script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+<!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+<script src="../assets/js_1/main.js"></script>
+<!-- <script src="../assets/js/main.js"></script> -->
+<script src="../assets/js_1/uti.js"></script>
+<!-- <script src="../assets/js/uti.js"></script> -->
+<script src="../assets/js_1/custom.js"></script>
+<!-- <script src="../assets/js/custom.js"></script> -->
+
+<script type="text/javascript">
+  function displaydetails() {
+      document.getElementById("empgrddetails").style.display = "block";
+      document.getElementsByClassName("upload_btn")[0].style.display = "none";  //new
+
+  }
+</script>
+<!-- <script>
+    function myFunction() {
+        let text = "Do you want to proceed";
+        if (confirm(text) == true) {
+            text = "You pressed OK!";
+        } else {
+            text = "You canceled!";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+</script> -->
+   <!-- columns -->
+   <script>
+
+    var expanded = false;
+ 
+ 
+ 
+ 
+    function showCheckboxes1() {
+ 
+      var checkboxes1 = document.getElementById("checkboxes1");
+ 
+      if (!expanded) {
+ 
+        checkboxes1.style.display = "block";
+ 
+        expanded = true;
+ 
+      } else {
+ 
+        checkboxes1.style.display = "none";
+ 
+        expanded = false;
+ 
+      }
+ 
+    }</script>
+ 
+  <script>
+ 
+    $(function () {
+ 
+      $("#example1").DataTable({
+ 
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+ 
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+ 
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+ 
+      $('#example2').DataTable({
+ 
+        "paging": true,
+ 
+        "lengthChange": false,
+ 
+        "searching": false,
+ 
+        "ordering": true,
+ 
+        "info": true,
+ 
+        "autoWidth": false,
+ 
+        "responsive": true,
+ 
+      });
+ 
+    });
+ 
+  </script>
+ 
+  <script>
+    document.getElementById('select-all2').onclick = function () {
+      var checkboxes1 = document.getElementsByName('master2');
+      for (var checkbox of checkboxes1) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+
+</body>
+</html>

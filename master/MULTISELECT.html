@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi-select</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="multiselect/jquery.multiselect.js"></script>
+    <link rel="stylesheet" href="multiselect/multiple-select.css">
+
+    <style>
+        .ms-options-wrap .ms-options {
+        position: absolute !important;
+        background: #fff;
+        z-index: 999;
+        border: 1px #d7d7d7 solid;
+        max-width: 300px;
+    }
+
+ 
+
+    .ms-options-wrap ul {
+        list-style: none;
+        padding: 0px;
+        line-height: 30px;
+        margin-top: 10px;
+    }
+
+ 
+
+    .ms-options-wrap button {
+        width: 100%;
+        background: #fff;
+        border: 1px #d8d8d8 solid;
+        height: 32px;
+        border-radius: 2px;
+        text-align: left;
+        overflow: hidden
+    }
+
+ 
+
+    .ms-options-wrap .ms-search input {
+        width: 90%;
+        margin: 10px;
+        padding: 5px 10px;
+    }
+
+ 
+
+    .ms-options-wrap a {
+        padding: 15px
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="col-md-2">
+            <h6 style="       position: relative;
+      left: -4px;">Makers</h6>
+            <select name="makers" id="makers_id" class="form-select  w-auto" style="position: relative;left: -11px;"
+                multiple>
+                <option selected="selected" value="Select" style="    position: relative;
+         left: -12px;">Select Maker</option>
+                <option value="INST">Sumit Mehta</option>
+                <option value="DSTH">Santosh Chipte</option>
+
+
+            </select><br>
+        </div>
+    </div>
+    <script>
+        $('#makers_id').multiselect({
+            search: true,
+            selectAll: true
+        });
+
+    </script>
+</body>
+
+</html>

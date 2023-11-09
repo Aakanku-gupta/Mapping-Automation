@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+<style>
+  td,
+  th {
+    border: none;
+    text-align: left;
+    padding: 2px;
+  }
+</style>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard bg-white">
+      <script type="text/javascript">
+        function addRows() {
+          var table = document.getElementById('emptbl');
+          var rowCount = table.rows.length;
+          var cellCount = table.rows[0].cells.length;
+          var row = table.insertRow(rowCount);
+          for (var i = 0; i <= cellCount; i++) {
+            var cell = 'cell' + i;
+            cell = row.insertCell(i);
+            var copycel = document.getElementById('col' + i).innerHTML;
+            cell.innerHTML = copycel;
+            if (i == 6) {
+              var radioinput = document.getElementById('col3').getElementsByTagName('input');
+              for (var j = 0; j <= radioinput.length; j++) {
+                if (radioinput[j].type == 'radio') {
+                  var rownum = rowCount;
+                  radioinput[j].name = 'gender[' + rownum + ']';
+                }
+              }
+            }
+          }
+        }
+        function deleteRows() {
+          var table = document.getElementById('emptbl');
+          var rowCount = table.rows.length;
+          if (rowCount > '2') {
+            var row = table.deleteRow(rowCount - 1);
+            rowCount--;
+          }
+          // else{
+          //     alert('There should be atleast one row');
+          // }
+        }
+      </script>
+      </head>
+
+      <body>
+        <form action="#" method="post">
+          <table id="emptbl">
+            <tr>
+              <th style="font-size: 12px; border: none; ">Rm Code</th>
+              <th style="font-size: 12px; border: none;">AAUM EQUITY % SHARE</th>
+              <th style="font-size: 12px; border: none;">SAAUM HYBRID % SHARE</th>
+              <th style="font-size: 12px; border: none;">AAUM ARBITRAGE % SHARE </th>
+              <th style="font-size: 12px; border: none;">AAUM FIXED INCOME % SHARE </th>
+              <th style="font-size: 12px; border: none;">AAUM CASH % SHARE</th>
+
+            </tr> <br>
+            <tr>
+              <td id="col0">
+                <!-- <select name="department[]" id="dept"> 
+                        <option value="0">Select</option> 
+                        <option value="1">365</option>
+                        <option value="2">985</option>
+                        <option value="3">658</option>
+                        </select>  -->
+                <select class="form-select" id="zoneSearchFilter" style="width:101px;">
+                  <option value="">ALL</option>
+                  <option value="CORP">586</option>
+                  <option value="EAST">485</option>
+                  <option value="GULF">732</option>
+                  <option value="NORTH"> 654</option>
+
+                </select>
+              </td>
+
+              <td id="col1"><input type="number" name="phone[]" value="" /></td>
+              <td id="col2"><input type="number" name="phone[]" value="" /></td>
+              <td id="col3"><input type="number" name="phone[]" value="" /></td>
+              <td id="col4"><input type="number" name="phone[]" value="" /></td>
+
+              <td id="col5"><input type="number" name="phone[]" value="" /></td>
+              <td><input class="btn btn-primary" type="button" value="Add" onclick="addRows()" /></td>
+              <td><input class="btn btn-primary" type="button" value="Delete" onclick="deleteRows()" /></td>
+
+
+
+            </tr>
+          </table> <br>
+
+          <table>
+
+            <td>Total</td>
+            <td><input style="position: relative;
+                        left: 70px;" type="number" name="phone[]" value="" /></td>
+            <td><input style="    position: relative;
+                        left: 72px;
+                    " type="number" name="phone[]" value="" /></td>
+            <td><input style="    position: relative;
+                        left: 69px;" type="number" name="phone[]" value="" /></td>
+            <td><input style="    position: relative;
+                        left: 72px" type="number" name="phone[]" value="" /></td>
+            <td><input style="position: relative;
+                        left: 75px;
+                    " type="number" name="phone[]" value="" /></td>
+          </table>
+
+          <td><input class="btn btn-primary" type="button" value="Close" /></td>
+
+          <td><input class="btn btn-primary" type="button" value="Save Changes" /></td>
+
+        </form>
+
+
+
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+        cPrev = -1;
+
+        function sortBy(c) {
+          rows = document.getElementById("sortable").rows.length;
+          columns = document.getElementById("sortable").rows[0].cells.length;
+          arrTable = [...Array(rows)].map(e => Array(columns));
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+            }
+          }
+
+          th = arrTable.shift();
+
+          if (c !== cPrev) {
+            arrTable.sort(
+              function (a, b) {
+                if (a[c] === b[c]) {
+                  return 0;
+                } else {
+                  return (a[c] < b[c]) ? -1 : 1;
+                }
+              }
+            );
+          } else {
+            arrTable.reverse();
+          }
+
+          cPrev = c;
+
+          arrTable.unshift(th);
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+            }
+          }
+        }
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="../assets/js_1/jquery.multi-select.js"></script>
+  <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+  </script>
+  <script>
+       // toggle script
+  var  innerSidebar = function(){
+      $('#sidebar').toggleClass('toggle-sidebar');
+
+  }
+
+    // toggle script
+
+  </script>
+   <script>
+    function myFunction2() {
+      alert("Wrong Data Found Please Check Again");
+    }
+    </script>
+
+</body>
+
+</html>

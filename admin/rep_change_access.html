@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+  <!-- <link rel="stylesheet" type="text/css" href="../assets/css/multis-styles.css"> -->
+  <link rel="stylesheet" type="text/css" href="../assets/css_1/multis-styles.css">
+</head>
+
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-12">
+            <h5>Mapping Change Access(Creation Record)</h5>
+            <form>
+              <hr>
+              <div class="row pt-3">
+                <div class="form-group col-md-3 mb-3">
+                  <form class="demo-example">
+                    <label>Reason Codes</label>
+                    <td>
+                      <select class="form-select">
+                        <option>--select--</option>
+                        <!--<option>Addition</option>-->
+                        <option>New Appointment</option>
+                        <option>Promotion/Transfer</option>
+                        <!--<option>Termination</option>-->
+                        <option>Seperation</option>
+                        <option>All India</option>
+                      </select>
+                    </td>
+                    </select>
+                  </form>
+                </div>
+                <div class="form-group col-md-3 mb-3">
+                  <form class="demo-example">
+                    <label>Channel Code</label>
+                    <td>
+                      <select class="form-select">
+                        <option>--select--</option>
+                        <option>RTL</option>
+                        <option>INST</option>
+                      </select>
+                    </td>
+                    </select>
+                  </form>
+                </div>
+                <div class="form-group col-md-3 mb-3">
+                  <form class="demo-example">
+                    <label>Region</label>
+                    <td>
+                      <select class="form-select">
+                        <option>--select--</option>
+                        <option>MUMB</option>
+                        <option>CORP</option>
+                        <option>AP</option>
+                        <option>CHAN</option>
+                        <option>BANGLORE</option>
+                        <option>All</option>
+                      </select>
+                    </td>
+                    </select>
+                  </form>
+                </div>
+                <div class="form-group col-md-3 mb-3">
+
+                  <form class="demo-example">
+                    <label>Selected UFC’s</label>
+                    <select id="people" name="people" multiple class="col-md-12">
+                      <option value="alice">111,JVPD</option>
+                      <option value="bob">123,KALYAN</option>
+                      <option value="carol">125,BHAVNAGAR</option>
+                      <option value="jack">All</option>
+                    </select>
+                  </form>
+                </div>
+
+                <div class="form-group col-md-3 mb-3">
+                  <form class="demo-example">
+                    <label> Mapping Criteria</label>
+                    <select id="mapping" name="mapping" multiple class="col-md-12">
+                      <option value="1">All Mappings</option>
+                      <option value="2">MFD TO RM MAPPING</option>
+                      <option value="3">PINCODE TO RM MAPPING</option>
+                      <option value="4">ARN+EUIN/SUB_ARN/BRANCH CODE MAPPING </option>
+                      <option value="5">ARN+UFC TO RM MAPPING</option>
+                      <option value="6">ARN+CITY TO RM MAPPING</option>
+                      <option value="7">PAN MAPPING</option>
+                      <option value="8">RIA TO RM MAPPING</option>
+                      <option value="9">EXCEPTIONS MAPPING</option>
+                      <option value="10">ARN+PINCODE TO RM MAPPING</option>
+                      <option value="11">RIA+CITY MAPPING</option>
+                      <option value="12">ARN+ SUB ARN+PIN TO RM MAPPING</option>
+                      <option value="13">ARN+SINGLE CITY TO RM MAPPING</option>
+                      <option value="14">DIRECT+SINGLE CITY TO RM MAPPING </option>
+                      <option value="15">ARN+GROUP OF CITIES TO RM MAPPING</option>
+                      <option value="16">DIRECT+GROUP OF CITIES TO RM MAPPING </option>
+                    </select>
+                  </form>
+                </div>
+
+                <div class="form-group col-md-3 mb-3">
+                  <label>Access Start Date</label>
+                  <input type="datetime-local" id="startDate" name="start_Date" class="form-control" />
+                </div>
+                <div class="form-group col-md-3 mb-3">
+                  <label>Access End Date</label>
+                  <input type="datetime-local" id="startDate" name="start_Date" class="form-control" />
+                </div>
+                <div class="form-group col-md-3 mb-3">
+                  <!-- <label>Effective Date</label> -->
+                  <input type="text" class="form-control" placeholder="Effective date" style="
+                    margin-top: 20px;" />
+                </div>
+                <div class="form-group col-md-3 mb-3">
+                  <label>KRA Valid From</label>
+                  <input type="datetime-local" id="startDate" name="start_Date" class="form-control" />
+                </div>
+                <div class="form-group col-md-3 mb-3">
+                  <label>VYMO Valid From</label>
+                  <input type="datetime-local" id="startDate" name="start_Date" class="form-control" />
+                </div>
+                <div class="col-md-3">
+                  <label>Remark</label>
+                  <input type="text" id="startDate" name="start_Date" class="form-control" placeholder="Remark">
+                </div>
+
+
+                <!-- <div class="form-group col-md-3 mb-3">
+                    <form class="demo-example">
+                    <label>Quarter</label>
+                    <td>
+                      <select class="form-select">
+                        <option>--select--</option>
+                        <option>Q1</option>
+                        <option>Q2</option>
+                        <option>Q3</option>
+                        <option>Q4</option>
+                      </select>
+                    </td>
+                  </select>
+                  </form>
+                  </div> -->
+                <div class="form-group col-md-3 mb-3">
+                  <form class="demo-example">
+                    <label>Purpose</label>
+                    <td>
+                      <select class="form-select">
+                        <option>--select--</option>
+                        <option>VYMO</option>
+                        <option>Both(VYMO/KRA)</option>
+                      </select>
+
+                    </td>
+
+                    </select>
+
+                  </form>
+                </div>
+                <div class="form-group col-md-3 mb-3">
+                  <label>Service Request Number</label>
+                  <input type="text" id="text" name="start_Date" class="form-control" />
+                </div>
+                <div class="col-md-3 mt-3"><a href="#" id="btn_search" name="btnsearch"
+                    class="btn btn-primary w-100">Submit</a></div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-md-12">
+            1-10 of 500 <i class="fa fa-solid fa-angle-left"></i> <a href=""><i
+                class="fa fa-solid fa-angle-right"></i></a>
+            <div class="overflow-auto">
+              <table class="table small border table-hover" id="sortable">
+                <thead>
+                  <tr class="bg-primary text-white">
+                    <!-- <th scope="col"><input type="checkbox" class="form-check-input" /></th> -->
+                    <th scope="col" id="colall">All<input type="checkbox" class="form-check-input" id="alltxt" /> </th>
+                    <th scope="col">ID <i class="fa fa-solid fa-sort"></i></th>
+                    <th scope="col"> Reason Codes <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+                    <th scope="col"> Channel Code <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+                    <th scope="col">Region <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+                    <th scope="col">Selected UFC’s <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th>
+                    <th scope="col">UFC_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+                    <th scope="col">Access Start Date <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th>
+                    <th scope="col">Access End Date <i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i></th>
+                    <th scope="col">KRA Valid From <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+                    <th scope="col">VYMO Valid From<i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th>
+                    <th scope="col">Employee Code <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+                    <th scope="col">Alternate Employee Code <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i>
+                    </th>
+                    <th scope="col">Service Request Number <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+                    <th scope="col">Check er ID <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+                    <!-- <th scope="col">Alternate Checker ID <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th> -->
+                    <th scope="col">Remark <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+                    <th scope="col">Stage <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Attach</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 1st -->
+                  <tr class="a">
+                    <td><input type="checkbox" class="form-check-input" /></td>
+                    <td><a href="../admin/ticket-checker.html"> 456</a></td>
+                    <td>Transfer</td>
+                    <td>RTL</td>
+                    <td></td>
+                    <td>111 </td>
+                    <td>JVPD</td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="01/09/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td>01/09/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="12/09/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td>12/09/2022 </td> -->
+                    <!-- <td></td>-->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!--<td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td>
+                  <td></td> -->
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="2456" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>2266,Veeraraj</td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td></td>
+                    <td>101</td>
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                        <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td> - </td>
+                    <td>Open for changes</td>
+                    <td>
+                      <select class="form-select">
+                        <option>Edit</option>
+                        <option>Delete</option>
+                        <option>Save</option>
+                        <option>Send Email Reminder</option>
+                        <option>Extend Date</option>
+                        <option>Reopen</option>
+                        <option>Discard</option>
+                      </select>
+                    </td>
+                    <td><button type="button" id="" class="btnactions">
+                        <label for="file"><i class="fa fa-paperclip "></i></label>
+                        </input>
+                        <input type="file" id="file" style="display:none;" /></td>
+                  </tr>
+                  <!-- 2nd -->
+
+                  <tr class="b">
+                    <td><input type="checkbox" class="form-check-input" /></td>
+                    <td><a href="../admin/ticket checker.html"> 125</a></td>
+                    <td> New</td>
+                    <td>INST</td>
+                    <td>MUMB</td>
+                    <td>123 </td>
+                    <td>KALYAN</td>
+                    <!-- <td>24/08/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="24/08/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td>28/08/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="28/08/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td>
+                  <td></td> -->
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="1234" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>3388,Ramanlal Agarwal</td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td></td>
+                    <td>102</td>
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>-</td>
+                    <td style="background-color: 	#FFB6C1;">Work in progress</td>
+                    <td>
+                      <select class="form-select">
+                        <option>Edit</option>
+                        <option>Delete</option>
+                        <option>Save</option>
+                        <option>Send Email Reminder</option>
+                        <option>Extend Date</option>
+                        <option>Reopen</option>
+                        <option>Discard</option>
+                      </select>
+                    </td>
+                    <td><button type="button" id="" class="btnactions">
+                        <label for="file"><i class="fa fa-paperclip"></i></label>
+                        </input>
+                        <input type="file" id="file" style="display:none;" /></td>
+                  </tr>
+                  <!-- 3rd -->
+                  <tr class="b">
+                    <td><input type="checkbox" class="form-check-input" /></td>
+                    <td><a href="../admin/ticket checker.html"> 126</a></td>
+                    <td>Transfer</td>
+                    <td>RTL</td>
+                    <td>GUJARAT</td>
+                    <td>124 </td>
+                    <td>JVPD</td>
+                    <!-- <td>24/08/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="25/07/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td>28/08/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="28/09/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td>
+                  <td></td> -->
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="1234" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>3411,Jyothi Ramaraya Pai</td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td></td>
+                    <td>103</td>
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>-</td>
+                    <td style="background-color: #ADD8E6;">Final Submission</td>
+                    <td>
+                      <select class="form-select">
+                        <option>Edit</option>
+                        <option>Delete</option>
+                        <option>Save</option>
+                        <option>Send Email Reminder</option>
+                        <option>Extend Date</option>
+                        <option>Reopen</option>
+                        <option>Discard</option>
+                      </select>
+                    </td>
+                    <td><button type="button" id="" class="btnactions">
+                        <label for="file"><i class="fa fa-paperclip"></i></label>
+                        </input>
+                        <input type="file" id="file" style="display:none;" /></td>
+                  </tr>
+                  <!-- 4th -->
+                  <tr class="b">
+                    <td><input type="checkbox" class="form-check-input" /></td>
+                    <td><a href="../admin/ticket checker.html"> 127</a></td>
+                    <td> New</td>
+                    <td>INST</td>
+                    <td>AGRA</td>
+                    <td>125 </td>
+                    <td>KALYAN</td>
+                    <!-- <td>24/08/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="16/07/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td>28/08/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="13/10/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td>
+                  <td></td> -->
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="1234" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>3388,Ramanlal Agarwal</td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td></td>
+                    <td>104</td>
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>-</td>
+                    <td onclick="myFunction()" style="background-color: yellow;">Ready to move for production</td>
+                    <td>
+                      <select class="form-select">
+                        <option>Edit</option>
+                        <option>Delete</option>
+                        <option>Save</option>
+                        <option>Send Email Reminder</option>
+                        <option>Extend Date</option>
+                        <option>Reopen</option>
+                        <option>Discard</option>
+                      </select>
+                    </td>
+                    <td><button type="button" id="" class="btnactions">
+                        <label for="file"><i class="fa fa-paperclip"></i></label>
+                        </input>
+                        <input type="file" id="file" style="display:none;" /></td>
+                  </tr>
+                  <!-- 5th -->
+                  <tr class="b">
+                    <td><input type="checkbox" class="form-check-input" /></td>
+                    <td><a href="../admin/ticket checker.html"> 128</a></td>
+                    <td> Transfer</td>
+                    <td>RTL</td>
+                    <td>PATNA</td>
+                    <td>126 </td>
+                    <td>KALYAN</td>
+                    <!-- <td>24/08/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="26/03/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td>28/08/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="15/12/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td>
+                  <td></td> -->
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="1234" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>2214,Giridhar Bekal/td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td></td>
+                    <td>105</td>
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>-</td>
+                    <td style="background-color: #A9BBFF;">Moving data to production</td>
+                    <td>
+                      <select class="form-select">
+                        <option>Edit</option>
+                        <option>Delete</option>
+                        <option>Save</option>
+                        <option>Send Email Reminder</option>
+                        <option>Extend Date</option>
+                        <option>Reopen</option>
+                        <option>Discard</option>
+                      </select>
+                    </td>
+                    <td><button type="button" id="" class="btnactions">
+                        <label for="file"><i class="fa fa-paperclip"></i></label>
+                        </input>
+                        <input type="file" id="file" style="display:none;" /></td>
+                  </tr>
+                  <!-- 6th -->
+                  <tr class="b">
+                    <td><input type="checkbox" class="form-check-input" /></td>
+                    <td><a href="../admin/ticket-checker.html"> 129</a></td>
+                    <td> New</td>
+                    <td>INST</td>
+                    <td>BANGLORE</td>
+                    <td>127 </td>
+                    <td> JVPD</td>
+                    <!-- <td>24/08/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="10/05/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td>28/08/2022 </td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="08/09/2022" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td> -->
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <!-- <td></td>
+                  <td></td> -->
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="1234" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>3411,Jyothi Ramaraya Pai</td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td></td>
+                    <td>106</td>
+                    <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                    <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                    <td>-</td>
+                    <td style="background-color: green;">Activity Completed</td>
+                    <td>
+                      <select class="form-select">
+                        <option>Edit</option>
+                        <option>Delete</option>
+                        <option>Save</option>
+                        <option>Send Email Reminder</option>
+                        <option>Extend Date</option>
+                        <option>Reopen</option>
+                        <option>Discard</option>
+                      </select>
+                    </td>
+                    <td><button type="button" id="" class="btnactions">
+                        <label for="file"><i class="fa fa-paperclip"></i></label>
+                        </input>
+                        <input type="file" id="file" style="display:none;" /></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr); cPrev = -1;
+        function sortBy(c) {
+          rows = document.getElementById("sortable").rows.length;
+          columns = document.getElementById("sortable").rows[0].cells.length;
+          arrTable = [...Array(rows)].map(e => Array(columns));
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+            }
+          }
+
+          th = arrTable.shift();
+
+          if (c !== cPrev) {
+            arrTable.sort(
+              function (a, b) {
+                if (a[c] === b[c]) {
+                  return 0;
+                } else {
+                  return (a[c] < b[c]) ? -1 : 1;
+                }
+              }
+            );
+          } else {
+            arrTable.reverse();
+          }
+
+          cPrev = c;
+
+          arrTable.unshift(th);
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+            }
+          }
+        }
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+
+  <!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script type="text/javascript">
+    $(function () {
+      $('#people').multiSelect();
+      $('#mapping').multiSelect();
+      $('#ice-cream').multiSelect();
+      $('#line-wrap-example').multiSelect({
+        positionMenuWithin: $('.position-menu-within')
+      });
+      $('#categories').multiSelect({
+        noneText: 'All categories',
+        presets: [
+          {
+            name: 'All categories',
+            all: true
+          },
+          {
+            name: 'My categories',
+            options: ['a', 'c']
+          }
+        ]
+      });
+      $('#modal-example').multiSelect({
+        'modalHTML': '<div class="multi-select-modal">'
+      });
+    });
+  </script>
+  <script>
+    function edit1() {
+      document.getElementById("trash1").style.display = "none";
+      document.getElementById("pencil1").style.display = "none";
+      document.getElementById("btn1").style.display = "block";
+    }
+    function save1() {
+      window.location.reload();
+      document.getElementById("btn1").style.display = "none";
+      document.getElementById("trash1").style.display = "block";
+      document.getElementById("pencil1").style.display = "block";
+
+    }
+    function edit2() {
+      document.getElementById("trash2").style.display = "none";
+      document.getElementById("pencil2").style.display = "none";
+      document.getElementById("btn2").style.display = "block";
+    }
+    function save2() {
+      window.location.reload();
+      document.getElementById("btn2").style.display = "none";
+      document.getElementById("trash2").style.display = "block";
+      document.getElementById("pencil2").style.display = "block";
+
+    }
+  </script>
+  <script>
+    function myFunction() {
+      alert("Are you sure want to move for production");
+    }
+  </script>
+</body>
+
+</html>

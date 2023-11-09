@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+  <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+  <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<style>
+  .form-select {
+    font-size: 16px;
+  }
+</style>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-8" style="height: 60px;">
+            <h5>RIA TO RM MAPPING</h5>
+            <a href="../mapping_edit/map_ria_code.html"> <i class="bi bi-arrow-return-left" 
+                style="position: relative;top: -20px;left: 800px;font-size: 40px;"></i></a>
+          </div>
+          <hr style="margin-bottom: 0px;">
+
+          <!-- Second sub tab start -->
+          <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+            <div class="col-md-12 mt-2">
+              <div class="row">
+                <div class="col-md-6  ">
+                    <label class="mt-4">RIA</label>
+                    <input type="text "value="INA000003833" class="form-control" disabled>
+                   
+                   
+                  <label class="mt-4">ARNNO_REF</label>
+                  <input type="text "value="DIRECT" class="form-control" disabled>
+                 
+                  <!-- <label class="mt-4">RIA_CODE</label>
+                  <select class="form-select">
+                    <option>CASE ID</option>
+                    <option value="202353">INA000015996</option>
+                    <option value="202354">INA000015229</option>
+                    <option value="202355">INA200002429	</option>
+                    <option value="202356">INA000015260</option>
+                    <option value="202357">INZ000005231</option>
+                    
+                  </select> -->
+
+                
+                  <label class="mt-4">RM_CODE</label>
+                  <input type="text "value="DMR-122" class="form-control" disabled>
+                  
+                  <label class="mt-4">VALID_FROM</label>
+                  <input type="text "value="01-JUL-2022" class="form-control" disabled>
+                  
+                  <label class="mt-4">REGION_CODE</label>
+                  <input type="text "value="MUM-RH" class="form-control" disabled>
+                
+                  <label class="mt-4">RM_UFC_CODE</label>
+                  <input type="text "value="" class="form-control" disabled>
+                 
+                  <!-- <label class="mt-4">ARN_CODE</label>
+                  <select class="form-select">
+                    <option>CASE ID</option>
+                    <option value="202353">ARN-50926</option>
+                    <option value="202354">ARN-69583</option>
+                    <option value="202355">ARN-70892</option>
+                  
+                  </select> -->
+                 
+                  <label class="mt-4">UFC_NAME</label>
+                  <input type="text "value="" class="form-control" disabled>
+                  
+                  <label class="mt-4">CHANNEL_CODE</label>
+                  <input type="text "value="RTL" class="form-control" disabled>
+                
+                
+                  <label class="mt-4">KRA_VALID_FORM</label>
+                  <input disabled value="01-04-2021" class="form-control">
+
+                <button  class="btn btn-primary mt-5" onclick="myFunction()">Save</button>
+                 
+
+                </div>
+
+                <div class="col-md-6 ">
+                    <label class="mt-4">UFC_CODE</label>
+                    <input type="text "value="" class="form-control" disabled>
+
+                    <label class="mt-4">DISTRIBUTOR NAME</label>
+                    <input type="text "value="Blue Ocean Financial Services Private Limited	" class="form-control" disabled>
+
+                    <label class="mt-4">ALLOCATION</label>
+                    <input type="text "value="N" class="form-control" disabled>
+
+                    <label class="mt-4">CAMS_CITY</label>
+                    <input type="text "value="MUMBAI" class="form-control" disabled>
+
+                    <label class="mt-4">RM_UFC_NAME</label>
+                    <input type="text "value="" class="form-control" disabled>
+
+                    <label class="mt-4">REGION_NAME</label>
+                    <input type="text "value="MUMBAI" class="form-control" disabled>
+
+                  
+                    <label class="mt-4">ZONE</label>
+                    <input type="text "value="WEST" class="form-control" disabled>
+                   
+                    
+                    <label class="mt-4">KRA_VALID_UPTO</label>
+                    <input type="date" class="form-control">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--  Second sub tab end-->
+
+          <!-- Third sub tab start -->
+
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+
+        $(document).ready(function () {
+          $('#action').multiselect();
+        });   
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="../assets/js_1/jquery.multi-select.js"></script>
+  <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+    // aaa
+    var acc = document.getElementsByClassName("accordion");
+
+    var i;
+
+
+
+
+    for (i = 0; i < acc.length; i++) {
+
+      acc[i].addEventListener("click", function () {
+
+        this.classList.toggle("active");
+
+        var panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+
+          panel.style.display = "none";
+
+        } else {
+
+          panel.style.display = "block";
+
+        }
+
+      });
+
+    }
+  </script>
+  <script>
+    function myFunction() {
+      alert("Data Save successfully");
+    }
+    </script>
+     <script>
+      // toggle script
+ var  innerSidebar = function(){
+     $('#sidebar').toggleClass('toggle-sidebar');
+
+ }
+
+   // toggle script
+
+ </script><script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+</body>
+
+</html>

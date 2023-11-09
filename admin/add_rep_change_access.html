@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>UTI</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+ <link href="../assets/css_1/style.css" rel="stylesheet"> 
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+
+  <link rel="stylesheet" type="text/css" href="../assets/css/multis-styles.css">
+</head>
+<body>
+  <div uti-include-html="../includes/header1.html"></div>
+	<!-- sidebar start -->
+<div uti-include-html="includes/sidebar.html"></div>
+
+
+
+<!-- sidebar start -->
+<div uti-include-html="../includes/sidebar.html"></div>
+<!-- sidebar end -->
+<main id="main" class="main">
+  <section class="section dashboard">
+<div class="bg-white p-3 border">
+<div class="row">
+  <div class="col-md-12">
+      <h5>Mapping Change Access(Status Report)</h5>
+        <hr id="arn-master-firsthr">
+        <form>
+        <div class="row pt-3">
+          <table>
+          <h6>Ticket Creation Between:</h5>
+          <div class="form-group col-md-4 mb-3">
+            <label> Start Date</label>
+            <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+          </div>
+           <div class="form-group col-md-4 mb-3">
+            <label> End Date</label>
+            <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+          </div>
+        </table>
+        <hr>
+        <table>
+          <tbody>
+            <tr>
+                <td>
+                    <label>Karvy Valid From</label>
+                     <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+                </td>
+           <td style="padding-left:10px">
+                    <label>Vymo Valid From</label>
+         <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+                    </td>
+         <td style="padding-left:10px">
+            <label> Stages </label> 
+                   <select name="ddlEmpRole" id="ddlEmpRole" class="form-select w-100">
+                    <option selected="selected" value="Select">Select</option>
+                    <option value="1">Open for Changes</option>
+                    <option value="2">Work In Progress</option>
+                    <option value="3">Rejected By Checker</option>
+                    <option value="2">Approved By Checker</option>
+                    <option value="3">Pending For Checker Approval</option>
+                    <option value="4">Ready to Move for Prodcution</option>
+                    <option value="4">Activity Completed</option>
+              </select> 
+                    </td>
+                <td style="padding-left:10px">
+                    <label>Search Text</label>
+                    <input type="text" class="form-control" id="txtsearch" style="margin-left:5px;">
+                </td>
+            </tr>
+            <tr>
+              <td style="padding-top:20px;padding-left:0px">
+                   <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary" onclick="displaydetails();">Search</a>
+              </td>
+  <td style="padding-top: 20px;">
+  <a href="../admin/rep_change_access.html" id="btn_search" name="btnsearch" class="btn btn-primary" >Add New Control Record</a>
+  </td>
+  </tr>
+          </table>
+        </div></form>
+
+    </div>
+</div>
+
+<hr mt-3>
+<div class="overflow-auto" id="empgrddetails" style="display:none">
+  <table class="table small border table-hover" id="sortable">
+    <thead>
+    <tr class="bg-primary text-white">
+      <th scope="col" id="colall">All<input type="checkbox" class="form-check-input" id="alltxt" /> </th>
+      <th scope="col">ID <i class="fa fa-solid fa-sort" ></i></th>
+      <th scope="col"> Reason Codes <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+      <th scope="col"> Channel Code <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+      <th scope="col">Region <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+      <th scope="col">Selected UFC’s <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th>
+      <th scope="col">UFC_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+      <th scope="col">Access Start Date <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th>
+      <th scope="col">Access End Date <i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i></th>
+      <th scope="col">KRA Valid From <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+      <th scope="col">VYMO Valid From<i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th>
+      <th scope="col">Employee Code <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+      <th scope="col">Alternate Employee Code <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+      <th scope="col">Remark <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+      <th scope="col">Action</th>
+      <th scope="col">Attach</th>
+    </tr>
+  </thead>
+    <tbody>
+    <tr>
+      <td><input type="checkbox" class="form-check-input" /></td>
+      <td><a href="../admin/ticket checker.html">3343</a></td>
+      <td>Transfer</td>
+      <td>RTL</td>
+      <td></td>
+      <td>111 </td>
+      <td>JVPD</td>
+      <td class="border bg-light text-center"><input class="form-control mb-1" value="01/09/2022" />
+      <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td>
+      <!-- <td>01/09/2022 </td> -->
+      <td class="border bg-light text-center"><input class="form-control mb-1" value="12/09/2022" />
+        <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td>
+      <!-- <td>12/09/2022 </td> -->
+      <!-- <td></td>-->
+        <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+        <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td>
+      <!--<td></td> -->
+      <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+        <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td>
+      <!-- <td></td>
+      <td></td> -->
+      <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="2456" />
+        <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+        <td><select class="form-select">
+          <option>2266,Veeraraj</option>
+          <option>2214,Giridhar Bekal</option>
+           <option>3411,Jyothi Ramaraya Pai</option> 
+          <option>3388,Ramanlal Agarwal</option>
+        </select></td>
+      <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+          <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td>
+      <td> - </td>
+      <td>
+        <select class="form-select">
+          <option>Edit</option>
+          <option>Delete</option>
+          <option>Save</option> 
+          <option>Send Email Reminder</option>
+          <option>Extend Date</option> 
+          <option>Reopen</option>
+          <option>Discard</option>
+        </select>
+      </td>
+      <td><button type="button" id="" class="btnactions">
+        <label for="file"><i class="fa fa-paperclip "></i></label>
+      </input>
+        <input type="file" id="file" style="display:none;" /></td>
+    </tr>
+  </tbody>
+  </table>
+
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+<li class="page-item"><a class="page-link" href="#">1</a></li>
+<li class="page-item"><a class="page-link" href="#">2</a></li>
+<li class="page-item"><a class="page-link" href="#">3</a></li>
+<li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer id="footer" class="footer">
+<div class="copyright">
+&copy; Copyright <strong><span>UTI</span></strong>
+<script type="text/javascript">
+var d = new Date();
+yr = d.getFullYear();
+document.write(yr);      cPrev = -1;
+function sortBy(c) {
+rows = document.getElementById("sortable").rows.length;
+columns = document.getElementById("sortable").rows[0].cells.length;
+arrTable = [...Array(rows)].map(e => Array(columns));
+
+for (ro=0; ro<rows; ro++) {
+for (co=0; co<columns; co++) {
+  arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+}
+}
+
+th = arrTable.shift();
+
+if (c !== cPrev) {
+arrTable.sort(
+  function (a, b) {
+      if (a[c] === b[c]) {
+          return 0;
+      } else {
+          return (a[c] < b[c]) ? -1 : 1;
+      }
+  }
+);
+} else {
+arrTable.reverse();
+}
+
+cPrev = c;
+
+arrTable.unshift(th);
+
+for (ro=0; ro<rows; ro++) {
+for (co=0; co<columns; co++) {
+  document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+}
+}
+}
+</script>
+. All Rights Reserved
+</div>
+</footer>
+
+
+  <!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+<script type="text/javascript">
+function displaydetails()
+{
+  document.getElementById("empgrddetails").style.display="block";
+}
+</script>
+
+</body>
+</html>
+
+  <!-- <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong> <script type="text/javascript">
+          var d = new Date();
+          yr = d.getFullYear();
+          document.write(yr);
+
+          $(document).ready(function() {  
+        $('#action').multiselect();  
+        });   
+    </script>. All Rights Reserved</div>
+  </footer>
+  <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/uti.js"></script>
+  <script src="../assets/js/custom.js"></script> -->
+

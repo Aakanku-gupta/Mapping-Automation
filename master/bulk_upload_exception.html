@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>UTI</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css_1/main.css" rel="stylesheet">
+    <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+    <link href="../assets/css_1/style.css" rel="stylesheet">
+    <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/multis-styles.css">
+</head>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+    <main id="main" class="main">
+        <section class="section dashboard">
+            <div class="bg-white p-3 border">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>EXCEPTION MASTER</h5>
+                        <a href="../master/all_master_bulk_upload.html"> <i class="bi bi-arrow-return-left" style="position: relative;
+                          top: -52px;
+                          float: right;
+                          font-size: 40px;
+                      "></i></a>
+                        <hr>
+                        <div class="mt-2">
+                          <h3 class="mb-4" style="text-align: center;">Upload File </h3>
+                          <div style="justify-content: center; display: flex;">
+                              <div style="margin: 5px;"> <button type="button" class="btn btn-primary ">
+                                      <a href="../Templates/Exceptions-Master.xlsx" style="color:white">Download Exception Master
+                                          Template <br> <i class="fa fa-file-excel-o"></i></a></button>
+                              </div>
+
+                              <div style="margin: 5px;">
+
+                                <input type="file" accept=".csv" style="background-color: #193984; padding: 14px; border-radius: 5px; color: white;" />
+                              </div>
+
+                              <div style="margin: 5px;" class="upload_btn"> 
+
+                                <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary" style="padding: 14px;"
+                                    onclick="displaydetails();">Preview</a>
+                            </div>
+
+                          </div>
+                      </div>
+
+                    </div>
+                </div>
+
+
+                <hr mt-3>
+                <div class="overflow-auto" id="empgrddetails" style="display:none">
+                    <div class="row">
+                        <div class="col-md-9">  
+                            <p>No of Records - 52</p> <p>No of Column - 12</p>  <p>Selected UFC- 549 - Patna </p>
+                     
+                        </div>
+                      
+                        
+                        <div class="col-md-3">  <p> Upload Date - 24/06/2023 </p>  <p>File Name - Exception Bulk Upload </p>
+                       
+                            <p>File Type - .csv</p>
+                        
+                       
+                          
+                        </div></div>
+                    <table class="table small border table-hover" id="sortable">
+                      <thead>
+                      <tr class="bg-primary text-white">
+                        <!-- <th scope="col"><input type="checkbox" class="form-check-input" /></th> -->
+                       
+                        <th scope="col">CASE ID <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+                        <th scope="col">REMARKS <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+                        <th scope="col">CASE_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+                        <!-- <th scope="col">FIELDS <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th> not required-->
+                        <th scope="col">ATTRIBUTE <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+                        <th scope="col">P_SEQ <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th>
+                        <th scope="col">EXCEPTION_ATTRIBUTE <i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i></th>
+                        <th scope="col">SRNO <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+                        <th scope="col">VALID_FROM <i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th>
+                        <th scope="col">VALID_UPTO <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+                        <th scope="col">CASENO <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+                        <th scope="col">CASE_TYPE <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+                        <th scope="col">APPLICABILITY <i class="fa fa-solid fa-sort" onclick="sortBy(13)"></i></th>
+                     
+                      </tr>
+                    </thead>
+                      <tbody>
+                        <tr>
+                     
+                          <td>C1058</td>
+                          <td></td>
+                          <td>BND-Excep-599259454896-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599259454896</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1058</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                     
+                                        </tr>
+                        <tr>
+                        
+                          <td>C1058</td>
+                          <td></td>
+                          <td>BND-Excep-599259454896-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIEQGPCB99577070599259454896</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1058</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                      
+                                        </tr>
+                        <tr>
+                       
+                          <td>C1059</td>
+                          <td></td>
+                          <td>BND-Excep-599259454896-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599259454896</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1059</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                     
+                                        </tr>
+                        <tr>
+                          
+                          <td>C1059</td>
+                          <td></td>
+                          <td>BND-Excep-599259454896-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIEQGPCB99580743599259454896</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1059</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                     
+                                        </tr>
+                        <tr>
+                      
+                          <td>C1060</td>
+                          <td></td>
+                          <td>BND-Excep-599259454896-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599259454896</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1060</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                    
+                                        </tr>
+                        <tr>
+                        
+                          <td>C1060</td>
+                          <td></td>
+                          <td>BND-Excep-599259454896-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIEQGPCB99582442599259454896</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1060</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                    
+                                        </tr>
+                        <tr>
+                          
+                          <td>C1061</td>
+                          <td></td>
+                          <td>BND-Excep-599331260276-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599331260276</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1061</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                  
+                                        </tr>
+                        <tr>
+                         
+                          <td>C1061</td>
+                          <td></td>
+                          <td>BND-Excep-599331260276-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIEQGPKB99421549599331260276</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1061</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                    
+                                        </tr>
+                        <tr>
+                        
+                          <td>C1062</td>
+                          <td></td>
+                          <td>BND-Excep-599331183076-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599331183076</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1062</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                     
+                                        </tr>
+                        <tr>
+                        
+                          <td>C1062</td>
+                          <td></td>
+                          <td>BND-Excep-599331183076-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIEQGPKB99420996599331183076</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1062</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                       
+                                        </tr>
+                        <tr>
+                         
+                          <td>C1063</td>
+                          <td></td>
+                          <td>BND-Excep-599329464506-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599329464506</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1063</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                      
+                                        </tr>
+                        <tr>
+                          
+                          <td>C1063</td>
+                          <td></td>
+                          <td>BND-Excep-599329464506-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIGPGPKB99421498599329464506</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1063</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                        
+                                        </tr>
+                        <tr>
+                         
+                          <td>C1064</td>
+                          <td></td>
+                          <td>BND-Excep-599280893681-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599280893681</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1064</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                     
+                                        </tr>
+                        <tr>
+                          
+                          <td>C1064</td>
+                          <td></td>
+                          <td>BND-Excep-599280893681-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIEQGPKB99415597599280893681</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1064</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                       
+                                        </tr>
+                        <tr>
+                          
+                          <td>C1065</td>
+                          <td></td>
+                          <td>BND-Excep-599280893681-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599280893681</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1065</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                        
+                                        </tr>
+                        <tr>
+                          <td>C1065</td>
+                          <td></td>
+                          <td>BND-Excep-599280893681-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIEQGPKB99415770599280893681</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1065</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                     
+                                        </tr>
+                        <tr>
+                         
+                          <td>C1066</td>
+                          <td></td>
+                          <td>BND-Excep-599332578671-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599332578671</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1066</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                        
+                                        </tr>
+                        <tr>
+                          
+                          <td>C1066</td>
+                          <td></td>
+                          <td>BND-Excep-599332578671-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIEQGPST99222709599332578671</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1066</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                       
+                                        </tr>
+                        <tr>
+                          
+                          <td>C1067</td>
+                          <td></td>
+                          <td>BND-Excep-599321858295-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599321858295</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1067</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                       
+                                        </tr>
+                        <tr>
+                          <td>C1067</td>
+                          <td></td>
+                          <td>BND-Excep-599321858295-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIEQGPST99222274599321858295</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1067</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                        
+                                        </tr>
+                        <tr>
+                          
+                          <td>C1068</td>
+                          <td></td>
+                          <td>BND-Excep-577330259806-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>577330259806</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1068</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                       
+                                        </tr>
+                        <tr>
+                        
+                          <td>C1068</td>
+                          <td></td>
+                          <td>BND-Excep-577330259806-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTICPD2BS771785867577330259806</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1068</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                       
+                                        </tr>
+                        <tr>
+                          
+                          <td>C1069</td>
+                          <td></td>
+                          <td>BND-Excep-577328548123-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>577328548123</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1069</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                          
+                                        </tr>
+                        <tr>
+                       
+                          <td>C1069</td>
+                          <td></td>
+                          <td>BND-Excep-577328548123-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTICPD2BS771785868577328548123</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1069</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                          
+                                        </tr>
+                        <tr>
+                          <td>C1119</td>
+                          <td></td>
+                          <td>AGSPP5291J--Suraj Ramchand Popley</td>
+                          <!-- <td></td> -->
+                          <td>AGSPP5291J</td>
+                          <td>A</td>
+                          <td>PANNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1119</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                          
+                                        </tr>
+                        <tr>
+                          
+                          <td>C1120</td>
+                          <td></td>
+                          <td>AAACS5154L-Popley Diamond and Gold Plaza Pvt Ltd</td>
+                          <!-- <td></td> -->
+                          <td>AAACS5154L</td>
+                          <td>A</td>
+                          <td>PANNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>1120</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                          
+                                        </tr>
+                        <tr>
+                          <td>C2086</td>
+                          <td></td>
+                          <td>AZHAAN SALEEM MERCHANT-599333868576</td>
+                          <!-- <td></td> -->
+                          <td>599333868576</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2086</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                          
+                                        </tr>
+                        <tr>
+                         
+                          <td>C2087</td>
+                          <td></td>
+                          <td>GAURI MOONDRA-599259454896</td>
+                          <!-- <td></td> -->
+                          <td>599259454896</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2087</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                          
+                                        </tr>
+                        <tr>
+                          <td>C2088</td>
+                          <td></td>
+                          <td>ABHIJIT DATTANAND KUMTA-599333286276</td>
+                          <!-- <td></td> -->
+                          <td>599333286276</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2088</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                          
+                                        </tr>
+                        <tr>
+                          <td>C2089</td>
+                          <td></td>
+                          <td>RAKSHIT HARGAVE-599280893681</td>
+                          <!-- <td></td> -->
+                          <td>599280893681</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2089</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                         
+                                        </tr>
+                        <tr>
+                          <td>C2090</td>
+                          <td></td>
+                          <td>RAKSHIT HARGAVE-599333636254</td>
+                          <!-- <td></td> -->
+                          <td>599333636254</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2090</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                         
+                                        </tr>
+                        <tr>
+                          <td>C2091</td>
+                          <td></td>
+                          <td>RAJSEKAR KUPPUSWAMI MITTA-599333290121</td>
+                          <!-- <td></td> -->
+                          <td>599333290121</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2091</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                      
+                                        </tr>
+                        <tr>
+                          <td>C2092</td>
+                          <td></td>
+                          <td>RAMNIKLAL H PARBHOO-599333187721</td>
+                          <!-- <td></td> -->
+                          <td>599333187721</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2092</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                   
+                                        </tr>
+                        <tr>
+                          <td>C2093</td>
+                          <td></td>
+                          <td>MANISHA DINESH MULANI-599333777061</td>
+                          <!-- <td></td> -->
+                          <td>599333777061</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2093</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                       
+                                        </tr>
+                        <tr>
+                          <td>C2094</td>
+                          <td></td>
+                          <td>ASHISH AVINASH BAKRE-599333187716</td>
+                          <!-- <td></td> -->
+                          <td>599333187716</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2094</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                       
+                                        </tr>
+                        <tr>
+                          <td>C2095</td>
+                          <td></td>
+                          <td>ANIL P MEHTA-599333402492</td>
+                          <!-- <td></td> -->
+                          <td>599333402492</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2095</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                      
+                                        </tr>
+                        <tr>
+                          <td>C2096</td>
+                          <td></td>
+                          <td>AHMED SARFRAZ KHAN-599333960062</td>
+                          <!-- <td></td> -->
+                          <td>599333960062</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2096</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                       
+                                        </tr>
+                        <tr>
+                          <td>C2097</td>
+                          <td></td>
+                          <td>RAJAT SAPRA-599333455646</td>
+                          <!-- <td></td> -->
+                          <td>599333455646</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2097</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                        
+                                        </tr>
+                        <tr>
+                          <td>C2098</td>
+                          <td></td>
+                          <td>HARILAL KANJI RAGHWANI-599333212105</td>
+                          <!-- <td></td> -->
+                          <td>599333212105</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2098</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                        
+                                        </tr>
+                        <tr>
+                          <td>C2099</td>
+                          <td></td>
+                          <td>ARPAN RAJNEESH DAVID-599333208856</td>
+                          <!-- <td></td> -->
+                          <td>599333208856</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2099</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                       
+                                        </tr>
+                        <tr>
+                          <td>C2100</td>
+                          <td></td>
+                          <td>SUNANDO MUKHOPADHYAY-599333289873</td>
+                          <!-- <td></td> -->
+                          <td>599333289873</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2100</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                      
+                                        </tr>
+                        <tr>
+                          <td>C2101</td>
+                          <td></td>
+                          <td>SUNANDO MUKHOPADHYAY-599333239557</td>
+                          <!-- <td></td> -->
+                          <td>599333239557</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2101</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                       
+                                        </tr>
+                        <tr>
+                          <td>C2102</td>
+                          <td></td>
+                          <td>S A PATEL-599333908757</td>
+                          <!-- <td></td> -->
+                          <td>599333908757</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2102</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                     
+                                        </tr>
+                        <tr>
+                          <td>C2103</td>
+                          <td></td>
+                          <td>N SUDHAKAR-599325839905</td>
+                          <!-- <td></td> -->
+                          <td>599325839905</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2103</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                          
+                                        </tr>
+                        <tr>
+                          <td>C2104</td>
+                          <td></td>
+                          <td>SATISH RAMESH LALWANI-599333442765</td>
+                          <!-- <td></td> -->
+                          <td>599333442765</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>2104</td>
+                          <td>B</td>
+                          <td>Sales-NetSales/AAUM</td>
+                         
+                                        </tr>
+                        <tr>
+      
+                          <td>C991</td>
+                          <td></td>
+                          <td>BND-Excep-599330230196-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599330230196</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>991</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                         
+                                        </tr>
+                        <tr>
+      
+                          <td>C991</td>
+                          <td></td>
+                          <td>BND-Excep-599330230196-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTIEQGPST99215879599330230196</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>991</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                       
+                                        </tr>
+                        <tr>
+      
+                          <td>C992</td>
+                          <td></td>
+                          <td>BND-Excep-599321858295-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>599321858295</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>992</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                         
+                                        </tr>
+                        <tr>
+      
+                          <td>C997</td>
+                          <td></td>
+                          <td>BND-Excep-577328440664-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTINYG1BS771375530577328440664</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>997</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                         
+                                        </tr>
+                        <tr>
+      
+                          <td>C998</td>
+                          <td></td>
+                          <td>BND-Excep-577328440664-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>577328440664</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>998</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                         
+                                        </tr>
+                        <tr>
+      
+                          <td>C998</td>
+                          <td></td>
+                          <td>BND-Excep-577328440664-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTINYG1BS771396841577328440664</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>998</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                         
+                                        </tr>
+                        <tr>
+      
+                          <td>C999</td>
+                          <td></td>
+                          <td>BND-Excep-577328440664-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>577328440664</td>
+                          <td>C</td>
+                          <td>FOLIO NUMBER</td>
+                          <td>2</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>999</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                         
+                                        </tr>
+                        <tr>
+      
+                          <td>C999</td>
+                          <td></td>
+                          <td>BND-Excep-577328440664-RMCODE3907</td>
+                          <!-- <td></td> -->
+                          <td>UTINYG1BS771462346577328440664</td>
+                          <td>F</td>
+                          <td>TRANSACTION REFNO</td>
+                          <td>1</td>
+                          <td>01-JUL-2022</td>
+                          <td>30-DEC-9999</td>
+                          <td>999</td>
+                          <td>S</td>
+                          <td>Sales-NetSales</td>
+                         
+                                        </tr>
+                    </tbody>
+                    </table>
+                
+                
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                    <div>              <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">EXCEPTION MASTER</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <center>
+                                <h5>EXCEPTION Master File Successfully Uploaded</h5>
+                              </center>
+                              <hr>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <p>No of Records - 52</p><br>
+                                  <p>Case Id - 3445</p>
+                                </div>
+                                <div class="col-md-6">
+                                  <p>No of Column - 12</p>
+          
+                                  <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-auto mt-4">
+          
+                                    <option selected="selected" value="Select">Select Checker</option>
+          
+                                    <option value="INST">Sumit Mehta</option>
+          
+                                    <option value="DSTH">Santosh Chipte</option>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                                  </select>
+                                </div>
+                              </div>
+          
+          
+                            </div>
+                            <!--error Modal -->
+                            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Exception Master</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                      <center><h4 style="color: red;">File Content Error</h4></center><hr>
+                                      <div class="row">
+                                          <div class="col-md-6"> <p>No of Records - 2</p>
+                                     </div>
+                                          <div class="col-md-6"><p>No of Column - 17</p> <div > <button type="button" class="btn w-100" style="background-color: red;">
+                                            <a href="../Templates/Exceptions-Master.xlsx" style="color:white">Download 
+                                                File <br> <i class="fa fa-file-excel-o"></i></a></button>
+                                    </div></div>
+                                      </div>
+                                     
+                                     
+                                      </div> -->
+                            <!--/error Modal -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary"><a href="../master/all_master_bulk_upload.html"
+                                  style="color:white">Ok</a></button>
+          
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                                           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                              Start Upload
+                                          </button>
+                                       
+                      </div> <br>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>UTI</span></strong>
+            <script type="text/javascript">
+                var d = new Date();
+                yr = d.getFullYear();
+                document.write(yr); cPrev = -1;
+                function sortBy(c) {
+                    rows = document.getElementById("sortable").rows.length;
+                    columns = document.getElementById("sortable").rows[0].cells.length;
+                    arrTable = [...Array(rows)].map(e => Array(columns));
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                        }
+                    }
+
+                    th = arrTable.shift();
+
+                    if (c !== cPrev) {
+                        arrTable.sort(
+                            function (a, b) {
+                                if (a[c] === b[c]) {
+                                    return 0;
+                                } else {
+                                    return (a[c] < b[c]) ? -1 : 1;
+                                }
+                            }
+                        );
+                    } else {
+                        arrTable.reverse();
+                    }
+
+                    cPrev = c;
+
+                    arrTable.unshift(th);
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                        }
+                    }
+                }
+                      // toggle script
+    
+
+   var  innerSidebar = function(){
+
+$('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+// toggle script
+            </script>
+            . All Rights Reserved
+        </div>
+    </footer>
+
+
+    <!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+    <script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+    <!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+    <script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+    <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+    <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+    <script src="../assets/js_1/main.js"></script>
+    <!-- <script src="../assets/js/main.js"></script> -->
+    <script src="../assets/js_1/uti.js"></script>
+    <!-- <script src="../assets/js/uti.js"></script> -->
+    <script src="../assets/js_1/custom.js"></script>
+    <!-- <script src="../assets/js/custom.js"></script> -->
+
+    <script type="text/javascript">
+      function displaydetails() {
+          document.getElementById("empgrddetails").style.display = "block";
+          document.getElementsByClassName("upload_btn")[0].style.display = "none";  //new
+
+      }
+  </script>
+    <script>
+        function myFunction() {
+            let text = "Do you want to proceed";
+            if (confirm(text) == true) {
+                text = "You pressed OK!";
+            } else {
+                text = "You canceled!";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+ <script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+
+</body>
+
+</html>

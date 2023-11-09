@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>UTI</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+	<link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+	<link href="../assets/css_1/main.css" rel="stylesheet">
+	<link href="../assets/css_1/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between"><i class="toggle-sidebar-btn pe-2">
+        <span class="fa fa-align-justify text-white"></span> </i><img src="../assets/images_1/logo_1.png" alt=""
+        width="130px"></div>
+    <div class="col-md-9">
+      <h6 class="text-center text-white small pt-2" style="    margin: 0px;
+    ">Welcome : Kiran Dalvi | Last Login : Jun 19th 12:00pm</h6>
+      <div class="row">
+        <div class="col-md-3">
+          <h6 class="text-left text-white small pt-2">Role : Admin &nbsp;&nbsp; Location : MUMBAI</h6>
+        </div>
+        <div class="col-md-3 text-white">
+          <label style="font-size: 12px;" >ROLE : </label>
+          <select class="form-select" style="width: 150px; padding: 0px 10px;">
+            <option>ROLE</option>
+            <option>CM</option>
+            <option>RH</option>
+            <option>ZH</option>
+            <option>CH</option>
+          </select>
+        </div>
+        <div class="col-md-3 text-white" >
+          <label style="font-size: 12px;">CASE ID : </label>
+          <select class="form-select" style="width: 150px; padding: 0px 10px;">
+            <option>CASE ID</option>
+            <option>3445</option>
+            <option>3553</option>
+            <option>3534</option>
+            <option>3645</option>
+            <option>3745</option>
+          </select>
+        </div>
+        <div class="col-md-3 text-white" >
+          <label style="font-size: 12px;">UFC_CODE : </label>
+          <select class="form-select" style="width: 150px; padding: 0px 10px;">
+            <option>UFC_Code</option>
+            <option>132, MUZAFFARPUR</option>
+            <option>549, PATNA</option>
+            <option>548, BHAGALPUR</option>
+            <option>218, DARBHANGA</option>
+            <option>147, AURANGABAD</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown pe-4">
+          <a class="nav-link dropdown-toggle text-white small" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">User</a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li><a class="dropdown-item d-flex align-items-center" href="../login.html"><i class="fa fa-sign-out"></i>
+                <span>Logout</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+	<!-- sidebar start -->
+	<div uti-include-html="../includes/sidebar.html"></div>
+	<!-- sidebar end -->
+  <main id="main" class="main">
+		<section class="section dashboard">
+  <div class="bg-white p-3 border">
+  <div class="row">
+    <div class="col-md-12">
+        <h5>Assign Role To Users</h5>
+    </div>
+    <hr id="arn-master-secondhr">
+   <div class="col-md-6">
+    <tr>
+      <th scope="col">Records <i class="fa fa-solid"></i></th>
+      <td>
+        <select class="form-select" id="records">
+          <option>50</option>
+          <option>100</option>
+          <option>200</option>
+          <option>All</option>
+        </select>
+      </td>
+    </tr>
+  </div>
+  <div class="col-md-6">
+  <label>Search:<input type="search" class="form-control" placeholder="" ></label></div>
+  </div>
+  <hr>
+  <div class="overflow-auto">
+    <table class="table small border table-hover" id="sortable">
+      <thead>
+      <tr class="bg-primary text-white">
+        <th> </th>
+        <th scope="col">SrNo <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+        <th scope="col">Code <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+        <th scope="col">Name <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+        <th scope="col">Role <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th>
+        <th scope="col">Action <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+</tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" class="form-check-input" /></td>
+          <td>1</td>
+          <td>2020</td>
+          <td>Kiran Dalvi</td>
+          <td>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Admin</option>
+              <option>Employee</option>
+              <option>Regional Head</option>
+              <option>Chief Manager</option>
+              <option>Country Head</option>
+            </select>
+          </td>
+          <td>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Edit</option>
+              <option>Update</option>
+              <option>View</option>
+              <option>Delete</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="form-check-input" /></td>
+          <td>2</td>
+          <td>1133</td>
+          <td>V Venkatagiri</td>
+          <td>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Admin</option>
+              <option>Employee</option>
+              <option>Regional Head</option>
+              <option>Chief Manager</option>
+              <option>Country Head</option>
+            </select>
+          </td>
+          <td>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Edit</option>
+              <option>Update</option>
+              <option>View</option>
+              <option>Delete</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="form-check-input" /></td>
+          <td>3</td>
+          <td>1124</td>
+          <td>Kundanlal Manwatkar</td>
+          <td>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Admin</option>
+              <option>Employee</option>
+              <option>Regional Head</option>
+              <option>Chief Manager</option>
+              <option>Country Head</option>
+            </select>
+          </td>
+          <td>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Edit</option>
+              <option>Update</option>
+              <option>View</option>
+              <option>Delete</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="form-check-input" /></td>
+          <td>4</td>
+          <td>3706</td>
+          <td>Sumit Mehta</td>
+          <td>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Admin</option>
+              <option>Employee</option>
+              <option>Regional Head</option>
+              <option>Chief Manager</option>
+              <option>Country Head</option>
+            </select>
+          </td>
+          <td>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Edit</option>
+              <option>Update</option>
+              <option>View</option>
+              <option>Delete</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="form-check-input" /></td>
+          <td>5</td>
+          <td>3671</td>
+          <td>Santosh Chipte</td>
+          <td>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Admin</option>
+              <option>Employee</option>
+              <option>Regional Head</option>
+              <option>Chief Manager</option>
+              <option>Country Head</option>
+            </select>
+          </td>
+          <td>
+            <select class="form-select">
+              <option>Select</option>
+              <option>Edit</option>
+              <option>Update</option>
+              <option>View</option>
+              <option>Delete</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>           
+</div>
+</div>
+</section>
+</main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong> <script type="text/javascript">
+          var d = new Date();
+          yr = d.getFullYear();
+          document.write(yr);
+
+          $(document).ready(function() {  
+        $('#action').multiselect();  
+        });   
+    </script>. All Rights Reserved</div>
+  </footer>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <script src="../assets/js_1/main.js"></script>
+  <script src="../assets/js_1/uti.js"></script>
+  <script src="../assets/js_1/custom.js"></script><script>
+    function myFunction2() {
+      alert("Wrong Data Found Please Check Again");
+    }
+    </script>
+</body>
+</html>

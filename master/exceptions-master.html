@@ -1,0 +1,3050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+  <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+  <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<style>
+  .show {
+  display: block!important;
+
+}
+ .popup-content {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  font-weight: bolder;
+  border: 1px solid;
+border-radius: 10px;
+}
+.popup {
+  top: 150px;
+z-index: 999;
+display: none;
+background: none;
+}
+
+</style>
+<style>
+  .form-select {
+    font-size: 16px;
+  }
+</style>
+<style>
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  /* The Modal (background) */
+  .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  }
+  /* Modal Content */
+  .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid #888;
+  width: 72%;
+  position: relative;
+  left: 168px;
+  font-size: 9px;
+  }
+  /* The Close Button */
+  .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  }
+</style>
+
+<body id="sidebar">
+  <!-- header start -->
+  <!-- <div uti-include-html="../includes/header2.html"></div> -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between"><i class="toggle-sidebar-btn pe-2"
+        onclick="innerSidebar()">
+
+        <span class="fa fa-align-justify text-white"></span> </i><img src="../assets/images_1/logo_1.png" alt=""
+        width="130px"></div>
+
+    <div class="col-md-7">
+
+      <div class="row">
+
+        <div class="col-md-3"></div>
+
+        <div class="col-md-3">
+          <div class="text-white" style="margin: 5px;">
+
+            <label style="font-size: 12px;">ROLE : </label>
+
+            <select class="form-select" style="padding: 0px 10px;">
+
+              <option>ROLE</option>
+
+              <option>CM</option>
+
+              <option>RH</option>
+
+              <option>ZH</option>
+
+              <option>CH</option>
+
+            </select>
+
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3">
+          <div class="text-white" style="margin: 5px;">
+
+            <label style="font-size: 12px;">UFC NAME : </label>
+
+            <select class="form-select" style="padding: 0px 10px;">
+
+              <option>UFC NAME</option>
+
+              <option>132, MUZAFFARPUR</option>
+
+              <option>549, PATNA</option>
+
+              <option>548, BHAGALPUR</option>
+
+              <option>218, DARBHANGA</option>
+
+              <option>147, AURANGABAD</option>
+
+            </select>
+
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="text-white" style="margin: 5px;">
+
+            <label style="font-size: 12px;">CASE ID : </label>
+
+            <select class="form-select" style="padding: 0px 10px;">
+
+              <option>CASE ID</option>
+
+              <option>3445</option>
+
+              <option>3553</option>
+
+              <option>3534</option>
+
+              <option>3645</option>
+
+              <option>3745</option>
+
+            </select>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6"><button class=" btn-primary ">Approved</button></div>
+            <div class="col-md-6">
+              <!-- <button class=" btn-primary" onclick="myFunction2()">Reject</button>  -->
+              <!-- Button trigger modal -->
+
+              <button id="myButton" type="button" class=" btn-primary">
+
+                Reject
+              </button>
+
+              <!-- Modal -->
+              <div id="myPopup" class="popup mt-5">
+                <div class="popup-content ">
+                  <h4>
+                  Changes are not approved for case number 3445
+                  </h4><hr>
+                  <p style="    text-align: left;">Sumit Mehta's Comment</p>
+                  <input type="text" class="form-control" name="" id="">
+                    <h5 class="mt-3" ><input type="checkbox" name="" id="" checked > Send this notification to Santosh Chipte(Maker)</h5>
+                    
+                      <button  class="btn btn-primary" data-bs-dismiss="closePopup"  style="color: white;" id="closePopup">
+                        Submit
+                      </button>
+                     
+                    <button type="button" class="btn btn-primary reject" data-bs-dismiss="closePopup1" id="closePopup1"  style="color: white;">Close</button>
+                  
+                  </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+      <div class="pb-2" style="justify-content: center; display: flex;">
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <div class="col-md-12" style="margin-left: 5px;">
+
+        <span class="text-white">Welcome : Santosh Chipte | Last Login : Jun 19th 12:00pm</span>
+      </div>
+
+      <div class="col-md-12">
+
+        <div class="row">
+
+          <div class="col-md-4"></div>
+
+          <div class="col-md-4"></div>
+
+          <div class="col-md-4 mt-2"> <a href="../login.html" class="text-white">Log Out</a></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+
+
+</head>
+<div id="myModal" class="modal">
+<!-- Modal content -->
+<div class="modal-content">
+   <span class="close">&times;</span>
+   <section id="SplitPopup" class="section dashboard bg-white">
+      <form action="#" method="post">
+         <table id="emptbl">
+            <tr>
+               <th style="font-size: 12px; border: none; ">RM CODE</th>
+               <th style="font-size: 12px; border: none;">AAUM EQUITY % SHARE</th>
+               <th style="font-size: 12px; border: none;">SAAUM HYBRID % SHARE</th>
+               <th style="font-size: 12px; border: none;">AAUM ARBITRAGE % SHARE </th>
+               <th style="font-size: 12px; border: none;">AAUM FIXED INCOME % SHARE </th>
+               <th style="font-size: 12px; border: none;">AAUM CASH % SHARE</th>
+            </tr>
+            <br>
+            <tr>
+               <td id="col0">
+                  <!-- <select name="department[]" id="dept">
+                     <option value="0">Select</option>
+                     
+                     <option value="1">365</option>
+                     
+                     <option value="2">985</option>
+                     
+                     <option value="3">658</option>
+                     
+                     </select>  -->
+                  <select class="form-select" id="zoneSearchFilter" style="width:101px;">
+                     <option value="">ALL</option>
+                     <option value="CORP">586</option>
+                     <option value="EAST">485</option>
+                     <option value="GULF">732</option>
+                     <option value="NORTH"> 654</option>
+                  </select>
+               </td>
+               <td id="col1"><input type="number" name="phone[]" value="" /></td>
+               <td id="col2"><input type="number" name="phone[]" value="" /></td>
+               <td id="col3"><input type="number" name="phone[]" value="" /></td>
+               <td id="col4"><input type="number" name="phone[]" value="" /></td>
+               <td id="col5"><input type="number" name="phone[]" value="" /></td>
+               <td><input class="btn btn-primary" type="button" value="Add" onclick="addRows()" /></td>
+               <td><input class="btn btn-primary" type="button" value="Delete" onclick="deleteRows()" /></td>
+            </tr>
+         </table>
+         <br>
+         <table>
+            <td style="font-size: 16px;">Total</td>
+            <td><input style="position: relative;
+               left: 82px;" type="number" name="phone[]" value="" /></td>
+            <td><input style="    position: relative;
+               left: 92px;
+               " type="number" name="phone[]" value="" /></td>
+            <td><input style="    position: relative;
+               left: 105px;" type="number" name="phone[]" value="" /></td>
+            <td><input style="    position: relative;
+               left: 127px" type="number" name="phone[]" value="" /></td>
+            <td><input style="position: relative;
+               left: 158px;
+               " type="number" name="phone[]" value="" /></td>
+         </table>
+         <br>
+         <td><input class="btn btn-primary" type="button" value="Save Changes" /></td>
+      </form>
+   </section>
+</div>
+</div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+
+
+    <section class="section dashboard">
+      <div class="bg-white p-5 border">
+        <div class="row">
+          <div class="col-md-8">
+            <h5>EXCEPTIONS MASTER</h5>
+          </div>
+          <hr>
+          <!-- akku -->
+          <div class="row">
+            <div class="col-md-12">
+              <!-- <a href="../master/bulk_upload_exception.html" class="btn btn-primary "
+                style=" width: auto; border: none;">Bulk Upload + </a> -->
+              <a href="../master/add-record-exception.html" class="btn btn-primary"
+                style=" width: auto;  border: none ">Add Record +</a>
+            </div>
+          </div>
+          <!-- div -->
+
+
+
+          <div class="tab-content" id="myTabContent">
+
+            <!-- first sub tab  start-->
+            <div class="tab-pane fade  " id="total" role="tabpanel" aria-labelledby="total-tab">
+              <div class="overflowemail">
+
+
+                <div class="mt-2" style="width: 150px;">
+                  <h3 class="mb-4">Upload File </h3>
+                  <input type="file" class="hsag">
+                  <button class="xyz " style="border-radius: 5px;">Upload</button>
+
+                </div>
+
+
+
+
+
+              </div>
+            </div>
+            <!-- first sub tab end-->
+
+
+            <!-- Second sub tab start -->
+            <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+              <div class="col-md-12 mt-2">
+                <div class="row">
+                  <div class="col-md-6  ">
+                    <label class="mt-4">KRV_Code</label>
+                    <input type="text " placeholder="ARN-29742" class="form-control mt-2">
+                    <label class="mt-4">Channel_code</label>
+                    <input type="text " placeholder="RTL" class="form-control mt-2">
+                    <label class="mt-4">NEW_BR_CODE</label>
+                    <input type="text " placeholder="119" class="form-control mt-2">
+                    <label class="mt-4">REGION_CODE</label>
+                    <input type="text " placeholder="NORH" class="form-control mt-2">
+                    <label class="mt-4">NAME</label>
+                    <input type="text " placeholder="DEUTSCHE BANK" class="form-control mt-2">
+                    <label class="mt-4">MULTI_CITY FLAG</label>
+                    <input type="text " placeholder="E" class="form-control mt-2">
+                    <label class="mt-4">CATEGORY</label>
+                    <input type="text " placeholder="BANKS" class="form-control mt-2">
+                    <label class="mt-4">ZONE</label>
+                    <input type="text " placeholder="WEST" class="form-control mt-2">
+                    <label class="mt-4">ARN_GROUP_NAME</label>
+                    <input type="text " placeholder="Deutsche Bank" class="form-control mt-2">
+                    <label class="mt-4">SUB_CHANNEL</label>
+                    <input type="text " placeholder="E-ARN" class="form-control mt-2">
+
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <label class="mt-4">VALID_FROM</label>
+                    <input type="text " placeholder="01-10-2021" class="form-control mt-2">
+                    <label class="mt-4">VALID_UPTO</label>
+                    <input type="text " placeholder="30-12-9999" class="form-control mt-2">
+                    <label class="mt-4">CREATION_DT</label>
+                    <input type="text " placeholder="01-07-2019" class="form-control mt-2">
+                    <label class="mt-4">LSTUPDDT</label>
+                    <input type="text " placeholder="25-07-2019" class="form-control mt-2">
+                    <label class="mt-4">ACTIVE_FLAG</label>
+                    <input type="text " placeholder="Y" class="form-control mt-2">
+                    <label class="mt-4">OWNER_TYPE</label>
+                    <input type="text " placeholder="" class="form-control mt-2">
+                    <label class="mt-4">SAP_UFC_CODE</label>
+                    <input type="text " placeholder="119" class="form-control mt-2">
+                    <label class="mt-4">PRM_CODE</label>
+                    <input type="text " placeholder="" class="form-control mt-2">
+                    <label class="mt-4">CHANNEL_GROUP</label>
+                    <input type="text " placeholder="BNND" class="form-control mt-2">
+                    <button class="btu">submit</button>
+
+                  </div>
+
+
+
+
+
+                </div>
+
+              </div>
+
+            </div>
+
+            </table>
+
+          </div>
+
+
+
+        </div>
+        <!--  third sub tab end-->
+
+        <!-- third sub tab start -->
+        <div class="tab-pane fade" id="cross" role="tabpanel" aria-labelledby="cross">
+
+
+        </div>
+        <!--  third sub tab end-->
+
+
+
+      </div>
+
+      </div>
+      </div>
+
+
+
+      <div class="col-md-12 mt-5">
+        <div class="row">
+          <div class="col-md-3">
+            <input type="text" class="form-control">
+          </div>
+          <div class="col-md-3">
+            <select class="form-select" id="select1">
+              <option>Select Quarter</option>
+              <option value="202353">2022-23-Q1</option>
+              <option value="202354">2022-23-Q2</option>
+              <option value="202355">2022-23-Q3</option>
+              <option value="202356">2022-23-Q4</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select" id="select2">
+              <option>Case ID</option>
+              <option value="202353">All</option>
+              <option value="202354">1092</option>
+              <option value="202355">1093</option>
+              <option value="202356">1094</option>
+              <option value="202357">1095</option>
+              <option value="202358">1096</option>
+              <option value="202359">1097</option>
+              <option value="202360">1098</option>
+              <option value="202361">1099</option>
+              <option value="202362">C 1000</option>
+              <option value="202362">C 1001</option>
+              <option value="202362">C 1002</option>
+              <option value="202362">C 1003</option>
+
+            </select>
+          </div>
+          <div class="row col-md-3">
+            <div class="col-md-6">
+              <a href="#" name="btnsearch" class="btn btn-primary w-30">Search</a>
+
+            </div>
+
+            <div class="col-md-6">
+              <div class="dropdown pull-right">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" >
+                  <i class="fa fa-solid fa-download"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">PDF</button></li>
+                  <li><button class="dropdown-item" type="button">Excel</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div><hr>
+       
+        
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <!-- Modal -->
+
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title" style="position: relative; top: -22px;">File Name:ARN</h4>
+              <h4 style="position: relative;
+         bottom: -1px;
+         left: -130px;
+     ">Column Count:5</h4>
+              <h4 style="position: relative;
+         top: 20px;
+         left: -263px;">Row Count:4</h4><button
+                style="border-radius: 9px;background-color:#193984;color: white ;">upload</button>
+            </div>
+
+            <div class="modal-body" style="overflow: scroll;">
+
+              <table>
+                <tr>
+                  <th class="abc">KRV_CODE</th>
+                  <th class="abc">CHANNEL_CODE</th>
+                  <th class="abc">NEW_BR_CODE</th>
+                  <th class="abc">REGION_CODE</th>
+                  <th class="abc">NAME</th>
+                  <th class="abc">MULTICITY FLAG</th>
+                  <th class="abc">CATEGORY</th>
+                  <th class="abc">ZONE</th>
+                  <th class="abc">ARN_GROUP_NAME</th>
+                  <th class="abc">SUB_CHANNEL</th>
+                  <th class="abc">VALID_FROM</th>
+                  <th class="abc">VALID_UPTO</th>
+                  <th class="abc">CREATION_DT</th>
+                  <th class="abc">LSTUPDDT</th>
+                  <th class="abc">ACTIVE_FLAG</th>
+
+                  <th class="abc">SAP_UFC_CODE</th>
+                </tr>
+
+                <tr>
+                  <td class="cde">ARN-29742</td>
+                  <td class="cde">RTL</td>
+                  <td class="cde"> 119</td>
+                  <td class="cde">NORH </td>
+                  <td class="cde">DEUTSCHE BANK</td>
+                  <td class="cde">E</td>
+                  <td class="cde">BANKS</td>
+                  <td class="cde">WEST</td>
+                  <td class="cde">Deutsche Bank</td>
+                  <td class="cde">E-ARN</td>
+                  <td class="cde">01-10-2021</td>
+                  <td class="cde">30-12-9999</td>
+                  <td class="cde">01-07-2019</td>
+                  <td class="cde">25-07-2019</td>
+                  <td class="cde">Y</td>
+                  <td class="cde">119</td>
+                </tr>
+
+
+
+
+
+                <tr>
+                  <td class="cde"> ARN-47629</td>
+                  <td class="cde">RTL</td>
+                  <td class="cde"> 119</td>
+                  <td class="cde">MUMB </td>
+                  <td class="cde">BARCLAYS BANK PLC</td>
+                  <td class="cde">Y</td>
+                  <td class="cde"> ND</td>
+                  <td class="cde">WEST</td>
+                  <td class="cde"> Barclays</td>
+                  <td class="cde">M-ARN</td>
+                  <td class="cde"> 01-10-2021</td>
+                  <td class="cde">30-12-9999</td>
+                  <td class="cde">16-11-2021</td>
+                  <td class="cde">08-12-2021</td>
+                  <td class="cde">Y</td>
+                  <td class="cde">119</td>
+                </tr>
+
+
+
+                <tr>
+                  <td class="cde"> ARN-49707</td>
+                  <td class="cde">RTL</td>
+                  <td class="cde"> 117</td>
+                  <td class="cde"> NORH </td>
+                  <td class="cde"> RELIGARE WEALTH</td>
+                  <td class="cde">E</td>
+                  <td class="cde"> ND</td>
+                  <td class="cde"></td>
+                  <td class="cde"> Religare</td>
+                  <td class="cde"> E-ARN</td>
+                  <td class="cde"> 01-10-2021</td>
+                  <td class="cde"> 30-12-9999</td>
+                  <td class="cde">01-07-2019</td>
+                  <td class="cde"> 25-07-2019</td>
+                  <td class="cde">Y</td>
+                  <td class="cde">117</td>
+                </tr>
+
+
+                <tr>
+                  <td class="cde"> ARN-79711</td>
+                  <td class="cde">RTL</td>
+                  <td class="cde">400 </td>
+                  <td class="cde">NORT </td>
+                  <td class="cde"> RELIGARE MARKETINGS</td>
+                  <td class="cde">Y</td>
+                  <td class="cde"> ND</td>
+                  <td class="cde">NORTH </td>
+                  <td class="cde"> Barclays</td>
+                  <td class="cde">M-ARN</td>
+                  <td class="cde"> 01-10-2021</td>
+                  <td class="cde">30-12-9999</td>
+                  <td class="cde">16-11-2021</td>
+                  <td class="cde">08-12-2021</td>
+                  <td class="cde">Y</td>
+                  <td class="cde">119</td>
+                </tr>
+              </table>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- <hr id="third-hr" style="margin-top: -56px; "> -->
+      <!-- <table>
+   <tr>
+     <td>
+       <table class="row pt-3 id=" step1">
+         <tr>
+           <td><input type="text" class="form-control" id="select3" /></td>
+           <td>
+             <select class="form-select" id="select1">
+               <option>Select Quarter</option>
+               <option value="202353">2022-23-Q1</option>
+               <option value="202354">2022-23-Q2</option>
+               <option value="202355">2022-23-Q3</option>
+               <option value="202356">2022-23-Q4</option>
+             </select>
+           </td>
+           <td>
+             <select class="form-select" id="select2">
+               <option>Select KRV Code</option>
+               <option value="202353">ARN-29742</option>
+               <option value="202354">ARN-47629</option>
+               <option value="202355">ARN-49707</option>
+               <option value="202356">ARN-79711</option>
+               <option value="202357">AAB-1000</option>
+               <option value="202358">ARN-251276</option>
+               <option value="202359">ARN-69626</option>
+               <option value="202360">ARN-94941</option>
+               <option value="202361">ARN-132998</option>
+               <option value="202362">ARN-60809</option>
+             </select>
+           </td>
+           <td><a href="#" id="btn_search1" name="btnsearch" class="button "
+               style="border-radius: 5px; background-color:#193984; color: white;">Search</a></td>
+         </tr>
+       </table>
+     </td>
+
+   </tr>
+ </table> -->
+      <!-- <hr id="arn-master-secondhr"> -->
+      <!-- 1-10 of 500 <i class="fa fa-solid fa-angle-left"></i> <a href=""><i class="fa fa-solid fa-angle-right"></i></a> -->
+      <div class="row pt-2">
+
+        <div class="col-md-6 row mb-3" >
+          <!-- <tr>
+              <th scope="col"><b>Show</b> <i class="fa fa-solid"></i></th>
+              <td>
+                
+                </td> -->
+          <div class="col-md-3" style="display: flex; margin-top: 30px;">
+            <label>Show</label>
+            <select class="form-select" id="records" style="margin-left: 10px;">
+              <option>50</option>
+              <option>100</option>
+              <option>200</option>
+              <option>All</option>
+            </select> <b> entries</b>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-6" style=" margin-top: 30px;">
+            <!-- <label>Maker</label> -->
+    
+            <div class="selectBox form-control" style="    position: relative;
+            top: -12px;" onclick="showCheckboxes1()">
+    
+              <select class="custom-select border-bottom form-control-plaintext">
+    
+                <option>Column </option>
+    
+              </select>
+    
+              <div class="overSelect"></div>
+    
+            </div>
+    
+            <div id="checkboxes1" class="checkstyle">
+    
+              <label><input type="checkbox" id="select-all2">Select All</label>
+              <label for="onem">
+    
+                <input type="checkbox" id="onem" name="master2" onclick="myFunction()" />
+    
+                CASE ID </label>
+    
+              <label for="twom">
+                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+    
+                REMARKS </label>
+                <label for="twom">
+                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+    
+                  CASE_NAME</label>
+                  <label for="twom">
+                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+      
+                    ATTRIBUTE </label>
+                    <label for="twom">
+                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+        
+                      P_SEQ</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        EXCEPTION_ATTRIBUTE</label>
+                        <label for="twom">
+                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+            
+                          SRNO </label>
+                          <label for="twom">
+                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+              
+                            VALID_FROM</label>
+                            <label for="twom">
+                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                
+                              VALID_UPTO </label>
+                              <label for="twom">
+                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                  
+                                CASENO </label>
+                                <label for="twom">
+                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                    
+                                  CASE_TYPE </label>
+                                  <label for="twom">
+                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                      
+                                    APPLICABILITY </label>
+                                                       
+                                                                                          
+                                                                                            
+            </div>
+          </div>
+    </div>
+     
+
+
+        <!-- akku -->
+        <!-- <div class="col-md-4"> -->
+        <!-- <form> -->
+        <!-- <a href="../Templates/Exceptions-master.xlsx" download="Exceptions-Master"><button type="button" id="templatebtn" class="btn btn-primary">Templates</button></a>  -->
+        <!-- </form> -->
+        <!-- </div> -->
+        <!-- <hr id="arn-master-firsthr"> -->
+
+        <!-- <div class="col-md-6">
+              <td><button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="margin-left: 210px;"><i class="fa fa-solid fa-download"></i></button>
+                <ul class="dropdown-menu">
+                <li><button class="dropdown-item" type="button">Excel</button></li>
+                </ul></td>
+                </div>
+              </div> -->
+        <div class="overflow-auto">
+          <table class="table small border table-hover" id="sortable">
+            <thead>
+              <tr class="bg-primary text-white">
+                <!-- <th scope="col"><input type="checkbox" class="form-check-input" /></th> -->
+
+                <th scope="col">CASE ID <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+                <th scope="col">REMARKS <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+                <th scope="col">CASE_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+                <!-- <th scope="col">FIELDS <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th> not required-->
+                <th scope="col">ATTRIBUTE <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+                <th scope="col">P_SEQ <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th>
+                <th scope="col">EXCEPTION_ATTRIBUTE <i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i></th>
+                <th scope="col">SRNO <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+                <th scope="col">VALID_FROM <i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th>
+                <th scope="col">VALID_UPTO <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+                <th scope="col">CASENO <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+                <th scope="col">CASE_TYPE <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+                <th scope="col">APPLICABILITY <i class="fa fa-solid fa-sort" onclick="sortBy(13)"></i></th>
+                <!-- <th scope="col">FLAG_RETROSPECTIVE <i class="fa fa-solid fa-sort" onclick="sortBy(14)"></i></th> not required -->
+                <!-- <th scope="col">LSTUPDDT <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th> not required-->
+                <th scope="col">CREATION_SERV_REQ</th>
+                <th scope="col">LSTUPD_SERV_REQ</th>
+                <th scope="col">LSTUPDUSER</th>
+                <th scope="col">CREATION_TICKET_ID</th>
+                <th scope="col">LSTUPD_TICKET_ID</th>
+                <th scope="col">LSTUPDDT</th>
+                <th scope="col">CREATION_DT</th>
+                <th scope="col">ACTION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+                <td>BUMST_1985695836</td>
+                <td></td>
+                <td>BND-Excep-599259454896-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599259454896</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>1058</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                  <td>
+                    <div class="dropdown">
+                      <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class=""></i>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                        <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                        <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                      </ul>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5689756423</td>
+                <td></td>
+                <td>BND-Excep-599259454896-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIEQGPCB99577070599259454896</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+                
+                <td>1058</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>BUMAP_5678904356</td>
+                <td></td>
+                <td>BND-Excep-599259454896-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599259454896</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>1059</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_2365987564</td>
+                <td></td>
+                <td>BND-Excep-599259454896-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIEQGPCB99580743599259454896</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>1059</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>BUMST_8975321569</td>
+                <td></td>
+                <td>BND-Excep-599259454896-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599259454896</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+                
+                <td>1060</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_578942368</td>
+                <td></td>
+                <td>BND-Excep-599259454896-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIEQGPCB99582442599259454896</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+                
+                <td>1060</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>BUMST_5432186578</td>
+                <td></td>
+                <td>BND-Excep-599331260276-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599331260276</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>1061</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_8364968723</td>
+                <td></td>
+                <td>BND-Excep-599331260276-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIEQGPKB99421549599331260276</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>1061</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>BUMST_9897538756</td>
+                <td></td>
+                <td>BND-Excep-599331183076-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599331183076</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+             
+                <td>1062</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>BUMST_6958423658</td>
+                <td></td>
+                <td>BND-Excep-599331183076-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIEQGPKB99420996599331183076</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+                
+                <td>1062</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599329464506-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599329464506</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>1063</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599329464506-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIGPGPKB99421498599329464506</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>1063</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599280893681-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599280893681</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>1064</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599280893681-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIEQGPKB99415597599280893681</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>1064</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599280893681-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599280893681</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>1065</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599280893681-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIEQGPKB99415770599280893681</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+                
+                <td>1065</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599332578671-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599332578671</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>1066</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599332578671-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIEQGPST99222709599332578671</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>1066</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599321858295-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599321858295</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+                
+                <td>1067</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599321858295-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIEQGPST99222274599321858295</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>1067</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-577330259806-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>577330259806</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>1068</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-577330259806-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTICPD2BS771785867577330259806</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>1068</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-577328548123-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>577328548123</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>1069</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-577328548123-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTICPD2BS771785868577328548123</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>1069</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>AGSPP5291J--Suraj Ramchand Popley</td>
+                <!-- <td></td> -->
+                <td>AGSPP5291J</td>
+                <td>A</td>
+                <td>PANNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>1119</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>AAACS5154L-Popley Diamond and Gold Plaza Pvt Ltd</td>
+                <!-- <td></td> -->
+                <td>AAACS5154L</td>
+                <td>A</td>
+                <td>PANNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>1120</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>AZHAAN SALEEM MERCHANT-599333868576</td>
+                <!-- <td></td> -->
+                <td>599333868576</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+             
+                <td>2086</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>GAURI MOONDRA-599259454896</td>
+                <!-- <td></td> -->
+                <td>599259454896</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>2087</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>ABHIJIT DATTANAND KUMTA-599333286276</td>
+                <!-- <td></td> -->
+                <td>599333286276</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>2088</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>RAKSHIT HARGAVE-599280893681</td>
+                <!-- <td></td> -->
+                <td>599280893681</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>2089</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>RAKSHIT HARGAVE-599333636254</td>
+                <!-- <td></td> -->
+                <td>599333636254</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>2090</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>RAJSEKAR KUPPUSWAMI MITTA-599333290121</td>
+                <!-- <td></td> -->
+                <td>599333290121</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>2091</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>RAMNIKLAL H PARBHOO-599333187721</td>
+                <!-- <td></td> -->
+                <td>599333187721</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>2092</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+               </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>MANISHA DINESH MULANI-599333777061</td>
+                <!-- <td></td> -->
+                <td>599333777061</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>2093</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>ASHISH AVINASH BAKRE-599333187716</td>
+                <!-- <td></td> -->
+                <td>599333187716</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>2094</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>ANIL P MEHTA-599333402492</td>
+                <!-- <td></td> -->
+                <td>599333402492</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+                
+                <td>2095</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>AHMED SARFRAZ KHAN-599333960062</td>
+                <!-- <td></td> -->
+                <td>599333960062</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>2096</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>RAJAT SAPRA-599333455646</td>
+                <!-- <td></td> -->
+                <td>599333455646</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>2097</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>HARILAL KANJI RAGHWANI-599333212105</td>
+                <!-- <td></td> -->
+                <td>599333212105</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+                
+                <td>2098</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>ARPAN RAJNEESH DAVID-599333208856</td>
+                <!-- <td></td> -->
+                <td>599333208856</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>2099</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>SUNANDO MUKHOPADHYAY-599333289873</td>
+                <!-- <td></td> -->
+                <td>599333289873</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>2100</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>SUNANDO MUKHOPADHYAY-599333239557</td>
+                <!-- <td></td> -->
+                <td>599333239557</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>2101</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>S A PATEL-599333908757</td>
+                <!-- <td></td> -->
+                <td>599333908757</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>2102</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>N SUDHAKAR-599325839905</td>
+                <!-- <td></td> -->
+                <td>599325839905</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>2103</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>SATISH RAMESH LALWANI-599333442765</td>
+                <!-- <td></td> -->
+                <td>599333442765</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>2104</td>
+                <td>B</td>
+                <td>Sales-NetSales/AAUM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599330230196-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599330230196</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>991</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599330230196-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTIEQGPST99215879599330230196</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>991</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-599321858295-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>599321858295</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+                
+                <td>992</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-577328440664-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTINYG1BS771375530577328440664</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>997</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-577328440664-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>577328440664</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>998</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-577328440664-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTINYG1BS771396841577328440664</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>998</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-577328440664-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>577328440664</td>
+                <td>C</td>
+                <td>FOLIO NUMBER</td>
+                <td>2</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+              
+                <td>999</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+
+                <td>UIMST_5876423656</td>
+                <td></td>
+                <td>BND-Excep-577328440664-RMCODE3907</td>
+                <!-- <td></td> -->
+                <td>UTINYG1BS771462346577328440664</td>
+                <td>F</td>
+                <td>TRANSACTION REFNO</td>
+                <td>1</td>
+                <td>30-DEC-9999</td>
+                <td>01-JUL-2022</td>
+               
+                <td>999</td>
+                <td>S</td>
+                <td>Sales-NetSales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="dropdown">
+                    <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                      id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class=""></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="../master/edit-exception-master.html">Edit</a></li>
+                      <li><a class="dropdown-item" href="../master/close-exception-master.html">Close</a></li>
+                      <li><a class="dropdown-item" id="myBtn">Edit/Split</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</footer>
+
+<script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+<!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+<script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+<!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+<script src="../assets/js_1/jquery.multi-select.js"></script>
+<!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+<script src="../assets/js_1/main.js"></script>
+<!-- <script src="../assets/js/main.js"></script> -->
+<script src="../assets/js_1/uti.js"></script>
+<!-- <script src="../assets/js/uti.js"></script> -->
+<script src="../assets/js_1/custom.js"></script>
+<!-- <script src="../assets/js/custom.js"></script> -->
+
+<script>
+  var onClick = function() {
+  };
+
+// $('#button').click(onClick);
+
+$('#button2').click(function() {
+alert('Are you sure to proceed?');
+});
+</script>
+<script>
+// toggle script
+var  innerSidebar = function(){
+$('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+// toggle script
+
+</script>
+<script type="text/javascript">
+function addRows() {
+
+  var table = document.getElementById('emptbl');
+
+  var rowCount = table.rows.length;
+
+  var cellCount = table.rows[0].cells.length;
+
+  var row = table.insertRow(rowCount);
+
+  for (var i = 0; i <= cellCount; i++) {
+
+    var cell = 'cell' + i;
+
+    cell = row.insertCell(i);
+
+    var copycel = document.getElementById('col' + i).innerHTML;
+
+    cell.innerHTML = copycel;
+
+    if (i == 6) {
+
+      var radioinput = document.getElementById('col3').getElementsByTagName('input');
+
+      for (var j = 0; j <= radioinput.length; j++) {
+
+        if (radioinput[j].type == 'radio') {
+
+          var rownum = rowCount;
+
+          radioinput[j].name = 'gender[' + rownum + ']';
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+function deleteRows() {
+
+  var table = document.getElementById('emptbl');
+
+  var rowCount = table.rows.length;
+
+  if (rowCount > '2') {
+
+    var row = table.deleteRow(rowCount - 1);
+
+    rowCount--;
+
+  }
+
+
+}
+
+function PopupShow() {
+
+  document.getElementById('SplitPopup').style.display = "block";
+
+}
+
+function PopupHide() {
+
+  document.getElementById('SplitPopup').style.display = "none";
+
+}
+
+</script>
+<script>
+$(document).on("click", "#myBtn", function () {
+
+
+
+
+  $('#myModal').css("display", "block")
+
+})
+
+
+
+
+
+
+
+
+
+
+$('.close').click(function () {
+
+ 
+
+  $('#myModal').css("display", "none")
+
+})
+
+
+</script>
+<!-- <script>
+function myFunction2() {
+  alert("Wrong Data Found Please Check Again");
+}
+</script>  -->
+<script>
+      
+  myButton.addEventListener("click", function () {
+    myPopup.classList.add("show");
+  });
+  closePopup.addEventListener("click", function () {
+    myPopup.classList.remove("show");
+  });
+  closePopup1.addEventListener("click", function () {
+    myPopup.classList.remove("show");
+  });
+  window.addEventListener("click", function (event) {
+    if (event.target == myPopup) {
+      myPopup.classList.remove("show");
+    }
+  });
+</script>
+  <!-- columns -->
+  <script>
+
+    var expanded = false;
+  
+  
+  
+  
+    function showCheckboxes1() {
+  
+      var checkboxes1 = document.getElementById("checkboxes1");
+  
+      if (!expanded) {
+  
+        checkboxes1.style.display = "block";
+  
+        expanded = true;
+  
+      } else {
+  
+        checkboxes1.style.display = "none";
+  
+        expanded = false;
+  
+      }
+  
+    }</script>
+  
+  <script>
+  
+    $(function () {
+  
+      $("#example1").DataTable({
+  
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+  
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+  
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+  
+      $('#example2').DataTable({
+  
+        "paging": true,
+  
+        "lengthChange": false,
+  
+        "searching": false,
+  
+        "ordering": true,
+  
+        "info": true,
+  
+        "autoWidth": false,
+  
+        "responsive": true,
+  
+      });
+  
+    });
+  
+  </script>
+  
+  <script>
+    document.getElementById('select-all2').onclick = function () {
+      var checkboxes1 = document.getElementsByName('master2');
+      for (var checkbox of checkboxes1) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+</body>
+
+</html>

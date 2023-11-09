@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>UTI</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+ <link href="../assets/css_1/style.css" rel="stylesheet"> 
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+   <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+   <link href="../assets/css_1/main.css" rel="stylesheet">
+   <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+   <link href="../assets/css_1/style.css" rel="stylesheet">
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+   <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+   <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+ 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ 
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+		<section class="section dashboard">
+  <div class="bg-white p-3 border">
+  <div class="row">
+    <div class="col-md-12">
+      <h5>Add Employee Details</h5>
+       <hr id="arn-master-firsthr">
+      <div class="row">
+        <div class="col-md-12">
+          <table>
+            <tr>
+              <td>
+                <input type="file" id="myFile" />
+              </td>
+              <td>
+                <input type="button" value="Upload" id="btnupload" class="btn btn-primary" />
+              </td>
+            </tr>
+           </table>
+      <form>
+        <hr id="third-hr">
+<div class="row pt-3">
+<div class="form-group col-md-6 mb-3">
+<label>Employee ID</label>
+<input type="" id="" name="" class="form-control">
+</div> 
+<div class="form-group col-md-6 mb-3">
+<label> Employee Name </label>
+<input type="" id="" name="" class="form-control">
+</div>
+<div class="form-group col-md-6 mb-3">
+<label>Email ID</label>
+<input type="" id="" name="" class="form-control">
+</div>
+<!-- <div class="form-group col-md-6 mb-3"> -->
+<!-- <label>Password</label> -->
+<!-- <input type="" id="" name="" class="form-control" >      -->
+<!-- </div> -->
+<div class="form-group col-md-6 mb-3">
+<label> Channel Code </label>
+<select name="ddlChannelCode" id="ddlChannelCode" class="form-select w-100">
+<option selected="selected" value="Select">Select</option>
+<option value="PRDCT">PRDCT</option>
+<option value="INST">INST</option>
+<option value="PSUC">PSUC</option>
+<option value="SIP">SIP</option>
+<option value="UTIMF">UTIMF</option>
+<option value="RTL">RTL</option>    
+</select>
+</div>
+<div class="form-group col-md-6 mb-3">
+  <label> Employee Role </label>
+  <select name="ddlemployeerole" id="ddlemployeerole" class="form-select w-100">
+  <option selected="selected" value="Select">Select</option>
+  <option value="VRM">VRM</option>
+  <option value="Zonal Head">Zonal Head</option>
+  <option value="Region Head">Region Head</option>
+  <option value="Chief Manager">Chief Manager</option>
+  <option value="CMO">CMO</option>
+  <option value="Channel Head/Country Head">Channel Head/Country Head</option>
+  <option value="Relationship Manager/Senior Relationship Manager">Relationship Manager/Senior Relationship Manager</option>    
+  </select>
+</div>
+<!-- <div class="form-group col-md-6 mb-2"> -->
+<!-- <label>CRM Reporting Role</label> -->
+<!-- <select name="ddlReportingRole" id="ddlReportingRole" class="form-select w-100"> -->
+  <!-- <option value="Select">Select</option> -->
+  <!-- <option value="Audit Team">Audit Team</option> -->
+  <!-- <option value="BND - Business Development Manager">BND - Business Development Manager</option> -->
+  <!-- <option value="BND - Channel Head">BND - Channel Head</option> -->
+  <!-- <option value="BND - Named Account Manager / Regional Head">BND - Named Account Manager / Regional Head</option> -->
+  <!-- <option value="BND - Relationship Manager">BND - Relationship Manager</option> -->
+  <!-- <option value="Compliance Team">Compliance Team</option> -->
+  <!-- <option value="COO">COO</option> -->
+  <!-- <option value="DoAA Team">DoAA Team</option> -->
+  <!-- <option value="DoFA Team">DoFA Team</option> -->
+  <!-- <option value="Head - CC">Head - CC</option> -->
+  <!-- <option value="Head - CC &amp; Online Sales">Head - CC &amp; Online Sales</option> -->
+  <!-- <option value="Head - Marketing &amp; Sales">Head - Marketing &amp; Sales</option> -->
+  <!-- <option value="Head - Operations">Head - Operations</option> -->
+  <!-- <option value="Head - Product">Head - Product</option> -->
+  <!-- <option value="IMC - Business Development Manager">IMC - Business Development Manager</option> -->
+  <!-- <option value="IMC - Channel Head">IMC - Channel Head</option> -->
+  <!-- <option value="IMC - Regional Head">IMC - Regional Head</option> -->
+  <!-- <option value="IMC - Relationship Manager">IMC - Relationship Manager</option> -->
+  <!-- <option value="MD/EA to MD">MD/EA to MD</option> -->
+  <!-- <option value="MIS &amp; Analytics Team">MIS &amp; Analytics Team</option> -->
+  <!-- <option value="Operations - IRC Team">Operations - IRC Team</option> -->
+  <!-- <option value="Operations - MIS Team">Operations - MIS Team</option> -->
+  <!-- <option value="Operations - SIP Team">Operations - SIP Team</option> -->
+  <!-- <option value="Operations - SLA Team">Operations - SLA Team</option> -->
+  <!-- <option value="PMS Team">PMS Team</option> -->
+  <!-- <option value="Product Debt Team">Product Debt Team</option> -->
+  <!-- <option value="Product Equity Team">Product Equity Team</option> -->
+  <!-- <option value="PSUC - Channel Head">PSUC - Channel Head</option> -->
+  <!-- <option value="PSUC - Relationship Manager">PSUC - Relationship Manager</option> -->
+  <!-- <option value="Retail - Business Development Manager">Retail - Business Development Manager</option> -->
+  <!-- <option value="Retail - Channel Head">Retail - Channel Head</option> -->
+  <!-- <option value="Retail - Chief Manager">Retail - Chief Manager</option> -->
+  <!-- <option value="Retail - International Finance Team">Retail - International Finance Team</option> -->
+  <!-- <option value="Retail - Regional Coordinator">Retail - Regional Coordinator</option> -->
+  <!-- <option value="Retail - Regional Head">Retail - Regional Head</option> -->
+  <!-- <option value="Retail - Relationship Manager">Retail - Relationship Manager</option> -->
+  <!-- <option value="Retail - Zonal Head">Retail - Zonal Head</option> -->
+  <!-- <option value="Risk Team">Risk Team</option> -->
+  <!-- <option value="SIP &amp; SP - Head">SIP &amp; SP - Head</option> -->
+  <!-- <option value="SIP &amp; SP - Relationship Manager">SIP &amp; SP - Relationship Manager</option> -->
+  <!-- <option value="No Role">No Role</option> -->
+  <!-- </select> -->
+<!-- </div> -->
+<!-- <div class="form-group col-md-6 mb-2"> -->
+  <!-- <label>CRM Power User</label> -->
+  <!-- <select name="ddlPowerUser" id="ddlPowerUser" class="form-select w-100"> -->
+    <!-- <option value="Select">Select</option> -->
+    <!-- <option value="O">Power user : User shall have access to OBIEE (max 50 user permissable)</option> -->
+    <!-- <option value="B">Non-power user : User shall have access to BI Publisher</option> -->
+    <!-- <option value="N">User shall not have access to any reporting application</option> -->
+    <!-- </select> -->
+<!-- </div> -->
+<hr class="mt-3">
+<div class="form-group col-md-4 mb-3">
+  <label>Zone</label>
+  <select name="ddlzone" id="ddlzone" class="form-control">
+    <option selected="selected" value="Select">Select</option>
+    <option value="West">West</option>
+    <option value="South">South</option>
+    <option value="North">North</option>
+    <option value="Gulf">Gulf</option>
+    <option value="Corp">Corp</option>
+    <option value="East">East</option>
+    </select>
+  </div> 
+  <div class="form-group col-md-4 mb-3">
+    <label>Region</label>
+    <select name="ddlRegion" id="ddlRegion" class="form-control">
+      <option selected="selected" value="Select">Select</option>
+      <option value="A">Andhra Pradesh</option>
+      <option value="B">Bihar</option>
+      <option value="BN">B&ND Bangalore</option>
+      <option value="BN1">B&ND Delhi</option>
+      <option value="BN2">B&ND Kolkata</option>
+      <option value="BN3">B&ND Mumbai</option>
+      <option value="C">Chandigarh</option>
+      <option value="D">Delhi</option>
+      <option value="E">Gujarat</option>
+      <option value="F">Gulf</option>
+      <option value="G">Karnataka</option>
+      <option value="H">Mumbai</option>
+      <option value="I">Nagpur</option>
+      <option value="J">North East</option>
+      <option value="J1">Orissa & Jharkhand</option>
+      <option value="J2">Rajasthan</option>
+      <option value="J3">Rest of Maharashtra and Goa</option>
+      <option value="J4">Tamilnadu and Kerala</option>
+      <option value="J5">West Bengal</option>
+      </select>
+    </div> 
+<div class="form-group col-md-4 mb-3">
+<label>Location/UFC</label>
+<select name="ddl_location" id="ddl_location" class="form-control">
+<option selected="selected" value="Select">Select</option>
+<option value="428">AGARTALA</option>
+<option value="407">AGRA</option>
+<option value="101">AHMEDABAD</option>
+<option value="418">AJMER</option>
+<option value="462">AKOLA</option>
+<option value="430">ALIGARH</option>
+<option value="408">ALLAHABAD</option>
+<option value="131">ALWAR</option>
+<option value="447">AMBALA</option>
+<option value="137">AMRAVATI</option>
+<option value="411">AMRITSAR</option>
+<option value="129">ANAND</option>
+<option value="313">ANNA NAGAR</option>
+<option value="456">ASANSOL</option>
+<option value="128">AURANGABAD</option>
+<option value="AHD01">B&amp;ND AHMEDABAD-01</option>
+<option value="BAN01">B&amp;ND BANGALORE-01</option>
+<option value="BAN-RH">B&amp;ND BANGLORE-RM(RH Reporting </option>
+<option value="CHN01">B&amp;ND CHENNAI-01</option>
+<option value="HYD01">B&amp;ND HYDERABAD-01</option>
+<option value="KOL01">B&amp;ND KOLKATA-01</option>
+<option value="KOL02">B&amp;ND KOLKATA-02</option>
+<option value="KOL-RH">B&amp;ND KOLKOTA-RM(RH Reporting)</option>
+<option value="MUM01">B&amp;ND MUMBAI-01</option>
+<option value="MUM02">B&amp;ND MUMBAI-02</option>
+<option value="MUM03">B&amp;ND MUMBAI-03</option>
+<option value="MUM-RH">B&amp;ND MUMBAI-RM(RH Reporting)</option>
+<option value="DEL01">B&amp;ND NEWDELHI-01</option>
+<option value="DEL02">B&amp;ND NEWDELHI-02</option>
+<option value="DEL-RH">B&amp;ND NEWDELHI-RM(RH Reporting)</option>
+<option value="PUN01">B&amp;ND PUNE-01</option>
+<option value="215">BAHARAMPUR (WB)</option>
+<option value="437">BALASORE</option>
+<option value="303">BANGALORE</option>
+<option value="213">BARASAT</option>
+<option value="220">BARDHAMAN</option>
+<option value="427">BAREILLY</option>
+<option value="325">BELGAUM</option>
+<option value="329">BELLARY</option>
+<option value="218">BERHAMPUR (ORISSA)</option>
+<option value="431">BHAGALPUR</option>
+<option value="138">BHARUCH</option>
+<option value="450">BHATINDA</option>
+<option value="125">BHAVNAGAR</option>
+<option value="139">BHILAI</option>
+<option value="132">BHILWARA</option>
+<option value="110">BHOPAL</option>
+<option value="202">BHUBANESHWAR</option>
+<option value="144">BHUJ</option>
+<option value="133">BIKANER</option>
+<option value="455">BILASPUR</option>
+<option value="121">BKC</option>
+<option value="219">BOKARO</option>
+<option value="113">BORIVALI</option>
+<option value="406">CHANDIGARH</option>
+<option value="300">CHENNAI MAIN</option>
+<option value="124">CHINCHWAD</option>
+<option value="305">COCHIN</option>
+<option value="310">COIMBATORE</option>
+<option value="000">CORPORATE</option>
+<option value="216">CUTTACK</option>
+<option value="445">DARBHANGA</option>
+<option value="328">DAVANGERE</option>
+<option value="410">DEHRADUN</option>
+<option value="211">DHANBAD</option>
+<option value="204">DURGAPUR</option>
+<option value="413">FARIDABAD</option>
+<option value="142">GANDHINAGAR</option>
+<option value="442">GAYA</option>
+<option value="115">GHATKOPAR</option>
+<option value="412">GHAZIABAD</option>
+<option value="433">GORAKHPUR</option>
+<option value="145">GOREGAON</option>
+<option value="331">GULBARGA</option>
+<option value="432">GUNTUR</option>
+<option value="424">GURGAON</option>
+<option value="201">GUWAHATI</option>
+<option value="426">GWALIOR</option>
+<option value="459">HALDWANI</option>
+<option value="451">HARIDWAR</option>
+<option value="601">HITECHCITY UFC</option>
+<option value="307">HUBLI</option>
+<option value="304">HYDERABAD</option>
+<option value="102">INDORE</option>
+<option value="425">JABALPUR</option>
+<option value="403">JAIPUR</option>
+<option value="423">JALANDHAR</option>
+<option value="143">JALGAON</option>
+<option value="441">JAMMU</option>
+<option value="421">JAMNAGAR</option>
+<option value="205">JAMSHEDPUR</option>
+<option value="449">JANAK PURI</option>
+<option value="319">JAYANAGAR</option>
+<option value="460">JHANSI</option>
+<option value="414">JODHPUR</option>
+<option value="464">JORHAT</option>
+<option value="458">JUNAGADH</option>
+<option value="111">JVPD</option>
+<option value="318">KADAPA</option>
+<option value="123">KALYAN</option>
+<option value="438">KALYANI</option>
+<option value="402">KANPUR</option>
+<option value="210">KHARAGPUR</option>
+<option value="114">KOLHAPUR</option>
+<option value="200">KOLKATA</option>
+<option value="510">KOLKATA-(K-ARN)</option>
+<option value="419">KOTA</option>
+<option value="326">KOTTAYAM</option>
+<option value="436">KOZHIKODE (CALICUT)</option>
+<option value="415">LAXMI NAGAR UFC</option>
+<option value="119">LOTUS COURT</option>
+<option value="405">LUCKNOW</option>
+<option value="401">LUDHIANA</option>
+<option value="309">MADURAI</option>
+<option value="214">MALDA</option>
+<option value="317">MALLESWARAM</option>
+<option value="312">MANGALORE</option>
+<option value="127">MARGAO</option>
+<option value="605">MATHURA</option>
+<option value="444">MEERUT</option>
+<option value="457">MEHSANA</option>
+<option value="439">MORADABAD</option>
+<option value="446">MUZAFFARPUR</option>
+<option value="320">MYSORE</option>
+<option value="105">NAGPUR</option>
+<option value="109">NASIK</option>
+<option value="134">NAVSARI</option>
+<option value="417">NEHRU PLACE</option>
+<option value="327">NELLORE</option>
+<option value="400">NEW DELHI</option>
+<option value="440">NOIDA</option>
+<option value="117">NRI BRANCH OFFICE</option>
+<option value="103">PANAJI</option>
+<option value="448">PANIPAT</option>
+<option value="429">PATIALA</option>
+<option value="203">PATNA</option>
+<option value="416">PITAM PURA</option>
+<option value="454">PONDICHERRY</option>
+<option value="122">POWAI</option>
+<option value="104">PUNE</option>
+<option value="315">PUNJGUTTA</option>
+<option value="118">RAIPUR</option>
+<option value="324">RAJAHMUNDRY</option>
+<option value="107">RAJKOT</option>
+<option value="209">RANCHI</option>
+<option value="207">RASHBEHARI</option>
+<option value="126">RATLAM</option>
+<option value="461">ROHTAK</option>
+<option value="222">ROURKELA</option>
+<option value="604">SAHARANPUR</option>
+<option value="434">SALEM</option>
+<option value="208">SALTLAKE</option>
+<option value="212">SAMBALPUR</option>
+<option value="316">SECUNDERABAD</option>
+<option value="221">SERAMPORE</option>
+<option value="223">SHILLONG</option>
+<option value="404">SHIMLA</option>
+<option value="463">SHIMOGA</option>
+<option value="141">SIKAR</option>
+<option value="224">SILCHAR</option>
+<option value="206">SILIGURI</option>
+<option value="135">SOLAPUR</option>
+<option value="140">SRIGANGANAGAR</option>
+<option value="106">SURAT</option>
+<option value="314">T NAGAR</option>
+<option value="116">THANE</option>
+<option value="217">TINSUKIA</option>
+<option value="435">TIRUNELVELI</option>
+<option value="330">TIRUPATI</option>
+<option value="322">TIRUPUR</option>
+<option value="301">TRICHUR</option>
+<option value="306">TRICHY</option>
+<option value="311">TRIVANDRUM</option>
+<option value="422">UDAIPUR</option>
+<option value="108">VADODARA</option>
+<option value="453">VALSAD</option>
+<option value="136">VAPI</option>
+<option value="409">VARANASI</option>
+<option value="112">VASHI</option>
+<option value="323">VELLORE</option>
+<option value="302">VIJAYAWADA</option>
+<option value="157">VIRAR</option>
+<option value="308">VISHAKHAPATNAM</option>
+<option value="321">WARANGAL</option>
+<option value="606">WHITEFIELD (BANGALORE)</option>
+</select>
+</div>
+<div class="form-group col-md-4 mb-3">
+  <label>Functional Role</label>
+<select name="ddlFunctionalRole" id="ddlFunctionalRole" class="form-control">
+<option value="Select">Select</option>
+<option value="ADMIN">ADMIN</option>
+<option value="CH">CH</option>
+<option value="RH">RH</option>
+<option value="RM">RM</option>
+<option value="SUPPORT">SUPPORT</option>
+<option value="ZH">ZH</option>
+</select>
+</div>
+<!-- <div class="form-group col-md-4 mb-3"> -->
+  <!-- <label>City</label> -->
+<!-- <select name="ddlCity" id="ddlCity" class="form-control"> -->
+<!-- <option value="Select">Select</option> -->
+<!-- <option value="BANGALORE">BANGALORE</option> -->
+<!-- <option value="CHENNAI">CHENNAI</option> -->
+<!-- <option value="FARIDABAD">FARIDABAD</option> -->
+<!-- <option value="GHAZIABAD">GHAZIABAD</option> -->
+<!-- <option value="GURGAON">GURGAON</option> -->
+<!-- <option value="KOLKATA">KOLKATA</option> -->
+<!-- <option value="MUMBAI">MUMBAI</option> -->
+<!-- <option value="NEW DELHI">NEW DELHI</option> -->
+<!-- <option value="NOIDA">NOIDA</option> -->
+<!-- <option value="THANE">THANE</option> -->
+<!-- <option value="VASHI">VASHI</option> -->
+<!-- </select> -->
+<!-- </div> -->
+<div class="form-group col-md-4 mb-3">
+  <label>Start Date/Transfer Date</label>
+  <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+</div>
+<div class="form-group col-md-4 mb-3">
+  <label>End Date</label>
+  <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+</div>
+<div class="form-group col-md-4 mb-3">
+<label>Status</label>
+<select name="ddl_status" id="ddl_status" class="form-control">
+  <option selected="selected" value="Select">Select</option>
+  <option value="Y">Working</option>
+  <option value="N">Not Working</option>
+  </select>
+</div>
+<div class="form-group col-md-4 mb-3">
+  <label>Type Of Movement</label>
+  <select name="ddl_status" id="ddl_status" class="form-control">
+    <option selected="selected" value="Select">Select</option>
+    <option value="1">New</option>
+    <option value="2">Transfer</option>
+    <option value="3">Resignation</option>
+    <option value="4">Promotion</option>
+    <option value="5">Demotion</option>
+    </select>
+  </div>
+
+<!-- <div class="form-group col-md-4 mb-3"> -->
+  <!-- <label>Petty Cash Claim</label> -->
+  <!-- <select name="ddl_pc" id="ddl_pc" class="form-control" > -->
+    <!-- <option selected="selected" value="Select">Select</option> -->
+    <!-- <option value="Y">YES</option> -->
+    <!-- <option value="N">NO</option> -->
+    <!-- </select> -->
+  <!-- </div> -->
+<div class="form-group col-md-4 mb-3">
+<label>Select Quarter</label>
+<select name="ddlquarterselction" id="ddlquarterselction" class="form-control">
+  <option selected="selected" value="Select">--Select--</option>
+  <option value="202353">2022-23-Q1</option>
+  <option value="202354">2022-23-Q2</option>
+  <option value="202355">2022-23-Q3</option>
+  </select>
+</div>
+<div class="form-group col-md-4 mb-3">
+  <label>Valid From</label>
+  <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+</div>
+<div class="form-group col-md-4 mb-3">
+  <label>Valid Upto</label>
+  <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+</div>
+<div class="form-group col-md-4 mb-3">
+  <label>HR Valid From</label>
+  <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+</div>
+<div class="form-group col-md-4 mb-3">
+  <label>HR Valid Upto</label>
+  <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+</div>
+<div class="form-group col-md-8">
+<label>Remark</label>
+<textarea class="form-control" id="" name="" ></textarea>
+</div>
+<div class="col-md-12 mt-3 text-center"> 
+<a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">SAVE</a> 
+<a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">Cancel</a>
+<a href="../user-managment/employeedetails.html" id="btn_search" name="btnsearch" class="btn btn-primary">Back</a>   
+</div> 
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong> <script type="text/javascript">
+          var d = new Date();
+          yr = d.getFullYear();
+          document.write(yr);
+
+          $(document).ready(function() {  
+        $('#action').multiselect();  
+        });   
+    </script>. All Rights Reserved</div>
+  </footer>
+
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+    // aaa
+    var acc = document.getElementsByClassName("accordion");
+
+    var i;
+
+
+
+
+    for (i = 0; i < acc.length; i++) {
+
+      acc[i].addEventListener("click", function () {
+
+        this.classList.toggle("active");
+
+        var panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+
+          panel.style.display = "none";
+
+        } else {
+
+          panel.style.display = "block";
+
+        }
+
+      });
+
+    }
+  </script>
+   <script>
+    // toggle script
+var  innerSidebar = function(){
+   $('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+ // toggle script
+
+</script>
+<script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+</body>
+</html>

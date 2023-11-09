@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta content="width=device-width,initial-scale=1" name="viewport">
+   <title>UTI</title>
+   <meta content="" name="description">
+   <meta content="" name="keywords">
+   <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+   <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+   <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+   <link href="../assets/css_1/main.css" rel="stylesheet">
+   <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+   <link href="../assets/css_1/style.css" rel="stylesheet">
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+
+<body>
+   <header id="header" class="header fixed-top d-flex align-items-center">
+
+      <div class="d-flex align-items-center justify-content-between"><i class="toggle-sidebar-btn pe-2"
+            onclick="innerSidebar()">
+
+            <span class="fa fa-align-justify text-white"></span> </i><img src="../assets/images_1/logo_1.png" alt=""
+            width="130px"></div>
+
+      <div class="col-md-7">
+
+         <div class="row">
+
+            <div class="col-md-3"></div>
+
+            <div class="col-md-3">
+               <div class="text-white" style="margin: 5px;">
+
+                  <label style="font-size: 12px;">ROLE : </label>
+
+                  <select class="form-select" style="padding: 0px 10px;">
+
+                     <option>ROLE</option>
+
+                     <option>CM</option>
+
+                     <option>RH</option>
+
+                     <option>ZH</option>
+
+                     <option>CH</option>
+
+                  </select>
+
+               </div>
+            </div>
+
+
+
+            <div class="col-md-3">
+               <div class="text-white" style="margin: 5px;">
+
+                  <label style="font-size: 12px;">UFC NAME : </label>
+
+                  <select class="form-select" style="padding: 0px 10px;">
+
+                     <option>UFC NAME</option>
+
+                     <option>132, MUZAFFARPUR</option>
+
+                     <option>549, PATNA</option>
+
+                     <option>548, BHAGALPUR</option>
+
+                     <option>218, DARBHANGA</option>
+
+                     <option>147, AURANGABAD</option>
+
+                  </select>
+
+               </div>
+               <div class="row">
+                  <div class="col-md-6"><button class=" btn-primary ">Approved</button></div>
+                  <div class="col-md-6">
+                     <button class=" btn-primary" onclick="myFunction2()">Reject</button>
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="col-md-3">
+               <div class="text-white" style="margin: 5px;">
+
+                  <label style="font-size: 12px;">CASE ID : </label>
+
+                  <select class="form-select" style="padding: 0px 10px;">
+
+                     <option>CASE ID</option>
+
+                     <option>3445</option>
+
+                     <option>3553</option>
+
+                     <option>3534</option>
+
+                     <option>3645</option>
+
+                     <option>3745</option>
+
+                  </select>
+
+               </div>
+            </div>
+
+         </div>
+
+
+
+         <div class="pb-2" style="justify-content: center; display: flex;">
+
+
+
+
+
+
+
+
+
+         </div>
+
+      </div>
+
+      <div class="col-md-4">
+
+         <div class="col-md-12" style="margin-left: 5px;">
+
+            <span class="text-white">Welcome : Santosh Chipte | Last Login : Jun 19th 12:00pm</span>
+         </div>
+
+         <div class="col-md-12">
+
+            <div class="row">
+
+               <div class="col-md-4"></div>
+
+               <div class="col-md-4"></div>
+
+               <div class="col-md-4 mt-2"> <a href="../login.html" class="text-white">Log Out</a></div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </header>
+   <!-- sidebar start -->
+   <div uti-include-html="../includes/sidebar.html"></div>
+   <!-- sidebar end -->
+   <main id="main" class="main">
+      <section class="section dashboard bg-white">
+         <div class="bg-white p-3 border">
+            <div class="row">
+               <div class="col-md-8">
+                  <h5>Online PAN Addition</h5>
+               </div>
+               <tr>
+                  <td align="center">
+                     <br>
+                     <br>
+                     <table id="Table2" cellspacing="1" cellpadding="1" width="92%" align="center" border="0"
+                        style="padding-top:0;">
+                        <tbody>
+                           <tr id="ReferenceDetails">
+                              <td>
+                                 <table id="Table5" style="WIDTH:100%; HEIGHT: 30px;background-color:darkblue"
+                                    cellspacing="1" cellpadding="4" align="center" border="1">
+                                    <tbody>
+                                       <tr bgcolor="darkblue">
+                                          <td colspan="6" align="left" style="width:200px"><span id="Label10"
+                                                style="color:White;font-weight:bold;text-decoration:underline;">Reference
+                                                Details</span></td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="refno"
+                                                style="display:inline-block;font-weight:bold;width:97px;">Reference
+                                                No</span>
+                                          </td>
+                                          <td>
+                                             <span id="ReferenceNo"
+                                                style="display:inline-block;font-weight:bold;width:230px;">PRTL13042203361</span>
+                                          </td>
+                                          <td>
+                                             <span id="creation"
+                                                style="display:inline-block;font-weight:bold;width:85px;">Creation
+                                                Date</span>
+                                          </td>
+                                          <td>
+                                             <span id="CreationDate"
+                                                style="display:inline-block;font-weight:bold;width:230px;">13-APR-2022</span>
+                                          </td>
+                                          <td>
+                                             <span id="status" style="font-weight:bold;">Status</span>
+                                          </td>
+                                          <td id="Status" style="background-color:Green;">
+                                             <span id="lbl_status"
+                                                style="display:inline-block;color:White;background-color:Green;font-weight:bold;height:16px;width:244px;">
+                                                Channel Head Approved </span>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr id="PanDetails" bgcolor="#ffffff">
+                              <td>
+                                 <table id="Table4" style="WIDTH:100%;background-color:darkblue" cellspacing="1"
+                                    cellpadding="2" align="center" border="1">
+                                    <tbody>
+                                       <tr bgcolor="darkblue">
+                                          <td colspan="6" align="left" style="width:100%;"><span id="Label11"
+                                                style="color:White;font-weight:bold;text-decoration:underline;">PAN
+                                                Details</span>
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             <span id="CreationDateRM" style="color:White;font-weight:bold;">Creation
+                                                Date: </span>
+                                             <span id="RMCreationDate"
+                                                style="color:White;font-weight:bold;">13-APR-2023</span>
+                                          </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="Label30" style="font-weight:bold;">Pan No</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtPanNo" type="text" value="AAACT7585L" maxlength="10"
+                                                id="txtPanNo" disabled="disabled" class="aspNetDisabled">
+                                          </td>
+                                          <td>
+                                             <span id="Label29"
+                                                style="display:inline-block;font-weight:bold;width:71px;">Client
+                                                Name</span>
+                                          </td>
+                                          <td colspan="3">
+                                             <input name="txtClientName" type="text"
+                                                value="TANMARG INVESTMENT & TRADING PVT LTD." id="txtClientName"
+                                                disabled="disabled" class="aspNetDisabled" style="width:450px;">
+                                          </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="Label27" style="font-weight:bold;">Meets Channel
+                                                Definition:</span>
+                                          </td>
+                                          <td>
+                                             <select name="ddlGroupName" id="ddlGroupName" disabled="disabled"
+                                                class="aspNetDisabled" style="width:100px;">
+                                                <option value="Select">RTL</option>
+                                                <option selected="selected" value="1">IMC</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <span id="Label26" style="font-weight:bold;">Group Name</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtGroup" type="text" value="KALYANI GROUP" id="txtGroup"
+                                                disabled="disabled" class="aspNetDisabled" style="width:300px;">
+                                          </td>
+                                          <td><span id="lblStartDate"
+                                                style="display:inline-block;font-weight:bold;width:79px;">Effective
+                                                Date</span></td>
+                                          <td>
+                                             <input name="txtEffectiveDate" type="text" value="18-Jun-2023"
+                                                id="txtEffectiveDate" disabled="disabled" class="aspNetDisabled"
+                                                style="width:100px;">
+                                          </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="Label2" style="font-weight:bold;">Client City</span>
+                                          </td>
+                                          <td>
+                                             <select name="ddlKAMGroup" id="ddlKAMGroup" disabled="disabled"
+                                                class="aspNetDisabled" style="width:120px;">
+                                                <option selected="selected" value="1">Mumbai</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <span id="Label28"
+                                                style="display:inline-block;font-weight:bold;width:75px;">Mapping
+                                                To</span>
+                                          </td>
+                                          <td colspan="3">
+                                             <select name="ddlMappingTo" id="ddlMappingTo" disabled="disabled"
+                                                class="aspNetDisabled" style="width:100px;">
+                                                <option selected="selected" value="Select">RM</option>
+                                                <option value="Self">Self</option>
+                                                <option value="RM">RM</option>
+                                             </select>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr id="PersonalDetails">
+                              <td>
+                                 <table id="Table1" style="WIDTH:100%; HEIGHT: 61px;background-color:darkblue"
+                                    cellspacing="1" cellpadding="2" align="center" border="1">
+                                    <tbody>
+                                       <tr bgcolor="darkblue">
+                                          <td colspan="8" align="left" style="width:200px"><span id="Label13"
+                                                style="color:White;font-weight:bold;text-decoration:underline;">Creator
+                                                Information</span></td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="Label24" style="font-weight:bold;">Employee Id</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtEmpID" type="text" value="" id="txtEmpID"
+                                                disabled="disabled" class="aspNetDisabled">
+                                          </td>
+                                          <td>
+                                             <span id="Label23" style="font-weight:bold;">Employee Name</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtEmpName" type="text" value="" id="txtEmpName"
+                                                disabled="disabled" class="aspNetDisabled" style="width:180px;">
+                                          </td>
+                                          <td>
+                                             <span id="Label22" style="font-weight:bold;">Role</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtEmpRole" type="text" value="" id="txtEmpRole"
+                                                disabled="disabled" class="aspNetDisabled">
+                                          </td>
+                                          <td>
+                                             <span id="Label21" style="font-weight:bold;">Channel</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtEmpChannel" type="text" value="" id="txtEmpChannel"
+                                                disabled="disabled" class="aspNetDisabled" style="width:180px;">
+                                          </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="Label20" style="font-weight:bold;">Region</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtEmpRegion" type="text" value="" id="txtEmpRegion"
+                                                disabled="disabled" class="aspNetDisabled">
+                                          </td>
+                                          <td>
+                                             <span id="Label19" style="font-weight:bold;">UFC Name</span>
+                                          </td>
+                                          <td colspan="5">
+                                             <input name="txtEmpUFC" type="text" value="" id="txtEmpUFC"
+                                                disabled="disabled" class="aspNetDisabled">
+                                          </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="Label18" style="font-weight:bold;">Creater Remarks</span>
+                                          </td>
+                                          <td colspan="7">
+                                             <textarea name="txtEmpComment" rows="2" cols="20" id="txtEmpComment"
+                                                disabled="disabled" class="aspNetDisabled"
+                                                style="height:68px;width:528px;">ITS A KALYANI GROUP COMPANY. HENCE PUTTING UP FOR MAPPING</textarea>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr id="RMDetails">
+                              <td>
+                                 <table id="Table3" style="WIDTH:100%; HEIGHT: 61px; background-color:darkblue"
+                                    cellspacing="1" cellpadding="2" align="center" border="1">
+                                    <tbody>
+                                       <tr bgcolor="darkblue">
+                                          <td colspan="8" align="left"><span id="Label14"
+                                                style="color:White;font-weight:bold;text-decoration:underline;">Mapped
+                                                RM Information</span></td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="Label17" style="font-weight:bold;">Mapped Emp Id</span>
+                                          </td>
+                                          <td>
+                                             <select name="ddlRMCode" id="ddlRMCode" disabled="disabled"
+                                                class="aspNetDisabled" style="height:16px;width:278px;">
+                                                <option selected="selected" value="Select">2443</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <span id="Label16" style="font-weight:bold;"> Employee Name</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtRMEmpName" type="text" value="" id="txtRMEmpName"
+                                                disabled="disabled" class="aspNetDisabled" style="width:180px;">
+                                          </td>
+                                          <td>
+                                             <span id="Label15" style="font-weight:bold;">Role</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtRMEmpRole" type="text" value="" id="txtRMEmpRole"
+                                                disabled="disabled" class="aspNetDisabled">
+                                          </td>
+                                          <td>
+                                             <span id="lblRMCHannel" style="font-weight:bold;">Channel</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtRMEmpChannel" type="text" value="" id="txtRMEmpChannel"
+                                                disabled="disabled" class="aspNetDisabled" style="width:197px;">
+                                          </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="lblRMRegion" style="font-weight:bold;">Mapped Region</span>
+                                          </td>
+                                          <td>
+                                             <select name="ddlrmregion" id="ddlrmregion" style="width:278px;">
+                                                <option value="Select">--Select--</option>
+                                                <option value="DELH">DELHI</option>
+                                                <option value="BNND_BANG">B&amp;ND BANGALORE</option>
+                                                <option value="ROMH">REST OF MAHARASHTRA &amp; GOA</option>
+                                                <option value="BNND_KOLK">B&amp;ND KOLKATA</option>
+                                                <option value="UP">UTTAR PRADESH</option>
+                                                <option value="WB">WEST BENGAL</option>
+                                                <option value="BIHR">BIHAR</option>
+                                                <option value="BNND_DELH">B&amp;ND DELHI</option>
+                                                <option value="MUMB">MUMBAI</option>
+                                                <option value="CHAN">CHANDIGARH</option>
+                                                <option value="ORJK">ORISSA &amp; JHARKHAND</option>
+                                                <option value="KRTK">KARNATAKA</option>
+                                                <option value="NAGP">NAGPUR</option>
+                                                <option value="NEAST">NORTH EAST</option>
+                                                <option value="RAJS">RAJASTHAN</option>
+                                                <option value="GULF">GULF</option>
+                                                <option value="TNNK">TAMIL NADU &amp; KERALA</option>
+                                                <option value="AP">ANDHRA PRADESH</option>
+                                                <option value="BNND_MUMB">B&amp;ND MUMBAI</option>
+                                                <option value="GUJR">GUJARAT</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <span id="lblRMUFCCode" style="font-weight:bold;">UFC Name</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtRMUFC" type="text" value="" id="txtRMUFC"
+                                                disabled="disabled" class="aspNetDisabled">
+                                          </td>
+                                          <td>
+                                             <span id="Label8" style="font-weight:bold;">RH Name</span>
+                                          </td>
+                                          <td colspan="3">
+                                             <input name="txtMapRHName" type="text" value="" id="txtMapRHName"
+                                                disabled="disabled" class="aspNetDisabled" style="width:387px;">
+                                          </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="Label9" style="font-weight:bold;">Forward To:</span>
+                                          </td>
+                                          <td colspan="7">
+                                             <select name="ddlForward" id="ddlForward" disabled="disabled"
+                                                class="aspNetDisabled" style="width:150px;">
+                                                <option value="CH">Channel Head-CH</option>
+                                                <option selected="selected" value="RH">Regional Head-RH</option>
+                                             </select>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr id="RHDetails">
+                              <td>
+                                 <table id="Table8" style="WIDTH:100%; HEIGHT: 61px; background-color:darkblue"
+                                    cellspacing="1" cellpadding="2" align="center" border="1">
+                                    <tbody>
+                                       <tr style="height:7px;background-color:darkblue">
+                                          <td colspan="8" align="left">
+                                             <span id="Label31"
+                                                style="color:White;font-weight:bold;text-decoration:underline;">Mapped
+                                                ZH Information</span>
+                                          </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="lblRHMappedID" style="font-weight:bold;">Employee Id</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtRHMappedID" type="text" value="3712" id="txtRHMappedID"
+                                                disabled="disabled" class="aspNetDisabled">
+                                          </td>
+                                          <td>
+                                             <span id="lblRHEmpName" style="font-weight:bold;">Employee Name</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtRHEmpName" type="text" value="Mr. Namit Swani"
+                                                id="txtRHEmpName" disabled="disabled" class="aspNetDisabled"
+                                                style="width:180px;">
+                                          </td>
+                                          <td>
+                                             <span id="lblRHRole" style="font-weight:bold;">Role</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtRHRole" type="text" value="ZH" id="txtRHRole"
+                                                disabled="disabled" class="aspNetDisabled">
+                                          </td>
+                                          <td>
+                                             <span id="lblRHChannel" style="font-weight:bold;">Channel</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtRHChannel" type="text" value="Institution"
+                                                id="txtRHChannel" disabled="disabled" class="aspNetDisabled"
+                                                style="width:230px;">
+                                          </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="Label7" style="font-weight:bold;">Region</span>
+                                          </td>
+                                          <td colspan="7">
+                                             <input name="txtRHRegion" type="text" value="REST OF MAHARASHTRA"
+                                                id="txtRHRegion" disabled="disabled" class="aspNetDisabled">
+                                          </td>
+                                       </tr>
+                                       <tr id="RHRemarks" bgcolor="#ffffff">
+                                          <td>
+                                             <span id="Label6" style="font-weight:bold;">RH Remarks</span>
+                                          </td>
+                                          <td colspan="7">
+                                             <textarea name="txtCMRemarks" rows="2" cols="20" id="txtCMRemarks"
+                                                disabled="disabled" class="aspNetDisabled"
+                                                style="height:68px;width:528px;">IMC Trail.</textarea>
+                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                             <span id="Label1" style="color:Black;font-weight:bold;">RH-App/Rej
+                                                Date</span>&nbsp;&nbsp;
+                                             <span id="lblRHDate" style="font-weight:bold;">18-Jun-2023</span>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr id="CHDetails">
+                              <td>
+                                 <table id="Table9" style="WIDTH:100%; HEIGHT: 61px; background-color:darkblue"
+                                    cellspacing="1" cellpadding="2" align="center" border="1">
+                                    <tbody>
+                                       <tr style="height:7px;background-color:darkblue">
+                                          <td colspan="8" align="left"><span id="Label32"
+                                                style="color:White;font-weight:bold;text-decoration:underline;">Mapped
+                                                CH Information</span> </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="lblRHEmpID" style="font-weight:bold;">Employee Id</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtRHCode" type="text" value="" id="txtRHCode"
+                                                class="aspNetDisabled">
+                                          </td>
+                                          <td>
+                                             <span id="lblRHEmpName" style="font-weight:bold;">Employee Name</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtRHName" type="text" value="" id="txtRHName"
+                                                class="aspNetDisabled" style="width:180px;">
+                                          </td>
+                                          <td>
+                                             <span id="lblCHRole" style="font-weight:bold;">Role</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtCHRole" type="text" value="CH" id="txtCHRole"
+                                                class="aspNetDisabled">
+                                          </td>
+                                          <td>
+                                             <span id="lblCHChannel" style="font-weight:bold;">Channel</span>
+                                          </td>
+                                          <td>
+                                             <input name="txtCHChannel" type="text" value="INSTITUTION"
+                                                id="txtCHChannel" class="aspNetDisabled" style="width:180px;">
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr id="TCDetails">
+                              <td>
+                                 <table id="Table10" style="WIDTH:100%; HEIGHT: 61px; background-color:darkblue"
+                                    cellspacing="1" cellpadding="2" align="center" border="1">
+                                    <tbody>
+                                       <tr style="height:7px;background-color:darkblue">
+                                          <td align="left"><span id="Label33"
+                                                style="color:White;font-weight:bold;text-decoration:underline;">Terms
+                                                &amp; Condition</span> </td>
+                                       </tr>
+                                       <tr bgcolor="#ffffff">
+                                          <td align="center">
+                                             <span id="Label5"
+                                                style="color:#CC0000;font-size:Large;font-weight:bold;text-decoration:none;">*</span>
+                                             <span class="aspNetDisabled" style="font-weight:bold;"><input
+                                                   id="chkRemarks" type="checkbox" name="chkRemarks"
+                                                   checked="checked"><label for="chkRemarks">I have validated the
+                                                   content of this PAN mapping request and find them to be true. I
+                                                   declare this request is in line with the channel definition as per
+                                                   the current Rule book.</label></span>
+                                          </td>
+                                          <!-- <td align="center">
+                                             <span class="aspNetDisabled" style="font-weight:bold;"><label for="chkRemarks"> <span id="Label5"
+                                                      style="color:#CC0000;font-size:Large;font-weight:bold;text-decoration:none;">*</span><input
+                                                      id="chkRemarks" type="checkbox" name="chkRemarks"
+                                                      checked="checked">I have validated the
+                                                   content of this PAN mapping request and find them to be true. I
+                                                   declare this request is in line with the channel definition as per
+                                                   the current Rule book.</label></span>
+                                          </td> -->
+                                          <!-- <td>
+                                          <label>
+                                             <span id="Label5"
+                                             style="color:#CC0000;font-size:Large;font-weight:bold;">*</span><span><input type="checkbox"/><span>I have validated the
+                                                content of this PAN mapping request and find them to be true. I
+                                                declare this request is in line with the channel definition as per
+                                                the current Rule book.</span></span></label>
+                                          </td> -->
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr id="RemarksDetails">
+                              <td>
+                                 <table id="Table7" style="WIDTH:100%; HEIGHT: 30px;background-color:#ffffff"
+                                    cellspacing="1" cellpadding="2" align="center" border="1">
+                                    <tbody>
+                                       <tr bgcolor="#ffffff">
+                                          <td>
+                                             <span id="lblRemarks" style="font-weight:bold;">Remarks</span>
+                                             <span id="Lblremarkvalid"
+                                                style="color:#CC0000;font-size:Large;font-weight:bold;text-decoration:none;">*</span>
+                                          </td>
+                                          <td>
+                                             <textarea name="txtComments" rows="2" cols="20" id="txtComments"
+                                                style="height:68px;width:528px;"></textarea>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr id="ButtonDetails">
+                              <td>
+                                 <table class="tablegreen" id="Table6"
+                                    style="WIDTH:100%; HEIGHT: 30px;background-color:#ffffff" cellspacing="1"
+                                    cellpadding="4" align="center" border="0">
+                                    <tbody>
+                                       <tr bgcolor="#ffffff">
+                                          <td height="17" align="center">
+                                             <div class="col-md-12 mt-3 text-center">
+                                                <a href="#" id="btn_search" name="btnsearch"
+                                                   class="btn btn-primary">Approve</a>
+                                                <a href="#" id="btn_search" name="btnsearch"
+                                                   class="btn btn-primary">Reject</a>
+                                                <a href="#" id="btn_search" name="btnsearch"
+                                                   class="btn btn-primary">Hold</a>
+                                                <a href="#" id="btn_search" name="btnsearch"
+                                                   class="btn btn-primary">Revert</a>
+                                                <a href="../Pan Addition/pan_addition.html" id="btn_search"
+                                                   name="btnsearch" class="btn btn-primary">Back</a>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </td>
+               </tr>
+               </tbody>
+               </table>
+               </form>
+               <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+               <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+               <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+               <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+               <script src="../assets/js_1/jquery.multi-select.js"></script>
+               <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+               <script src="../assets/js_1/main.js"></script>
+               <!-- <script src="../assets/js/main.js"></script> -->
+               <script src="../assets/js_1/uti.js"></script>
+               <!-- <script src="../assets/js/uti.js"></script> -->
+               <script src="../assets/js_1/custom.js"></script>
+               <!-- <script src="../assets/js/custom.js"></script> -->
+</body>
+
+</html>

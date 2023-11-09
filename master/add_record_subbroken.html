@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+  <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+  <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<style>
+  .form-select {
+    font-size: 16px;
+  }
+</style>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-8"style="height: 60px;">
+            <h5>SUBBROKER MASTER</h5>
+            <a href="../master/subbroker-master.html"> <i class="bi bi-arrow-return-left" 
+            style="position: relative;top: -37px;left: 800px;font-size: 40px;"></i></a>
+          </div>
+          <hr style="margin-bottom: 0px;">
+
+          <!-- Second sub tab start -->
+          <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+            <div class="col-md-12 mt-2">
+              <div class="row">
+                <div class="col-md-6">
+                 
+                  <label class="mt-4">SUBBROKER_CODE</label>
+                  <input type="text " placeholder="4277" class="form-control">
+                  <!-- <label class="mt-4">SUBBROKER_CODE</label>
+                  <select class="form-select">
+                    <option>CASE ID</option>
+                    <option value="202353">4277</option>
+                    <option value="202354">2044</option>
+                    <option value="202355">1747</option>
+                    <option value="202355">72008</option>
+                    <option value="202355">72103</option>
+                    
+
+                  </select> -->
+                   <!-- <label class="mt-4">	ARNNO</label>
+                  <input type="text " placeholder="ARN-0019" class="form-control mt-2"> -->
+                  <label class="mt-4">ARNNO</label>
+                  <select class="form-select">
+                    <!-- <option>CASE ID</option> -->
+                    <option value="202353">ARN-0019</option>
+                    <option value="202354">ARN-0005</option>
+                    <option value="202355">ARN-0155</option>
+                    
+
+                  </select>
+                 
+                   <!-- <label class="mt-4">UFC_CODE</label>
+                  <input type="text " placeholder="BAN01" class="form-control mt-2"> -->
+                 
+
+
+
+
+
+                  <!-- <label class="mt-4">CHANNEL_CODE</label>
+                  <input type="text " placeholder="RTL" class="form-control mt-2"> -->
+                  
+                  <!-- <label class="mt-4">	REGION_CODE</label>
+                  <input type="text " placeholder="BNND_BANG" class="form-control mt-2"> -->
+                  <label class="mt-4">REGION_CODE</label>
+                  <select class="form-select">
+                    <!-- <option>CASE ID</option> -->
+                    <option value="202353">BNND_BANG</option>
+                    <option value="202354">	GUJR</option>
+                  </select>
+                 
+                  <label class="mt-4">KRV_CODE</label>
+                  <select class="form-select">
+                    <!-- <option>CASE ID</option> -->
+                    <option value="202353">ARN-0019</option>
+                    <option value="202354">ARN-0005</option>
+                    <option value="202355">ARN-0155</option>
+                  
+                  </select>
+                 
+                  <!-- <label class="mt-4">KRV_CODE</label>
+                  <input type="text " placeholder="ARN-0019" class="form-control mt-2"> -->
+                 
+                  <label class="mt-4">CHANNEL_CODE</label>
+                  <select class="form-select">
+                    <!-- <option>CASE ID</option> -->
+                    <option value="202353">RTL</option>
+                    <option value="202353">INST</option>
+                  
+
+                  </select>
+                  
+
+                  <label class="mt-4">	CREATION_DT</label>
+                  <input type="date" class="form-control ">
+                  
+                  
+
+                </div>
+
+                <div class="col-md-6 ">
+                  <label class="mt-4">ZONE</label>
+                  <select class="form-select" >
+                    <option>Zone</option>
+                    <option value="202353">East</option>
+                    <option value="202354">West</option>
+                    <option value="202355">North</option>
+                    <option value="202356">South</option>
+                    <option value="202357">North West</option>
+                    <option value="202358">North East</option>
+                    <option value="202359">South west</option>
+                    <option value="202360">South east</option>
+                    
+                  </select>
+                 
+                  
+                  <!-- <label class="mt-4">	UFC_CODE</label>
+                  <input type="text " placeholder="303" class="form-control mt-2"> -->
+                  <label class="mt-4">UFC_CODE</label>
+                  <select class="form-select">
+                    <!-- <option>CASE ID</option> -->
+                    <option value="202353">303</option>
+                    <option value="202354">101</option>
+                   
+                  </select>
+                  <label class="mt-4">UFC_LOCATION</label>
+                  <select class="form-select" >
+                    <option value="202353">428,AGARTALA</option>
+                    <option value="202354">407,AGRA</option>
+                    <option value="202355">101,AHMEDABAD</option>
+                    <option value="202356">418,AJMER</option>
+                    <option value="202357">430,ALIGARH</option>
+                    <option value="202358">447,AMBALA</option>
+                    <option value="202359">437,BALASORE</option>
+                    <option value="202360">303,BANGALORE</option>
+                    <option value="202360">213,BARASAT</option>
+                    
+                  </select>
+                  <label class="mt-4">VALID_FROM</label>
+                  <input type="date"class="form-control">
+                  <label class="mt-4">VALID_UPTO</label>
+                  <input type="date"  class="form-control ">
+                  <label class="mt-4">LST_UPDDT</label>
+                  <input type="date"  class="form-control">
+                 
+
+                </div>
+                <div class="col-md-3">
+                  <label class="mt-4">Service Request Number<span id="Label5" style="color:#CC0000;font-size:Large;font-weight:bold;text-decoration:none;">*</span></label>
+
+                  <input type="text " class="form-control">
+              </div>
+              <div class="col-md-3">
+
+                <label class="mt-4">Remark</label>
+    
+               <textarea  class="form-control"></textarea>
+    
+            </div>
+            <div class="form-group col-md-3 mt-4 ">
+              <label>Checker</label>
+              <div class="selectBox form-control" onclick="showCheckboxes()">
+    
+                <select class="custom-select border-bottom form-control-plaintext">
+    
+                  <option>Checker </option>
+    
+                </select>
+    
+                <div class="overSelect"></div>
+    
+              </div>
+    
+              <div id="checkboxes" class="checkstyle">
+    
+                <!-- <label><input type="checkbox" id="select-all1">Select All</label>
+                <label for="onem"> -->
+    
+                  <input type="checkbox" id="onem" name="master" />
+    
+                  Santosh Chipte</label>
+    
+                <label for="twom">
+                  <input type="checkbox" id="twom" name="master" />
+    
+                  Sumit Mehta</label>
+    
+    
+    
+           
+    
+              </div>
+             
+            </div>
+              <div class="col-md-3">
+                  <!-- <button class="btn btn-primary" style="margin-top: 35px" onclick="myFunction()">Submit</button> -->
+                  <button type="button" style="position: relative; top: 40px;
+                  " class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">
+                    Submit
+                  </button>
+              </div>
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content w-75">
+                  <div>
+                    <button type="button" class="close" data-dismiss="modal">
+                      <span aria-hidden="true" style="margin-right: 25px">&times;</span>
+                    </button>
+                  </div>
+                  <center>
+                    <div class="modal-body" style="font-weight: bold;">Data Save successfully</div>
+                    <div class="modal-body"><strong>CASE ID-</strong> UIMST_2558975642</div>
+                  </center>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!--  Second sub tab end-->
+
+          <!-- Third sub tab start -->
+
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+
+        $(document).ready(function () {
+          $('#action').multiselect();
+        });   
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="../assets/js_1/jquery.multi-select.js"></script>
+  <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+    // aaa
+    var acc = document.getElementsByClassName("accordion");
+
+    var i;
+
+
+
+
+    for (i = 0; i < acc.length; i++) {
+
+      acc[i].addEventListener("click", function () {
+
+        this.classList.toggle("active");
+
+        var panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+
+          panel.style.display = "none";
+
+        } else {
+
+          panel.style.display = "block";
+
+        }
+
+      });
+
+    }
+  </script>
+  <script>
+    function myFunction() {
+      alert("Data save successfully");
+    }
+        // toggle script
+    
+
+   var  innerSidebar = function(){
+
+$('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+// toggle script
+    </script>
+     <script>
+      function myFunction2() {
+        alert("Wrong Data Found Please Check Again");
+      }
+      </script>
+      <script>
+        function myFunction() 
+          alert("Data save successfully");
+        </script> <script>
+               function myFunction2() {
+                 alert("Wrong Data Found Please Check Again");
+               }
+               </script>
+                <script>
+                  function showCheckboxes() {
+         
+                   var checkboxes = document.getElementById("checkboxes");
+             
+                   if (!expanded) {
+             
+                     checkboxes.style.display = "block";
+             
+                     expanded = true;
+             
+                   } else {
+             
+                     checkboxes.style.display = "none";
+             
+                     expanded = false;
+             
+                   }
+             
+                 }</script>
+                 <script>
+                   document.getElementById('select-all1').onclick = function () {
+                     var checkboxes = document.getElementsByName('master');
+                     for (var checkbox of checkboxes) {
+                       checkbox.checked = this.checked;
+                     }
+                   }
+                 </script>
+      
+</body>
+
+</html>

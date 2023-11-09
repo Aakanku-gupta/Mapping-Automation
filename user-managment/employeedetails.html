@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>UTI</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+ <link href="../assets/css_1/style.css" rel="stylesheet"> 
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+   <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+   <link href="../assets/css_1/main.css" rel="stylesheet">
+   <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+   <link href="../assets/css_1/style.css" rel="stylesheet">
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+   <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+   <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+ 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ 
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+		<section class="section dashboard">
+  <div class="bg-white p-3 border">
+  <div class="row">
+    <div class="col-md-12">
+        <h5>Employee Details</h5>
+        <form>
+          <hr>
+          <div class="row pt-3">
+            <div class="form-group col-md-4 mb-3">
+                  <label>Employee ID</label>
+                  <input type="" id="" name="" class="form-control">
+              </div> 
+              <div class="form-group col-md-4 mb-3">
+                <label> Employee Name </label>
+                <input type="" id="" name="" class="form-control">
+              </div>
+              <div class="form-group col-md-4 mb-3">
+                <label> Channel Code </label>
+                <select name="ddlChannelCode" id="ddlChannelCode" class="form-select w-100">
+                  <option selected="selected" value="Select">Select</option>
+                  <option value="INST">INST</option>
+                  <option value="DSTH">DSTH</option>
+                  <option value="PSUC">PSUC</option>
+                  <option value="DSA">DSA</option>
+                  <option value="BND">BND</option>
+                  <option value="PMS">PMS</option>
+                  <option value="RTPV">RTPV</option>
+                  <option value="ONLC">ONLC</option>
+                  <option value="SIP">SIP</option>
+                  <option value="CDST">CDST</option>
+                  <option value="UTIMF">UTIMF</option>
+                  <option value="ADMI">ADMI</option>
+                  <option value="SME">SME</option>
+                  <option value="ALL">ALL</option>
+                  <option value="PSUB">PSUB</option>
+                  <option value="CC">CC</option>
+                  <option value="POST">POST</option>
+                  <option value="RTL">RTL</option>
+                  <option value="DSIT">DSIT</option>
+                  <option value="BANK">BANK</option>
+                  <option value="PVTB">PVTB</option>
+                  <option value="PRDCT">PRDCT</option>
+              </select>
+              </div>
+              <div class="form-group col-md-4 mb-3">
+                
+                <label>Status</label>
+                <select name="ddlStatus" id="ddlStatus" class="form-select w-100">
+                  <option value="Select">Select</option>
+                  <option value="Y">Working</option>
+                  <option selected="selected" value="N">Not Working</option>
+            </select>
+              
+              </div>
+              <div class="form-group col-md-4 mb-3">
+                 <label> Employee Role </label> 
+                 <select name="ddlEmpRole" id="ddlEmpRole" class="form-select w-100">
+                  <option selected="selected" value="Select">Select</option>
+                  <option value="Zonal Head">Zonal Head</option>
+                  <option value="Region Head">Region Head</option>
+                  <option value="Chief Manager">Chief Manager</option>
+                  <option value="Channel Head">Channel Head</option>
+            </select> 
+              </div>
+              <div class="form-group col-md-4 mb-3">
+                <label> Location/UFC </label>
+                <select name="ddlLocation" id="ddlLocation" class="form-select w-100">
+                  <option selected="selected" value="Select">Select</option>
+            </select>
+              </div>
+              <div class="col-md-12 mt-3"> 
+                <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary" onclick="displaydetails();">Search</a> 
+                <a href="../user-managment/addemployeedetails.html" id="btn_search" name="btnsearch" class="btn btn-primary" >Add New Record</a>
+                <!-- <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">Add Channel</a>  -->
+                <!-- <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">Login As User</a> -->
+                <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">Download</a> 
+              </div> 
+          </div></form>
+        
+      </div>
+</div>
+
+<hr mt-3>
+<div class="overflow-auto" id="empgrddetails" style="display:none">
+  <table class="table small border table-hover" id="sortable">
+    <thead>
+    <tr class="bg-primary text-white">
+      <th scope="col">Sr No <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+      <th scope="col">Emp ID <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+      <th scope="col">Employee Name <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+      <th scope="col">Channel <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th>
+      <th scope="col">Role <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+      <th scope="col">Region <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th>
+      <th scope="col">Location<i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i></th>
+      <th scope="col">UFC <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+      <th scope="col">Start Date <i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th>
+      <th scope="col">End Date <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+      <th scope="col">HR Start Date <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+      <th scope="col">HR End Date <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+      <th scope="col">Status <i class="fa fa-solid fa-sort" onclick="sortBy(13)"></i></th>
+      <th scope="col">Functional Role <i class="fa fa-solid fa-sort" onclick="sortBy(14)"></i></th>
+      <th scope="col">ACTION</th> 
+    </tr>
+  </thead>
+    <tbody>
+    <tr>
+      <td>1</td>
+      <td>0635</td>
+      <td>Shaikh , Sadik Papamiya</td>
+      <td>RTL</td>
+      <td>RH</td>
+      <td>GULF</td>
+      <td>117</td>
+      <td>NRI BRANCH OFFICE</td>
+      <td>10-APR-2012</td>
+      <td> </td>
+      <td>01-APR-2012</td>
+      <td>30-DEC-9999</td>
+      <td>WORKING</td>
+      <td>RH</td>
+ <td>
+  <a href="../user-managment/addemployeedetails.html">Edit</a>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0810</td>
+      <td>	Belsare,Sanjay</td>
+      <td>RTL</td>
+      <td>RM</td>
+      <td>AP</td>
+      <td>HYD01</td>
+      <td>B&ND HYDERABAD-01</td>
+      <td>18-Oct-2021</td>
+      <td> </td>
+      <td>01-OCT-2021</td>
+      <td>30-DEC-9999</td>
+      <td>WORKING</td>
+      <td>RM</td>
+ <td>
+  <a href="../user-managment/addemployeedetails.html">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+<li class="page-item"><a class="page-link" href="#">1</a></li>
+<li class="page-item"><a class="page-link" href="#">2</a></li>
+<li class="page-item"><a class="page-link" href="#">3</a></li>
+<li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer id="footer" class="footer">
+<div class="copyright">
+&copy; Copyright <strong><span>UTI</span></strong>
+<script type="text/javascript">
+var d = new Date();
+yr = d.getFullYear();
+document.write(yr);      cPrev = -1;
+function sortBy(c) {
+rows = document.getElementById("sortable").rows.length;
+columns = document.getElementById("sortable").rows[0].cells.length;
+arrTable = [...Array(rows)].map(e => Array(columns));
+
+for (ro=0; ro<rows; ro++) {
+for (co=0; co<columns; co++) {
+  arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+}
+}
+
+th = arrTable.shift();
+
+if (c !== cPrev) {
+arrTable.sort(
+  function (a, b) {
+      if (a[c] === b[c]) {
+          return 0;
+      } else {
+          return (a[c] < b[c]) ? -1 : 1;
+      }
+  }
+);
+} else {
+arrTable.reverse();
+}
+
+cPrev = c;
+
+arrTable.unshift(th);
+
+for (ro=0; ro<rows; ro++) {
+for (co=0; co<columns; co++) {
+  document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+}
+}
+}
+</script>
+. All Rights Reserved
+</div>
+</footer>
+
+<script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+<!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+<script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+<!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+<script src="../assets/js_1/jquery.multi-select.js"></script>
+<!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+<script src="../assets/js_1/main.js"></script>
+<!-- <script src="../assets/js/main.js"></script> -->
+<script src="../assets/js_1/uti.js"></script>
+<!-- <script src="../assets/js/uti.js"></script> -->
+<script src="../assets/js_1/custom.js"></script>
+<!-- <script src="../assets/js/custom.js"></script> -->
+
+<script type="text/javascript">
+function displaydetails()
+{
+  document.getElementById("empgrddetails").style.display="block";
+}
+</script>
+<script>
+  var onClick = function () {
+  };
+
+  // $('#button').click(onClick);
+
+  $('#button2').click(function () {
+    alert('Are you sure to proceed?');
+  });
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
+  // aaa
+  var acc = document.getElementsByClassName("accordion");
+
+  var i;
+
+
+
+
+  for (i = 0; i < acc.length; i++) {
+
+    acc[i].addEventListener("click", function () {
+
+      this.classList.toggle("active");
+
+      var panel = this.nextElementSibling;
+
+      if (panel.style.display === "block") {
+
+        panel.style.display = "none";
+
+      } else {
+
+        panel.style.display = "block";
+
+      }
+
+    });
+
+  }
+</script>
+<script>
+  // toggle script
+var  innerSidebar = function(){
+ $('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+// toggle script
+
+</script>
+<script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+
+</body>
+</html>
+
+  <!-- <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong> <script type="text/javascript">
+          var d = new Date();
+          yr = d.getFullYear();
+          document.write(yr);
+
+          $(document).ready(function() {  
+        $('#action').multiselect();  
+        });   
+    </script>. All Rights Reserved</div>
+  </footer>
+  <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/uti.js"></script>
+  <script src="../assets/js/custom.js"></script> -->
+

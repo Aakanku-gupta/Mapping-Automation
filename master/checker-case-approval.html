@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+  <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+  <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <style>
+    .show {
+    display: block!important;
+ 
+  }
+   .popup-content {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    font-weight: bolder;
+    border: 1px solid;
+  border-radius: 10px;
+
+  }
+  .popup {
+    top: 150px;
+  z-index: 999;
+  display: none;
+  background: none;
+  }
+  
+</style>
+<style>
+  body {font-family: Arial, Helvetica, sans-serif;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  </style>
+  <style>
+    p,
+    label {
+      font: 15px 'Exo 2', sans-serif;
+    }
+
+    input {
+      margin: 6px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 2 2;
+      font: 15px 'Exo 2', sans-serif;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+
+<body id="sidebar">
+  <!-- header start -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <i class="toggle-sidebar-btn pe-2" onclick="innerSidebar()">
+        <span class="fa fa-align-justify text-white"></span> </i><img src="../assets/images_1/logo_1.png" alt=""
+        width="130px" />
+    </div>
+  
+    <div class="col-md-7">
+      <div class="row">
+        <div class="col-md-3"></div>
+    </div>
+  
+      <div class="pb-2" style="justify-content: center; display: flex"></div>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="col-md-12" style="margin-left: 5px">
+        <span class="text-white">Welcome : Santosh Chipte | Last Login : Jun 19th 12:00pm</span>
+      </div>
+  
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-4"></div>
+  
+          <div class="col-md-4"></div>
+  
+          <div class="col-md-4 mt-2">
+            <a href="../login.html" class="text-white">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+
+    <section class="section dashboard bg-white">
+
+      <h4>CHECKER CASE APPROVAL(MASTER/MAPPING) </h4>
+      <!-- <a href="#"> <i class="bi bi-arrow-return-left"
+          style="position: relative;top: -37px;left: 800px;font-size: 40px;"></i></a> -->
+      <br>
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-3">
+
+            <h6>CASE ID</h6>
+            <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-75">
+
+              <option>C1058</option>
+              <option>C1059</option>
+              <option>C1060</option>
+              <option>C1061</option>
+              <option>C1062</option>
+              <option>C1063</option>
+              <option>C1064</option>
+              <option>C1065</option>
+              <option>C1066</option>
+
+
+
+
+            </select>
+          </div>
+
+
+          <!-- master -->
+          <div class="col-md-3">
+            <h6>Master</h6>
+            <select name="ddlMaster" id="ddlMaster" class="form-select  w-75">
+
+                <option>ARN MASTER</option>
+                <option>EXCEPTION MASTER</option>
+                <option>PAN MASTER</option>
+                <option>RIA MASTER</option>
+                <option>SUBBROKER MASTER</option>
+                <option>SCHEME MASTER</option>
+                <option>MFDEX ARN CITY UFWISE SHARING SCHEME MASTER</option>
+                <option>UFC MASTER</option>
+                <option>REGION MASTER</option>
+                <option> ZONE MASTER</option>
+               <option>USER MASTER</option>
+               <option>MAP DETAG SUB ARN MASTER</option>
+               <option>RIA MASTER</option>
+               <option>SCHEME CATEGORY CONVERSION MASTER</option>
+               <option>KRA MASTER</option>
+               <option>KRA APPLICABILITY MASTER</option>
+               <option>CAMS CITY UFC MASTER</option>
+               <option>VIRTUAL RMCODE MASTER</option>
+               <option>CHANNEL MASTER</option>
+               <option>FINTECH MASTER</option>
+               <option>REASON MASTER</option>
+  
+  
+  
+  
+              </select>
+
+          </div>
+        
+
+       
+          <!-- mapping -->
+          <div class="col-md-3">
+            <h6>Mapping</h6>
+            <select name="ddlMapping" id="ddlMapping" class="form-select  w-75">
+
+                <option>MFD TO RM MAPPING</option>
+                <option>PINCODE TO RM MAPPING</option>
+                <option>MFD TO RM MAPPING</option>
+                <option>ARN+EUIN/SUB ARN/BRANCH CODE MAPPING</option>
+                <option>ARN+UFC TO RM MAPPING</option>
+                <option>ARN+CITY TO RM MAPPING</option>
+                <option>PAN MAPPING</option>
+                <option>RIA TO RM MAPPING</option>
+                <option>EXCEPTIONS MAPPING</option>
+                <option>ARN + PINCODE TO RM MAPPING</option>
+               <option>RIA+CITY MAPPING</option>
+               <option>ARN+ SUB ARN+PIN TO RM MAPPING</option>
+               <option>CAMS MFDEX_ARN+SINGLE CITY TO RM MAPPING</option>
+               <option>CAMS MFDEX_DIRECT+SINGLE CITY TO RM MAPPING</option>
+               <option>CAMS MFDEX_ARN+GROUP OF CITIES TO RM MAPPING</option>
+               <option>CAMS MFDEX_DIRECT+GROUP OF CITIES TO RM MAPPING</option>
+               <option>TEAM SAT MAPPING</option>
+               <option>BDACA ARN MULTICITY</option>
+               <option>BDACA PINCODE MAPPING</option>
+               <option>BDACA_ARN_MAPPING</option>
+              </select>
+          </div>
+          
+
+
+    
+        
+          <!-- MAKER TRANSFER TO -->
+          <!-- <div class="col-md-3">
+                <label class="mt-4">Checker(Transfer To)</label>
+                  <select class="form-select" >
+                    <option >Checker</option>
+                    <option >Sumit Mehta</option>
+                    <option >Santosh Chipte</option>
+                  
+                    
+                  </select>
+             </div> -->
+
+          <div class="col-md-2">
+            <a href="#">
+              <button class="btn btn-primary">Show Records</button>
+            </a>
+            
+          </div>
+
+          <div class="col-md-1">
+            <!-- <div class="dropdown pull-right"> -->
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-solid fa-download"></i>
+            </button>
+            <ul class="dropdown-menu">
+            
+              <li><button class="dropdown-item" type="button">Excel</button></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6"><button class="btn-primary" id="myBtn">Approve</button></div>
+        <div class="col-md-6">
+          <!-- <button class=" btn-primary" onclick="myFunction2()">Reject</button>  -->
+          <!-- Button trigger modal -->
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+
+            <div class="popup-content  mx-lg-auto" style="width: 35rem;">
+              <h5>
+                Changes are  approved for case number 3445
+              </h5>
+              <hr>
+              <p style="text-align: left;">Checker's Comment</p>
+              <input type="text" class="form-control" name="" id="">
+              <div class="row">
+                <div class="col-md-7">
+                  <h5
+                   class="mt-3"> Send this notification to </h5>
+                </div>
+                <div class="col-md-3">
+
+                  <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-auto mt-3">
+                    <option selected="selected" value="Select" style="position: relative;
+                     left: -12px;">Select Maker</option>
+                    <option value="INST">Sumit Mehta</option>
+                    <option value="DSTH">Santosh Chipte</option>
+
+
+                  </select><br>
+                </div>
+                <div class="col-md-2"></div>
+              
+              <div class="col-md-6">
+              
+              <button class="btn btn-primary w-100" data-bs-dismiss="closePopup2" style="color: white;" id="closePopup2">
+                Submit
+              </button></div>
+              <div class="col-md-6">
+              <button type="button" class="btn btn-primary reject w-100" data-bs-dismiss="closePopup3" id="closePopup3"
+                style="color: white;">Close</button></div></div>
+
+
+            </div>
+
+          </div>
+          <button id="myButton" type="button" class=" btn-primary" style="position: relative;
+          left: -432px;">
+
+            Reject
+          </button>
+
+          <!-- Modal -->
+          <div id="myPopup" class="popup">
+            <div class="popup-content" style="position: relative;
+            left: -388px;
+            top: -144px;
+            width: 345px;
+            height: 318px;">
+              <h5>
+                Changes are not approved for case number 3445
+              </h5>
+              <hr>
+              <p style="    text-align: left;">Checker's Comment</p>
+              <input type="text" class="form-control" name="" id="">
+              <div class="row">
+                <div class="col-md-7">
+                  <h5 class="mt-3"> Send this notification to </h5>
+                </div>
+                <div class="col-md-3">
+
+                  <select name="ddlChannelCode" id="ddlChannelCode1" class="form-select  w-auto mt-3">
+                    <option selected="selected" value="Select" style="    position: relative;
+                       left: -12px;">Select Maker</option>
+                    <option value="INST">Sumit Mehta</option>
+                    <option value="DSTH">Santosh Chipte</option>
+
+
+                  </select><br>
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+              <button class="btn btn-primary" data-bs-dismiss="closePopup" style="color: white;" id="closePopup">
+                Submit
+              </button>
+
+              <button type="button" class="btn btn-primary reject" data-bs-dismiss="closePopup1" id="closePopup1"
+                style="color: white;">Close</button>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- 1st data -->
+      <div class="overflow-auto" id="text" style="display: none;">
+        <div class="overflow-auto">
+          <table class="table small border" id="myTable">
+            <tr class="bg-primary text-white">
+
+              <th scope="col">KRV_CODE</th>
+              <th scope="col">CHANNEL_CODE</th>
+              <th scope="col">NEW_BR_CODE</th>
+              <th scope="col">REGION_CODE</th>
+              <th scope="col">NAME</th>
+              <!-- <th scope="col">DIST</th> not required-->
+              <!-- <th scope="col">ALLOCATION</th> -->
+              <th scope="col">MULTICITY FLAG</th> <!--changed label from Allocation to Multicity Flag-->
+              <th scope="col">CATEGORY</th>
+              <!-- <th scope="col">GROUPCD</th> not required-->
+              <!-- <th scope="col">RM_CODE</th>  not required, will be part of mapping-->
+              <th scope="col">ZONE</th>
+              <th scope="col">ARN_GROUP_NAME</th>
+              <th scope="col">SUB_CHANNEL</th>
+              <!-- <th scope="col">ARN_TYPE</th> not required-->
+              <th scope="col">VALID_FROM</th>
+              <th scope="col">VALID_UPTO</th>
+              <th scope="col">CREATION_DT</th>
+              <th scope="col">LSTUPDDT</th>
+              <th scope="col">ACTIVE_FLAG</th>
+              <th scope="col">OWNER_TYPE</th>
+              <th scope="col">UFC_CODE</th>
+              <th scope="col">PRM_CODE</th>
+              <th scope="col">CHANNEL_GROUP</th>
+              <th scope="col">ACTION</th>
+              <!-- <th scope="col">SAP_REGION_CODE</th>
+                    <th scope="col">SAP_ZONE_CODE</th> -->
+              <!-- <th scope="col">ACTION</th> -->
+            </tr>
+            <tr class="a">
+              <td>ARN-29742</td>
+              <td>RTL</td>
+              <td>119</td>
+              <td>NORH</td>
+              <td>DEUTSCHE BANK</td>
+              <!-- <td></td> -->
+              <td>E</td>
+              <td>BANKS</td>
+              <!-- <td>NAM-1</td> -->
+              <!-- <td>NORM</td> -->
+              <td style="background-color: #ADD8E6" title="OLD VALUE: EAST">WEST</td>
+
+
+
+              <td>Deutsche Bank</td>
+              <td>E-ARN</td>
+              <!-- <td>BANK (GROUP)</td> -->
+              <td>01-10-2021</td>
+              <td>30-12-9999</td>
+              <td>01-07-2019</td>
+              <td>25-07-2019</td>
+              <td>Y</td>
+              <td></td>
+              <td>119</td>
+              <td></td>
+              <td>BNND</td>
+           
+            </tr>
+            <tr>
+              <td>ARN-47629</td>
+              <td>RTL</td>
+              <td>119</td>
+              <td>MUMB</td>
+              <td>BARCLAYS BANK PLC</td>
+              <td>Y</td>
+              <td>ND</td>
+              <td>WEST</td>
+              <td>Barclays</td>
+              <td>M-ARN</td>
+              <td>01-10-2021</td>
+              <td>30-12-9999</td>
+              <td>16-11-2021 17:46:42</td>
+              <td>08-12-2021</td>
+              <td>Y</td>
+              <td></td>
+              <td>119</td>
+              <td></td>
+              <td>BNND</td>
+           
+            </tr>
+            <tr>
+              <td>ARN-49707</td>
+              <td>RTL</td>
+              <td>117</td>
+              <td>NORH</td>
+              <td>RELIGARE WEALTH MANAGEMENT LIMITED</td>
+              <!-- <td></td> -->
+              <td>E</td>
+              <td>ND</td>
+              <!-- <td>NAM-3</td> -->
+              <!-- <td>NORM</td> -->
+              <td></td>
+              <td>Religare</td>
+              <td>E-ARN</td>
+              <!-- <td>DSTH</td> -->
+              <td>01-10-2021</td>
+              <td>30-12-9999</td>
+              <td>01-07-2019</td>
+              <td>25-07-2019</td>
+              <td>Y</td>
+              <td></td>
+              <td>117</td>
+              <td></td>
+              <td>BNND</td>
+           
+            <tr>
+              <td>ARN-79711</td>
+              <td>RTL</td>
+              <td>400</td>
+              <td>NORH</td>
+              <td>RELIGARE MARKETINGS SERVICES PVT LTD</td>
+              <!-- <td></td> -->
+              <td>E</td>
+              <td>ND</td>
+              <!-- <td>NAM-2</td> -->
+              <!-- <td>NORM</td> -->
+              <td class="tool" style="background-color:#ADD8E6;" title="OLD VALUE: SOUTH">NORTH</td>
+
+              <td>Religare</td>
+              <td>E-ARN</td>
+              <!-- <td>MISVPAY-BANK</td> -->
+              <td>01-10-2021</td>
+              <td>30-12-9999</td>
+              <td>01-07-2019</td>
+              <td>25-07-2019</td>
+              <td>Y</td>
+              <td></td>
+              <td>400</td>
+              <td></td>
+              <td>BNND</td>
+           
+            </tr>
+            <tr>
+              <td>AAB-1000</td>
+              <td>RTL</td>
+              <td>400</td>
+              <td>NORH</td>
+              <td>THE ROYAL BANK OF SCOTLAND N V</td>
+              <!-- <td></td> -->
+              <td>E</td>
+              <td>ND</td>
+              <!-- <td>NAM-3</td> -->
+              <!-- <td>NORM</td> -->
+              <td></td>
+              <td>Sanctum Wealth</td>
+              <td>E-ARN</td>
+              <!-- <td>BANK</td> -->
+              <td>01-10-2021</td>
+              <td>30-12-9999</td>
+              <td>01-07-2019</td>
+              <td>25-07-2019</td>
+              <td>Y</td>
+              <td></td>
+              <td>400</td>
+              <td></td>
+              <td>BNND</td>
+            
+            </tr>
+          </table>
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+   
+
+
+        <div id="checkboxes" class="checkstyle">
+
+
+        </div>
+
+        <!-- <a href="../master/maker-checker-for-applicationn.html" class="btn btn-primary mb-2" style=" width: 160px;  border: none;     position: relative;
+        left: 15px; top: 19px; ">Transfer -->
+
+      </div>
+      
+      <!-- 2nd data -->
+ 
+      <div class="overflow-auto" id="empgrddetails" style="display:none">
+        <table class="table small border table-hover" id="sortable">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th scope="col" id="colall">All<input type="checkbox" class="form-check-input" id="alltxt" /> </th>
+              <th scope="col">KRV_CODE</th>
+              <th scope="col">CHANNEL_CODE</th>
+              <th scope="col">NEW_BR_CODE</th>
+              <th scope="col">REGION_CODE</th>
+              <th scope="col">NAME</th>
+              <th scope="col">MULTICITY FLAG</th> <!--changed label from Allocation to Multicity Flag-->
+              <th scope="col">CATEGORY</th>
+              <th scope="col">ZONE</th>
+              <th scope="col">ARN_GROUP_NAME</th>
+              <th scope="col">SUB_CHANNEL</th>
+              <th scope="col">VALID_FROM</th>
+              <th scope="col">VALID_UPTO</th>
+              <th scope="col">CREATION_DT</th>
+              <th scope="col">LSTUPDDT</th>
+              <th scope="col">ACTIVE_FLAG</th>
+              <th scope="col">OWNER_TYPE</th>
+              <th scope="col">UFC_CODE</th>
+              <th scope="col">PRM_CODE</th>
+              <th scope="col">CHANNEL_GROUP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" class="form-check-input" /></td>
+              <td>ARN-29742</td>
+              <td>RTL</td>
+              <td>119</td>
+              <td>NORH</td>
+              <td>DEUTSCHE BANK</td>
+              <td>E</td>
+              <td>BANKS</td>
+              <td style="background-color: #ADD8E6" title="OLD VALUE: SOUTH" >WEST</td>
+              <td>Deutsche Bank</td>
+              <td>E-ARN</td>
+              <td>01-10-2021</td>
+              <td>30-12-9999</td>
+              <td>01-07-2019</td>
+              <td>25-07-2019</td>
+              <td>Y</td>
+              <td></td>
+              <td>119</td>
+              <td></td>
+              <td>BNND</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="form-check-input" /></td>
+              <td>ARN-47629</td>
+              <td>RTL</td>
+              <td>119</td>
+              <td>MUMB</td>
+              <td>BARCLAYS BANK PLC</td>
+              <td>Y</td>
+              <td>ND</td>
+              <td style="background-color: #ADD8E6" title="OLD VALUE: NORTH">WEST</td>
+              <td>Barclays</td>
+              <td>M-ARN</td>
+              <td>01-10-2021</td>
+              <td>30-12-9999</td>
+              <td>16-11-2021 17:46:42</td>
+              <td>08-12-2021</td>
+              <td>Y</td>
+              <td></td>
+              <td>119</td>
+              <td></td>
+              <td>BNND</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <tr>
+          
+          </tr>
+        </table>
+        <br>
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+ 
+    </div>
+     
+
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+        cPrev = -1;
+
+        function sortBy(c) {
+          rows = document.getElementById("sortable").rows.length;
+          columns = document.getElementById("sortable").rows[0].cells.length;
+          arrTable = [...Array(rows)].map(e => Array(columns));
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+            }
+          }
+
+          th = arrTable.shift();
+
+          if (c !== cPrev) {
+            arrTable.sort(
+              function (a, b) {
+                if (a[c] === b[c]) {
+                  return 0;
+                } else {
+                  return (a[c] < b[c]) ? -1 : 1;
+                }
+              }
+            );
+          } else {
+            arrTable.reverse();
+          }
+
+          cPrev = c;
+
+          arrTable.unshift(th);
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+            }
+          }
+        }
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <script src="../assets/js_1/jquery.multi-select.js"></script>
+  <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+  </script>
+
+
+
+
+  <!-- 1st -->
+
+  <script>
+
+    var expanded = false;
+
+
+
+    function showCheckboxes() {
+
+      var checkboxes = document.getElementById("checkboxes");
+
+      if (!expanded) {
+
+        checkboxes.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+
+
+
+
+  <script>
+    document.getElementById('select-all1').onclick = function () {
+      var checkboxes = document.getElementsByName('master');
+      for (var checkbox of checkboxes) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+  <script>
+    document.getElementById('select-all').onclick = function () {
+      var checkboxes = document.getElementsByName('master1');
+      for (var checkbox of checkboxes) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+
+
+
+  <!-- maker -->
+  <script>
+
+    var expanded = false;
+
+
+
+
+    function showCheckboxes1() {
+
+      var checkboxes1 = document.getElementById("checkboxes1");
+
+      if (!expanded) {
+
+        checkboxes1.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes1.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+  <script>
+    document.getElementById('select-all2').onclick = function () {
+      var checkboxes1 = document.getElementsByName('master2');
+      for (var checkbox of checkboxes1) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+  <!-- checker -->
+  <script>
+
+    var expanded = false;
+
+
+
+
+    function showCheckboxes2() {
+
+      var checkboxes2 = document.getElementById("checkboxes2");
+
+      if (!expanded) {
+
+        checkboxes2.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes2.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+  <script>
+    document.getElementById('select-all3').onclick = function () {
+      var checkboxes2 = document.getElementsByName('checker');
+      for (var checkbox of checkboxes2) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+
+  <!-- kjgxdghnvgd -->
+
+  <script>
+
+    var expanded = false;
+
+
+
+
+    function showCheckboxes5() {
+
+      var checkboxes2 = document.getElementById("checkboxes5");
+
+      if (!expanded) {
+
+        checkboxes2.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes2.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+  <script>
+    document.getElementById('select-all5').onclick = function () {
+      var checkboxes5 = document.getElementsByName('checker1');
+      for (var checkbox of checkboxes5) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+  <!-- master -->
+  <script>
+    function myFunction() {
+      var checkBox = document.getElementById("one");
+      var text = document.getElementById("text");
+      if (checkBox.checked == true) {
+        $("input[name='checker']").prop("checked", false)
+        $("#text1").hide();
+        text.style.display = "block";
+      } 
+     else {
+        text.style.display = "none";
+      }
+    }
+  </script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the "All" checkbox and all the checkboxes in the table
+      var selectAllCheckbox = document.getElementById('select-all6');
+      var checkboxes = document.querySelectorAll('#text input[type="checkbox"]');
+
+      // Add an event listener to the "All" checkbox
+      selectAllCheckbox.addEventListener('change', function () {
+        // Loop through all checkboxes and set their checked property based on the state of the "All" checkbox
+        checkboxes.forEach(function (checkbox) {
+          checkbox.checked = selectAllCheckbox.checked;
+        });
+      });
+    });
+  </script>
+    <script>
+
+      myButton.addEventListener("click", function () {
+        myPopup.classList.add("show");
+      });
+      closePopup.addEventListener("click", function () {
+        myPopup.classList.remove("show");
+      });
+      closePopup1.addEventListener("click", function () {
+        myPopup.classList.remove("show");
+      });
+      closePopup2.addEventListener("click", function () {
+        myModal.classList.remove("show");
+      });
+      closePopup3.addEventListener("click", function () {
+        myModal.classList.remove("show");
+      });
+  
+      window.addEventListener("click", function (event) {
+        if (event.target == myPopup) {
+          myPopup.classList.remove("show");
+        }
+      });
+    </script>
+
+<script>
+  $(document).on("click", "#myBtn", function () {
+
+    $('#myModal').css("display", "block")
+
+  })
+  $(document).on("click", "#closePopup3", function () {
+
+    $('#myModal').css("display", "none")
+
+  })
+  $(document).on("click", "#closePopup2", function () {
+
+    $('#myModal').css("display", "none")
+
+  })
+
+  $('.close').click(function () {
+
+
+
+    $('#myModal').css("display", "none")
+
+  })
+
+
+
+  // For Master Data
+  $("#ddlMaster").change(function(){
+    $("#empgrddetails").hide();
+    $("#text").show();
+  })
+  $("#ddlMapping").change(function(){
+    $("#empgrddetails").show();
+    $("#text").hide();
+  })
+
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>UTI</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css_1/main.css" rel="stylesheet">
+    <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+    <link href="../assets/css_1/style.css" rel="stylesheet">
+    <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+
+<body id="sidebar">
+    <!-- header start -->
+    <div uti-include-html="../includes/header1.html"></div>
+    <!-- header end -->
+    
+    <!-- sidebar start -->
+    <div uti-include-html="../includes/sidebar.html"></div>
+    <!-- sidebar end -->
+    <main id="main" class="main">
+        <section class="section dashboard bg-white">
+            <div class="bg-white p-3 border">
+                <div class="row">
+                    <div class="">
+                        <!-- <h5>BNND MAP PINCODE ARN</h5> -->
+                       
+                        <h5>BDACA ARN MAPPING </h5><hr>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- <a href="../mapping-for-institution-channel_edit/bulk-upload-exception.html" class="btn btn-primary " style=" width: auto; border: none;">Bulk
+                          Upload + </a> -->
+                        <!-- <a href="../mapping-for-institution-channel_edit/bulk-update-exception.html" class="btn btn-primary " style=" width: auto; border: none;">Bulk RM
+                          Update</a> -->
+                          <a href="../mapping_view/add-bdaca_arn.html" class="btn btn-primary " style=" width: auto; border: none;">Add Record +</a>
+                      </div><br><br>
+                </div>
+            </div>
+                <!-- <hr id="third-hr"/> -->
+                <table>
+                    <!-- 1-10 of 500 <i class="fa fa-solid fa-angle-left"></i> <a href=""><i class="fa fa-solid fa-angle-right"></i></a> -->
+                    <tr>
+                        <!-- <th scope="col">Records <i class="fa fa-solid"></i></th> -->
+                        <td>
+                            <label>Quarter</label>
+                            <select class="form-select" id="quaterSearchFilter" name="SelectQuarter" style="width:200px;">
+                            <option value="1">2023-24-Q1</option>
+                            <option value="2">2022-23-Q4</option>
+                            <option value="3">2022-23-Q3</option>
+                            <option value="4">2022-23-Q2</option>
+                            <option value="5">2022-23-Q1</option>
+                            </select>
+                           </td>
+                            <td style="padding-left:10px">
+                              <label>Zone</label>
+                              <select class="form-select" id="zoneSearchFilter" style="width:101px;">
+                                  <option value="">ALL</option>
+                                  <option value="CORP"> CORP</option>
+                                  <option value="EAST"> EAST</option>
+                                  <option value="GULF"> GULF</option>
+                                  <option value="NORTH"> NORTH</option>
+                                  <option value="SOUTH"> SOUTH</option>
+                                  <option value="WEST"> WEST</option>
+                              </select>
+                          </td>
+                          <td style="padding-left:10px">
+                            <label>Region</label>
+                            <select class="form-select" id="regionSearchFilter">
+                                <option value="">All</option>
+                                <option value="AP"> ANDHRA PRADESH</option>
+                                <option value="BNND_BANG"> B&ND BANGALORE</option>
+                                <option value="BNND_DELH"> B&ND DELHI</option>
+                                <option value="BNND_KOLK"> B&ND KOLKATA</option>
+                                <option value="BNND_MUMB"> B&ND MUMBAI</option>
+                                <option value="BIHR"> BIHAR</option>
+                                <option value="CHAN"> CHANDIGARH</option>
+                                <option value="CORP"> CORPORATE OFFICE</option>
+                                <option value="DELH"> DELHI</option>
+                                <option value="GUJR"> GUJARAT</option>
+                                <option value="GULF"> GULF</option>
+                                <option value="KRTK"> KARNATAKA</option>
+                                <option value="MUMB"> MUMBAI</option>
+                                <option value="NAGP"> NAGPUR</option>
+                                <option value="NEAST"> NORTH EAST</option>
+                                <option value="ORJK"> ORISSA & JHARKHAND</option>
+                                <option value="RAJS"> RAJASTHAN</option>
+                                <option value="ROMH"> REST OF MAHARASHTRA & GOA</option>
+                                <option value="TNNK"> TAMIL NADU & KERALA</option>
+                                <option value="UP"> UTTAR PRADESH</option>
+                                <option value="WB"> WEST BENGAL</option>
+                            </select>
+                            </td>
+                             <td style="padding-left:10px">
+                                  <label>UFC</label>
+                                  <select class="form-select" id="ufcNameSearchFilter">
+                                  <option value="">ALL</option>
+                                  <option value="1">B&ND MUMBAI-RM(RH Reporting)</option>
+                                  <option value="2">B&ND BANGLORE-RM(RH Reporting)</option>
+                                  <option value="3">B&ND KOLKOTA-RM(RH Reporting)</option>
+                                  <option value="4">HITECHCITY UFC</option>
+                                  <option value="5">VALSAD </option>
+                                  <option value="6">PONDICHERRY</option>
+                                  <option value="7">ASANSOL</option>
+                                  <option value="8">JHANSI</option>
+                                  <option value="9">B&ND MUMBAI-01</option>
+                                  <option value="10">B&ND MUMBAI-02</option>
+                                  <option value="11">B&ND MUMBAI-02</option>
+                                  <option value="12">B&ND MUMBAI-03</option>
+                                  <option value="13">B&ND AHMEDABAD-01</option>
+                                  </select>
+                                  </td>
+                              <td style="padding-left:10px">
+                                <label>Search Text</label>
+                                <input type="text" class="form-control" id="txtsearch" style="margin-left:5px;">
+                            </td>
+                            </tr>
+                            <tr>
+                              <td style="padding-top:20px;padding-left:0px">
+                                  <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary w-100">Search <img src="/Content/images/btn-spinner.gif" style="display:none"></a>
+                              </td>
+                              <td style="padding-top: 20px;">
+                                  <div class="dropdown pull-right" style="margin-left:20px">
+                                      <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <i class="fa fa-solid fa-download"></i>
+                                      </button>
+                                      <ul class="dropdown-menu">
+                                          <li><button class="dropdown-item" id="btnExport" type="button">Excel</button></li>
+                                      </ul>
+                                  </div>
+                              </td>
+                          </tr>
+                            </table>
+            </div>
+            <br>
+            <div class="overflow-auto" id="margin">
+                <hr>
+                <div class="col-md-6 row mb-3">
+                  <!-- <tr>
+                            <th scope="col"><b>Show</b> <i class="fa fa-solid"></i></th>
+                            <td>
+                              
+                              </td> -->
+                  <div class="col-md-3" style="display: flex; margin-top: 30px;">
+                    <label>Show</label>
+                    <select class="form-select" id="records" style="margin-left: 10px;">
+                      <option>50</option>
+                      <option>100</option>
+                      <option>200</option>
+                      <option>All</option>
+                    </select> <b> entries</b>
+                  </div>
+                  <div class="col-md-2"></div>
+                  <div class="col-md-6" style=" margin-top: 30px;">
+                    <!-- <label>Maker</label> -->
+          
+                    <div class="selectBox form-control" style="    position: relative;
+                          top: -12px;" onclick="showCheckboxes1()">
+          
+                      <select class="custom-select border-bottom form-control-plaintext">
+          
+                        <option>Column </option>
+          
+                      </select>
+          
+                      <div class="overSelect"></div>
+          
+                    </div>
+          
+                    <div id="checkboxes1" class="checkstyle">
+          
+                      <label><input type="checkbox" id="select-all2">Select All</label>
+                      <label for="onem">
+          
+                        <input type="checkbox" id="onem" name="master2" onclick="myFunction()" />
+          
+                        KRV_CODE</label>
+          
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        REGION_CODE</label>
+                      <label for="threem">
+                        <input type="checkbox" id="threem" name="master2" onclick="myFunction2()" />
+          
+                        ZONE</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                        CRCODE</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        CACODE</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                        UFC_CODE</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        SAP_REGION_CODE</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        SAP_ZONE_CODE</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        KRA_VALID_FROM</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                      	KRA_VALID_UPTO</label>
+                    
+                                </div>
+                                
+                  </div>
+                </div>
+                <table class="table small border table-hover" id="sortable">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <!-- <th scope="col"><input type="checkbox" class="form-check-input" /></th> -->
+                            <th scope="col" id="colall">KRV_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i>
+                            </th>
+                            <!-- <th scope="col">ARN_NUMBER <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th> -->
+                            <!-- <th scope="col">UFC_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th> -->
+                            <th scope="col">REGION_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+                            <!-- <th scope="col">ARN_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th> -->
+                            <th scope="col">ZONE <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+                            <th scope="col">CRCODE <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th>
+                            <!-- <th scope="col" class="bg-danger">EMP_ID <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th> -->
+                            <th scope="col">CACODE <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+                            <!-- <th scope="col">EMP_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th> -->
+                           
+                        
+                            <th scope="col">UFC_CODE<i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+                            <th scope="col">SAP_REGION_CODE<i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th>
+                            <th scope="col">SAP_ZONE_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+                            <th scope="col">KRA_VALID_FROM<i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+                            <th scope="col">KRA_VALID_UPTO <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+                            <th scope="col">CREATION_SERV_REQ <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+                            <th scope="col">LSTUPD_SERV_REQ <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+                            <th scope="col">LSTUPDUSER<i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+                            <th scope="col">CREATION_TICKET_ID<i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+                            <th scope="col">LSTUPD_TICKET_ID<i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+                            <th scope="col">LSTUPDDT<i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+                            <th scope="col">CREATION_DT
+                              <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+
+                            <th scope="col">ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ARN-76121</td>
+                            <td>105</td>
+                            <td>EAST</td>
+                            <td>442U001</td>
+                            <td>NOCA</td>
+                           
+                            <td>3/31/2022</td>
+                            <td>105</td>
+                            <td></td>
+                            <td>10-08-2019</td>
+                            <td>11-08-2021</td>
+                            <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+
+              <td></td>
+              <td></td>
+              <td></td>
+              
+            
+                            
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-76557</td>
+                            <td>437</td>
+                            <td>WEST</td>
+                            <td>442U001</td>
+                            <td>NOCA</td>
+                         
+                            <td>3/31/2022</td>
+                            <td>105</td>
+                            <td></td>
+                            <td>15-08-2019</td>
+                            <td>18-06-2021</td>
+                            <td>MAA-56985632</td>
+                            <td></td>
+                            <td></td>
+                            <td>EMMAP693258147</td>
+              
+                            <td></td>
+                            <td>16-06-2022</td>
+                            <td></td>
+                         
+                          
+                           
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-142332</td>
+                            <td>437</td>
+                            <td>NORTH</td>
+                            <td>442U001</td>
+                            <td>NOCA</td>
+                           
+                            <td>3/31/2022</td>
+                            <td>437</td>
+                            <td></td>
+                            <td>21-08-2019</td>
+                            <td>23-08-2021</td>
+                            <td>MAA-45698526</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+              
+                            <td></td>
+                            <td>15-09-2023</td>
+                            <td>21-07-2019</td>
+                          
+                           
+                           
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-142908</td>
+                            <td>118</td>
+                            <td>SOUTH</td>
+                            <td>431U002</td>
+                            <td>NOCA</td>
+                           
+                            <td>3/31/2022</td>
+                            <td>118</td>
+                            <td></td>
+                            <td>10-08-2019</td>
+                            <td>11-08-2021</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+              
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                           
+                          
+                           
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-148100</td>
+                            <td>118</td>
+                            <td>EAST</td>
+                            <td>445U002</td>
+                            <td>NOCA</td>
+                          
+                            <td>3/31/2022</td>
+                            <td>118</td>
+                            <td></td>
+                            <td>13-04-2019</td>
+                            <td>19-03-2021</td>
+                            <td>MAA-65356546</td>
+              <td></td>
+              <td></td>
+              <td></td>
+
+              <td></td>
+              <td></td>
+              <td></td>
+             
+             
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-10273</td>
+                            <td>418</td>
+                            <td>WEST</td>
+                            <td>442U001</td>
+                            <td>NOCA</td>
+                           
+                       
+                            <td>3/31/2022</td>
+                            <td>418</td>
+                            <td></td>
+                            <td>16-02-2019</td>
+                            <td>15-05-2021</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>EMMAP569852365</td>
+              
+                            <td></td>
+                            <td>16-09-2022</td>
+                            <td>21-03-2019</td>
+                           
+                           
+                            
+                          
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-10272</td>
+                            <td>418</td>
+                            <td>NORTH</td>
+                            <td>446U003</td>
+                            <td>NOCA</td>
+                       
+                            
+                            <td>3/31/2022</td>
+                            <td>418</td>
+                            <td></td>
+                            <td>10-08-2019</td>
+                            <td>11-08-2021</td>
+                            <td>MAA-65356546</td>
+                            <td></td>
+                            <td></td>
+                            <td>EMMAP569852365</td>
+              
+                            <td></td>
+                            <td>16-09-2022</td>
+                            <td></td>
+                        
+                          
+                           
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-1765</td>
+                            <td>114</td>
+                            <td>SOUTH</td>
+                            <td>446U003</td>
+                            <td>NOCA</td>
+                          
+                            
+                            <td>3/31/2022</td>
+                            <td>114</td>
+                            <td></td>
+                            <td>10-05-2019</td>
+                            <td>18-03-2021</td>
+                            <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+
+              <td></td>
+              <td></td>
+              <td></td>
+            
+            
+                           
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td> ARN-1764</td>
+                            <td>114 </td>
+                            <td>EAST</td>
+                            <td>442U001</td>
+                            <td>NOCA</td>
+                        
+                            
+                            <td>3/31/2022</td>
+                            <td>114</td>
+                            <td></td>
+                            <td>10-08-2019</td>
+                            <td>11-08-2021</td>
+                            <td>MAA-65356546</td>
+              <td></td>
+              <td></td>
+              <td>EMMAP569852365</td>
+
+              <td></td>
+              <td>16-09-2022</td>
+              <td>21-03-2019</td>
+              
+            
+                           
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-85831</td>
+                            <td>203</td>
+                            <td>WEST</td>
+                            <td>445U002</td>
+                            <td>NOCA</td>
+                            
+                            
+                            <td>3/31/2022</td>
+                            <td>203</td>
+                            <td></td>
+                            <td>26-05-2021</td>
+                            <td>26-05-2021</td>
+                           
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>EMMAP569852365</td>
+              
+                            <td></td>
+                            <td>16-09-2022</td>
+                            <td>21-03-2019</td>
+                           
+                           
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-115224</td>
+                            <td>404</td>
+                            <td>NORTH</td>
+                            <td>445U002</td>
+                            <td>NOCA</td>
+                          
+                            
+                            <td>3/31/2022</td>
+                            <td>404</td>
+                            <td></td>
+                            <td>03-02-2019</td>
+                            <td>05-08-2021</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+              
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                         
+                          
+                           
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-109041</td>
+                            <td>306</td>
+                            <td>SOUTH</td>
+                            <td>442U001</td>
+                            <td>NOCA</td>
+                          
+                            
+                            <td>3/31/2022</td>
+                            <td>306</td>
+                            <td></td>
+                            <td>14-04-2019</td>
+                            <td>12-02-2021</td>
+                            <td>MAA-65356546</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+              
+                            <td></td>
+                            <td>16-09-2022</td>
+                            <td>21-03-2019</td>
+                          
+                         
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+                        <tr>
+                            <td>ARN-116237</td>
+                            <td>306</td>
+                            <td>NORTH</td>
+                            <td>442U001</td>
+                            <td>NOCA</td>
+                         
+                            
+                            <td>3/31/2022</td>
+                            <td>306</td>
+                            <td></td>
+                            <td>23-02-2019</td>
+                            <td>26-08-2021</td>
+                            <td>MAA-65356546</td>
+                            <td></td>
+                            <td></td>
+                            <td>EMMAP569852365</td>
+              
+                            <td></td>
+                            <td>16-09-2022</td>
+                            <td></td>
+                          
+                           
+                            <td>
+                                <div class="dropdown">
+                                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class=""></i>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="../mapping_view/edit-bdaca-arn.html">Edit</a></li>
+                                    <li><a class="dropdown-item" href="../mapping_view/close-bdaca-arn.html">Close</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+                <!-- <div class="col-md-12 mt-3"> 
+              <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">Update </a><p>(Update Selected Record Only As Per Above Search Criteria)</p>
+              </div>  -->
+
+                <br>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+            <script type="text/javascript">
+                var d = new Date();
+                yr = d.getFullYear();
+                document.write(yr);
+                cPrev = -1;
+
+                function sortBy(c) {
+                    rows = document.getElementById("sortable").rows.length;
+                    columns = document.getElementById("sortable").rows[0].cells.length;
+                    arrTable = [...Array(rows)].map(e => Array(columns));
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                        }
+                    }
+
+                    th = arrTable.shift();
+
+                    if (c !== cPrev) {
+                        arrTable.sort(
+                            function (a, b) {
+                                if (a[c] === b[c]) {
+                                    return 0;
+                                } else {
+                                    return (a[c] < b[c]) ? -1 : 1;
+                                }
+                            }
+                        );
+                    } else {
+                        arrTable.reverse();
+                    }
+
+                    cPrev = c;
+
+                    arrTable.unshift(th);
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                        }
+                    }
+                }
+            </script>. All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+    <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+    <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+    <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+    <script src="../assets/js_1/jquery.multi-select.js"></script>
+    <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+    <script src="../assets/js_1/main.js"></script>
+    <!-- <script src="../assets/js/main.js"></script> -->
+    <script src="../assets/js_1/uti.js"></script>
+    <!-- <script src="../assets/js/uti.js"></script> -->
+    <script src="../assets/js_1/custom.js"></script>
+    <!-- <script src="../assets/js/custom.js"></script> -->
+
+    <script>
+        var onClick = function () {
+        };
+
+        // $('#button').click(onClick);
+
+        $('#button2').click(function () {
+            alert('Are you sure to proceed?');
+        });
+    </script>
+    <script>
+           // toggle script
+  var  innerSidebar = function(){
+      $('#sidebar').toggleClass('toggle-sidebar');
+
+  }
+
+    // toggle script
+
+    </script>
+             <!-- columns -->
+   <script>
+
+    var expanded = false;
+
+
+
+
+    function showCheckboxes1() {
+
+      var checkboxes1 = document.getElementById("checkboxes1");
+
+      if (!expanded) {
+
+        checkboxes1.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes1.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+  <script>
+    document.getElementById('select-all2').onclick = function () {
+      var checkboxes1 = document.getElementsByName('master2');
+      for (var checkbox of checkboxes1) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+
+    
+    
+
+</body>
+
+</html>

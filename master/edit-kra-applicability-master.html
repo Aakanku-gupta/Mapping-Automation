@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+  <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+  <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<style>
+  .form-select {
+    font-size: 16px;
+  }
+</style>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+
+
+ 
+    <section class="section dashboard">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <h6>EDIT FUNCTIONALITY FOR KRA APPLICABILITY MASTER</h6><hr>
+          <a href="../master/kra-applicability-master.html"> <i class="bi bi-arrow-return-left" 
+           style="    position: relative;
+           bottom: 67px;
+           left: 800px;
+           font-size: 40px;"></i></a>
+          <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+            <div class="col-md-12 mt-2">
+              <div class="row">
+                <div class="col-md-6">
+                 
+                  <label class="mt-4">BSCYEAR</label>
+                  <select class="form-select" >
+                    <option>2019</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                   
+                  </select>
+                  <label class="mt-4">CHANNEL</label>
+                  <select class="form-select" >
+                    <option>INST</option>
+                    <option>RTL</option>
+                  </select>
+                  <label class="mt-4">EMP_ROLE</label>
+                  <select class="form-select" >
+                    <option>CH</option>
+                    <option>RM</option>
+                    <option>RH</option>
+                  </select>
+                  <label class="mt-4">KRA_CODE</label>
+                  <select class="form-select" >
+                    <option>31</option>
+                    <option>41</option>
+                    <option>501</option>
+                    <option>502</option>
+                    <option>503</option>
+                  </select>
+
+              
+                  
+               
+                </div>
+
+                <div class="col-md-6 ">
+                  <label class="mt-4">KRA_DESCRIPTION</label>
+                  <select class="form-select" >
+                    <option>CLIENT ACTIVATION</option>
+                    <option>MARKET SHARE( UTI QAAUM)</option>
+                    <option>INCREMENTAL QAAUM (LIQUID)</option>
+                    <option>NON-FINANCIAL-NFIN_KRA_CALLANDACTV</option>
+                
+                  </select>
+
+                  <label class="mt-4">KRA_TYPE</label>
+                  <select class="form-select" >
+                    <option>FIN</option>
+                    <option>NFIN</option>
+                    
+                  </select>
+
+                  <label class="mt-4">WTGS</label>
+                  <select class="form-select" >
+                    <option>10</option>
+                    <option>20</option>
+                    
+                  </select>
+
+                  
+                  <label class="mt-4">KRA_FREQ</label>
+                  <select class="form-select" >
+                    <option>A</option>
+                    <option>H</option>
+                    <option>Q</option>
+                    
+                  </select>
+                
+
+              
+                
+            
+                
+                 
+                 
+                  
+
+
+                
+                   
+                
+                  
+                   
+                 
+                 
+                 
+
+                </div>
+                
+                <div class="col-md-3">
+
+                  <label class="mt-4">Service Request Number<span id="Label5" style="color:#CC0000;font-size:Large;font-weight:bold;text-decoration:none;">*</span></label>
+
+      
+                  <input type="text " class="form-control">
+      
+              </div>
+      
+              <div class="col-md-3">
+      
+                  <label class="mt-4">Remark</label>
+      
+                 <textarea  class="form-control"></textarea>
+      
+              </div>
+      
+             
+              <div class="form-group col-md-3 mt-4 ">
+                <label>Checker</label>
+                <div class="selectBox form-control" onclick="showCheckboxes()">
+      
+                  <select class="custom-select border-bottom form-control-plaintext">
+      
+                    <option>Checker </option>
+      
+                  </select>
+      
+                  <div class="overSelect"></div>
+      
+                </div>
+      
+                <div id="checkboxes" class="checkstyle">
+      
+                  <!-- <label><input type="checkbox" id="select-all1">Select All</label>
+                  <label for="onem"> -->
+      
+                    <input type="checkbox" id="onem" name="master" />
+      
+                    Santosh Chipte</label>
+      
+                  <label for="twom">
+                    <input type="checkbox" id="twom" name="master" />
+      
+                    Sumit Mehta</label>
+      
+      
+      
+             
+      
+                </div>
+               
+              </div>
+      
+              <div class="col-md-3">
+                <button type="button" style="    position: relative;
+                top: 25px;" class="btn btn-primary mt-4" data-toggle="modal" data-target="#exampleModal">
+                  Update
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content w-75">
+                    <div>
+                      <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true" style="margin-right: 25px">&times;</span>
+                      </button>
+                    </div>
+                    <center>
+                      <div class="modal-body" style="font-weight: bold;">Data Save successfully</div>
+                      <div class="modal-body"><strong>CASE ID-</strong> UIMST_2558975642</div>
+                    </center>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+              </div>
+
+              </div>
+            </div>
+          </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">
+        &copy; Copyright <strong><span>UTI</span></strong>
+        <script type="text/javascript">
+            var d = new Date();
+            yr = d.getFullYear();
+            document.write(yr); cPrev = -1;
+            function sortBy(c) {
+                rows = document.getElementById("sortable").rows.length;
+                columns = document.getElementById("sortable").rows[0].cells.length;
+                arrTable = [...Array(rows)].map(e => Array(columns));
+
+                for (ro = 0; ro < rows; ro++) {
+                    for (co = 0; co < columns; co++) {
+                        arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                    }
+                }
+
+                th = arrTable.shift();
+
+                if (c !== cPrev) {
+                    arrTable.sort(
+                        function (a, b) {
+                            if (a[c] === b[c]) {
+                                return 0;
+                            } else {
+                                return (a[c] < b[c]) ? -1 : 1;
+                            }
+                        }
+                    );
+                } else {
+                    arrTable.reverse();
+                }
+
+                cPrev = c;
+
+                arrTable.unshift(th);
+
+                for (ro = 0; ro < rows; ro++) {
+                    for (co = 0; co < columns; co++) {
+                        document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                    }
+                }
+            }
+                  // toggle script
+
+
+var  innerSidebar = function(){
+
+$('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+// toggle script
+        </script>
+        . All Rights Reserved
+    </div>
+</footer>
+
+
+  <!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script type="text/javascript">
+    function displaydetails() {
+        document.getElementById("empgrddetails").style.display = "block";
+        document.getElementsByClassName("upload_btn")[0].style.display = "none";  //new
+
+    }
+</script>
+  <script>
+      function myFunction() {
+          let text = "Do you want to proceed";
+          if (confirm(text) == true) {
+              text = "You pressed OK!";
+          } else {
+              text = "You canceled!";
+          }
+          document.getElementById("demo").innerHTML = text;
+      }
+  </script>
+
+</body>
+<script>
+  function myFunction() {
+    alert("Record edit successfully");
+  }
+  </script> <script>
+         function myFunction2() {
+           alert("Wrong Data Found Please Check Again");
+         }
+         </script>
+          <script>
+            function showCheckboxes() {
+   
+             var checkboxes = document.getElementById("checkboxes");
+       
+             if (!expanded) {
+       
+               checkboxes.style.display = "block";
+       
+               expanded = true;
+       
+             } else {
+       
+               checkboxes.style.display = "none";
+       
+               expanded = false;
+       
+             }
+       
+           }</script>
+           <script>
+             document.getElementById('select-all1').onclick = function () {
+               var checkboxes = document.getElementsByName('master');
+               for (var checkbox of checkboxes) {
+                 checkbox.checked = this.checked;
+               }
+             }
+           </script>
+
+</html>

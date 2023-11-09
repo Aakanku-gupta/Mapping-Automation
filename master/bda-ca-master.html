@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+  <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+  <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-12">
+            <h5>BDA/CA MASTER</h5>
+          </div>
+        </div>
+        <hr id="arn-master-firsthr">
+        <div class="row">
+          <div>
+            <!-- <a href="../master/bulk-upload-bda-ca.html" class="btn btn-primary"
+              style=" width: 160px; border: none;">Bulk Upload + </a> -->
+            <a href="../master/add-record-bda-ca.html" class="btn btn-primary" style=" width: 160px;  border: none ">Add
+              Record +</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mt-5">
+            <div class="row">
+              <div class="col-md-3">
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <select class="form-select" id="select1">
+                  <option>Select Quarter</option>
+                  <option value="202353">2022-23-Q1</option>
+                  <option value="202354">2022-23-Q2</option>
+                  <option value="202355">2022-23-Q3</option>
+                  <option value="202356">2022-23-Q4</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <select class="form-select" id="select2">
+                  <option>Select CRCACode</option>
+                  <option value="1">446C008</option>
+                  <option value="2">431B001</option>
+                  <option value="3">431B003</option>
+                  <option value="4">445B003</option>
+                  <option value="5">203B001</option>
+                  <option value="6">203C006</option>
+                  <option value="7">446C007</option>
+                  <option value="8">447C003</option>
+                  <option value="9">457U001</option>
+                  <option value="10">441B002</option>
+                </select>
+    
+              </div>
+              <div class="row col-md-3">
+                <div class="col-md-6">
+                  <a href="#" name="btnsearch" class="btn btn-primary w-30">Search</a>
+                </div>
+    
+                <div class="col-md-6">
+                  <div class="dropdown pull-right">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="false" >
+                      <i class="fa fa-solid fa-download"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item" type="button">PDF</button></li>
+                      <li><button class="dropdown-item" type="button">Excel</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+          </div>
+        </div>
+        <hr id="arn-master-secondhr">
+        <div class="row pt-2">
+
+          <div class="col-md-6 row mb-3" >
+            <!-- <tr>
+                <th scope="col"><b>Show</b> <i class="fa fa-solid"></i></th>
+                <td>
+                  
+                  </td> -->
+            <div class="col-md-3" style="display: flex; margin-top: 30px;">
+              <label>Show</label>
+              <select class="form-select" id="records" style="margin-left: 10px;">
+                <option>50</option>
+                <option>100</option>
+                <option>200</option>
+                <option>All</option>
+              </select> <b> entries</b>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-6" style=" margin-top: 30px;">
+              <!-- <label>Maker</label> -->
+    
+              <div class="selectBox form-control" style="    position: relative;
+              top: -12px;" onclick="showCheckboxes1()">
+    
+                <select class="custom-select border-bottom form-control-plaintext">
+    
+                  <option>Column </option>
+    
+                </select>
+    
+                <div class="overSelect"></div>
+    
+              </div>
+    
+              <div id="checkboxes1" class="checkstyle">
+    
+                <label><input type="checkbox" id="select-all2">Select All</label>
+                <label for="onem">
+    
+                  <input type="checkbox" id="onem" name="master2" onclick="myFunction()" />
+    
+                  CRCACODE</label>
+    
+                <label for="twom">
+                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+    
+                  REGION</label>
+                  <label for="twom">
+                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+      
+                    UFC</label>
+                    <label for="twom">
+                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+        
+                      DIST_CODE</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        CRCODE</label>
+                        <label for="twom">
+                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+            
+                          DISTRICT_NAME</label>
+                          <label for="twom">
+                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+              
+                            CACODE</label>
+                            <label for="twom">
+                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                
+                              UFC_HQ</label>
+                              <label for="twom">
+                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                  
+                                NAME_CR</label>
+                                <label for="twom">
+                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                    
+                                  STATUS</label>
+                                  <label for="twom">
+                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                      
+                                    DATE_OF_APP</label>
+                                    <label for="twom">
+                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                        
+                                      ADDRESS1</label>
+                                      <label for="twom">
+                                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                          
+                                        ADDRESS2</label>
+                                        <label for="twom">
+                                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                            
+                                          ADDRESS3</label>
+                                          <label for="twom">
+                                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                              
+                                            ADDRESS4</label>
+                                            <label for="twom">
+                                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                
+                                              PHONENO</label>
+                                              <label for="twom">
+                                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                  
+                                                MOBILENO</label>
+                                                <label for="twom">
+                                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                    
+                                                  EMAIL</label>
+                                                  <label for="twom">
+                                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                      
+                                                    DATE_OF_BIRTH</label>
+                                                    <label for="twom">
+                                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                        
+                                                      DRAWEEBANK_BRCODE</label>
+                                                      <var><var>   <label for="twom">
+                                                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                          
+                                                        ACNO_ALTBRANCHCODE</label>
+                                                        <label for="twom">
+                                                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                            
+                                                          VALID_FROM</label>
+                                                          <label for="twom">
+                                                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                              
+                                                            VALID_UPTO</label>
+                                                            <label for="twom">
+                                                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                
+                                                              PAYBEL_LOC</label>
+                                                              <label for="twom">
+                                                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                  
+                                                                BRANCH_NAME</label>
+                                                                <label for="twom">
+                                                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                    
+                                                                  IFSC_CODE</label>
+                                                                  <label for="twom">
+                                                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                      
+                                                                    STATUS_DOSM</label>
+                                                                    <label for="twom">
+                                                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                        
+                                                                      FIXED_PAY</label>
+                                                                      <label for="twom">
+                                                                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                          
+                                                                        ZONE</label>
+                                                                        <label for="twom">
+                                                                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                            
+                                                                          UFC_CODE</label>
+                                                                          <label for="twom">
+                                                                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                              
+                                                                            ARN_NUMBER</label>
+                                                                            <label for="twom">
+                                                                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                                
+                                                                              ARN_VALIDITY</label>
+                                                                              <label for="twom">
+                                                                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                                  
+                                                                                GST_NUMBER</label>
+                                                                                <label for="twom">
+                                                                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                                    
+                                                                                  PAN_NO</label>
+                                                                                  <label for="twom">
+                                                                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                                      
+                                                                                    GST_VALID</label>
+                                                                                    <label for="twom">
+                                                                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                                        
+                                                                                      MAHARASHTRA</label>
+                                                                                      <label for="twom">
+                                                                                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                                          
+                                                                                        RBP</label>
+                                                                                        <label for="twom">
+                                                                                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                                            
+                                                                                          ETSP</label>
+                                                                                          <label for="twom">
+                                                                                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                                              
+                                                                                            UTI_INFRA_FUND</label>
+                                                                                            <label for="twom">
+                                                                                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                                                
+                                                                                              BDACA_UTI_EMAIL</label>
+                                                                                            
+                                                                                              
+              </div>
+            </div>
+    </div>
+         
+
+        </div>
+        <br>
+        <div class="overflow-auto">
+          <table class="table small border">
+            <tr class="bg-primary text-white">
+           
+              <th scope="col">CRCACODE</th>
+              <th scope="col">REGION</th>
+              <th scope="col">UFC</th>
+              <!-- <th scope="col">UFC_CODE</th> -->
+              <th scope="col">DIST_CODE</th>
+              <th scope="col">CRCODE</th>
+              <th scope="col">DISTRICT_NAME</th>
+              <th scope="col">CACODE</th>
+              <th scope="col">UFC_HQ</th>
+              <th scope="col">NAME_CR</th>
+              <th scope="col">STATUS</th>
+              <th scope="col">DATE_OF_APP</th>
+              <th scope="col">ADDRESS1</th>
+              <th scope="col">ADDRESS2</th>
+              <th scope="col">ADDRESS3</th>
+              <th scope="col">ADDRESS4</th>
+              <th scope="col">PHONENO</th>
+              <th scope="col">MOBILENO</th>
+              <th scope="col">EMAIL</th>
+              <th scope="col">DATE_OF_BIRTH</th>
+              <th scope="col">DRAWEEBANK_BRCODE</th>
+              <th scope="col">ACNO_ALTBRANCHCODE</th>
+              <th scope="col">VALID_FROM</th>
+              <th scope="col">VALID_UPTO</th>
+              <th scope="col">PAYBEL_LOC</th>
+              <th scope="col">BRANCH_NAME</th>
+              <th scope="col">IFSC_CODE</th>
+              <th scope="col">STATUS_DOSM</th>
+              <th scope="col">FIXED_PAY</th>
+              <th scope="col">ZONE</th>
+              <th scope="col">UFC_CODE</th>
+            
+              <th scope="col">ARN_NUMBER</th>
+              <th scope="col">ARN_VALIDITY</th>
+              <th scope="col">GST_NUMBER</th>
+              <th scope="col">PAN_NO</th>
+              <th scope="col">GST_VALID</th>
+              <th scope="col">MAHARASHTRA</th>
+              <th scope="col">RBP</th>
+              <th scope="col">ETSP</th>
+              <th scope="col">UTI_INFRA_FUND</th>
+              <th scope="col">BDACA_UTI_EMAIL</th>
+              <th scope="col">CREATION_SERV_REQ</th>
+              <th scope="col">LSTUPD_SERV_REQ</th>
+              <th scope="col">LSTUPDUSER</th>
+              <th scope="col">CREATION_TICKET_ID</th>
+              <th scope="col">LSTUPD_TICKET_ID</th>
+              <th scope="col">LSTUPDDT</th>
+              <th scope="col">CREATION_DT</th>
+              <th scope="col">ACTION</th>
+            </tr>
+            <tr>
+       
+              <td>446C008</td>
+              <td>BIHAR</td>
+              
+              <td>446</td>
+              <td>304</td>
+              <td>9658</td>
+              <td>EAST CHAMPARAN</td>
+              <td>2618</td>
+              <td>NO</td>
+              <td>MD RIZWAN</td>
+              <td>CA</td>
+              <td>01-02-2020</td>
+              <td>WHITE HOUSE, LAMBODAR GALI</td>
+              <td>MEENA BAZAR</td>
+              <td>MOTIHARI</td>
+              <td>EAST CHAMPARAN</td>
+              <td>482001</td>
+              <td>9835479344</td>
+              <td>rizwan_utimf@yahoo.co.in</td>
+              <td>25-04-1974</td>
+              <td>STATE BANK OF INDIA</td>
+              <td>SB A/C 10063221478</td>
+              <td>01-04-2021</td>
+              <td>30-12-9999</td>
+              <td>MUZAFFARPUR</td>
+              <td>CHANDWARA</td>
+              <td>SBIN0003557</td>
+              <td>Chief Agent</td>
+              <td>7000</td>
+              <td>East</td>
+              <!-- <td>446</td> -->
+              <td>ARN-7000</td>
+              <td>2563</td>
+              <td>26-03-2021</td>
+              <td>AQWPS3509K</td>
+              <td>3692581472</td>
+              <td>26-03-2022</td>
+              <td></td>
+              <td></td>
+              <!-- <td>0</td>
+              <td>0</td> -->
+              <td></td>
+              <td></td>
+              <td>Eastchamparan_446C008@sa.utimf.com</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-bda-ca-master.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-bda-ca-maseter.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+             
+              <td>431B001</td>
+              <td>BIHAR</td>
+             
+              <td>431</td>
+              <td>318</td>
+              <td>4569</td>
+              <td>KATIHAR</td>
+              <td>1592</td>
+              <td></td>
+              <td>SHRI RABINDRA KUMAR SAH</td>
+              <td>CR</td>
+              <td>18-05-1989</td>
+              <td>KESHRI MARKET, BANIA TOLA CHOWK</td>
+              <td>M G ROAD</td>
+              <td>P.O. & DIST. KATIHAR</td>
+              <td></td>
+              <td>244155</td>
+              <td>9431096365</td>
+              <td>rksahktr@rediffmail.com</td>
+              <td>08-09-1950</td>
+              <td>AXIS BANK,PATNA</td>
+              <td>SB A/C 142010100004916</td>
+              <td>30-12-9999</td>
+              <td>01-04-2021</td>
+            
+              <td>MUZAFFARPUR</td>
+              <!-- <td>0</td>
+              <td>0</td> -->
+              <td>Business Development Associate</td>
+              <td>	SBIN00032615</td>
+              <td>Chief Agent</td>
+              <!-- <td>431</td> -->
+              <td>9000</td>
+              <td>West</td>
+              <td>ARN-7001</td>
+              <td>2615</td>
+              <td>15-12-2022</td>
+              <td>AQWPS3510K</td>
+              <td>1259365746</td>
+              <td>15-12-2022</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Katihar_431B001@sa.utimf.com</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-bda-ca-master.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-bda-ca-maseter.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+
+        $(document).ready(function () {
+          $('#action').multiselect();
+        });   
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+    // aaa
+    var acc = document.getElementsByClassName("accordion");
+
+    var i;
+
+
+
+
+    for (i = 0; i < acc.length; i++) {
+
+      acc[i].addEventListener("click", function () {
+
+        this.classList.toggle("active");
+
+        var panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+
+          panel.style.display = "none";
+
+        } else {
+
+          panel.style.display = "block";
+
+        }
+
+      });
+
+    }
+        // toggle script
+    
+
+   var  innerSidebar = function(){
+
+$('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+// toggle script
+  </script>
+    <!-- columns -->
+ <script>
+
+  var expanded = false;
+
+
+
+
+  function showCheckboxes1() {
+
+    var checkboxes1 = document.getElementById("checkboxes1");
+
+    if (!expanded) {
+
+      checkboxes1.style.display = "block";
+
+      expanded = true;
+
+    } else {
+
+      checkboxes1.style.display = "none";
+
+      expanded = false;
+
+    }
+
+  }</script>
+
+<script>
+
+  $(function () {
+
+    $("#example1").DataTable({
+
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+    $('#example2').DataTable({
+
+      "paging": true,
+
+      "lengthChange": false,
+
+      "searching": false,
+
+      "ordering": true,
+
+      "info": true,
+
+      "autoWidth": false,
+
+      "responsive": true,
+
+    });
+
+  });
+
+</script>
+
+<script>
+  document.getElementById('select-all2').onclick = function () {
+    var checkboxes1 = document.getElementsByName('master2');
+    for (var checkbox of checkboxes1) {
+      checkbox.checked = this.checked;
+    }
+  }
+</script>
+ 
+ 
+</body>
+
+</html>

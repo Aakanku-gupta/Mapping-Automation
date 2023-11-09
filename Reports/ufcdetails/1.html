@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>UTI</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+	<link href="../../assets/css/bootstrap.min_v5.1.3.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="../../assets/css/main.css" rel="stylesheet">
+  <link href="../../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between"><i class="toggle-sidebar-btn pe-2">
+        <span class="fa fa-align-justify text-white"></span> </i><img src="../assets/images_1/logo_1.png" alt=""
+        width="130px"></div>
+    <div class="col-md-9">
+      <h6 class="text-center text-white small pt-2" style="    margin: 0px;
+    ">Welcome : Kiran Dalvi | Last Login : Jun 19th 12:00pm</h6>
+      <div class="row">
+        <div class="col-md-3">
+          <h6 class="text-left text-white small pt-2">Role : Admin &nbsp;&nbsp; Location : MUMBAI</h6>
+        </div>
+        <div class="col-md-3 text-white">
+          <label style="font-size: 12px;" >ROLE : </label>
+          <select class="form-select" style="width: 150px; padding: 0px 10px;">
+            <option>ROLE</option>
+            <option>CM</option>
+            <option>RH</option>
+            <option>ZH</option>
+            <option>CH</option>
+          </select>
+        </div>
+        <div class="col-md-3 text-white" >
+          <label style="font-size: 12px;">CASE_ID : </label>
+          <select class="form-select" style="width: 150px; padding: 0px 10px;">
+            <option>CASE_ID</option>
+            <option>3445</option>
+            <option>3553</option>
+            <option>3534</option>
+            <option>3645</option>
+            <option>3745</option>
+          </select>
+        </div>
+        <div class="col-md-3 text-white" >
+          <label style="font-size: 12px;">UFC_CODE : </label>
+          <select class="form-select" style="width: 150px; padding: 0px 10px;">
+            <option>UFC_Code</option>
+            <option>132, MUZAFFARPUR</option>
+            <option>549, PATNA</option>
+            <option>548, BHAGALPUR</option>
+            <option>218, DARBHANGA</option>
+            <option>147, AURANGABAD</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown pe-4">
+          <a class="nav-link dropdown-toggle text-white small" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">User</a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li><a class="dropdown-item d-flex align-items-center" href="../login.html"><i class="fa fa-sign-out"></i>
+                <span>Logout</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+	<!-- sidebar start -->
+	<div uti-include-html="../../includes/sidebar.html"></div>
+	<!-- sidebar end -->
+  <main id="main" class="main">
+		<section class="section dashboard">
+  <div class="bg-white p-3 border">
+  <div class="row">
+    <div class="col-md-12">
+        <h5>UFC Details</h5>
+    </div>
+    <hr>
+    <form class="ng-pristine ng-valid-model.code ng-valid ng-valid-required ng-valid-model.name">
+      <div class="overflow-auto">
+        <table class="table small border">
+          <tr class="bg-primary text-white">
+             <th scope="col">UFC Code</th>
+            <th scope="col">UFC Name</th>
+            <th scope="col">From Date</th>
+            <th scope="col">To Date</th>
+            <th scope="col">Mapping</th>
+            <th scope="col">Status</th>
+          </tr>
+          <tr>
+            <td>111</td>
+            <td>JVPD</td>
+            <td>01/09/2022</td>
+            <td>12/09/2022</td>
+            <td>ARN Mapping</td>
+            <td>Not Completed</td>
+          </tr>
+          <tr>
+            <td>123</td>
+            <td>KALYAN</td>
+            <td>05/09/2022</td>
+            <td>11/09/2022</td>
+            <td>ARN Mapping</td>
+            <td>Not Completed</td>
+          </tr>
+          <tr>
+            <td>125</td>
+            <td>BHAVNAGAR</td>
+            <td>03/09/2022</td>
+            <td>12/09/2022</td>
+            <td>ARN Mapping</td>
+            <td>Not Completed</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-12 mt-3"> 
+        <a href="../mappingstatus.html" id="btn_search" name="btnsearch" class="btn btn-primary" >Close</a> 
+      </div> 
+  </div>
+  </div>
+</div>
+</section>
+</main>
+<footer id="footer" class="footer">
+  <div class="copyright">
+    &copy; Copyright <strong><span>UTI</span></strong>
+    <script type="text/javascript">
+      var d = new Date();
+      yr = d.getFullYear();
+      document.write(yr);      cPrev = -1;
+function sortBy(c) {
+rows = document.getElementById("sortable").rows.length;
+columns = document.getElementById("sortable").rows[0].cells.length;
+arrTable = [...Array(rows)].map(e => Array(columns));
+
+for (ro=0; ro<rows; ro++) {
+    for (co=0; co<columns; co++) {
+        arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+    }
+}
+
+th = arrTable.shift();
+
+if (c !== cPrev) {
+    arrTable.sort(
+        function (a, b) {
+            if (a[c] === b[c]) {
+                return 0;
+            } else {
+                return (a[c] < b[c]) ? -1 : 1;
+            }
+        }
+    );
+} else {
+    arrTable.reverse();
+}
+
+cPrev = c;
+
+arrTable.unshift(th);
+
+for (ro=0; ro<rows; ro++) {
+    for (co=0; co<columns; co++) {
+        document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+    }
+}
+}
+    </script>
+    . All Rights Reserved
+  </div>
+</footer>
+  <script src="../../assets/js/bootstrap.bundle.min_v5.1.3.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/uti.js"></script>
+  <script src="../../assets/js/custom.js"></script>
+</body>
+<script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+</html>

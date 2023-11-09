@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-12">
+            <h5>CRCA EXCLUSION MASTER</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <!-- <a href="../master/bulk-upload-crca-exclusion.html" class="btn btn-primary"
+              style=" width: 160px; border: none;">Bulk Upload + </a> -->
+            <a href="../master/add-record-crca-exclusive.html" class="btn btn-primary" style=" width: 160px;  border: none ">Add
+              Record +</a>
+          </div>
+        </div>
+        <hr id="arn-master-firsthr">
+        <div class="row">
+          <div class="col-md-12">
+            <table>
+              <tr>
+                <td>
+                  <table class="row pt-3 id=" step1">
+                    <tr>
+                      <td><input type="text" class="form-control" id="select3" /></td>
+                      <td>
+                        <select class="form-select" id="select1">
+                          <option>Select Quarter</option>
+                          <option value="202353">2022-23-Q1</option>
+                          <option value="202354">2022-23-Q2</option>
+                          <option value="202355">2022-23-Q3</option>
+                          <option value="202356">2022-23-Q4</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="form-select" id="select2">
+                          <option>Select ACNO</option>
+                          <option value="1">572288032082</option>
+                          <option value="2">572303692973</option>
+                          <option value="3">501304074086</option>
+                          <option value="4">561258454363</option>
+                          <option value="5"></option>
+                          <option value="6">530308898724</option>
+                          <option value="7">530311704793</option>
+                          <option value="8">514308571566</option>
+                        </select>
+                      </td>
+                      <td><a href="#" id="btn_search1" name="btnsearch" class="btn btn-primary w-30">Search</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <hr id="arn-master-secondhr">
+        <div class="row pt-2">
+
+          <div class="col-md-6  mb-3" style="display: flex; margin-top: 30px;">
+  
+            <tr>
+  
+              <th scope="col"><b>Show</b> <i class="fa fa-solid"></i></th>
+  
+              <td>
+  
+                <select class="form-select" id="records" style="margin-left: 10px;">
+  
+                  <option>50</option>
+  
+                  <option>100</option>
+  
+                  <option>200</option>
+  
+                  <option>All</option>
+  
+                </select><b>Entries</b>
+  
+              </td>
+  
+            </tr>
+  
+          </div>
+          <div class="col-md-6">
+            <td><button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="margin-left: 180px;"><i class="fa fa-solid fa-download"></i></button>
+              <ul class="dropdown-menu">
+                <li><button class="dropdown-item" type="button">Excel</button></li>
+              </ul>
+            </td>
+          </div>
+        </div>
+        <div class="overflow-auto">
+          <table class="table small border">
+            <tr class="bg-primary text-white">
+              
+              <th scope="col">CHANNEL_CODE</th>
+              <th scope="col">VIRTUAL_RMCODE_STR</th>
+              <th scope="col">UFC_CODE</th>
+              <th>UFC_NAME </th>
+              <th scope="col">VALID_FROM</th>
+              <th scope="col">VALID_UPTO</th>
+              <th scope="col">VIRTUAL_RM_MASTER</th>
+              <th scope="col">CREATION_SERV_REQ</th>
+              <th scope="col">LSTUPD_SERV_REQ</th>
+              <th scope="col">LSTUPDUSER</th>
+              <th scope="col">CREATION_TICKET_ID</th>
+              <th scope="col">LSTUPD_TICKET_ID</th>
+              <th scope="col">LSTUPDDT</th>
+              <th scope="col">CREATION_DT</th>
+              <th scope="col">ACTION</th>
+            </tr>
+            <tr>
+             
+              <td>572288032082</td>
+              <td>AAATB3000B</td>
+              <td>142B001</td>
+              <td></td>
+              <td>30-12-9999</td>
+              <td>01-04-2018</td>
+              <td></td>
+              
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-record-crca-exclusive.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-crca-exclusive-master.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+             
+              <td>572303692973</td>
+              <td>ADBPP8800D</td>
+              <td>142B001</td>
+              <td></td>
+              <td>30-12-9999</td>
+              <td>01-04-2018</td>
+
+              <td></td>
+              
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-record-crca-exclusive.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-crca-exclusive-master.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+             
+              <td>501304074086</td>
+              <td>AAAAT2500R</td>
+              <td>142B001</td>
+              <td></td>
+              <td>30-12-9999</td>
+              <td>01-04-2018</td>
+              <td></td>
+             
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-record-crca-exclusive.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-crca-exclusive-master.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+             
+              <td>561258454363</td>
+              <td>AAAAT2425K</td>
+              <td>107B001</td>
+              <td></td>
+              <td>30-12-9999</td>
+              <td>01-04-2018</td>
+              <td></td>
+           
+              <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-record-crca-exclusive.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-crca-exclusive-master.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+             
+              <td>561258454363</td>
+              <td>AADTS0469E</td>
+              <td>105B002</td>
+           
+              <td></td>
+              <td>01-10-2019</td>
+              <td>30-12-9999</td>
+              <td></td>
+             
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-record-crca-exclusive.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-crca-exclusive-master.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">
+        &copy; Copyright <strong><span>UTI</span></strong>
+        <script type="text/javascript">
+            var d = new Date();
+            yr = d.getFullYear();
+            document.write(yr); cPrev = -1;
+            function sortBy(c) {
+                rows = document.getElementById("sortable").rows.length;
+                columns = document.getElementById("sortable").rows[0].cells.length;
+                arrTable = [...Array(rows)].map(e => Array(columns));
+
+                for (ro = 0; ro < rows; ro++) {
+                    for (co = 0; co < columns; co++) {
+                        arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                    }
+                }
+
+                th = arrTable.shift();
+
+                if (c !== cPrev) {
+                    arrTable.sort(
+                        function (a, b) {
+                            if (a[c] === b[c]) {
+                                return 0;
+                            } else {
+                                return (a[c] < b[c]) ? -1 : 1;
+                            }
+                        }
+                    );
+                } else {
+                    arrTable.reverse();
+                }
+
+                cPrev = c;
+
+                arrTable.unshift(th);
+
+                for (ro = 0; ro < rows; ro++) {
+                    for (co = 0; co < columns; co++) {
+                        document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                    }
+                }
+            }
+                  // toggle script
+
+
+var  innerSidebar = function(){
+
+$('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+// toggle script
+        </script>
+        . All Rights Reserved
+    </div>
+</footer>
+
+
+  <!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script type="text/javascript">
+    function displaydetails() {
+        document.getElementById("empgrddetails").style.display = "block";
+        document.getElementsByClassName("upload_btn")[0].style.display = "none";  //new
+
+    }
+</script>
+  <script>
+      function myFunction() {
+          let text = "Do you want to proceed";
+          if (confirm(text) == true) {
+              text = "You pressed OK!";
+          } else {
+              text = "You canceled!";
+          }
+          document.getElementById("demo").innerHTML = text;
+      }
+  </script>
+
+<script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+  
+</body>
+
+</html>

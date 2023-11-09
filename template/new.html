@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CKEditor Example</title>
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+</head>
+
+<body>
+    <textarea name="editor1" id="editor1" rows="10" cols="80"></textarea>
+    <button id="saveButton">Save</button>
+
+    <script>
+        // CKEditor initialization
+        CKEDITOR.replace('editor1');
+
+        // Save button click event
+        document.getElementById('saveButton').addEventListener('click', function () {
+            var content = CKEDITOR.instances.editor1.getData();
+            console.log(content); // You can do something with the content here, like sending it to a server.
+        });
+    </script>
+</body>
+
+</html>

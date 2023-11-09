@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard  bg-white">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-8">
+            <h5>VYMO DISTRIBUTOR MAPPING</h5>
+          </div>
+          <div class="col-md-4 text-end text-danger">
+            Access Valid Till : 01/09/2022 to 12/09/2022
+          </div>
+          <!-- <div class="col-md-4">
+            <form>
+              <a href="../Templates/Vymo-Distributor-Mapping.xlsx" download="Vymo-Distributor-Mapping"><button
+                  type="button" id="templatebtn" class="btn btn-primary">Templates</button></a>
+            </form>
+          </div> -->
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-12">
+              <div class="row">
+                <div id="left">
+                  <div id="sidebar">
+                      <div id="accordian">
+                          <h1 class="serchtitle">
+                              <span id="ContentPlaceHolder1_spnMobCategoryName" class="category-name"></span>
+                          </h1>
+                         
+                          <p class="filter-option-heading">Update Records (Bulk Update On Basis Of RM To New RM)</p>
+                         
+                          <div class="row pt-3 filter-option-content" id="step1">
+                              <table class="">
+                                  <tr>
+                                      <td><select class="form-select">
+                                              <option>Old RM_Code</option>
+                                          </select></td>
+                                      <td>
+                                          <select class="form-select">
+                                            <option>New RM CODE</option>                                              <option> 4546,Sakshi Hinge</option>
+                                              <option>4251,Jigar Chandulal Bhanushali</option>
+                                              <option>D-PRM-115</option>
+                                              <option>NORM</option>
+                                          </select>
+                                      </td>
+                                      <td><a href="#" id="" name="" class="btn btn-primary w-100">Save</a></td>
+                                      <td><button class="btn btn-primary dropdown-toggle" type="button"
+                                              data-bs-toggle="dropdown" aria-expanded="false">
+                                              <i class="fa fa-solid fa-download"></i>
+                                          </button>
+                                          <ul class="dropdown-menu">
+                                              <li><button class="dropdown-item" type="button">PDF</button></li>
+                                              <li><button class="dropdown-item" type="button">Excel</button></li>
+                                          </ul>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                <!-- <div class="col-md-12">
+                  <a href="../mapping_edit/vymo distributor mapping-bulk-upload.html" class="btn btn-primary mt-4 " style="width: auto;
+                  border: none;
+                  position: relative;
+                  bottom: 48px;">Bulk
+                    Upload + </a> -->
+                  <!-- <a href="../mapping_edit/vymo distributor mapping-bulk-update.html" class="btn btn-primary mt-4" style=" width: auto; border: none;">Bulk RM
+                    Update +</a> -->
+                   <!-- <a href="../mapping_edit/vymo distributor mapping-bulk-add_record.html" class="btn btn-primary mt-4"
+                    style=" width: auto;  border: none ">Add Record +</a> -->
+                  </div>
+                </div>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade  " id="total" role="tabpanel" aria-labelledby="total-tab">
+                  <div class="overflowemail">
+                    <div class="mt-2" style="width: 150px;">
+                      <h3 class="mb-4">Upload File </h3>
+                      <input type="file" class="hsag">
+                      <button class="xyz " style="border-radius: 5px;">Upload</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+                  <div class="col-md-12 mt-2">
+                    <div class="row">
+                      <div class="col-md-6  ">
+                        <label class="mt-4">KRV_Code</label>
+                        <input type="text " placeholder="ARN-29742" class="form-control mt-2">
+                        <label class="mt-4">Channel_code</label>
+                        <input type="text " placeholder="RTL" class="form-control mt-2">
+                        <label class="mt-4">NEW_BR_CODE</label>
+                        <input type="text " placeholder="119" class="form-control mt-2">
+                        <label class="mt-4">REGION_CODE</label>
+                        <input type="text " placeholder="NORH" class="form-control mt-2">
+                        <label class="mt-4">NAME</label>
+                        <input type="text " placeholder="DEUTSCHE BANK" class="form-control mt-2">
+                        <label class="mt-4">MULTI_CITY FLAG</label>
+                        <input type="text " placeholder="E" class="form-control mt-2">
+                        <label class="mt-4">CATEGORY</label>
+                        <input type="text " placeholder="BANKS" class="form-control mt-2">
+                        <label class="mt-4">ZONE</label>
+                        <input type="text " placeholder="WEST" class="form-control mt-2">
+                        <label class="mt-4">ARN_GROUP_NAME</label>
+                        <input type="text " placeholder="Deutsche Bank" class="form-control mt-2">
+                        <label class="mt-4">SUB_CHANNEL</label>
+                        <input type="text " placeholder="E-ARN" class="form-control mt-2">
+
+                      </div>
+
+                      <div class="col-md-6 ">
+                        <label class="mt-4">VALID_FROM</label>
+                        <input type="text " placeholder="01-10-2021" class="form-control mt-2">
+                        <label class="mt-4">VALID_UPTO</label>
+                        <input type="text " placeholder="30-12-9999" class="form-control mt-2">
+                        <label class="mt-4">CREATION_DT</label>
+                        <input type="text " placeholder="01-07-2019" class="form-control mt-2">
+                        <label class="mt-4">LSTUPDDT</label>
+                        <input type="text " placeholder="25-07-2019" class="form-control mt-2">
+                        <label class="mt-4">ACTIVE_FLAG</label>
+                        <input type="text " placeholder="Y" class="form-control mt-2">
+                        <label class="mt-4">OWNER_TYPE</label>
+                        <input type="text " placeholder="" class="form-control mt-2">
+                        <label class="mt-4">UFC_CODE</label>
+                        <input type="text " placeholder="119" class="form-control mt-2">
+                        <label class="mt-4">PRM_CODE</label>
+                        <input type="text " placeholder="" class="form-control mt-2">
+                        <label class="mt-4">CHANNEL_GROUP</label>
+                        <input type="text " placeholder="BNND" class="form-control mt-2">
+                        <button class="btu">submit</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+              </div>
+            </div>
+          
+          </div>
+          <hr>
+          <table>
+            <tr>
+              <!-- <th scope="col">Records <i class="fa fa-solid"></i></th> -->
+              <td>
+                <label>Quarter</label>
+                <select class="form-select" id="quaterSearchFilter" name="SelectQuarter" style="width:200px;">
+                <option value="1">2023-24-Q1</option>
+                <option value="2">2022-23-Q4</option>
+                <option value="3">2022-23-Q3</option>
+                <option value="4">2022-23-Q2</option>
+                <option value="5">2022-23-Q1</option>
+                </select>
+               </td>
+                <td style="padding-left:10px">
+                  <label>Zone</label>
+                  <select class="form-select" id="zoneSearchFilter" style="width:101px;">
+                      <option value="">ALL</option>
+                      <option value="CORP"> CORP</option>
+                      <option value="EAST"> EAST</option>
+                      <option value="GULF"> GULF</option>
+                      <option value="NORTH"> NORTH</option>
+                      <option value="SOUTH"> SOUTH</option>
+                      <option value="WEST"> WEST</option>
+                  </select>
+              </td>
+              <td style="padding-left:10px">
+                <label>Region</label>
+                <select class="form-select" id="regionSearchFilter">
+                    <option value="">All</option>
+                    <option value="AP"> ANDHRA PRADESH</option>
+                    <option value="BNND_BANG"> B&ND BANGALORE</option>
+                    <option value="BNND_DELH"> B&ND DELHI</option>
+                    <option value="BNND_KOLK"> B&ND KOLKATA</option>
+                    <option value="BNND_MUMB"> B&ND MUMBAI</option>
+                    <option value="BIHR"> BIHAR</option>
+                    <option value="CHAN"> CHANDIGARH</option>
+                    <option value="CORP"> CORPORATE OFFICE</option>
+                    <option value="DELH"> DELHI</option>
+                    <option value="GUJR"> GUJARAT</option>
+                    <option value="GULF"> GULF</option>
+                    <option value="KRTK"> KARNATAKA</option>
+                    <option value="MUMB"> MUMBAI</option>
+                    <option value="NAGP"> NAGPUR</option>
+                    <option value="NEAST"> NORTH EAST</option>
+                    <option value="ORJK"> ORISSA & JHARKHAND</option>
+                    <option value="RAJS"> RAJASTHAN</option>
+                    <option value="ROMH"> REST OF MAHARASHTRA & GOA</option>
+                    <option value="TNNK"> TAMIL NADU & KERALA</option>
+                    <option value="UP"> UTTAR PRADESH</option>
+                    <option value="WB"> WEST BENGAL</option>
+                </select>
+                </td>
+                 <td style="padding-left:10px">
+                      <label>UFC</label>
+                      <select class="form-select" id="ufcNameSearchFilter">
+                      <option value="">ALL</option>
+                      <option value="1">B&ND MUMBAI-RM(RH Reporting)</option>
+                      <option value="2">B&ND BANGLORE-RM(RH Reporting)</option>
+                      <option value="3">B&ND KOLKOTA-RM(RH Reporting)</option>
+                      <option value="4">HITECHCITY UFC</option>
+                      <option value="5">VALSAD </option>
+                      <option value="6">PONDICHERRY</option>
+                      <option value="7">ASANSOL</option>
+                      <option value="8">JHANSI</option>
+                      <option value="9">B&ND MUMBAI-01</option>
+                      <option value="10">B&ND MUMBAI-02</option>
+                      <option value="11">B&ND MUMBAI-02</option>
+                      <option value="12">B&ND MUMBAI-03</option>
+                      <option value="13">B&ND AHMEDABAD-01</option>
+                      </select>
+                      </td>
+                  <td style="padding-left:10px">
+                    <label>Search Text</label>
+                    <input type="text" class="form-control" id="txtsearch" style="margin-left:5px;">
+                </td>
+                </tr>
+                <tr>
+                  <td style="padding-top:20px;padding-left:0px">
+                      <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary w-100">Search <img src="/Content/images/btn-spinner.gif" style="display:none"></a>
+                  </td>
+                  <td style="padding-top: 20px;">
+                      <div class="dropdown pull-right" style="margin-left:20px">
+                          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-solid fa-download"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                              <li><button class="dropdown-item" id="btnExport" type="button">Format-1</button></li>
+                              <li><button class="dropdown-item" id="btnExport" type="button">Format-4</button></li>
+                          </ul>
+                      </div>
+                  </td>
+              </tr>
+                </table><hr>
+                <div class="col-md-6 row mb-3">
+                  <!-- <tr>
+                            <th scope="col"><b>Show</b> <i class="fa fa-solid"></i></th>
+                            <td>
+                              
+                              </td> -->
+                  <div class="col-md-3" style="display: flex; margin-top: 30px;">
+                    <label>Show</label>
+                    <select class="form-select" id="records" style="margin-left: 10px;">
+                      <option>50</option>
+                      <option>100</option>
+                      <option>200</option>
+                      <option>All</option>
+                    </select> <b> entries</b>
+                  </div>
+                  <div class="col-md-2"></div>
+                  <div class="col-md-6" style=" margin-top: 30px;">
+                    <!-- <label>Maker</label> -->
+          
+                    <div class="selectBox form-control" style="    position: relative;
+                          top: -12px;" onclick="showCheckboxes1()">
+          
+                      <select class="custom-select border-bottom form-control-plaintext">
+          
+                        <option>Column </option>
+          
+                      </select>
+          
+                      <div class="overSelect"></div>
+          
+                    </div>
+          
+                    <div id="checkboxes1" class="checkstyle">
+          
+                      <label><input type="checkbox" id="select-all2">Select All</label>
+                      <label for="onem">
+          
+                        <input type="checkbox" id="onem" name="master2" onclick="myFunction()" />
+          
+                       
+                        Dist Key</label>
+          
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                        Distributor Name</label>
+                      <label for="threem">
+                        <input type="checkbox" id="threem" name="master2" onclick="myFunction2()" />
+          
+                        Assigned To</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                        User ID</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                      	Creation Date</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                        Last Updated Date</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        Email </label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        Phone </label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        Primary Phone Number	</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        Status  </label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        Category   	</label>
+                        <label for="twom">
+                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+            
+                          Partner Recruitment Date </label>
+                          <label for="twom">
+                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+              
+                            Engagement Frequency </label>
+                            <label for="twom">
+                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                
+                              ARN Number </label>
+                              <label for="twom">
+                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                  
+                                Sub ARN   <label for="twom">
+                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                    
+                                  Sub ARN Name </label>
+                                  <label for="twom">
+                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                      
+                                    Group Name</label>
+                                    <label for="twom">
+                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                        
+                                      Group ARN </label>
+                                      <label for="twom">
+                                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                          
+                                        Commission Category</label>
+                                        <label for="twom">
+                                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                            
+                                          Tier</label>
+                                          <label for="twom">
+                                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                              
+                                            State  </label>
+                                            <label for="twom">
+                                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                
+                                              City  </label>
+                                              <label for="twom">
+                                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                  
+                                              	Home Location</label>
+                                                <label for="twom">
+                                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                    
+                                                  ARN Validity</label>
+                                                  <label for="twom">
+                                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                      
+                                                    ARN Validity</label>
+                                                    <label for="twom">
+                                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                        
+                                                Channel </label>
+                                                      <label for="twom">
+                                                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                          
+                                                        Distributor PAN</label>
+                                                        <label for="twom">
+                                                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                            
+                                                          Distributor Type</label>
+                                                          <label for="twom">
+                                                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                              
+                                                            Effective Date</label>
+                                                            <label for="twom">
+                                                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                
+                                                              Secondary Contact Number</label>
+                                                              <label for="twom">
+                                                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                  
+                                                                Residential Contact Number</label>
+                                                                <label for="twom">
+                                                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                    
+                                                                	Pincode</label>
+                                                                  <label for="twom">
+                                                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                      
+                                                                    Birth Date</label>
+                                                                    <label for="twom">
+                                                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                        
+                                                                      Mapping City</label> <label for="twom">
+                                                                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                          
+                                                                        Tagged UTI Branch</label>
+                                                                        <label for="twom">
+                                                                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                            
+                                                                          Tagged UTI Branch Code</label>
+                                                                           <label for="twom">
+                                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                    
+                                                  Tagged MISVPAY Branch Code</label> <label for="twom">
+                                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                      
+                                                    Alternate Address Line 1</label>
+                                                    <label for="twom">
+                                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                        
+                                                      Alternate Address Line 2</label>
+                                                       <label for="twom">
+                                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                    
+                                                  Alternate City</label>
+                                                  <label for="twom">
+                                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                      
+                                                    Alternate City</label>
+                                                    <label for="twom">
+                                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                        
+                                                      Alternate State</label>
+                                                      <label for="twom">
+                                                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                          
+                                                        Alternate Pincode</label>
+                                                        <label for="twom">
+                                                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                            
+                                                          Anniversary Date</label>
+                                                          <label for="twom">
+                                                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                              
+                                                            Distributor ARN </label>
+
+                                                            <label for="twom">
+                                                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                
+                                                              Alternate Email </label>
+                                                              <label for="twom">
+                                                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                  
+                                                                Distributor Segment </label>
+                                                                <label for="twom">
+                                                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                    
+                                                                  Alternate Contact Number</label>
+                                                                  <label for="twom">
+                                                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                      
+                                                                    KRA_VALID_FORM </label>
+                                                                    <label for="twom">
+                                                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                        
+                                                                      KRA_VALID_UPTO  </label>
+
+                        
+                  
+                          
+                                </div>
+                                
+                  </div>
+                </div>
+        </div>
+      </div>
+
+      <br>
+      <div class="overflow-auto" id="margin">
+        <table class="table small border table-hover" id="sortable">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th scope="col" id="colall">All<input type="checkbox" class="form-check-input" id="alltxt" /> </th>
+              <!-- <th scope="col">Lead Code <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th> -->
+              <th scope="col">Dist Key <i class="fa fa-solid fa-sort" onclick="sortBy(33)"></i></th>
+              <th scope="col">Distributor Name <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th>
+              <th scope="col">Assigned To <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+              <th scope="col" class="">User ID <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+              <th scope="col">Creation Date <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th>
+              <th scope="col">Last Updated Date <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+          
+              <th scope="col">Email <i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i></th>
+              <th scope="col">Phone <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+              <th scope="col">Primary Phone Number <i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th>
+              <th scope="col">Status <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+              <th scope="col">Category <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+              <th scope="col">Partner Recruitment Date <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+              <th scope="col">Engagement Frequency <i class="fa fa-solid fa-sort" onclick="sortBy(13)"></i></th>
+              <th scope="col">ARN Number <i class="fa fa-solid fa-sort" onclick="sortBy(14)"></i></th>
+              <th scope="col">Sub ARN <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <th scope="col">Sub ARN Name <i class="fa fa-solid fa-sort" onclick="sortBy(16)"></i></th>
+              <th scope="col">Group Name <i class="fa fa-solid fa-sort" onclick="sortBy(17)"></i></th>
+              <th scope="col">Group ARN <i class="fa fa-solid fa-sort" onclick="sortBy(18)"></i></th>
+              <th scope="col">Commission Category <i class="fa fa-solid fa-sort" onclick="sortBy(19)"></i></th>
+              <th scope="col">Tier <i class="fa fa-solid fa-sort" onclick="sortBy(20)"></i></th>
+              <th scope="col">State <i class="fa fa-solid fa-sort" onclick="sortBy(21)"></i></th>
+              <th scope="col">City <i class="fa fa-solid fa-sort" onclick="sortBy(22)"></i></th>
+              <th scope="col">Home Location <i class="fa fa-solid fa-sort" onclick="sortBy(23)"></i></th>
+              <th scope="col">ARN Validity <i class="fa fa-solid fa-sort" onclick="sortBy(24)"></i></th>
+              <th scope="col">Channel <i class="fa fa-solid fa-sort" onclick="sortBy(25)"></i></th>
+              <th scope="col">Distributor PAN <i class="fa fa-solid fa-sort" onclick="sortBy(26)"></i></th>
+              <th scope="col">Distributor Type <i class="fa fa-solid fa-sort" onclick="sortBy(27)"></i></th>
+              <th scope="col">Effective Date <i class="fa fa-solid fa-sort" onclick="sortBy(28)"></i></th>
+              <th scope="col">Secondary Contact Number <i class="fa fa-solid fa-sort" onclick="sortBy(29)"></i></th>
+              <th scope="col">Residential Contact Number <i class="fa fa-solid fa-sort" onclick="sortBy(30)"></i></th>
+              <th scope="col">Pincode <i class="fa fa-solid fa-sort" onclick="sortBy(31)"></i></th>
+              <th scope="col">Birth Date <i class="fa fa-solid fa-sort" onclick="sortBy(32)"></i></th>
+          
+              <th scope="col">Mapping City <i class="fa fa-solid fa-sort" onclick="sortBy(34)"></i></th>
+              <th scope="col">Tagged UTI Branch <i class="fa fa-solid fa-sort" onclick="sortBy(35)"></i></th>
+              <th scope="col">Tagged UTI Branch Code <i class="fa fa-solid fa-sort" onclick="sortBy(36)"></i></th>
+              <th scope="col">Tagged MISVPAY Branch Code <i class="fa fa-solid fa-sort" onclick="sortBy(37)"></i></th>
+              <th scope="col">Alternate Address Line 1 <i class="fa fa-solid fa-sort" onclick="sortBy(38)"></i></th>
+              <th scope="col">Alternate Address Line 2 <i class="fa fa-solid fa-sort" onclick="sortBy(39)"></i></th>
+              <th scope="col">Alternate City <i class="fa fa-solid fa-sort" onclick="sortBy(40)"></i></th>
+              <th scope="col">Alternate State <i class="fa fa-solid fa-sort" onclick="sortBy(41)"></i></th>
+              <th scope="col">Alternate Pincode <i class="fa fa-solid fa-sort" onclick="sortBy(42)"></i></th>
+              <th scope="col">Anniversary Date <i class="fa fa-solid fa-sort" onclick="sortBy(43)"></i></th>
+              <th scope="col">Distributor ARN <i class="fa fa-solid fa-sort" onclick="sortBy(44)"></i></th>
+              <th scope="col">Alternate Email <i class="fa fa-solid fa-sort" onclick="sortBy(45)"></i></th>
+              <th scope="col">Distributor Segment <i class="fa fa-solid fa-sort" onclick="sortBy(46)"></i></th>
+              <th scope="col">Alternate Contact Number <i class="fa fa-solid fa-sort" onclick="sortBy(47)"></i></th>
+              <th scope="col">KRA_VALID_FORM <i class="fa fa-solid fa-sort" onclick="sortBy(48)"></i></th>
+              <th scope="col">KRA_VALID_UPTO <i class="fa fa-solid fa-sort" onclick="sortBy(49)"></i></th>
+              <!-- <th scope="col">ACTION</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" class="form-check-input" /></td>
+              <!-- <td>APkiZc2K_Rp</td> -->
+              <td>ARN-1101RTL</td>
+              <td>Vinita Baraya</td>
+
+              <td>Mr. Gurumukh Mansharamani</td>
+              <td>
+                <select class="form-select">
+                  <option>1877,Mr. Gurumukh Mansharamani</option>
+                  <option>2426,Krishnamarthy.D</option>
+                  <option>2426,Rao A Sudarsana</option>
+                 
+                </select>
+              </td>
+              <td>12-02-2020 19:22:26</td>
+              <td>27-04-2022 17:20:58</td>
+             
+              <td>vbaraya11@gmail.com</td>
+              <td></td>
+              <td>+919829052232</td>
+              <td>Y</td>
+              <td>Individual</td>
+              <td>Sep 19 2002</td>
+              <td>1877</td>
+              <td>ARN-1101</td>
+              <td>423</td>
+              <td>ARN</td>
+              <td>groupa</td>
+              <td>ARN-1101</td>
+              <td>M1</td>
+              <td>PURPLE</td>
+              <td>RA</td>
+              <td>JAIPUR</td>
+              <td>A-131 Vidyut Nagar,Ajmer Road,,JAIPUR,JAIPUR,RA,JAIPUR,302021</td>
+              <td>Jan 26 2023</td>
+              <td>RTL</td>
+              <td>ACQPB8046B</td>
+              <td>Individual</td>
+              <td>Apr 01 2022</td>
+              <td>+919991242256</td>
+              <td>2352323</td>
+              <td>302021</td>
+              <td>Oct 10 1968</td>
+              <td>JAIPUR</td>
+              <td>JAIPUR</td>
+              <td>403</td>
+              <td>403</td>
+              <td>Vymo, 611, 2nd Cross Rd,</td>
+              <td>3rd Block, Koramangala,</td>
+              <td>Bengaluru</td>
+              <td>Karnataka</td>
+              <td>560034</td>
+              <td>Mar 14 2019</td>
+              <td></td>
+              <td>testdist@uti.com</td>
+              <td>C</td>
+              <td>9829118905</td>
+              <td>Apr 01 2022</td>
+              <td>Apr 01 2025</td>
+              <!-- <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../mapping_edit/edit-vymo-distributor.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../mapping_edit/close-vymo-distributor.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>     -->
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="form-check-input" /></td>
+              <!-- <td>B6i9gihrKp</td> -->
+              <td>ARN-118633RTL</td>
+              <td>Sharmila Chandrashekhar Inamdar</td>
+
+              <td>Mr. Warrier Anil C R</td>
+              <td>
+                <select class="form-select">
+                  <option>2801,Mr. Warrier Anil C R</option>
+                  <option>DMR-115</option>
+                  <option>D-PRM-115</option>
+                  <option>NORM</option>
+                </select>
+              </td>
+              <td>19-02-2020 12:33:23</td>
+              <td>01-09-2022 10:59:18</td>
+             
+              <td>manishaleeds@gmail.com</td>
+              <td></td>
+              <td>+919769695940</td>
+              <td>Y</td>
+              <td>RESIDENT INDIVIDUAL</td>
+              <td>Apr 24 2019</td>
+              <td>4289</td>
+              <td>ARN-118633</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>M4</td>
+              <td>RED</td>
+              <td>MA</td>
+              <td>THANE WEST</td>
+              <td>401 A / 6 VIKAS COMPLEX,CASTLE MILL COMPOUND,THANE WEST,THANE WEST,THANE WEST,MA,THANE WEST,400601
+              </td>
+              <td>Jan 11 2023</td>
+              <td>RTL</td>
+              <td>AAGPI3976D</td>
+              <td>Individual</td>
+              <td>Jun 30 2022</td>
+              <td></td>
+              <td>9769695940</td>
+              <td>400601</td>
+              <td>Dec 28 1969</td>
+              <td>THANE</td>
+              <td>THANE</td>
+              <td>116</td>
+              <td>116</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>A</td>
+              <td></td>
+              <td>Apr 01 2022</td>
+              <td>Apr 01 2025</td>
+              <!-- <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../mapping_edit/edit-vymo-distributor.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../mapping_edit/close-vymo-distributor.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>     -->
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="form-check-input" /></td>
+              <!-- <td>B6B0zF5hLR_</td> -->
+              <td>ARN-119551RTL</td>
+              <td>Rajesh Ramachandra Sarma</td>
+
+              <td>Mr. Rakesh Ray</td>
+              <td>
+                <select class="form-select">
+                  <option>3907,Mr. Rakesh Ray</option>
+                  <option>DMR-115</option>
+                  <option>D-PRM-115</option>
+                  <option>NORM</option>
+                </select>
+              </td>
+              <td>19-02-2020 12:33:23</td>
+              <td>03-04-2022 08:33:26</td>
+           
+              <td>rajesh_sarma1@rediffmail.com</td>
+              <td></td>
+              <td>+919833627961</td>
+              <td>Y</td>
+              <td>RESIDENT INDIVIDUAL</td>
+              <td>Apr 27 2017</td>
+              <td>3907</td>
+              <td>ARN-119551</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>M6</td>
+              <td>RED</td>
+              <td>MA</td>
+              <td>MUMBAI</td>
+              <td>C-104, BLDG NO-72,,SWARAJ CHS LTD,TILAK NAGAR CHEMBUR,MUMBAI,MUMBAI,MA,MUMBAI,400089</td>
+              <td>Jan 24 2023</td>
+              <td>RTL</td>
+              <td>APVPS5359E</td>
+              <td>Individual</td>
+              <td>Jun 30 2022</td>
+              <td></td>
+              <td>25287902</td>
+              <td>400089</td>
+              <td>Jul 17 1970</td>
+              <td>GHATKOPAR</td>
+              <td>GHATKOPAR</td>
+              <td>115</td>
+              <td>115</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Z</td>
+              <td></td>
+              <td>Apr 01 2022</td>
+              <td>Apr 01 2025</td>
+              <!-- <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../mapping_edit/edit-vymo-distributor.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../mapping_edit/close-vymo-distributor.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>     -->
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="form-check-input" /></td>
+              <!-- <td>kPBUzF5hLCs</td> -->
+              <td>ARN-10279RTL</td>
+              <td>Kiran Manohar Babre</td>
+              <td>Mr. Vishwanathan A R Narsimhan</td>
+              <td>
+                <select class="form-select">
+                  <option>1366,Mr. Vishwanathan A R Narsimhan</option>
+                  <option>DMR-115</option>
+                  <option>D-PRM-115</option>
+                  <option>NORM</option>
+                </select>
+              </td>
+              <td>19-02-2020 12:33:23</td>
+              <td>03-04-2022 08:33:26</td>
+              
+              <td>kinsure@gmail.com</td>
+              <td></td>
+              <td>+919869008391</td>
+              <td>Y</td>
+              <td>Individual</td>
+              <td>Sep 03 1987</td>
+              <td>1366</td>
+              <td>ARN-10279</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>M4</td>
+              <td>ORANGE</td>
+              <td>MA</td>
+              <td>Navi Mumbai</td>
+              <td>C-14/ Nayan Aptt,Nr Gandhi Statue Uran Mora Rd,Uran Raigad,Navi Mumbai,Navi Mumbai,MA,Navi
+                Mumbai,400702</td>
+              <td>Apr 01 2022</td>
+              <td>RTL</td>
+              <td>ADTPB2124N</td>
+              <td>Individual</td>
+              <td>Jun 30 2022</td>
+              <td></td>
+              <td>02227222677</td>
+              <td>400702</td>
+              <td>Oct 16 1957</td>
+
+              <td>VASHI</td>
+              <td>VASHI</td>
+              <td>112</td>
+              <td>112</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>A</td>
+              <td></td>
+              <td>Apr 01 2022</td>
+              <td>Apr 01 2025</td>
+              <!-- <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../mapping_edit/edit-vymo-distributor.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../mapping_edit/close-vymo-distributor.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>     -->
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="form-check-input" /></td>
+              <!-- <td>A2AezXihLnp</td> -->
+              <td>ARN-138100RTL</td>
+              <td>Dinesh Pandurang Mayangade</td>
+              <td>Mr. S Venkatesh</td>
+              <td>
+                <select class="form-select">
+                  <option>2417,r. S Venkatesh</option>
+                  <option>DMR-115</option>
+                  <option>D-PRM-115</option>
+                  <option>NORM</option>
+                </select>
+              </td>
+              <td>19-02-2020 12:33:23</td>
+              <td>01-09-2022 10:59:21</td>
+           
+              <td>dinesh.mayangade@gmail.com</td>
+              <td></td>
+              <td>+919819698450</td>
+              <td>Y</td>
+              <td>RESIDENT INDIVIDUAL</td>
+              <td>Feb 23 2018</td>
+              <td>2417</td>
+              <td>ARN-138100</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>M6</td>
+              <td>RED</td>
+              <td>MA</td>
+              <td>Thane</td>
+              <td>
+                403,KrishnaPatilBuilding,PlotNo-288,NearFishMarket,NaviMumbai,Sector-22TurbheGaon,Thane,Thane,Thane,MA,Thane,400703
+              </td>
+              <td>Apr 01 2022</td>
+              <td>RTL</td>
+              <td>ALPPM3815R</td>
+              <td>Individual</td>
+              <td>Jun 30 2022</td>
+              <td></td>
+              <td></td>
+              <td>400703</td>
+              <td>Dec 10 1979</td>
+            
+              <td>VASHI</td>
+              <td>VASHI</td>
+              <td>112</td>
+              <td>112</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Z</td>
+              <td></td>
+              <td>Apr 01 2022</td>
+              <td>Apr 01 2025</td>
+              <!-- <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../mapping_edit/edit-vymo-distributor.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../mapping_edit/close-vymo-distributor.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>     -->
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <tr>
+            <!-- <td><a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">Update</a></td>
+              <td><a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">Activity Completed</a></td> -->
+            <td><input type="button" id="button" class="btn btn-primary" value="Save For Later" /></td>
+            <td><input type="button" id="button2" class="btn btn-primary" value="Activity Completed" /></td>
+            <td><input type="text" class="form-control" id="txtsearch" placeholder="Remark" style="margin-left: 0px;" />
+            </td>
+          </tr>
+        </table>
+        <br>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+        cPrev = -1;
+
+        function sortBy(c) {
+          rows = document.getElementById("sortable").rows.length;
+          columns = document.getElementById("sortable").rows[0].cells.length;
+          arrTable = [...Array(rows)].map(e => Array(columns));
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+            }
+          }
+
+          th = arrTable.shift();
+
+          if (c !== cPrev) {
+            arrTable.sort(
+              function (a, b) {
+                if (a[c] === b[c]) {
+                  return 0;
+                } else {
+                  return (a[c] < b[c]) ? -1 : 1;
+                }
+              }
+            );
+          } else {
+            arrTable.reverse();
+          }
+
+          cPrev = c;
+
+          arrTable.unshift(th);
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+            }
+          }
+        }
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <script src="../assets/js_1/jquery.multi-select.js"></script>
+  <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+  </script>
+   <script>
+    // toggle script
+var  innerSidebar = function(){
+   $('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+ // toggle script
+
+</script>
+   <!-- columns -->
+   <script>
+
+    var expanded = false;
+  
+  
+  
+  
+    function showCheckboxes1() {
+  
+      var checkboxes1 = document.getElementById("checkboxes1");
+  
+      if (!expanded) {
+  
+        checkboxes1.style.display = "block";
+  
+        expanded = true;
+  
+      } else {
+  
+        checkboxes1.style.display = "none";
+  
+        expanded = false;
+  
+      }
+  
+    }</script>
+  
+  <script>
+  
+    $(function () {
+  
+      $("#example1").DataTable({
+  
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+  
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+  
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+  
+      $('#example2').DataTable({
+  
+        "paging": true,
+  
+        "lengthChange": false,
+  
+        "searching": false,
+  
+        "ordering": true,
+  
+        "info": true,
+  
+        "autoWidth": false,
+  
+        "responsive": true,
+  
+      });
+  
+    });
+  
+  </script>
+  
+  <script>
+    document.getElementById('select-all2').onclick = function () {
+      var checkboxes1 = document.getElementsByName('master2');
+      for (var checkbox of checkboxes1) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

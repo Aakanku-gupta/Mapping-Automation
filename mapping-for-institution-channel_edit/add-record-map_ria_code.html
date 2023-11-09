@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+  <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+  <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<style>
+  .form-select {
+    font-size: 16px;
+  }
+</style>
+
+
+<body>
+  <body id="sidebar">
+    <!-- header start -->
+    <div uti-include-html="../includes/header1.html"></div>
+    <!-- header end -->
+    
+    <!-- sidebar start -->
+    <div uti-include-html="../includes/sidebar.html"></div>
+    <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-8"style="height: 60px;">
+            <h5>MAP-RIA CODE MAPPING</h5>
+            <a href="../mapping-for-institution-channel_edit/map_ria_code.html"> <i class="bi bi-arrow-return-left" 
+            style="position: relative;top: -37px;left: 800px;font-size: 40px;"></i></a>
+          </div>
+          <hr style="margin-bottom: 0px;">
+
+          <!-- Second sub tab start -->
+          <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+            <div class="col-md-12 mt-2">
+              <div class="row">
+                <div class="col-md-6  ">
+                    
+                  <label class="mt-4">RIA_CODE</label>
+                  <input type="text " placeholder="RIA_CODE"class="form-control">
+                    <label class="mt-4">RIA_NAME</label>
+                  <input type="text "class="form-control">
+
+                  <label class="mt-4">ARNNO_REF</label>
+                  <input type="text " placeholder="ARN-29742" class="form-control">
+
+                  <label class="mt-4">MULITCITY</label>
+                  <input type="text " class="form-control">
+
+                  <label class="mt-4">RM_CODE</label>
+                  <select class="form-select" >
+                    <option>RM_CODE</option>
+                    <option>45</option>
+                    <option>46</option>
+                    <option>47</option>
+                  </select>
+
+                  <label class="mt-4">RM_NAME</label>
+                  <input type="text " class="form-control">
+
+                  <label class="mt-4">UFC_AREA_CODE</label>
+                  <input type="text " class="form-control">
+                  
+                  <label class="mt-4">KRV_VALID_FORM</label>
+                  <input type="date"  class="form-control">
+                  
+                </div>
+
+                <div class="col-md-6 ">
+                    <label class="mt-4">REGION_CODE</label>
+                    <input type="text " class="form-control">
+                    <label class="mt-4">REGION_NAME</label>
+                    <input type="text " class="form-control">
+                   
+                    <label class="mt-4">ZONE</label>
+                    <select class="form-select" >
+                      <option>Zone</option>
+                      <option>East</option>
+                      <option value="202354">West</option>
+                      <option >North</option>
+                      <option >South</option>
+                      <option>North West</option>
+                      <option >North East</option>
+                      <option >South west</option>
+                      <option >South east</option>
+                    </select>
+
+                  <label class="mt-4">UFC_CODE</label>
+                  <input type="text " class="form-control ">
+
+                  <label class="mt-4">CHANNEL_CODE</label>
+                  <input type="text " class="form-control ">
+                
+                  <label class="mt-4">UFC_NAME</label>
+                  <select class="form-select">
+                    <!-- <option>CASE ID</option> -->                          
+                    <option >PATNA</option>
+                    <option >MUZAFFARPUR</option>
+                    <option>MERRUT</option>
+                  </select>
+
+                  <label class="mt-4">CITY</label>
+                  <input type="text " class="form-control">
+
+                  <label class="mt-4">KRV_VALID_UPTO</label>
+                  <input type="date"  class="form-control">
+                 
+                
+
+                </div>
+                <div class="col-md-3">
+
+                  <label class="mt-4">Service Request Number <span id="Label5" style="color:#CC0000;font-size:Large;font-weight:bold;text-decoration:none;">*</span></label>
+                  <input type="text " class="form-control">
+      
+              </div>
+      
+      
+             
+              <div class="form-group col-md-3 mt-4 ">
+                <label>Checker</label>
+                <div class="selectBox form-control" onclick="showCheckboxes()">
+      
+                  <select class="custom-select border-bottom form-control-plaintext">
+      
+                    <option>Checker </option>
+      
+                  </select>
+      
+                  <div class="overSelect"></div>
+      
+                </div>
+      
+                <div id="checkboxes" class="checkstyle">
+      
+                  <!-- <label><input type="checkbox" id="select-all1">Select All</label>
+                  <label for="onem"> -->
+      
+                    <input type="checkbox" id="onem" name="master" />
+      
+                    Santosh Chipte</label>
+      
+                  <label for="twom">
+                    <input type="checkbox" id="twom" name="master" />
+      
+                    Sumit Mehta</label>
+      
+      
+      
+             
+      
+                </div>
+               
+              </div>
+              
+              <div class="col-md-3">
+      
+                <label class="mt-4">Remark</label>
+      
+               <textarea  class="form-control"></textarea>
+      
+            </div>
+            <div class="col-md-3">
+              <button  class="btn btn-primary mt-4" onclick="myFunction()">Submit</button>
+            </div>
+      
+              </div>
+            </div>
+          </div>
+          <!--  Second sub tab end-->
+
+          <!-- Third sub tab start -->
+
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+
+        $(document).ready(function () {
+          $('#action').multiselect();
+        });   
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="../assets/js_1/jquery.multi-select.js"></script>
+  <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+    // aaa
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+ <script>
+  function myFunction() {
+    alert("Data save successfully");
+  }
+     // toggle script
+     var  innerSidebar = function(){
+      $('#sidebar').toggleClass('toggle-sidebar');
+  }
+    // toggle script
+  </script> <script>
+         function myFunction2() {
+           alert("Wrong Data Found Please Check Again");
+         }
+         </script>
+</body>
+
+</html>

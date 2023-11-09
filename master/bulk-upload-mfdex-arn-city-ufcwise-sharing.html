@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>UTI</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css_1/main.css" rel="stylesheet">
+    <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+    <link href="../assets/css_1/style.css" rel="stylesheet">
+    <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/multis-styles.css">
+</head>
+
+<body id="sidebar">
+    <!-- header start -->
+    <div uti-include-html="../includes/header1.html"></div>
+    <!-- header end -->
+    
+    <!-- sidebar start -->
+    <div uti-include-html="../includes/sidebar.html"></div>
+    <!-- sidebar end -->
+    <main id="main" class="main">
+        <section class="section dashboard">
+            <div class="bg-white p-3 border">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>BULK UPLOAD MFDEX ARN CITY UFCWISE SHARING</h5>
+                        <a href="../master/all_master_bulk_upload.html"> <i class="bi bi-arrow-return-left" style="position: relative;
+                          top: -52px;
+                          float: right;
+                          font-size: 40px;
+                      "></i></a>
+                        <hr>
+                        <div class="mt-2">
+                            <h3 class="mb-4" style="text-align: center;">Upload File </h3>
+                            <div style="justify-content: center; display: flex;">
+                                <div style="margin: 5px;"> <button type="button" class="btn btn-primary ">
+                                        <a href="../Templates/Mfdex-ARN-City-UFCWise-Sharing-Master.xlsx" style="color:white">Download MFDEX ARN City MASter
+                                            Template <br> <i class="fa fa-file-excel-o"></i></a></button>
+                                </div>
+
+                                <div style="margin: 5px;">
+
+                                    <input type="file" accept=".csv"
+                                        style="background-color: #193984; padding: 14px; border-radius: 5px; color: white;" />
+                                </div>
+                                <div style="margin: 5px;" class="upload_btn"> 
+
+                                    <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary" style="padding: 14px;"
+                                        onclick="displaydetails();">Preview</a>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        </form>
+
+                    </div>
+                </div>
+
+
+                <hr mt-3>
+                <div class="overflow-auto" id="empgrddetails" style="display:none">
+                    <div class="row">
+                        <div class="col-md-9">  
+                            <p>No of Records - 10</p> <p>No of Column - 19</p>  <p>Selected UFC- 549 - Patna </p>
+                     
+                        </div>
+                      
+                        
+                        <div class="col-md-3">  <p> Upload Date - 24/06/2023 </p>  <p>File Name - MFDEX ARN CITY Bulk Upload </p>
+                       
+                            <p>File Type - .csv</p>
+                        
+                       
+                          
+                        </div></div>
+                   
+                     
+                    <!-- <table class="table small border table-hover" id="sortable">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th scope="col" id="colall">KRV_CODE </th>
+                                <th scope="col">CHANNEL_CODE</th>
+                                <th scope="col"> NEW_BR_CODE </th>
+                                <th scope="col"> REGION_CODE</th>
+                                <th scope="col">NAME </th>
+                                <th scope="col">MULTICITY FLAG </th>
+                                <th scope="col">CATEGORY</th>
+                                <th scope="col">ZONE
+                                </th>
+                                <th scope="col">ARN_GROUP_NAME</th>
+                                <th scope="col">SUB_CHANNEL</th>
+                                <th scope="col">VALID_FROM</th>
+                                <th scope="col">VALID_UPTO </th>
+                                <th scope="col">CREATION_DT </th>
+                                <th scope="col">LSTUPDDT </th>
+                                <th scope="col">ACTIVE_FLAG</th>
+                                <th scope="col">UFC_CODE</th>
+                                <th scope="col">CHANNEL_GROUP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ARN-29742</td>
+                                <td>RTL</td>
+                                <td>119</td>
+                                <td>NORTH</td>
+                                <td>DEUTSCHE BANK</td>
+                                <td>E</td>
+                                <td>BANKS</td>
+                                <td>WEST</td>
+                                <td>Deutsche Bank</td>
+                                <td>E-ARN</td>
+                                <td> 01-10-2021</td>
+                                <td>30-12-9999 </td>
+                                <td>01-07-2019</td>
+                                <td>25-07-2019</td>
+                                <td>Y</td>
+                                <td>119</td>
+                                <td>BNND</td>
+                            </tr>
+                            <tr>
+                                <td>ARN-29732</td>
+                                <td>RTL</td>
+                                <td>119</td>
+                                <td>MUMBAI</td>
+                                <td>BARCLAYS BANK PLC</td>
+                                <td>Y</td>
+                                <td>ND</td>
+                                <td>WEST</td>
+                                <td>BARCLAYS</td>
+                                <td>M-ARN</td>
+                                <td>01-10-2021</td>
+                                <td>30-12-9999 </td>
+                                <td>16-01-2021</td>
+                                <td>25-07-2019</td>
+                                <td>Y</td>
+                                <td>119</td>
+                                <td>BNND</td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+                    <div class="overflow-auto" id="margin" >
+                        <table class="table small border table-hover" id="sortable">
+                          <thead>
+                            <tr class="bg-primary text-white">
+                                <th scope="col" id="colall">All<input type="checkbox" class="form-check-input" id="alltxt" /> </th>
+                                <th scope="col">CITY_TYPE <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+                                <th scope="col">KRV_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+                                <th scope="col">MULTICITY <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+                               <!-- <th scope="col">ARN_CATEGORY<i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th> -->
+                               <th scope="col">CATEGORY<i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th>
+                               <th scope="col">ARN_CHANNEL <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+                                <th scope="col" >T5B5_STATUS <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th>
+                                <th scope="col">MFDEX_CITY <i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i></th>
+                                <th scope="col">NEW_CITY<i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+                                <th scope="col">SCHANNEL<i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th>
+                                <th scope="col">UFC_CODE<i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+                                <th scope="col">UFC_NAME<i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+                                <th scope="col">REGION_CODE<i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+                                <th scope="col">REGION_NAME<i class="fa fa-solid fa-sort" onclick="sortBy(13)"></i></th>
+                                <th scope="col">ZONE<i class="fa fa-solid fa-sort" onclick="sortBy(14)"></i></th>
+                                <th scope="col">UFC_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+                                <th scope="col">SOW_EHS_PERC_SHARE<i class="fa fa-solid fa-sort" onclick="sortBy(18)"></i></th>
+                                <th scope="col">SOW_INCOME_PERC_SHARE<i class="fa fa-solid fa-sort" onclick="sortBy(19)"></i></th>
+                                <th scope="col">SOW_LQNMM_PERC_SHARE<i class="fa fa-solid fa-sort" onclick="sortBy(20)"></i></th>
+                                <!-- <th scope="col">ACTION</th> -->
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>MFDEX_CITY</td>
+                                <td>ARN-0016</td>
+                                <td>Y</td>
+                                <td>PREMIER</td>
+                                <td>RTL</td>
+                                <td>B5</td>
+                                <td>RAIGAD</td>
+                                <td>RAIGAD</td>
+                                <td>RTL</td>
+                                <td>112</td>
+                                <td></td>
+                                <td>MUMB</td>
+                                <td></td>
+                                <td>WEST</td>
+                                <td></td>
+                                <td>25</td>
+                                <td>25</td>
+                                <td>25</td>
+                                <!-- <td><select class="form-select">
+                                    <option>Select</option>
+                                    <option>Save</option>
+                                  </select>
+                                </td> -->
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>MFDEX_CITY</td>
+                                <td>ARN-0016</td>
+                                <td>Y</td>
+                                <td>PREMIER</td>
+                                <td>RTL</td>
+                                <td>B5</td>
+                                <td>RAIGAD</td>
+                                <td>RAIGAD</td>
+                                <td>RTL</td>
+                                <td>MUM02</td>
+                                <td></td>
+                                <td>BNND_MUMB</td>
+                                <td></td>
+                                <td>WEST</td>
+                                <td></td>
+                                <td>75</td>
+                                <td>75</td>
+                                <td>75</td>
+                                <!-- <td><select class="form-select">
+                                    <option>Select</option>
+                                    <option>Save</option>
+                                  </select>
+                                </td> -->
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>MFDEX_CITY</td>
+                                <td>ARN-0632</td>
+                                <td>Y</td>
+                                <td>BANK</td>
+                                <td>RTL</td>
+                                <td>T5</td>
+                                <td>RAIGAD</td>
+                                <td>RAIGAD</td>
+                                <td>RTL</td>
+                                <td>112</td>
+                                <td></td>
+                                <td>MUMB</td>
+                                <td></td>
+                                <td>WEST</td>
+                                <td></td>
+                                <td>25</td>
+                                <td>25</td>
+                                <td>25</td>
+                                <!-- <td><select class="form-select">
+                                    <option>Select</option>
+                                    <option>Save</option>
+                                  </select>
+                                </td> -->
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>MFDEX_CITY</td>
+                                <td>ARN-0632</td>
+                                <td>Y</td>
+                                <td>BANK</td>
+                                <td>RTL</td>
+                                <td>T5</td>
+                                <td>RAIGAD</td>
+                                <td>RAIGAD</td>
+                                <td>RTL</td>
+                                <td>MUM02</td>
+                                <td></td>
+                                <td>BNND_MUMB</td>
+                                <td></td>
+                                <td>WEST</td>
+                                <td></td>
+                                <td>75</td>
+                                <td>75</td>
+                                <td>75</td>
+                                <!-- <td><select class="form-select">
+                                    <option>Select</option>
+                                    <option>Save</option>
+                                  </select>
+                                </td> -->
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>MFDEX_CITY</td>
+                                <td>ARN-0893</td>
+                                <td>Y</td>
+                                <td>PREMIER</td>
+                                <td>RTL</td>
+                                <td>B5</td>
+                                <td>PALGHAR</td>
+                                <td>PALGHAR</td>
+                                <td>RTL</td>
+                                <td>157</td>
+                                <td></td>
+                                <td>MUMB</td>
+                                <td></td>
+                                <td>WEST</td>
+                                <td></td>
+                                <td>50</td>
+                                <td>50</td>
+                                <td>50</td>
+                                <!-- <td><select class="form-select">
+                                    <option>Select</option>
+                                    <option>Save</option>
+                                  </select>
+                                </td> -->
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>MFDEX_CITY</td>
+                                <td>ARN-0893</td>
+                                <td>Y</td>
+                                <td>PREMIER</td>
+                                <td>RTL</td>
+                                <td>B5</td>
+                                <td>PALGHAR</td>
+                                <td>PALGHAR</td>
+                                <td>RTL</td>
+                                <td>MUM02</td>
+                                <td></td>
+                                <td>BNND_MUMB</td>
+                                <td></td>
+                                <td>WEST</td>
+                                <td></td>
+                                <td>50</td>
+                                <td>50</td>
+                                <td>50</td>
+                                <!-- <td><select class="form-select">
+                                    <option>Select</option>
+                                    <option>Save</option>
+                                  </select>
+                                </td> -->
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>MFDEX_CITY</td>
+                                <td>ARN-124591</td>
+                                <td>Y</td>
+                                <td>BANK</td>
+                                <td>RTL</td>
+                                <td>T5</td>
+                                <td>SOUTH 24 PARGANAS</td>
+                                <td>SOUTH 24 PARGANAS</td>
+                                <td>RTL</td>
+                                <td>KOL02</td>
+                                <td></td>
+                                <td>BNND_KOLK</td>
+                                <td></td>
+                                <td>EAST</td>
+                                <td></td>
+                                <td>60</td>
+                                <td>60</td>
+                                <td>60</td>
+                                <!-- <td><select class="form-select">
+                                    <option>Select</option>
+                                    <option>Save</option>
+                                  </select>
+                                </td> -->
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>MFDEX_CITY</td>
+                                <td>ARN-124591</td>
+                                <td>Y</td>
+                                <td>OTHERS</td>
+                                <td>RTL</td>
+                                <td>T5</td>
+                                <td>SOUTH 24 PARGANAS</td>
+                                <td>SOUTH 24 PARGANAS</td>
+                                <td>RTL</td>
+                                <td>KOL02</td>
+                                <td></td>
+                                <td>BNND_KOLK</td>
+                                <td></td>
+                                <td>EAST</td>
+                                <td></td>
+                                <td>40</td>
+                                <td>40</td>
+                                <td>40</td>
+                                <!-- <td><select class="form-select">
+                                    <option>Select</option>
+                                    <option>Save</option>
+                                  </select>
+                                </td> -->
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>MFDEX_CITY</td>
+                                <td>ARN-77995</td>
+                                <td>Y</td>
+                                <td>PRIORITY</td>
+                                <td>RTL</td>
+                                <td>B5</td>
+                                <td>RAIGAD</td>
+                                <td>RAIGAD</td>
+                                <td>RTL</td>
+                                <td>112</td>
+                                <td></td>
+                                <td>MUMB</td>
+                                <td></td>
+                                <td>WEST</td>
+                                <td></td>
+                                <td>33.33</td>
+                                <td>33.33</td>
+                                <td>33.33</td>
+                                <!-- <td><select class="form-select">
+                                    <option>Select</option>
+                                    <option>Save</option>
+                                  </select>
+                                </td> -->
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" class="form-check-input" /></td>
+                                <td>MFDEX_CITY</td>
+                                <td>ARN-77995</td>
+                                <td>Y</td>
+                                <td>PRIORITY</td>
+                                <td>RTL</td>
+                                <td>B5</td>
+                                <td>RAIGAD</td>
+                                <td>RAIGAD</td>
+                                <td>RTL</td>
+                                <td>MUM02</td>
+                                <td></td>
+                                <td>BNND_MUMB</td>
+                                <td></td>
+                                <td>WEST</td>
+                                <td></td>
+                                <td>66.67</td>
+                                <td>66.67</td>
+                                <td>66.67</td>
+                                <!-- <td><select class="form-select">
+                                    <option>Select</option>
+                                    <option>Save</option>
+                                  </select>
+                                </td> -->
+                              </tr>
+                            </tbody>
+                          </table>
+                          <td><input type="button" id="button"  class="btn btn-primary"  onclick="myFunction()" value="Start Update" /></td>
+                          <td><input type="text" class="form-control" id="txtsearch" placeholder="Remark" style="    margin-left: 119px;
+                            position: relative;
+                            top: -32px;"/></td>
+
+
+                            
+                    <div>
+                       
+
+                    </div>
+                   
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                    <div> <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">MFDEX ARN CITY UFCWISE MASTER</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <center><h6>MFDEX ARN CITY UFCWISE Master File Successfully Uploaded </h6></center><hr>
+                            <div class="row">
+                                <div class="col-md-6"> <p>No of Records - 2</p><br><p>Case Id - 3445</p> </div>
+                                <div class="col-md-6"> <p>No of Column - 17</p>
+                      
+                                  <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-auto mt-4">
+
+                                    <option selected="selected" value="Select">Select Checker</option>
+          
+                                    <option value="INST">Sumit Mehta</option>
+          
+                                    <option value="DSTH">Santosh Chipte</option>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                                  </select></div>
+                                    </div>
+                                   
+                                   
+                                    </div>
+                       
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary"><a href="../master/all_master_bulk_upload.html" style="color:white">Ok</a></button>
+                                      
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                                          
+                                         
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          Start Upload
+                      </button>
+                        <br>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>UTI</span></strong>
+            <script type="text/javascript">
+                var d = new Date();
+                yr = d.getFullYear();
+                document.write(yr); cPrev = -1;
+                function sortBy(c) {
+                    rows = document.getElementById("sortable").rows.length;
+                    columns = document.getElementById("sortable").rows[0].cells.length;
+                    arrTable = [...Array(rows)].map(e => Array(columns));
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                        }
+                    }
+
+                    th = arrTable.shift();
+
+                    if (c !== cPrev) {
+                        arrTable.sort(
+                            function (a, b) {
+                                if (a[c] === b[c]) {
+                                    return 0;
+                                } else {
+                                    return (a[c] < b[c]) ? -1 : 1;
+                                }
+                            }
+                        );
+                    } else {
+                        arrTable.reverse();
+                    }
+
+                    cPrev = c;
+
+                    arrTable.unshift(th);
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                        }
+                    }
+                }
+            </script>
+            . All Rights Reserved
+        </div>
+    </footer>
+
+
+    <!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+    <script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+    <!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+    <script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+    <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+    <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+    <script src="../assets/js_1/main.js"></script>
+    <!-- <script src="../assets/js/main.js"></script> -->
+    <script src="../assets/js_1/uti.js"></script>
+    <!-- <script src="../assets/js/uti.js"></script> -->
+    <script src="../assets/js_1/custom.js"></script>
+    <!-- <script src="../assets/js/custom.js"></script> -->
+
+    <script type="text/javascript">
+        function displaydetails() {
+            document.getElementById("empgrddetails").style.display = "block";
+            document.getElementsByClassName("upload_btn")[0].style.display = "none";  //new
+
+        }
+    </script>
+    <script>
+        function myFunction() {
+            let text = "Do you want to proceed";
+            if (confirm(text) == true) {
+                text = "You pressed OK!";
+            } else {
+                text = "You canceled!";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+ <script>
+    // toggle script
+var  innerSidebar = function(){
+   $('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+ // toggle script
+
+</script>
+<script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+</body>
+
+</html>

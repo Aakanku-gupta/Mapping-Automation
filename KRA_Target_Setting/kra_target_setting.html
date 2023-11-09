@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>UTI</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+ <link href="../assets/css_1/style.css" rel="stylesheet"> 
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+   <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+   <link href="../assets/css_1/main.css" rel="stylesheet">
+   <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+   <link href="../assets/css_1/style.css" rel="stylesheet">
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+   <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+   <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+ 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ 
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+		<section class="section dashboard">
+  <div class="bg-white p-3 border">
+  <div class="row">
+     <div class="col-md-8">
+      <h5>KRA Target Setting</h5>
+    </div>
+  </div>
+  
+  <hr id="third-hr">
+  <div class="row">
+    <div class="col-md-12">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label>Search Text</label>
+                        <input type="text" class="form-control" id="select3">
+                    </td>
+                    <td style="min-width:160px">
+                      <label>Quater</label>
+                      <select class="form-select" id="select1" name="SelectQuarter" style="width: 150px;">
+                        <option value="1">2023-24-Q1</option>
+                        <option value="2">2022-23-Q4</option>
+                        <option value="3">2022-23-Q3</option>
+                        <option value="4">2022-23-Q2</option>
+                        <option value="5">2022-23-Q1</option>
+                      </select>
+           </td>
+           <td>
+              <label>Kra Code</label>
+              <select class="form-select" id="kra_code" name="KraCode">
+                <option value="">All</option>
+                <option value="31">31</option>
+                <option value="55">55</option>
+                <option value="57">57</option>
+                <option value="58">58</option>
+                <option value="59">59</option>
+                <option value="60">60</option>
+                <option value="61">61</option>
+                <option value="62">62</option>
+                <option value="63">63</option>
+                <option value="64">64</option>
+                <option value="65">65</option>
+                <option value="66">66</option>
+                <option value="67">67</option>
+              </select>
+           </td>
+           <td><a href="#" id="btn_search1" name="btnsearch" class="btn btn-primary w-30">Search</a></td>
+         </tr>
+       </table>
+<hr id="arn-master-secondhr">
+<div class="row pt-2">
+ <div class="col-md-6">
+ <tr>
+   <th scope="col">Records <i class="fa fa-solid"></i></th>
+   <td>
+     <select class="form-select" id="records">
+      <option>25</option>
+       <option>50</option>
+       <option>100</option>
+       <option>200</option>
+       <option>All</option>
+     </select>
+   </td>
+ </tr>
+</div>
+<div class="col-md-6">
+<td><button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+aria-expanded="false" id="downloadbtn" style="margin-left: 80px;"><i class="fa fa-solid fa-download"></i></button>
+<ul class="dropdown-menu">
+<li><button class="dropdown-item" type="button">Excel</button></li>
+</ul></td>
+</div>
+</div>
+  </div>
+  <br>
+        <div class="overflow-auto">
+          <table class="table small border">
+            <tr class="bg-primary text-white">
+              <th scope="col">CHANNEL</th>
+              <th scope="col">REGION_CODE</th>
+              <th scope="col">REGION_NAME</th>
+              <th scope="col">UFC_NAME</th>
+              <th scope="col">EMP_ID</th>
+              <th scope="col">EMPNAME</th>
+              <th scope="col">EMP_ROLE</th>
+              <th scope="col">ZONE</th>
+              <th scope="col">BSCYEAR</th>
+              <th scope="col">BSCSEQ</th>
+              <th scope="col">KRA_SEQ</th>
+              <th scope="col">KRA_DESCRIPTION</th>
+              <th scope="col">Base</th>
+              <th scope="col">TRG3(Level 3 Targets)</th>
+              <th scope="col">WTGS</th>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>PUNJGUTTA</td>
+              <td>0810</td>
+              <td>MR. SANJAY BELSARE</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>52</td>
+              <td>INCREASE IN AAUM SOW (EQUITY + HYBRID + SOLUTIONS)</td>
+              <td>2.60</td>
+              <td>0.58</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>PUNJGUTTA</td>
+              <td>0810</td>
+              <td>MR. SANJAY BELSARE</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>53</td>
+              <td>INCREASE IN AAUM SOW (INCOME)</td>
+              <td>1.65</td>
+              <td>1.43</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>PUNJGUTTA</td>
+              <td>0810</td>
+              <td>MR. SANJAY BELSARE</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>54</td>
+              <td>INCREASE IN AAUM SOW (LIQUID + MM)</td>
+              <td>4.42</td>
+              <td>1.09</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>Hyderabad BND</td>
+              <td>0810</td>
+              <td>MR. SANJAY BELSARE</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>55</td>
+              <td>NET SALES (ETF & INDEX)</td>
+              <td></td>
+              <td>2.00</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>PUNJGUTTA</td>
+              <td>0810</td>
+              <td>MR. SANJAY BELSARE</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>56</td>
+              <td>INCREASE IN SOW NEW SIP COUNT</td>
+              <td>2.73</td>
+              <td>1.50</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>Hyderabad BND</td>
+              <td>0810</td>
+              <td>MR. SANJAY BELSARE</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>57</td>
+              <td>New Investor Acquisition</td>
+              <td></td>
+              <td>3000.00</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>VISHAKHAPATNAM</td>
+              <td>0833</td>
+              <td>MR. DUVVRI VISWANATH</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>52</td>
+              <td>INCREASE IN AAUM SOW (EQUITY + HYBRID + SOLUTIONS)</td>
+              <td>6.05</td>
+              <td>0.58</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>VISHAKHAPATNAM</td>
+              <td>0833</td>
+              <td>MR. DUVVRI VISWANATH</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>53</td>
+              <td>INCREASE IN AAUM SOW (INCOME)</td>
+              <td>1.92</td>
+              <td>1.43</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>VISHAKHAPATNAM</td>
+              <td>0833</td>
+              <td>MR. DUVVRI VISWANATH</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>54</td>
+              <td>INCREASE IN AAUM SOW (LIQUID + MM)</td>
+              <td>7.69</td>
+              <td>1.09</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>VISHAKHAPATNAM</td>
+              <td>0833</td>
+              <td>MR. DUVVRI VISWANATH</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>55</td>
+              <td>NET SALES (ETF & INDEX)</td>
+              <td></td>
+              <td>1.50</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>VISHAKHAPATNAM</td>
+              <td>0833</td>
+              <td>MR. DUVVRI VISWANATH</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>56</td>
+              <td>INCREASE IN SOW NEW SIP COUNT</td>
+              <td>2.40</td>
+              <td>1.50</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>RTL</td>
+              <td>AP</td>
+              <td>ANDHRA PRADESH</td>
+              <td>VISHAKHAPATNAM</td>
+              <td>0833</td>
+              <td>MR. DUVVRI VISWANATH</td>
+              <td>RM</td>
+              <td>SOUTH</td>
+              <td>2022</td>
+              <td>4</td>
+              <td>57</td>
+              <td>New Investor Acquisition</td>
+              <td></td>
+              <td>2500.00</td>
+              <td>10</td>
+            </tr>
+          </table>           
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
+<footer id="footer" class="footer">
+	<div class="copyright">
+	&copy; Copyright <strong><span>UTI</span></strong>
+	<script type="text/javascript">
+	var d = new Date();
+	yr = d.getFullYear();
+	document.write(yr);      cPrev = -1;
+	function sortBy(c) {
+	rows = document.getElementById("sortable").rows.length;
+	columns = document.getElementById("sortable").rows[0].cells.length;
+	arrTable = [...Array(rows)].map(e => Array(columns));
+	
+	for (ro=0; ro<rows; ro++) {
+	for (co=0; co<columns; co++) {
+	  arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+	}
+	}
+	
+	th = arrTable.shift();
+	
+	if (c !== cPrev) {
+	arrTable.sort(
+	  function (a, b) {
+		  if (a[c] === b[c]) {
+			  return 0;
+		  } else {
+			  return (a[c] < b[c]) ? -1 : 1;
+		  }
+	  }
+	);
+	} else {
+	arrTable.reverse();
+	}
+	
+	cPrev = c;
+	
+	arrTable.unshift(th);
+	
+	for (ro=0; ro<rows; ro++) {
+	for (co=0; co<columns; co++) {
+	  document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+	}
+	}
+	}
+	</script>
+	. All Rights Reserved
+	</div>
+	</footer>
+	
+	<script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+	<!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+	<script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+	<!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+	<script src="../assets/js_1/jquery.multi-select.js"></script>
+	<!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+	<script src="../assets/js_1/main.js"></script>
+	<!-- <script src="../assets/js/main.js"></script> -->
+	<script src="../assets/js_1/uti.js"></script>
+	<!-- <script src="../assets/js/uti.js"></script> -->
+	<script src="../assets/js_1/custom.js"></script>
+	<!-- <script src="../assets/js/custom.js"></script> -->
+	
+	<script type="text/javascript">
+	function displaydetails()
+	{
+	  document.getElementById("empgrddetails").style.display="block";
+	}
+	</script>
+	<script>
+	  var onClick = function () {
+	  };
+	
+	  // $('#button').click(onClick);
+	
+	  $('#button2').click(function () {
+		alert('Are you sure to proceed?');
+	  });
+	  $('#myModal').on('shown.bs.modal', function () {
+		$('#myInput').trigger('focus')
+	  })
+	  // aaa
+	  var acc = document.getElementsByClassName("accordion");
+	
+	  var i;
+	
+	
+	
+	
+	  for (i = 0; i < acc.length; i++) {
+	
+		acc[i].addEventListener("click", function () {
+	
+		  this.classList.toggle("active");
+	
+		  var panel = this.nextElementSibling;
+	
+		  if (panel.style.display === "block") {
+	
+			panel.style.display = "none";
+	
+		  } else {
+	
+			panel.style.display = "block";
+	
+		  }
+	
+		});
+	
+	  }
+	</script>
+	<script>
+	  // toggle script
+	var  innerSidebar = function(){
+	 $('#sidebar').toggleClass('toggle-sidebar');
+	
+	}
+	
+	// toggle script
+	
+	</script>
+	<script>
+		function myFunction2() {
+		  alert("Wrong Data Found Please Check Again");
+		}
+		</script>
+	
+	</body>
+	</html>
+	
+	  <!-- <footer id="footer" class="footer">
+		<div class="copyright">&copy; Copyright <strong><span>UTI</span></strong> <script type="text/javascript">
+			  var d = new Date();
+			  yr = d.getFullYear();
+			  document.write(yr);
+	
+			  $(document).ready(function() {  
+			$('#action').multiselect();  
+			});   
+		</script>. All Rights Reserved</div>
+	  </footer>
+	  <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script>
+	  <script src="../assets/js/main.js"></script>
+	  <script src="../assets/js/uti.js"></script>
+	  <script src="../assets/js/custom.js"></script> -->
+	
+	

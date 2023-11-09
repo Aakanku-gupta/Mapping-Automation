@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+
+      background-color: #fefefe;
+      margin: auto;
+      padding: 15px;
+      border: 1px solid #888;
+      width: 72%;
+      position: relative;
+      left: 168px;
+      font-size: 9px;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <section id="SplitPopup" class="section dashboard bg-white">
+      <form action="#" method="post">
+        <table id="emptbl">
+          <tr>
+            <th style="font-size: 12px; border: none; ">Rm Code</th>
+            <th style="font-size: 12px; border: none;">AAUM EQUITY % SHARE</th>
+            <th style="font-size: 12px; border: none;">SAAUM HYBRID % SHARE</th>
+            <th style="font-size: 12px; border: none;">AAUM ARBITRAGE % SHARE </th>
+            <th style="font-size: 12px; border: none;">AAUM FIXED INCOME % SHARE </th>
+            <th style="font-size: 12px; border: none;">AAUM CASH % SHARE</th>
+
+          </tr> <br>
+          <tr>
+            <td id="col0">
+              <!-- <select name="department[]" id="dept"> 
+                              <option value="0">Select</option> 
+                              <option value="1">365</option>
+                              <option value="2">985</option>
+                              <option value="3">658</option>
+                              </select>  -->
+              <select class="form-select" id="zoneSearchFilter" style="width:101px;">
+                <option value="">ALL</option>
+                <option value="CORP">586</option>
+                <option value="EAST">485</option>
+                <option value="GULF">732</option>
+                <option value="NORTH"> 654</option>
+
+              </select>
+            </td>
+
+            <td id="col1"><input type="number" name="phone[]" value="" /></td>
+            <td id="col2"><input type="number" name="phone[]" value="" /></td>
+            <td id="col3"><input type="number" name="phone[]" value="" /></td>
+            <td id="col4"><input type="number" name="phone[]" value="" /></td>
+
+            <td id="col5"><input type="number" name="phone[]" value="" /></td>
+            <td><input class="btn btn-primary" type="button" value="Add" onclick="addRows()" /></td>
+            <td><input class="btn btn-primary" type="button" value="Delete" onclick="deleteRows()" /></td>
+
+
+
+          </tr>
+        </table> <br>
+
+        <table>
+
+          <td>Total</td>
+          <td><input style="position: relative;
+                              left: 82px;" type="number" name="phone[]" value="" /></td>
+          <td><input style="    position: relative;
+                              left: 92px;
+                          " type="number" name="phone[]" value="" /></td>
+          <td><input style="    position: relative;
+                              left: 105px;" type="number" name="phone[]" value="" /></td>
+          <td><input style="    position: relative;
+                              left: 127px" type="number" name="phone[]" value="" /></td>
+          <td><input style="position: relative;
+                              left: 158px;
+                          " type="number" name="phone[]" value="" /></td>
+        </table>
+        <br>
+
+
+        <td><td>
+          <div class="row">
+            <div class="col-md-2"> <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-auto mt-3">
+                <option selected="selected" value="Select" style="    position: relative; left: -12px;">Select Checker
+                </option>
+                <option value="INST">Sumit Mehta</option>
+                <option value="DSTH">Santosh Chipte</option>
+              </select></div>
+            <div class="col-md-2"> <input class="btn btn-primary mt-3" type="button" value="Save Changes" /></div>
+          </div>
+        </td></td>
+      </form>
+    </section>
+  </div>
+
+</div>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard bg-white">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-8">
+            <!-- <h5>MFDEX MAP CAMS CITY ARN</h5> -->
+            <h5>ARN+SINGLE CITY TO RM MAPPING</h5>
+          </div>
+          <div class="col-md-4 text-end text-danger">
+            Access Valid Till : 01/09/2022 to 12/09/2022
+          </div>
+          <!-- <hr id="first-hr"/> -->
+          <form>
+            <!-- <div class="row small">
+                <div class="col-md-4">
+                  <p class="mb-0"><strong>Channel Code</strong> : RTL </p>
+                </div>
+                <div class="col-md-4">
+                  <p class="mb-0"><strong>Region Code</strong> : MUMB </p>
+                </div>
+                <div class="col-md-4">
+                  <p class="mb-0"><strong>Region Name</strong> : MUMBAI </p>
+                </div>
+              </div>
+              <hr>-->
+            <!-- <div id="left">
+                <div id="sidebar">
+                  <div id="accordian">
+                    <h1 class="serchtitle">
+                      <span id="ContentPlaceHolder1_spnMobCategoryName" class="category-name"></span>
+                    </h1>
+                    <p class="filter-option-heading">Search</p>
+                    <table class="row pt-3 filter-option-content" id="step1" >
+                      <tr>
+                        <td><input type="text" class="form-control" /></td>
+                        <td>
+                          <select class="form-select">
+                            <option>Select Quarter</option>
+                            <option value="202353">2022-23-Q1</option>
+                            <option value="202354">2022-23-Q2</option>
+                            <option value="202355">2022-23-Q3</option>
+                            <option value="202356">2022-23-Q4</option>
+                          </select>
+                        </td>
+                        <td><a href="#" id="btn_search" name="btnsearch" class="btn btn-primary w-100">Search</a></td>
+                      </tr>
+                    </table> -->
+            <!-- <form class="row pt-3 filter-option-content" id="step1" style="padding-top: 0px;">
+                      <div class="float-left">
+  
+                      </div>
+                      <div class="float-left"></div>
+                    </form> -->
+            <!-- </div>
+                </div>
+              </div> -->
+            <hr id="second-hr" /><br>
+            <div class="col-md-12">
+              <!-- <a href="../mapping_edit/bulk-upload-mfdex_map_cams_city_arn.html" class="btn btn-primary " style=" width: auto; border: none;">Bulk
+                  Upload + </a> -->
+              <!-- <a href="../mapping_edit/bulk-update-mfdex_map_cams_city_arn.html" class="btn btn-primary "
+                style=" width: auto; border: none;">Bulk RM
+                Update +</a> -->
+                <div id="left">
+                  <div id="sidebar">
+                      <div id="accordian">
+                          <h1 class="serchtitle">
+                              <span id="ContentPlaceHolder1_spnMobCategoryName" class="category-name"></span>
+                          </h1>
+                         
+                          <p class="filter-option-heading">Update Records (Bulk Update On Basis Of RM To New RM)</p>
+                         
+                          <div class="row pt-3 filter-option-content" id="step1">
+                              <table class="">
+                                  <tr>
+                                      <td><select class="form-select">
+                                              <option>Old RM_Code</option>
+                                          </select></td>
+                                      <td>
+                                          <select class="form-select">
+                                            <option>New RM CODE</option>
+                                              <option> 4546,Sakshi Hinge</option>
+                                              <option>4251,Jigar Chandulal Bhanushali</option>
+                                              <option>D-PRM-115</option>
+                                              <option>NORM</option>
+                                          </select>
+                                      </td>
+                                      <td><a href="#" id="" name="" class="btn btn-primary w-100">Save</a></td>
+                                      <td><button class="btn btn-primary dropdown-toggle" type="button"
+                                              data-bs-toggle="dropdown" aria-expanded="false">
+                                              <i class="fa fa-solid fa-download"></i>
+                                          </button>
+                                          <ul class="dropdown-menu">
+                                              <li><button class="dropdown-item" type="button">PDF</button></li>
+                                              <li><button class="dropdown-item" type="button">Excel</button></li>
+                                          </ul>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- <a href="../mapping_edit/add-record-mfdex_map_cams_city_arn.html" class="btn btn-primary "
+                style=" width: auto; border: none;">Add Record +</a> -->
+            </div><br>
+
+
+
+
+
+
+
+
+            <div id="left">
+              <div id="sidebar">
+                <!-- <div id="accordian">
+                    <h1 class="serchtitle">
+                      <span id="ContentPlaceHolder1_spnMobCategoryName" class="category-name"></span>
+                    </h1>
+                    <p class="filter-option-heading">Update Records (Bulk Update On Basis Of RM To New RM)</p>
+                    <div class="row pt-3 filter-option-content" id="step1">    
+                    <table class="">
+                      <tr>
+                        <td><select class="form-select">
+                            <option>Old RM_Code</option>
+                          </select></td>
+                          <td>
+                                          <select class="form-select">
+                                            <option>Select RM CODE</option>
+                                             <option> 4546,Sakshi Hinge</option>
+                                             <option>4251,Jigar Chandulal Bhanushali</option>
+                                             <option>D-PRM-115</option>
+                                             <option>NORM</option>
+                                          </select>
+                                       </td>
+                          <!-- <td> -->
+                <!-- <input type="text" class="form-control" placeholder="Effective date" /> -->
+                <!-- </td> -->
+                <!-- <td><a href="#" id="" name="" class="btn btn-primary w-100">Save</a></td>
+                          <td><button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa fa-solid fa-download"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button">PDF</button></li>
+                            <li><button class="dropdown-item" type="button">Excel</button></li>
+                          </ul></td>
+                      </tr>
+                    </table> -->
+
+
+
+                <!-- <div class="row pt-3 filter-option-content" id="step1" style="padding-top: 0px;">                   
+                      <div class="col-md-2 pb-2">
+                        <div class="dropdown pull-right">
+                          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa fa-solid fa-download"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button">PDF</button></li>
+                            <li><button class="dropdown-item" type="button">Excel</button></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div> -->
+                <!-- </div>
+                </div>  -->
+              </div>
+
+
+              <!-- <input type="button" value="Update Records" onclick=" return UpdateRecords()" />
+
+              <div id ="myDIV" class="row pt-3" style="
+              padding-top: 0px; display: none;">
+                <p style="padding-left: 16px;padding-right: 16px;padding-bottom: 0px;">Update Records</p>  -->
+              <!--<div class="form-group col-md-3">
+                  <select class="form-select">
+                  <option>Old RM_Code</option>
+                  </select>
+                  <input type="text" class="form-control" placeholder="Old RM_Code"/> -->
+              <!--</div>
+                <div class="form-group col-md-3">
+                  <select class="form-select">
+                   <option>Select RM CODE</option>
+                    <option> 4546</option>
+                    <option>4251</option>
+                    <option>D-PRM-115</option>
+                    <option>NORM</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <input type="text" class="form-control" placeholder="Effective date"/>
+                </div>
+                <div class="col-md-2"><a href="#" id="" name="" class="btn btn-primary w-100">Save</a></div>
+                <div class="col-md-2 pb-2">
+                  <div class="dropdown pull-right">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-solid fa-download"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item" type="button">PDF</button></li>
+                      <li><button class="dropdown-item" type="button">Excel</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> -->
+
+            </div>
+        </div>
+        </form>
+
+      </div>
+      <!-- <hr id="third-hr"/> -->
+      <table>
+        <!-- 1-10 of 500 <i class="fa fa-solid fa-angle-left"></i> <a href=""><i class="fa fa-solid fa-angle-right"></i></a> -->
+        <tr>
+          <!-- <th scope="col">Records <i class="fa fa-solid"></i></th> -->
+
+          <td>
+            <label>Quarter</label>
+            <select class="form-select" id="quaterSearchFilter" name="SelectQuarter" style="width:200px;">
+              <option value="1">2023-24-Q1</option>
+              <option value="2">2022-23-Q4</option>
+              <option value="3">2022-23-Q3</option>
+              <option value="4">2022-23-Q2</option>
+              <option value="5">2022-23-Q1</option>
+            </select>
+          </td>
+          <td style="padding-left:10px">
+            <label>Zone</label>
+            <select class="form-select" id="zoneSearchFilter" style="width:101px;">
+              <option value="">ALL</option>
+              <option value="CORP"> CORP</option>
+              <option value="EAST"> EAST</option>
+              <option value="GULF"> GULF</option>
+              <option value="NORTH"> NORTH</option>
+              <option value="SOUTH"> SOUTH</option>
+              <option value="WEST"> WEST</option>
+            </select>
+          </td>
+          <td style="padding-left:10px">
+            <label>Region</label>
+            <select class="form-select" id="regionSearchFilter">
+              <option value="">All</option>
+              <option value="AP"> ANDHRA PRADESH</option>
+              <option value="BNND_BANG"> B&ND BANGALORE</option>
+              <option value="BNND_DELH"> B&ND DELHI</option>
+              <option value="BNND_KOLK"> B&ND KOLKATA</option>
+              <option value="BNND_MUMB"> B&ND MUMBAI</option>
+              <option value="BIHR"> BIHAR</option>
+              <option value="CHAN"> CHANDIGARH</option>
+              <option value="CORP"> CORPORATE OFFICE</option>
+              <option value="DELH"> DELHI</option>
+              <option value="GUJR"> GUJARAT</option>
+              <option value="GULF"> GULF</option>
+              <option value="KRTK"> KARNATAKA</option>
+              <option value="MUMB"> MUMBAI</option>
+              <option value="NAGP"> NAGPUR</option>
+              <option value="NEAST"> NORTH EAST</option>
+              <option value="ORJK"> ORISSA & JHARKHAND</option>
+              <option value="RAJS"> RAJASTHAN</option>
+              <option value="ROMH"> REST OF MAHARASHTRA & GOA</option>
+              <option value="TNNK"> TAMIL NADU & KERALA</option>
+              <option value="UP"> UTTAR PRADESH</option>
+              <option value="WB"> WEST BENGAL</option>
+            </select>
+          </td>
+          <td style="padding-left:10px">
+            <label>SAP_UFC</label>
+            <select class="form-select" id="ufcNameSearchFilter">
+              <option value="">ALL</option>
+              <option value="1">B&ND MUMBAI-RM(RH Reporting)</option>
+              <option value="2">B&ND BANGLORE-RM(RH Reporting)</option>
+              <option value="3">B&ND KOLKOTA-RM(RH Reporting)</option>
+              <option value="4">HITECHCITY UFC</option>
+              <option value="5">VALSAD </option>
+              <option value="6">PONDICHERRY</option>
+              <option value="7">ASANSOL</option>
+              <option value="8">JHANSI</option>
+              <option value="9">B&ND MUMBAI-01</option>
+              <option value="10">B&ND MUMBAI-02</option>
+              <option value="11">B&ND MUMBAI-02</option>
+              <option value="12">B&ND MUMBAI-03</option>
+              <option value="13">B&ND AHMEDABAD-01</option>
+            </select>
+          </td>
+          <td style="padding-left:10px">
+            <label>Search Text</label>
+            <input type="text" class="form-control" id="txtsearch" style="margin-left:5px;">
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-top:20px;padding-left:0px">
+            <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary w-100">Search <img
+                src="/Content/images/btn-spinner.gif" style="display:none"></a>
+          </td>
+          <td style="padding-top: 20px;">
+            <div class="dropdown pull-right" style="margin-left:20px">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa fa-solid fa-download"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><button class="dropdown-item" id="btnExport" type="button">Excel</button></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </table>
+      </div>
+      <hr>
+      <div class="col-md-6 row mb-3">
+        <!-- <tr>
+                  <th scope="col"><b>Show</b> <i class="fa fa-solid"></i></th>
+                  <td>
+                    
+                    </td> -->
+        <div class="col-md-3" style="display: flex; margin-top: 30px;">
+          <label>Show</label>
+          <select class="form-select" id="records" style="margin-left: 10px;">
+            <option>50</option>
+            <option>100</option>
+            <option>200</option>
+            <option>All</option>
+          </select> <b> entries</b>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-6" style=" margin-top: 30px;">
+          <!-- <label>Maker</label> -->
+
+          <div class="selectBox form-control" style="    position: relative;
+                top: -12px;" onclick="showCheckboxes1()">
+
+            <select class="custom-select border-bottom form-control-plaintext">
+
+              <option>Column </option>
+
+            </select>
+
+            <div class="overSelect"></div>
+
+          </div>
+
+          <div id="checkboxes1" class="checkstyle">
+
+            <label><input type="checkbox" id="select-all2">Select All</label>
+            <label for="onem">
+
+              <input type="checkbox" id="onem" name="master2" onclick="myFunction()" />
+
+              ARN</label>
+
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              DISTRIBUTOR NAME</label>
+            <label for="threem">
+              <input type="checkbox" id="threem" name="master2" onclick="myFunction2()" />
+
+              MFDEX_CITY</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+              NEW_CITY</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              RM_CODE</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+              RM_NAME</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              REGION_CODE</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+            	REGION_NAME</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              UFC_NAME</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              ZONE</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              UFC_CODE</label>
+              <label for="twom">
+                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+  
+                CHANNEL_CODE</label>
+                <label for="twom">
+                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+    
+                	AAUM EQUITY % SHARE</label>
+                  <label for="twom">
+                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                    AAUM HYBRID % SHARE </label>
+                    <label for="twom">
+                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                      AAUM ARBITRAGE % SHARE  </label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                        AAUM FIXED INCOME % SHARE </label>
+                  
+                        <label for="twom">
+                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                          AAUM CASH % SHARE </label>
+                      
+                  
+                
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <div class="overflow-auto" id="margin">
+        <table class="table small border table-hover">
+          <thead>
+            <tr class="bg-primary text-white">
+              <!-- <th scope="col"><input type="checkbox" class="form-check-input" /></th> -->
+              <th scope="col" id="colall">All<input type="checkbox" class="form-check-input" id="alltxt" /> </th>
+              <!-- <th scope="col">KRV_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th> -->
+              <th scope="col">ARN <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+              <!-- <th scope="col">NAME <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th> -->
+              <th scope="col">DISTRIBUTOR NAME <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+              <th scope="col">MFDEX_CITY <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+              <th scope="col">NEW_CITY <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th>
+              <th scope="col" class="bg-danger">RM_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+              <!-- <th scope="col" class="bg-danger">EMP_ID <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th> -->
+              <th scope="col">RM_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th>
+              <!-- <th scope="col">EMP_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th> -->
+              <th scope="col">REGION_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i></th>
+              <th scope="col">REGION_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+              <!-- <th scope="col">UFC_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th> -->
+              <th scope="col">UFC_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+              <th scope="col">ZONE <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+              <th scope="col">UFC_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+              <th scope="col">CHANNEL_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <!--new added-->
+              <!-- <th scope="col">SOW_EHS_PERC_SHARE <i class="fa fa-solid fa-sort" onclick="sortBy(13)"></i></th> -->
+              <th scope="col">AAUM EQUITY % SHARE <i class="fa fa-solid fa-sort" onclick="sortBy(16)"></i></th>
+              <!-- <th scope="col">SOW_INCOME_PERC_SHARE <i class="fa fa-solid fa-sort" onclick="sortBy(14)"></i></th> -->
+              <th scope="col">AAUM HYBRID % SHARE <i class="fa fa-solid fa-sort" onclick="sortBy(17)"></i></th>
+              <!-- <th scope="col">SOW_LQNMM_PERC_SHARE <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th> -->
+              <th scope="col">AAUM ARBITRAGE % SHARE <i class="fa fa-solid fa-sort" onclick="sortBy(18)"></i></th>
+              <th scope="col">AAUM FIXED INCOME % SHARE <i class="fa fa-solid fa-sort" onclick="sortBy(19)"></i></th>
+              <th scope="col">AAUM CASH % SHARE <i class="fa fa-solid fa-sort" onclick="sortBy(20)"></i></th>
+              <th scope="col">ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tr_clone">
+              <td><input type="checkbox" class="form-check-input" /></td>
+              <td>ARN-148616</td>
+              <td>EQUIRUS WEALTH PRIVATE LIMITED</td>
+              <td>PALGHAR</td>
+              <td>PALGHAR</td>
+              <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="4425" />
+                           <a class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class=""></i> </a>
+                        </td> -->
+                        <td>
+                          <select class="form-select">
+                           <option>Select RM CODE</option>
+                            <option> 4546,Sakshi Hinge</option>
+                            <option>4251,Jigar Chandulal Bhanushali</option>
+                            <option>CM-601,Virtual</option>
+                            <option>RM1,Virtual</option>
+                        </select>
+                        </td>
+              <td>MR. DIPTANU CHAUDHURI</td>
+              <td>BNND_MUMB</td>
+              <td></td>
+              <td>MUM-RH</td>
+              
+              <td>WEST</td>
+              <td></td>
+              <td>RTL</td>
+              <td class="border bg-light text-center"><input class="form-control mb-1" value="0" />
+                <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+              </td>
+              <td class="border bg-light text-center"><input class="form-control mb-1" value="0" />
+                <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+              </td>
+              <td class="border bg-light text-center"><input class="form-control mb-1" value="0" />
+                <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+              </td>
+              <td class="border bg-light text-center"><input class="form-control mb-1" value="0" />
+                <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+              </td>
+              <td class="border bg-light text-center"><input class="form-control mb-1" value="0" />
+                <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+              </td>
+              <td><button class="btn btn-primary" id="myBtn">Edit/Split</button>
+                <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button> -->
+                <!-- <input type="button" id="btn_search" name="remove" value="Remove" class="tr_clone_remove" onclick="removeclone(this)" style="display:none"> </td> -->
+                <!-- <td>
+                       <select id="action" class="form-select">
+                         <option value="">Select</option>
+                        <option>Edit</option> 
+                         <option value="save">Save</option>
+                       </select>
+                       </td> -->
+            </tr>
+
+            <!-- <tr class="tr_clone">
+                    <td><input type="checkbox" class="form-check-input" /></td>
+                    <td>ARN-100284</td>
+                    <td>AR WEALTH MANAGEMENT PRIVATE LIMITED</td>
+                    <td>PALGHAR</td>
+                    <td>PALGHAR</td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="3932" />
+                       <a class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class=""></i> </a>
+                    </td>
+                    <td>MS. JESSIKA SANKET DESAI</td>
+                    <td>BNND_MUMB</td>
+                    <td></td>
+                    <td>MUM-RH</td>
+                    <td></td>
+                    <td>WEST</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>RTL</td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="50" />
+                       <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="50" />
+                       <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="50" />
+                       <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="50" />
+                       <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="50" />
+                       <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td><input type="button" id="btn_search10" name="split" value="Split" ></td>
+                      <input type="button" id="btn_search" name="remove" value="Remove" class="tr_clone_remove" onclick="removeclone(this)" style="display:none"> </td> -->
+            <!-- <td>
+                       <select id="action" class="form-select">
+                         <option value="">Select</option>
+                         <option>Edit</option> 
+                         <option value="save">Save</option>
+                       </select>
+                       </td> 
+                 </tr>
+                 <tr class="tr_clone">
+                    <td><input type="checkbox" class="form-check-input" /></td>
+                    <td>ARN-181727</td>
+                    <td>IIFL WEALTH FINANCE LIMITED</td>
+                    <td>PALGHAR</td>
+                    <td>PALGHAR</td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="3932" />
+                       <a class="" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class=""></i> </a>
+                    </td>
+                    <td>MS. JESSIKA SANKET DESAI</td>
+                    <td>BNND_MUMB</td>
+                    <td></td>
+                    <td>MUM-RH</td>
+                    <td></td>
+                    <td>WEST</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>RTL</td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="100" />
+                       <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="100" />
+                       <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="100" />
+                       <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="100" />
+                       <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td class="border bg-light text-center"><input class="form-control mb-1" value="100" />
+                       <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                    </td>
+                    <td><input type="button" id="btn_search12" name="split" value="Split" ></td>
+                       <input type="button" id="btn_search" name="remove" value="Remove" class="tr_clone_remove" onclick="removeclone(this)" style="display:none"> </td> 
+                     <td>
+                       <select id="action" class="form-select">
+                         <option value="">Select</option>
+                        <option>Edit</option>
+                         <option value="save">Save</option>
+                       </select>
+                       </td> 
+                 </tr> -->
+          </tbody>
+        </table>
+
+        <!-- Modal -->
+        <div class="center hideform">
+          <button id="close" style="float: right;">X</button>
+          <table>
+            <tr class="tr_clone">
+              <td><input type="checkbox" class="form-check-input" /></td>
+              <td>ARN-148616</td>
+              <td>EQUIRUS WEALTH PRIVATE LIMITED</td>
+              <td>PALGHAR</td>
+              <td>PALGHAR</td>
+              <td>
+                <select class="form-select">
+                  <option>4425,MR. DIPTANU CHAUDHURI</option>
+                  <option>D-PRM-115</option>
+                  <option>DMR-115</option>
+                  <option>NORM</option>
+                </select>
+              </td>
+              <td>MR. DIPTANU CHAUDHURI</td>
+              <td>BNND_MUMB</td>
+              <td></td>
+              <td>MUM-RH</td>
+              <td></td>
+              <td>WEST</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>RTL</td>
+              <td class="border bg-light text-center"><input class="form-control mb-1" value="0" />
+                <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+              </td>
+              <td class="border bg-light text-center"><input class="form-control mb-1" value="0" />
+                <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+              </td>
+              <td class="border bg-light text-center"><input class="form-control mb-1" value="0" />
+                <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+              </td>
+              <td class="border bg-light text-center"><input class="form-control mb-1" value="0" />
+                <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+              </td>
+              <td class="border bg-light text-center"><input class="form-control mb-1" value="0" />
+                <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+              </td>
+              <td><input type="button" id="btn_search11" name="split" value="Add Row" class="tr_clone_add">
+                <input type="button" id="btn_search" name="remove" value="Remove" class="tr_clone_remove"
+                  onclick="removeclone(this)" style="display:none">
+              </td>
+            </tr>
+          </table>
+          <br><br>
+          <input type="submit" value="Save" class="btn btn-primary">
+          <input type="text" value="Total" />
+        </div>
+
+        <!-- <div class="col-md-12 mt-3"> 
+              <a href="#" id="btn_search11" name="btnsearch" class="btn btn-primary">Update </a><p>(Update Selected Record Only As Per Above Search Criteria)</p>
+              </div>  -->
+        <table>
+          <tr>
+            <!-- <td><a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">Update</a></td>
+              <td><a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">Activity Completed</a></td> -->
+            <td><input type="button" id="button" class="btn btn-primary" value="Update" /></td>
+            <td><input type="button" id="button2" class="btn btn-primary" value="Activity Completed" /></td>
+            <td><input type="text" class="form-control" id="txtsearch" placeholder="Remark" style="margin-left: 0px;" />
+            </td>
+          </tr>
+        </table>
+        <br>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+
+        $(document).ready(function () {
+          $('#action').multiselect();
+        });
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+
+  <!-- 
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <script src="../assets/js_1/jquery.multi-select.js"></script>
+  <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <!-- <script>
+   $("input.tr_clone_add").on('click', function() {
+    var $tr    = $(this).closest('.tr_clone');
+    var $clone = $tr.clone();
+    $tr.after($clone);
+    $tr.next().find('.tr_clone_add').remove(); // to remove Split button from next row
+    $tr.next().find('.tr_clone_remove').show(); // to show Remove button on next row
+    // $(this).closest('.tr_clone');
+});
+// $("input.tr_clone_remove").on('click', function() {
+//    $(this).closest('.tr_clone').remove();
+// });
+
+function removeclone(obj){
+  $(obj).closest('tr').remove();
+}
+  </script> -->
+
+  <script>
+    $("input.tr_clone_add").on('click', function () {
+      var $tr = $(this).closest('.tr_clone');
+      var $clone = $tr.clone();
+      $tr.after($clone);
+      $tr.next().find('.tr_clone_add').remove(); // to remove Split button from next row
+      $tr.next().find('.tr_clone_remove').show(); // to show Remove button on next row
+      // $(this).closest('.tr_clone');
+    });
+    // $("input.tr_clone_remove").on('click', function() {
+    //    $(this).closest('.tr_clone').remove();
+    // });
+
+    function removeclone(obj) {
+      $(obj).closest('tr').remove();
+    }
+  </script>
+
+  <script>
+    $('#btn_search10').on('click', function () {
+      $('.center').show();
+      $(this).hide();
+    })
+
+    $('#close').on('click', function () {
+      $('.center').hide();
+      $('#btn_search10').show();
+    })
+  </script>
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+  </script>
+
+  <script type="text/javascript">
+    function addRows() {
+      var table = document.getElementById('emptbl');
+      var rowCount = table.rows.length;
+      var cellCount = table.rows[0].cells.length;
+      var row = table.insertRow(rowCount);
+      for (var i = 0; i <= cellCount; i++) {
+        var cell = 'cell' + i;
+        cell = row.insertCell(i);
+        var copycel = document.getElementById('col' + i).innerHTML;
+        cell.innerHTML = copycel;
+        if (i == 6) {
+          var radioinput = document.getElementById('col3').getElementsByTagName('input');
+          for (var j = 0; j <= radioinput.length; j++) {
+            if (radioinput[j].type == 'radio') {
+              var rownum = rowCount;
+              radioinput[j].name = 'gender[' + rownum + ']';
+            }
+          }
+        }
+      }
+    }
+    function deleteRows() {
+      var table = document.getElementById('emptbl');
+      var rowCount = table.rows.length;
+      if (rowCount > '2') {
+        var row = table.deleteRow(rowCount - 1);
+        rowCount--;
+      }
+      // else{
+      //     alert('There should be atleast one row');
+      // }
+    }
+    function PopupShow() {
+      document.getElementById('SplitPopup').style.display = "block";
+    }
+    function PopupHide() {
+      document.getElementById('SplitPopup').style.display = "none";
+    }
+  </script>
+  <script>
+
+
+    $(document).on("click", "#myBtn", function () {
+
+      $('#myModal').css("display", "block")
+    })
+
+    // $(document).on("click", ".close", function () {
+
+    //   // $('#myModal').css("display", "block")
+    // })
+
+
+    $('.close').click(function () {
+
+      $('#myModal').css("display", "none")
+    })
+
+    // // Get the modal
+    // var modal = document.getElementById("myModal");
+
+    // // Get the button that opens the modal
+    // var btn = document.getElementById("myBtn");
+
+    // // Get the <span> element that closes the modal
+    // var span = document.getElementsByClassName("close")[0];
+
+    // // When the user clicks the button, open the modal
+    // btn.onclick = function () {
+    //   modal.style.display = "block";
+    // }
+
+    // // When the user clicks on <span> (x), close the modal
+    // span.onclick = function () {
+    //   modal.style.display = "none";
+    // }
+
+    // // When the user clicks anywhere outside of the modal, close it
+    // window.onclick = function (event) {
+    //   if (event.target == modal) {
+    //     modal.style.display = "none";
+    //   }
+    // }
+  </script>
+  <script>
+    // toggle script
+    var innerSidebar = function () {
+      $('#sidebar').toggleClass('toggle-sidebar');
+
+    }
+
+ // toggle script
+
+  </script>
+   <!-- columns -->
+   <script>
+
+    var expanded = false;
+
+
+
+
+    function showCheckboxes1() {
+
+      var checkboxes1 = document.getElementById("checkboxes1");
+
+      if (!expanded) {
+
+        checkboxes1.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes1.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+  <script>
+    document.getElementById('select-all2').onclick = function () {
+      var checkboxes1 = document.getElementsByName('master2');
+      for (var checkbox of checkboxes1) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+
+
+
+</body>
+
+</html>

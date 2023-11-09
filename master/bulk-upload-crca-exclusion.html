@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>UTI</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css_1/main.css" rel="stylesheet">
+    <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+    <link href="../assets/css_1/style.css" rel="stylesheet">
+    <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/multis-styles.css">
+</head>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+    <main id="main" class="main">
+        <section class="section dashboard">
+            <div class="bg-white p-3 border">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>CRCA EXCLUSION MASTER</h5>
+                        <a href="../master/all_master_bulk_upload.html"> <i class="bi bi-arrow-return-left" style="position: relative;
+                          top: -52px;
+                          float: right;
+                          font-size: 40px;
+                      "></i></a>
+                        <hr>
+                        <div class="mt-2">
+                          <h3 class="mb-4" style="text-align: center;">Upload File </h3>
+                          <div style="display: flex; justify-content: center;">
+                              <div style="margin: 5px;"> <button type="button" class="btn btn-primary "><a
+                                          href="../Templates/CRCA_Exclusion-Master.xlsx" style="color:white">Download CRCA Exclusion Master
+                                          Template<br> <i class="fa fa-file-excel-o"></i></a></button></div>
+                              <div style="margin: 5px;">
+                                <input type="file" accept=".csv" style="background-color: #193984; padding: 14px; border-radius: 5px; color: white;" />
+                              </div>
+                              <div style="margin: 5px;" class="upload_btn"> 
+
+                                <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary" style="padding: 14px;"
+                                    onclick="displaydetails();">Preview</a>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+
+
+                <hr mt-3>
+                <div class="overflow-auto" id="empgrddetails" style="display:none">
+                    <div class="row">
+                        <div class="col-md-9">  
+                            <p>No of Records - 5</p> <p>No of Column - 9</p>  <p>Selected UFC- 549 - Patna </p>
+                     
+                        </div>
+                      
+                        
+                        <div class="col-md-3">  <p> Upload Date - 24/06/2023 </p>  <p>File Name - CRCA Exclusion Bulk Upload </p>
+                       
+                            <p>File Type - .csv</p>
+                        
+                       
+                          
+                        </div></div>
+                    <table class="table small border">
+                        <tr class="bg-primary text-white">
+                          <th> </th>
+                          <th scope="col">ACNO</th>
+                          <th scope="col">PAN</th>
+                          <th scope="col">CRCACODE</th>
+                          <th scope="col">VALID_FROM</th>
+                          <th scope="col">VALID_UPTO</th>
+                          <th scope="col">CACODE</th>
+                          <th scope="col">ARNNO</th>
+                          <th scope="col">STATUS</th>
+                          <th scope="col">SCHEME_CODE</th>
+                          <!-- <th scope="col">ACTION</th> -->
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox" class="form-check-input" /></td>
+                          <td>572288032082</td>
+                          <td>AAATB3000B</td>
+                          <td></td>
+                          <td>01-04-2018</td>
+                          <td>30-12-9999</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                     
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox" class="form-check-input" /></td>
+                          <td>572303692973</td>
+                          <td>ADBPP8800D</td>
+                          <td></td>
+                          <td>01-04-2018</td>
+                          <td>30-12-9999</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox" class="form-check-input" /></td>
+                          <td>501304074086</td>
+                          <td>AAAAT2500R</td>
+                          <td>142B001</td>
+                          <td>01-04-2018</td>
+                          <td>30-12-9999</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                     
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox" class="form-check-input" /></td>
+                          <td>561258454363</td>
+                          <td>AAAAT2425K</td>
+                          <td>107B001</td>
+                          <td>01-04-2018</td>
+                          <td>30-12-9999</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                       
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox" class="form-check-input" /></td>
+                          <td></td>
+                          <td>AADTS0469E</td>
+                          <td>105B002</td>
+                          <td>01-10-2019</td>
+                          <td>30-12-9999</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                       
+                        </tr>
+                      </table>
+                    
+                    <br>
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                    <div>                     <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">CRCA EXCLUSION MASTER</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <center><h6>CRCA EXCLUSION Master File Successfully Uploaded</h6></center><hr>
+                            <div class="row">
+                                <div class="col-md-6"> <p>No of Records - 2</p><br><p>Case Id - 3445</p> </div>
+                                <div class="col-md-6"> <p>No of Column - 17</p>
+                            
+                                  <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-auto mt-4">
+
+                                    <option selected="selected" value="Select">Select Checker</option>
+          
+                                    <option value="INST">Sumit Mehta</option>
+          
+                                    <option value="DSTH">Santosh Chipte</option>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                                  </select></div>
+                                    </div>
+                                   
+                                   
+                                    </div>
+                       
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary"><a href="../master/all_master_bulk_upload.html" style="color:white">Ok</a></button>
+                                      
+                                    </div>
+                          </div>
+                        </div>
+                      </div>
+                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                Start Upload
+                                            </button>
+                                       
+                        </div> <br>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>UTI</span></strong>
+            <script type="text/javascript">
+                var d = new Date();
+                yr = d.getFullYear();
+                document.write(yr); cPrev = -1;
+                function sortBy(c) {
+                    rows = document.getElementById("sortable").rows.length;
+                    columns = document.getElementById("sortable").rows[0].cells.length;
+                    arrTable = [...Array(rows)].map(e => Array(columns));
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                        }
+                    }
+
+                    th = arrTable.shift();
+
+                    if (c !== cPrev) {
+                        arrTable.sort(
+                            function (a, b) {
+                                if (a[c] === b[c]) {
+                                    return 0;
+                                } else {
+                                    return (a[c] < b[c]) ? -1 : 1;
+                                }
+                            }
+                        );
+                    } else {
+                        arrTable.reverse();
+                    }
+
+                    cPrev = c;
+
+                    arrTable.unshift(th);
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                        }
+                    }
+                }               // toggle script
+    
+
+    var  innerSidebar = function(){
+ 
+ $('#sidebar').toggleClass('toggle-sidebar');
+ 
+ }
+ 
+ // toggle script
+            </script>
+            . All Rights Reserved
+        </div>
+    </footer>
+
+
+    <!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+    <script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+    <!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+    <script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+    <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+    <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+    <script src="../assets/js_1/main.js"></script>
+    <!-- <script src="../assets/js/main.js"></script> -->
+    <script src="../assets/js_1/uti.js"></script>
+    <!-- <script src="../assets/js/uti.js"></script> -->
+    <script src="../assets/js_1/custom.js"></script>
+    <!-- <script src="../assets/js/custom.js"></script> -->
+    <script type="text/javascript">
+      function displaydetails() {
+          document.getElementById("empgrddetails").style.display = "block";
+          document.getElementsByClassName("upload_btn")[0].style.display = "none";  //new
+
+      }
+  </script>
+    <script>
+        function myFunction() {
+            let text = "Do you want to proceed";
+            if (confirm(text) == true) {
+                text = "You pressed OK!";
+            } else {
+                text = "You canceled!";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+ <script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+
+  <link rel="stylesheet" type="text/css" href="../assets/css/multis-styles.css">
+</head>
+<style>
+  #checkboxes3 label {
+    display: block;
+    font-weight: normal;
+  }
+</style>
+
+<body>
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- sidebar start -->
+  <div uti-include-html="includes/sidebar.html"></div>
+
+
+
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-12">
+            <h5>MASTER-MAPPING CHANGES</h5>
+            <hr id="arn-master-firsthr">
+            <form>
+              <div class="row pt-3">
+                <table>
+
+                  <!-- <div class="form-group col-md-4 mb-3">
+                    <label class="mt-4">CASE_NO</label>
+                    <select class="form-select">
+                  
+                      <option>101</option>
+                      <option>102</option>
+                      <option>103</option>
+                      <option>104</option>
+                    </select> -->
+
+
+<!-- 
+                  </div> -->
+                
+                  <div class="form-group col-md-4 mt-4 mb-3">
+                    <label class="">MASTER</label>
+                    <div class="selectBox form-control" onclick="showCheckboxes()">
+                      <select class="custom-select border-bottom form-control-plaintext">
+                        <option>Masters</option>
+                      </select>
+                      <div class="overSelect"></div>
+                    </div>
+                    <div id="checkboxes" class="checkstyle">
+                      <label><input type="checkbox" id="select-all1">Select All</label>
+                      <label for="onem">
+                        <input type="checkbox" id="onem" name="master" />
+                        ARN MASTER</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master" />
+                        PAN MASTER</label>
+                      <label for="threem">
+                        <input type="checkbox" id="threem" name="master" />
+                        RIA MASTER</label>
+                      <label for="fourm">
+                        <input type="checkbox" id="fourm" name="master" />
+
+                        SUBBROKER MASTER</label>
+
+                      <label for="fivem">
+
+                        <input type="checkbox" id="fivem" name="master" />
+
+                        SCHEME MASTER</label>
+
+                      <label for="sixm">
+
+                        <input type="checkbox" id="sixm" name="master" />
+
+                        MFDEX ARN CITY UFWISE SHARING MASTER</label>
+
+                      <label for="sevenm">
+
+                        <input type="checkbox" id="sevenm" name="master" />
+
+                        UFC MASTER</label>
+
+                      <label for="eightm">
+
+                        <input type="checkbox" id="eightm" name="master" />
+
+                        PINCODE MASTER</label>
+                      <label for="ninem">
+
+                        <input type="checkbox" id="ninem" name="master" />
+
+                        BDA/CA MASTER</label>
+                      <label for="tenm">
+
+                        <input type="checkbox" id="tenm" name="master" />
+
+
+
+
+                        CAMS CITY UFC MASTER</label>
+                      <label for="thirteenm">
+
+                        <input type="checkbox" id="thirteenm" name="master" />
+
+                        CHANNEL MASTER</label>
+                      <label for="fourteenm">
+
+                        <input type="checkbox" id="fourteenm" name="master" />
+
+                        FINTECH MASTER</label>
+                      <label for="fifteenm">
+
+                        <input type="checkbox" id="fifteenm" name="master" />
+
+
+
+                        ZONE MASTER</label>
+                      <label for="seventeenm">
+
+                        <input type="checkbox" id="seventeenm" name="master" />
+
+                        SCHEME CATEGORY CONVERSION MASTER</label>
+                      <label for="sixteenm">
+
+                        <input type="checkbox" id="sixteenm" name="master" />
+
+                        USER MASTER</label>
+                      <label for="sixteenm">
+
+                        <input type="checkbox" id="sixteenm" name="master" />
+
+                        REGION MASTER</label>
+                      <label for="sixteenm">
+
+                        <input type="checkbox" id="sixteenm" name="master" />
+
+                        KRA MASTER</label>
+                      <label for="sixteenm">
+
+                        <input type="checkbox" id="sixteenm" name="master" />
+
+                        CRCA-EXCLUSIVE MASTER</label>
+                      <label for="sixteenm">
+
+                        <input type="checkbox" id="sixteenm" name="master" />
+
+                        VIRTUAL RM MASTER</label>
+                      <label for="sixteenm">
+
+                        <input type="checkbox" id="sixteenm" name="master" />
+
+                        MAP DE TAG SUBARN MASTER</label>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                  </div>
+                  <div class="form-group col-md-4 mb-3">
+                    <label class="mt-4">MAPPING</label>
+
+
+
+
+                    <div class="selectBox form-control" onclick="showCheckboxes1()">
+
+                      <select class="custom-select border-bottom form-control-plaintext">
+
+                        <option>Mapping</option>
+
+                      </select>
+
+                      <div class="overSelect"></div>
+
+                    </div>
+
+                    <div id="checkboxes1" class="checkstyle">
+
+                      <label><input type="checkbox" id="select-all2">Select All</label>
+                      <label for="one0">
+
+                        <input type="checkbox" id="one0" name="master2" />ARN+EUIN OR SUB_ARN OR BRANCH CODE
+                        MAPPING</label>
+
+
+
+                      <label for="six0">
+
+                        <input type="checkbox" id="six0" name="master2" />
+
+                        ARN+ SUB ARN+PIN TO RM MAPPING</label>
+
+                      <label for="seven0">
+
+                        <input type="checkbox" id="seven0" name="master2" />
+
+                        ARN+UFC TO RM MAPPING</label>
+
+                      <label for="eight0">
+
+                        <input type="checkbox" id="eight0" name="master2" />
+
+                        ARN+SINGLE CITY TO RM MAPPING</label>
+                      <label for="nine0">
+
+                        <input type="checkbox" id="nine0" name="master2" />
+
+                        ARN+GROUP OF CITIES TO RM MAPPING</label>
+                      <label for="ten0">
+
+                        <input type="checkbox" id="ten0" name="master2" />
+
+                        ARN+UFC TO RM MAPPING</label>
+                      <label for="eleven0">
+
+                        <input type="checkbox" id="eleven0" name="master2" />
+
+                        PINCODE TO RM MAPPING</label>
+                      <label for="twelve0">
+
+                        <input type="checkbox" id="twelve0" name="master2" />
+
+                        RIA TO RM MAPPING</label>
+                      <label for="thirteen0">
+
+                        <input type="checkbox" id="thirteen0" name="master2" />
+
+                        RIA+CITY MAPPING</label>
+                      <label for="thirteen0">
+
+                        <input type="checkbox" id="forteen0" name="master2" />
+
+                        PAN MAPPING</label>
+                      <label for="forteen0">
+
+                        <input type="checkbox" id="fifteen0" name="master2" />
+
+                        BDACA_PINCODE_MAPPING</label>
+                      <label for="fifteen0">
+
+                        <input type="checkbox" id="sixteen0" name="master2" />
+
+                        BDACA_ARN_MAPPING</label>
+                      <label for="sixteen">
+
+                        <input type="checkbox" id="seventeen0" name="master2" />
+
+                        EXCEPTIONS MAPPING</label>
+                      <label for="seventeen0">
+
+                        <input type="checkbox" id="eightteen0" name="master2" />
+
+                        MFC TO RM MAPPING</label>
+                      <label for="eightteen0">
+
+                        <input type="checkbox" id="nineteen0" name="master2" />
+
+                        PINCODE TO RMMAPPING</label>
+                      <label for="nineteen0">
+
+                        <input type="checkbox" id="twenty0" name="master2" />
+
+                        ARN+PINCODE TO RM MAPPING</label>
+                      <label for="twenty0">
+
+                        <input type="checkbox" id="twenty0" name="master2" />
+
+                        DIRECT+SINGLE CITY TO RM MAPPING</label>
+
+
+                      <label for="forteen0">
+
+                        <input type="checkbox" id="forteen0" name="master2" />
+
+                        DIRECT+GROUP OF CITIES TO RM MAPPING</label>
+
+                      <label for="fifteen0">
+
+                        <input type="checkbox" id="fifteen0" name="master2" />
+
+                        PRM MAPPING</label>
+
+                      <label for="sixteen0">
+
+                        <input type="checkbox" id="one0" name="master2" />
+
+                        TEAM SAT MAPPING</label>
+                      <label for="one0">
+
+                        <input type="checkbox" id="one0" name="master2" />
+
+                        VYMO DISTRIBUTOR MAPPING</label>
+                      <label for="one0">
+
+                        <input type="checkbox" id="one0" name="master2" />
+
+                        TEAM SET MAPPING</label>
+                    </div>
+
+
+                  </div>
+                  <div class="form-group col-md-4 mt-4 mb-3">
+                    <label> STAGES </label>
+                    <select name="ddlEmpRole" id="ddlEmpRole" class="form-select w-100">
+                      <option selected="selected" value="Select">Select</option>
+                      <option value="1">Pending for Checker approval</option>
+                      <option value="2">Reject by Checker</option>
+                      <option value="3">Checker approved</option>
+                      <option value="4">Move to Prodcution</option>
+                      <option value="4">Discard</option>
+                    </select>
+                  </div>
+
+
+
+              </div>
+              </table>
+
+              <div class="row">
+                <div class="form-group col-md-4 mb-3">
+
+                  <label>KEY</label>
+                  <input type="text" id="startDate" name="start_Date" class="form-control" />
+                </div>
+
+                <!-- makers -->
+
+                <div class=" form-group col-md-4 mb-3">
+                  <label>MAKER</label>
+                  <!-- aakanksha -->
+                  <div class="selectBox form-control" onclick="showCheckboxes2()">
+
+                    <select class="custom-select border-bottom form-control-plaintext">
+
+                      <option>Maker</option>
+
+                    </select>
+
+                    <div class="overSelect"></div>
+
+                  </div>
+
+                  <div id="checkboxes2" class="checkstyle">
+
+                    <label><input type="checkbox" id="select-all3">Select All</label>
+                    <label for="onee"><input type="checkbox" id="onee" name="master3" />Santosh Chipte</label>
+
+                    <label for="twoo"><input type="checkbox" id="twoo" name="master3" /> Sumit Mehta</label>
+                  </div>
+                </div>
+                <!-- checker -->
+
+                <div class="form-group col-md-4 mb-3">
+                  <label>CHECKER</label>
+                  <div class="selectBox form-control" onclick="showCheckboxes3()">
+                    <select class="custom-select border-bottom form-control-plaintext">
+                      <option>Checker</option>
+                    </select>
+                    <div class="overSelect"></div>
+                  </div>
+
+                  <div id="checkboxes3" class="checkstyle" style="display: none; position: absolute;">
+                    <label><input type="checkbox" id="select-all4">Select All</label>
+                    <label for="oneee"><input type="checkbox" id="oneee" name="master4" /> Santosh Chipte</label>
+                    <label for="twooo"> <input type="checkbox" id="twooo" name="master4" /> Sumit Mehta</label>
+                  </div>
+                </div>
+                <div class="form-group col-md-3 mb-3">
+                  <label>Service Request Number</label>
+                  <input type="text" id="text" name="start_Date" class="form-control" />
+                </div>
+                <div class="col-md-4 mt-3">
+                  <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary"
+                    onclick="displaydetails();">Search</a><br><br>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="overflow-auto" id="empgrddetails" style="display:none">
+          <table class="table small border table-hover" id="sortable">
+            <thead>
+              <tr class="bg-primary text-white">
+                <!-- <th scope="col" id="colall">All<input type="checkbox" class="form-check-input" id="alltxt" /> </th> -->
+                <th scope="col">CASE ID <i class="fa fa-solid fa-sort"></i></th>
+                <th scope="col">Service Request Number <i class="fa fa-solid fa-sort"></i></th>
+                <th scope="col"> Masters <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+                <!-- <th scope="col"> Case_no <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th> -->
+                <th scope="col"> Channel Code <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+                <th scope="col">Region <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+                <th scope="col">UFC_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th>
+                <!-- <th scope="col">UFC_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th> -->
+                <!-- <th scope="col">Access Start Date <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th> -->
+                <!-- <th scope="col">Access End Date <i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i></th> -->
+                <th scope="col">KRA Valid From <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+                <th scope="col">VYMO Valid From<i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th>
+                <th scope="col">Maker <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+                <th scope="col">Checker <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+                <th scope="col">Checker Approval Date <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+                <th scope="col">Remark <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+                <th scope="col">Action</th>
+                <th scope="col">Attach</th>
+                <th scope="col">Stage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <!-- <td><input type="checkbox" class="form-check-input" /></td> -->
+                <td><a href="../admin/ticket checker.html">3343</a></td>
+                <td>1001</td>
+                <td>Arn Master</td>
+              
+                <td>RTL</td>
+                <td></td>
+                <td>111 </td>
+                <td>12/03/2021</td>
+                <td>13/04/2021</td>
+                <!-- <td>JVPD</td> -->
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="01/09/2022" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td> -->
+                <!-- <td>01/09/2022 </td> -->
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="12/09/2022" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td> -->
+                <!-- <td>12/09/2022 </td> -->
+                <!-- <td></td>-->
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td> -->
+                <!--<td></td> -->
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td> -->
+                <!-- <td></td>
+      <td></td> -->
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="Santosh Chipte" />
+        <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                <!-- <td><select class="form-select">
+          <option>2266,Veeraraj</option>
+          <option>2214,Giridhar Bekal</option>
+           <option>3411,Jyothi Ramaraya Pai</option> 
+          <option>3388,Ramanlal Agarwal</option>
+        </select></td> -->
+                <td>Santosh Chipte</td>
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+          <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a></td> -->
+                <td>Sumit Mehta</td>
+                <td>2/03/2021</td>
+                <td> - </td>
+                <td>
+                  <select class="form-select">
+                    <option>Edit</option>
+                    <option>Delete</option>
+                    <option>Save</option>
+                    <option>Send Email Reminder</option>
+                    <!-- <option>Extend Date</option>
+                    <option>Reopen</option>
+                    <option>Discard</option> -->
+                  </select>
+                </td>
+                <td><button type="button" id="" class="btnactions">
+                    <label for="file"><i class="fa fa-paperclip "></i></label>
+                    </input>
+                    <input type="file" id="file" style="display:none;" /></td>
+                    <td>Pending for checker approval</td>
+              </tr>
+              <tr>
+                <td><a href="../admin/ticket checker.html">3343</a></td>
+                <td>1002</td>
+                <td>Arn Master</td>
+               
+                <td>RTL</td>
+                <td></td>
+                <td>111 </td>
+                <td>21/03/2021</td>
+                <td>22/04/2021</td>
+<!-- 
+                 <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a> 
+                </td> -->
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td> -->
+                <td>Santosh Chipte</td>
+                <td>Sumit Mehta</td>
+                <td>2/03/2021</td>
+                <td> - </td>
+                <td>
+                  <select class="form-select">
+                    <option>Edit</option>
+                    <option>Delete</option>
+                    <option>Save</option>
+                    <option>Send Email Reminder</option>
+                    <!-- <option>Extend Date</option>
+                    <option>Reopen</option>
+                    <option>Discard</option> -->
+                  </select>
+                </td>
+                <td><button type="button" id="" class="btnactions">
+                    <label for="file"><i class="fa fa-paperclip "></i></label>
+                    </input>
+                    <input type="file" id="file" style="display:none;" /></td>
+                    <td>Reject by Checker</td>
+              </tr>
+              <tr>
+                <td><a href="../admin/ticket checker.html">3343</a></td>
+                <td>1003</td>
+                <td>Arn Master</td>
+                <td>RTL</td>
+                <td></td>
+                <td>111 </td>
+                <td>10/05/2022</td>
+                <td>21/06/2022</td>
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td> -->
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td> -->
+                <td>Santosh Chipte</td>
+                <td>Sumit Mehta</td>
+                <td>2/03/2021</td>
+                <td> - </td>
+                <td>
+                  <select class="form-select">
+                    <option>Edit</option>
+                    <option>Delete</option>
+                    <option>Save</option>
+                    <option>Send Email Reminder</option>
+                    <!-- <option>Extend Date</option>
+                    <option>Reopen</option>
+                    <option>Discard</option> -->
+                  </select>
+                </td>
+                <td><button type="button" id="" class="btnactions">
+                    <label for="file"><i class="fa fa-paperclip "></i></label>
+                    </input>
+                    <input type="file" id="file" style="display:none;" /></td>
+                    <td>Checker approved</td>
+              </tr>
+              <tr>
+                <td><a href="../admin/ticket checker.html">3343</a></td>
+                <td>1004</td>
+                <td>Arn Master</td>
+                <td>RTL</td>
+                <td></td>
+                <td>111 </td>
+                <td>19/06/2022</td>
+                <td>21/07/2022</td>
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td> -->
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td> -->
+                <td>Santosh Chipte</td>
+                <td>Sumit Mehta</td>
+                <td>2/03/2021</td>
+                <td> - </td>
+                <td>
+                  <select class="form-select">
+                    <option>Edit</option>
+                    <option>Delete</option>
+                    <option>Save</option>
+                    <option>Send Email Reminder</option>
+                    <!-- <option>Extend Date</option>
+                    <option>Reopen</option>
+                    <option>Discard</option> -->
+                  </select>
+                </td>
+                <td><button type="button" id="" class="btnactions">
+                    <label for="file"><i class="fa fa-paperclip "></i></label>
+                    </input>
+                    <input type="file" id="file" style="display:none;" /></td>
+                    <td>Move to Production</td>
+              </tr>
+              <tr>
+                <td><a href="../admin/ticket checker.html">3343</a></td>
+                <td>1005</td>
+                <td>Arn Master</td>
+                <td>RTL</td>
+                <td></td>
+                <td>111 </td>
+                <td>10/05/2022</td>
+                <td>12/06/2022</td>
+                <!-- <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td>
+                <td class="border bg-light text-center"><input class="form-control mb-1" value="" />
+                  <a class="" data-bs-toggle="" data-bs-target=""> <i class=""></i> </a>
+                </td> -->
+                <td>Santosh Chipte</td>
+                <td>Sumit Mehta</td>
+                <td>2/03/2021</td>
+                <td> - </td>
+                <td>
+                  <select class="form-select">
+                    <option>Edit</option>
+                    <option>Delete</option>
+                    <option>Save</option>
+                    <option>Send Email Reminder</option>
+                    <!-- <option>Extend Date</option>
+                    <option>Reopen</option>
+                    <option>Discard</option> -->
+                  </select>
+                </td>
+                <td><button type="button" id="" class="btnactions">
+                    <label for="file"><i class="fa fa-paperclip "></i></label>
+                    </input>
+                    <input type="file" id="file" style="display:none;" /></td>
+                    <td>Move to Production</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr); cPrev = -1;
+        function sortBy(c) {
+          rows = document.getElementById("sortable").rows.length;
+          columns = document.getElementById("sortable").rows[0].cells.length;
+          arrTable = [...Array(rows)].map(e => Array(columns));
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+            }
+          }
+
+          th = arrTable.shift();
+
+          if (c !== cPrev) {
+            arrTable.sort(
+              function (a, b) {
+                if (a[c] === b[c]) {
+                  return 0;
+                } else {
+                  return (a[c] < b[c]) ? -1 : 1;
+                }
+              }
+            );
+          } else {
+            arrTable.reverse();
+          }
+
+          cPrev = c;
+
+          arrTable.unshift(th);
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+            }
+          }
+        }
+      </script>
+      . All Rights Reserved
+    </div>
+  </footer>
+
+
+  <!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script type="text/javascript">
+    function displaydetails() {
+      document.getElementById("empgrddetails").style.display = "block";
+    }
+  </script>
+
+  <!-- 1st -->
+
+  <script>
+
+    var expanded = false;
+
+
+
+    function showCheckboxes() {
+
+      var checkboxes = document.getElementById("checkboxes");
+
+      if (!expanded) {
+
+        checkboxes.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+
+
+
+
+  <script>
+    document.getElementById('select-all1').onclick = function () {
+      var checkboxes = document.getElementsByName('master');
+      for (var checkbox of checkboxes) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+  <script>
+    document.getElementById('select-all').onclick = function () {
+      var checkboxes = document.getElementsByName('master1');
+      for (var checkbox of checkboxes) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+
+  <!-- 2ND -->
+  <script>
+
+    var expanded = false;
+
+
+
+
+    function showCheckboxes1() {
+
+      var checkboxes1 = document.getElementById("checkboxes1");
+
+      if (!expanded) {
+
+        checkboxes1.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes1.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+  <script>
+    document.getElementById('select-all2').onclick = function () {
+      var checkboxes1 = document.getElementsByName('master2');
+      for (var checkbox of checkboxes1) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+  <!-- maker -->
+  <script>
+
+    var expanded = false;
+
+
+
+
+    function showCheckboxes2() {
+
+      var checkboxes2 = document.getElementById("checkboxes2");
+
+      if (!expanded) {
+
+        checkboxes2.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes2.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+  <script>
+    document.getElementById('select-all3').onclick = function () {
+      var checkboxes2 = document.getElementsByName('master3');
+      for (var checkbox of checkboxes2) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+  <!-- checker -->
+  <script>
+
+    var expanded = false;
+
+
+
+
+    function showCheckboxes3() {
+
+      var checkboxes3 = document.getElementById("checkboxes3");
+
+      if (!expanded) {
+
+        checkboxes3.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes3.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+  <script>
+    document.getElementById('select-all4').onclick = function () {
+      var checkboxes3 = document.getElementsByName('master4');
+      for (var checkbox of checkboxes3) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

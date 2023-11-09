@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>UTI</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css_1/main.css" rel="stylesheet">
+    <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+    <link href="../assets/css_1/style.css" rel="stylesheet">
+    <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+<style>
+    p,
+    label {
+        font: 15px 'Exo 2', sans-serif;
+    }
+
+    input {
+        margin: 6px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 2 2;
+        font: 15px 'Exo 2', sans-serif;
+    }
+</style>
+
+<body id="sidebar">
+    <!-- header start -->
+    <div uti-include-html="../includes/header1.html"></div>
+    <!-- header end -->
+
+    <!-- sidebar start -->
+    <div uti-include-html="../includes/sidebar.html"></div>
+    <!-- sidebar end -->
+    <main id="main" class="main">
+
+        <section class="section dashboard bg-white">
+
+            <div class="col-md-8" style="bottom: 10px;">
+                <h4>LOV MASTER </h4>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    <h6>TYPE</h6>
+                </div>
+                <div class="col-md-3">
+                    <h6>TABLE NAME</h6>
+                </div>
+                <div class="col-md-3">
+                    <h6>COLUMN NAME</h6>
+                </div>
+                <div class="col-md-3">
+                    <h6>DESCRIPTION</h6>
+                </div>
+            </div><hr>
+            <!-- 2ND -->
+            <div class="row">
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">Master</p>
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">ARN MASTER</p>
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">CHANNEL_GROUP
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">BNND</option>
+                        <option value="orange">FINTECH</option>
+                        <option value="grape">MFD</option>
+
+                    </select>
+                </div>
+            </div>
+            <!-- 3rd -->
+            <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">CATEGORY
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">BANKS</option>
+                        <option value="orange">MFD - RD</option>
+                        <option value="grape">MFD</option>
+                        <option value="grape">NDS</option>
+                        <option value="grape">FINTECH</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 4th -->
+            <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">ALLOCATION
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">Y</option>
+                        <option value="orange">N</option>
+                        <option value="grape">E</option>
+
+                    </select>
+                </div>
+            </div>
+            <!-- MFDEX_ARN_CITY_UFCWISE_SHARING -->
+            <div class="row">
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">Master</p>
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">MFDEX ARN CITY UFCWISE SHARING<br>MASTER </p>
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">CITY_TYPE
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">MFDEX_CITY</option>
+                        <option value="orange">NEWCITY</option>
+
+
+                    </select>
+                </div>
+            </div>
+            <!-- 2nd -->
+            <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">MULTICITY
+
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">Y</option>
+                        <option value="orange">N</option>
+                        <option value="orange">E</option>
+
+
+                    </select>
+                </div>
+                <!-- PINCODE -->
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">Master</p>
+                </div>
+
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">PINCODE MASTER </p>
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">UFC_LOCATION
+
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">Y</option>
+                        <option value="orange">N</option>
+
+
+                    </select>
+                </div>
+                <!-- CAMS_CITY_UFC_MASTER -->
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">Master</p>
+                </div>
+
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">CAMS CITY UFC MASTER </p>
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">AMFI_CATEGORY
+
+
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">Next 75</option>
+                        <option value="orange">TOP 5</option>
+                        <option value="apple">NEXT 10</option>
+                        <option value="banana">Top 5</option>
+                        <option value="orange">B-110</option>
+                        <option value="orange">NEXT 75</option>
+
+
+                    </select>
+                </div>
+
+
+                <!-- 2ND -->
+                <div class="col-md-3">
+
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">MIS CITY CATEGORY
+
+
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">B30</option>
+                        <option value="orange">T6-15</option>
+                        <option value="banana">T16-30</option>
+                        <option value="orange">T5</option>
+
+
+                    </select>
+                </div>
+                <!-- 3RD -->
+                <div class="col-md-3">
+
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">T5_B5
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">T5</option>
+                        <option value="orange">B5</option>
+
+
+
+                    </select>
+
+                </div>
+                <!-- 4th -->
+                <div class="col-md-3">
+
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">DOFA_CAT
+
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">NEXT 81-90</option>
+                        <option value="orange">NEXT 31-40</option>
+                        <option value="apple">NEXT 41-50</option>
+                        <option value="banana">TOP 5</option>
+                        <option value="orange">B100</option>
+                        <option value="apple">NEXT 21-30</option>
+                        <option value="banana">Next 61-70</option>
+                        <option value="orange">Next 51-60</option>
+                        <option value="banana">NEXT 91-100</option>
+                        <option value="orange">NEXT 61-70</option>
+
+                        <option value="orange">Top 5</option>
+                        <option value="banana">TOP 6-10</option>
+                        <option value="orange">NEXT 11-20</option>
+                        <option value="banana">NEXT 51-60</option>
+                        <option value="orange">NEXT 71-80</option>
+
+
+
+                    </select>
+
+                </div>
+                <!-- 5TH -->
+                <div class="col-md-3">
+
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">BND_CITY
+
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">COONOOR</option>
+                        <option value="orange">T-4</option>
+                        <option value="apple">MUMBAI</option>
+                        <option value="banana">B-8</option>
+                        <option value="orange">NA</option>
+                        <option value="apple">B5</option>
+                        <option value="banana">KARAIKUDI</option>
+                        <option value="orange">T5</option>
+
+
+
+
+                    </select>
+
+                </div>
+                <!-- 6TH -->
+                <div class="col-md-3">
+
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">IMC_LOCATION
+
+
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">BANGALORE</option>
+                        <option value="orange">CHENNAI</option>
+                        <option value="apple">MUMBAI</option>
+                        <option value="banana">NA</option>
+                        <option value="orange">NA-RIRM</option>
+                        <option value="apple">NEW DELHI</option>
+                        <option value="banana">KARAIKUDI</option>
+                        <option value="orange">NORTH</option>
+                        <option value="apple">RIRM-UFC</option>
+                        <option value="banana">SOUTH</option>
+                        <option value="orange">WEST</option>
+
+
+
+
+                    </select>
+
+                </div>
+                <!-- 7TH -->
+                <div class="col-md-3">
+
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">BND_REGION
+
+
+
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">BNND_MUMB</option>
+                        <option value="orange">CHAN</option>
+                        <option value="apple">EAST</option>
+                        <option value="banana">NA</option>
+                        <option value="orange">WEST</option>
+                        <option value="apple">TNNK</option>
+                        <option value="orange">NORTH</option>
+                        <option value="banana">SOUTH</option>
+
+
+
+
+                    </select>
+
+                </div>
+                <!-- 8TH -->
+                <div class="col-md-3">
+
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">GROUP_NAME
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">GROUP</option>
+                        <option value="orange">SINGLE</option>
+
+
+
+
+
+                    </select>
+
+                </div>
+                <!-- 9TH -->
+                <div class="col-md-3">
+
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">DOFA_SUB_CAT
+
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">NEXT 51-60</option>
+                        <option value="orange">NEXT 71-80</option>
+                        <option value="apple">TOP 6-10</option>
+                        <option value="banana">Top 5</option>
+                        <option value="orange">NEXT 61-70</option>
+                        <option value="apple">NEXT 91-100</option>
+                        <option value="banana">Next 51-60</option>
+                        <option value="orange">Next 61-70</option>
+                        <option value="apple">NEXT 11-15</option>
+                        <option value="banana">B100</option>
+                        <option value="orange">NEXT 16-20</option>
+                        <option value="banana">NEXT 21-25</option>
+                        <option value="orange">NEXT 41-50</option>
+                        <option value="apple">NEXT 31-40</option>
+                        <option value="banana">NEXT 81-90</option>
+                        <option value="orange">NEXT 26-30</option>
+
+
+
+
+
+
+                    </select>
+
+                </div>
+                <!-- 10TH -->
+                <div class="col-md-3">
+
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                </div>
+                <div class="col-md-3">
+                    <p style="font-size: 12px;">BND_T8_B8
+
+
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <select id="fruitDropdown" style="width: 6rem;">
+                        <option value="apple">Select</option>
+                        <option value="banana">T-8</option>
+                        <option value="orange">B-8</option>
+
+
+                    </select>
+
+                </div>
+
+<!-- CRCA_MAST -->
+<div class="col-md-3">
+    <p style="font-size: 12px;">Master</p>
+</div>
+
+<div class="col-md-3">
+    <p style="font-size: 12px;">CRCA MASTER </p>
+</div>
+<div class="col-md-3">
+    <p style="font-size: 12px;">UFC_HQ
+
+
+
+
+    </p>
+</div>
+<div class="col-md-3">
+    <select id="fruitDropdown" style="width: 6rem;">
+        <option value="apple">Select</option>
+        <option value="banana">YES</option>
+        <option value="orange">NO</option>
+    
+
+
+    </select>
+</div>
+<!-- 2ND -->
+<div class="col-md-3">
+
+</div>
+
+<div class="col-md-3">
+
+</div>
+<div class="col-md-3">
+    <p style="font-size: 12px;">MAHARASHTRA
+
+
+
+
+
+    </p>
+</div>
+<div class="col-md-3">
+    <select id="fruitDropdown" style="width: 6rem;">
+        <option value="apple">Select</option>
+        <option value="banana">Y</option>
+        <option value="orange">N</option>
+    
+
+
+    </select>
+</div>
+
+
+            </div>
+
+
+
+            </div>
+
+
+
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+            <script type="text/javascript">
+                var d = new Date();
+                yr = d.getFullYear();
+                document.write(yr);
+                cPrev = -1;
+
+                function sortBy(c) {
+                    rows = document.getElementById("sortable").rows.length;
+                    columns = document.getElementById("sortable").rows[0].cells.length;
+                    arrTable = [...Array(rows)].map(e => Array(columns));
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                        }
+                    }
+
+                    th = arrTable.shift();
+
+                    if (c !== cPrev) {
+                        arrTable.sort(
+                            function (a, b) {
+                                if (a[c] === b[c]) {
+                                    return 0;
+                                } else {
+                                    return (a[c] < b[c]) ? -1 : 1;
+                                }
+                            }
+                        );
+                    } else {
+                        arrTable.reverse();
+                    }
+
+                    cPrev = c;
+
+                    arrTable.unshift(th);
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                        }
+                    }
+                }
+            </script>. All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+    <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+    <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+    <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+    <script src="../assets/js_1/jquery.multi-select.js"></script>
+    <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+    <script src="../assets/js_1/main.js"></script>
+    <!-- <script src="../assets/js/main.js"></script> -->
+    <script src="../assets/js_1/uti.js"></script>
+    <!-- <script src="../assets/js/uti.js"></script> -->
+    <script src="../assets/js_1/custom.js"></script>
+    <!-- <script src="../assets/js/custom.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

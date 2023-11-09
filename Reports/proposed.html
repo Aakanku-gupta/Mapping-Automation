@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>UTI</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+ <link href="../assets/css_1/style.css" rel="stylesheet"> 
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+   <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+   <link href="../assets/css_1/main.css" rel="stylesheet">
+   <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+   <link href="../assets/css_1/style.css" rel="stylesheet">
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+   <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+   <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+ 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ 
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+		<section class="section dashboard">
+  <div class="bg-white p-3 border">
+  <div class="row">
+    <div class="col-md-12">
+        <h4>AUDIT REPORT</h4>
+        <form>
+          <hr>
+          
+          <div class="row pt-3">
+            <div class="form-group col-md-6 mb-3">
+              <label style="position: relative;
+              top: -17px;">Service Request Number </label>
+              <input type="text" id="" name="" class="form-control">
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label style="position: relative;
+              top: -17px;">Case ID </label>
+              <input type="text" id="" name="" class="form-control">
+            </div>
+
+            <hr>
+
+            <div class="form-group col-md-3 mb-3">
+                  <label>From Date</label> 
+                  <input type="date" id="" name="" class="form-control">
+              </div> 
+              <div class="form-group col-md-3 mb-3">
+                <label>To Date </label>
+                <input type="date" id="" name="" class="form-control">
+              </div>
+          
+              
+              <div class="form-group col-md-3 mb-3">
+                <label>Maker User Id </label>
+                <input type="text" id="" name="" class="form-control">
+              </div>
+              <div class="form-group col-md-3 mb-3">
+                <label>Checker User Id </label>
+                <input type="text" id="" name="" class="form-control">
+              </div>
+              
+              <div class="col-md-3">
+                <label>Master</label>
+                <select name="" id="" class="form-select ">
+                  <option>Select</option>
+                  <option>All</option>
+    
+                    <option>ARN MASTER</option>
+                    <option>EXCEPTION MASTER</option>
+                    <option>PAN MASTER</option>
+                    <option>RIA MASTER</option>
+                    <option>SUBBROKER MASTER</option>
+                    <option>SCHEME MASTER</option>
+                    <option>MFDEX ARN CITY UFWISE SHARING SCHEME MASTER</option>
+                    <option>UFC MASTER</option>
+                    <option>REGION MASTER</option>
+                    <option> ZONE MASTER</option>
+                   <option>USER MASTER</option>
+                   <option>MAP DETAG SUB ARN MASTER</option>
+                   <option>RIA MASTER</option>
+                   <option>SCHEME CATEGORY CONVERSION MASTER</option>
+                   <option>KRA MASTER</option>
+                   <option>KRA APPLICABILITY MASTER</option>
+                   <option>CAMS CITY UFC MASTER</option>
+                   <option>VIRTUAL RMCODE MASTER</option>
+                   <option>CHANNEL MASTER</option>
+                   <option>FINTECH MASTER</option>
+                   <option>REASON MASTER</option>
+                  </select>
+              </div>
+              <div class="col-md-3">
+                <label>Mapping</label>
+                <select name="" id="" class="form-select  ">
+                  <option>Select</option>
+                  <option>All</option>
+    
+                    <option>MFD TO RM MAPPING</option>
+                    <option>PINCODE TO RM MAPPING</option>
+                    <option>MFD TO RM MAPPING</option>
+                    <option>ARN+EUIN/SUB ARN/BRANCH CODE MAPPING</option>
+                    <option>ARN+UFC TO RM MAPPING</option>
+                    <option>ARN+CITY TO RM MAPPING</option>
+                    <option>PAN MAPPING</option>
+                    <option>RIA TO RM MAPPING</option>
+                    <option>EXCEPTIONS MAPPING</option>
+                    <option>ARN + PINCODE TO RM MAPPING</option>
+                    <option>RIA+CITY MAPPING</option>
+                    <option>ARN+ SUB ARN+PIN TO RM MAPPING</option>
+                    <option>CAMS MFDEX_ARN+SINGLE CITY TO RM MAPPING</option>
+                    <option>CAMS MFDEX_DIRECT+SINGLE CITY TO RM MAPPING</option>
+                    <option>CAMS MFDEX_ARN+GROUP OF CITIES TO RM MAPPING</option>
+                    <option>CAMS MFDEX_DIRECT+GROUP OF CITIES TO RM MAPPING</option>
+                    <option>TEAM SAT MAPPING</option>
+                    <option>BDACA ARN MULTICITY</option>
+                    <option>BDACA PINCODE MAPPING</option>
+                   <option>BDACA_ARN_MAPPING</option>
+                  </select>
+              </div>
+              <div class="form-group col-md-3 mb-3">
+                <label>Key Value </label>
+                <input type="text" id="" name="" class="form-control">
+              </div>
+              
+              <div class="col-md-3">
+                <label>Status</label>
+                <select name="" id="" class="form-select  ">
+    
+                     <option>Select</option>
+                    <option>Approved</option>
+                    <option>Reject</option>
+                    <option>Pending</option>
+                    <option>Move To Production</option>
+                    <option>Close</option>
+                  
+                  </select>
+              </div>
+
+ 
+            
+             
+              
+              <div class="col-md-12 mt-3"> 
+                <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary" onclick="displaydetails();">Search</a> 
+                
+              </div> 
+              <div class="col-md-3">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" style="    position: relative;
+              left: 94px;
+              bottom: 33px;"
+                aria-expanded="false">
+                <i class="fa fa-solid fa-download"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><button class="dropdown-item" type="button">PDF</button></li>
+                <li><button class="dropdown-item" type="button">Excel</button></li>
+              </ul>
+            </div>
+              
+          </div></form>
+        
+      </div>
+</div>
+
+<hr mt-3>
+<div class="overflow-auto" id="empgrddetails" style="display:none">
+  <a href="#" name="btnsearch" class="btn btn-primary" >Case Wise View</a> 
+  <a href="#"  name="btnsearch" class="btn btn-primary" >Detail Wise View</a> 
+  <table class="modal-body" id="sortable">
+    <tr>
+      <th class="abc">CASE ID</th>
+    
+    
+    
+      <th class="abc">STATUS</th>
+    
+      <th class="abc">CASE CREATION DATE</th>
+      <th class="abc">CASE APPROVED DATE</th>
+      <th class="abc">CASE PRODUCTION DATE</th>
+      <th class="abc">REMARK</th>
+
+      <th class="abc">MAKER</th>
+      <th class="abc">CHECKER</th>
+  
+    
+    </tr>
+
+    <tr>
+      <td class="cde"><a href="../Reports/audit-report-subpage.html">BUMST_1985695836</a></td>
+      
+     
+     
+      <td class="cde">Approved</td>
+ 
+      <td class="cde">10-05-2021</td>
+      <td class="cde">21-08-2022</td>
+      <td class="cde">21-09-2022</td>
+      <td class="cde"></td>
+
+      
+      <td class="cde">Santosh Chipte</td>
+      <td class="cde">Sumit Mehta</td>
+
+     
+    </tr>
+
+
+
+
+
+    <tr>
+      <td class="cde"><a href="../Reports/audit-report-subpage-mapping.html">BUMAP_2325963245</a></td>
+    
+    
+      <td class="cde">Pending</td>
+    
+      <td class="cde">15-07-2021</td>
+      <td class="cde">23-09-2022</td>
+      <td class="cde">23-11-2022</td>
+      <td class="cde"></td>
+      <td class="cde">Santosh Chipte</td>
+      <td class="cde">Sumit Mehta</td>
+
+     
+    </tr>
+
+
+
+    <tr>
+      <td class="cde"><a href="../Reports/audit-report-subpage.html">UIMST_2596324569</a></td>
+ 
+     
+    
+      <td class="cde">Reject</td>
+   
+      <td class="cde">05-05-2022</td>
+      <td class="cde">19-06-2022</td>
+      <td class="cde">21-09-2022</td>
+      <td class="cde"></td>
+      <td class="cde">Santosh Chipte</td>
+      <td class="cde">Sumit Mehta</td>
+
+     
+    </tr>
+
+
+    <tr>
+      <td class="cde"><a href="../Reports/audit-report-subpage-mapping.html">EMMAP_4562378945</a></td>
+     
+        
+        
+        <td class="cde">Approved</td>
+      
+        <td class="cde">03-08-2021</td>
+        <td class="cde">09-03-2022</td>
+        <td class="cde">16-10-2022</td>
+        <td class="cde"></td>
+        <td class="cde">Santosh Chipte</td>
+        <td class="cde">Sumit Mehta</td>
+
+     
+    </tr>
+  </table>
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+<li class="page-item"><a class="page-link" href="#">1</a></li>
+<li class="page-item"><a class="page-link" href="#">2</a></li>
+<li class="page-item"><a class="page-link" href="#">3</a></li>
+<li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer id="footer" class="footer">
+<div class="copyright">
+&copy; Copyright <strong><span>UTI</span></strong>
+<script type="text/javascript">
+var d = new Date();
+yr = d.getFullYear();
+document.write(yr);      cPrev = -1;
+function sortBy(c) {
+rows = document.getElementById("sortable").rows.length;
+columns = document.getElementById("sortable").rows[0].cells.length;
+arrTable = [...Array(rows)].map(e => Array(columns));
+
+for (ro=0; ro<rows; ro++) {
+for (co=0; co<columns; co++) {
+  arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+}
+}
+
+th = arrTable.shift();
+
+if (c !== cPrev) {
+arrTable.sort(
+  function (a, b) {
+      if (a[c] === b[c]) {
+          return 0;
+      } else {
+          return (a[c] < b[c]) ? -1 : 1;
+      }
+  }
+);
+} else {
+arrTable.reverse();
+}
+
+cPrev = c;
+
+arrTable.unshift(th);
+
+for (ro=0; ro<rows; ro++) {
+for (co=0; co<columns; co++) {
+  document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+}
+}
+}
+</script>
+. All Rights Reserved
+</div>
+</footer>
+
+<script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+<!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+<script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+<!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+<script src="../assets/js_1/jquery.multi-select.js"></script>
+<!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+<script src="../assets/js_1/main.js"></script>
+<!-- <script src="../assets/js/main.js"></script> -->
+<script src="../assets/js_1/uti.js"></script>
+<!-- <script src="../assets/js/uti.js"></script> -->
+<script src="../assets/js_1/custom.js"></script>
+<!-- <script src="../assets/js/custom.js"></script> -->
+
+<script type="text/javascript">
+function displaydetails()
+{
+  document.getElementById("empgrddetails").style.display="block";
+}
+</script>
+
+</body>
+</html>
+
+  <!-- <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong> <script type="text/javascript">
+          var d = new Date();
+          yr = d.getFullYear();
+          document.write(yr);
+
+          $(document).ready(function() {  
+        $('#action').multiselect();  
+        });   
+    </script>. All Rights Reserved</div>
+  </footer>
+  <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/uti.js"></script>
+  <script src="../assets/js/custom.js"></script> -->
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+    // aaa
+    var acc = document.getElementsByClassName("accordion");
+
+    var i;
+
+
+
+
+    for (i = 0; i < acc.length; i++) {
+
+      acc[i].addEventListener("click", function () {
+
+        this.classList.toggle("active");
+
+        var panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+
+          panel.style.display = "none";
+
+        } else {
+
+          panel.style.display = "block";
+
+        }
+
+      });
+
+    }
+  </script>
+   <script>
+    // toggle script
+var  innerSidebar = function(){
+   $('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+ // toggle script
+
+</script><script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+

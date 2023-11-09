@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+ <link href="../assets/css_1/style.css" rel="stylesheet"> 
+   <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard bg-white">
+      
+        <h5>AUTO UPDATE RECORD</h5>
+        <a href="../mapping_edit/auto_updatee_record1.html"> <i class="bi bi-arrow-return-left" 
+          style="position: relative;top: -37px;left: 800px;font-size: 40px;"></i></a>
+        <br><br>
+        <div class="row">
+          <div class="col-md-6">
+            
+           <h6>Master Table Name</h6>
+           
+            <div class="selectBox form-control" onclick="showCheckboxes()">
+
+              <select class="custom-select border-bottom form-control-plaintext">
+
+                <option>Select</option>
+
+              </select>
+
+              <div class="overSelect"></div>
+
+            </div>
+
+            <div id="checkboxes" class="checkstyle">
+
+              <label for="one0">
+
+                <input type="checkbox" id="one0" />
+
+                ARN MASTER</label>
+
+              <label for="two0">
+
+                <input type="checkbox" id="two0" />
+
+                PAN MASTER</label>
+
+              <label for="three0">
+
+                <input type="checkbox" id="three0" />
+
+                RIA MASTER</label>
+
+              <label for="four0">
+
+                <input type="checkbox" id="four0" />
+
+                SUBBROKER MASTER</label>
+
+              <label for="five0">
+
+                <input type="checkbox" id="five0" />
+
+                SCHEME MASTER</label>
+
+              <label for="six0">
+
+                <input type="checkbox" id="six0" />
+
+                MFDEX ARN CITY UFWISE SHARING MASTER</label>
+
+              <label for="seven0">
+
+                <input type="checkbox" id="seven0" />
+
+                UFC MASTER</label>
+
+              <label for="eight0">
+
+                <input type="checkbox" id="eight0" />
+
+                PINCODE MASTER</label>
+                <label for="nine0">
+
+                  <input type="checkbox" id="nine0" />
+  
+                  BDA/CA MASTER</label>
+                  <label for="ten0">
+
+                    <input type="checkbox" id="ten0" />
+    
+                    UFC MASTER</label>
+                    <label for="eleven0">
+
+                      <input type="checkbox" id="eleven0" />
+      
+                      PINCODE MASTER</label>
+                      <label for="twelve0">
+
+                        <input type="checkbox" id="twelve0" />
+        
+                        CAMS CITY UFC MASTER</label>
+                        <label for="thirteen0">
+
+                          <input type="checkbox" id="thirteen0" />
+          
+                          CHANNEL MASTER</label>
+                          <label for="fourteen0">
+
+                            <input type="checkbox" id="fourteen0" />
+            
+                            FINTECH MASTER</label>
+                            <label for="fifteen0">
+
+                              <input type="checkbox" id="fifteen0" />
+              
+                              UFC MASTER</label>
+                              <label for="sixteen0">
+
+                                <input type="checkbox" id="sixteen0" />
+                
+                                ZONE MASTER</label>
+                                <label for="seventeen0">
+
+                                  <input type="checkbox" id="seventeen0" />
+                  
+                                  SCHEME CATEGORY CONVERSION MASTER</label>
+                                  <label for="sixteen0">
+
+                                    <input type="checkbox" id="sixteen0" />
+                    
+                                    USER MASTER</label>
+                                    <label for="sixteen0">
+
+                                      <input type="checkbox" id="sixteen0" />
+                      
+                                      REGION MASTER</label>
+                                      <label for="sixteen0">
+
+                                        <input type="checkbox" id="sixteen0" />
+                        
+                                        KRA MASTER</label>
+                                        <label for="sixteen0">
+
+                                          <input type="checkbox" id="sixteen0" />
+                          
+                                          CRCA-EXCLUSIVE MASTER</label>
+                                          <label for="sixteen0">
+
+                                            <input type="checkbox" id="sixteen0" />
+                            
+                                            VIRTUAL RM MASTER</label>
+                                            <label for="sixteen0">
+
+                                              <input type="checkbox" id="sixteen0" />
+                              
+                                              MAP DE TAG SUBARN MASTER</label>
+
+            </div>
+
+          </div>
+         
+          
+          <div class="col-md-6">
+            
+            <h6>Effective Table Mapping</h6>
+             <div class="selectBox form-control" onclick="showCheckboxes2()">
+ 
+               <select class="custom-select border-bottom form-control-plaintext">
+ 
+                 <option>Select</option>
+ 
+               </select>
+ 
+               <div class="overSelect"></div>
+ 
+             </div>
+ 
+             <div id="checkboxes2" class="checkstyle">
+ 
+               <label for="one0">
+ 
+                 <input type="checkbox" id="one0" />
+ 
+                 ARN+EUIN/SUB_ARN/BRANCH CODE MAPPING</label>
+ 
+               <label for="two0">
+ 
+                 <input type="checkbox" id="two0" />
+ 
+                 ARN+UFC TO RM MAPPING</label>
+ 
+               <label for="two0">
+ 
+                 <input type="checkbox" id="two0" />
+ 
+                 ARN+UFC TO RM MAPPING</label>
+ 
+               <label for="three0">
+ 
+                 <input type="checkbox" id="three0" />
+ 
+                 ARN+UFC TO RM MAPPING</label>
+ 
+               <label for="five0">
+ 
+                 <input type="checkbox" id="five0" />
+ 
+                 ARN+CITY TO RM MAPPING</label>
+ 
+               <label for="six0">
+ 
+                 <input type="checkbox" id="six0" />
+ 
+                 ARN+ SUB ARN+PIN TO RM MAPPING</label>
+ 
+               <label for="seven0">
+ 
+                 <input type="checkbox" id="seven0" />
+ 
+                 ARN+UFC TO RM MAPPING</label>
+ 
+               <label for="eight0">
+ 
+                 <input type="checkbox" id="eight0" />
+ 
+                 ARN+SINGLE CITY TO RM MAPPING</label>
+                 <label for="nine0">
+ 
+                   <input type="checkbox" id="nine0" />
+   
+                   ARN+GROUP OF CITIES TO RM MAPPING</label>
+                   <label for="ten0">
+ 
+                     <input type="checkbox" id="ten0" />
+     
+                     ARN+UFC TO RM MAPPING</label>
+                     <label for="eleven0">
+ 
+                       <input type="checkbox" id="eleven0" />
+       
+                       PINCODE TO RM MAPPING</label>
+                       <label for="twelve0">
+ 
+                         <input type="checkbox" id="twelve0" />
+         
+                         RIA TO RM MAPPING</label>
+                         <label for="thirteen0">
+ 
+                           <input type="checkbox" id="thirteen0" />
+           
+                           RIA+CITY MAPPING</label>
+                           <label for="thirteen0">
+ 
+                             <input type="checkbox" id="forteen0" />
+             
+                             PAN MAPPING</label>
+                             <label for="forteen0">
+ 
+                               <input type="checkbox" id="fifteen0" />
+               
+                               BDACA_PINCODE_MAPPING</label>
+                               <label for="fifteen0">
+ 
+                                 <input type="checkbox" id="sixteen0" />
+                 
+                                 BDACA_ARN_MAPPING</label>
+                                 <label for="sixteen">
+ 
+                                  <input type="checkbox" id="seventeen0" />
+                  
+                                  EXCEPTIONS MAPPING</label>
+                                  <label for="seventeen0">
+ 
+                                    <input type="checkbox" id="eightteen0" />
+                    
+                                    MFC TO RM MAPPING</label>
+                                    <label for="eightteen0">
+    
+                                     <input type="checkbox" id="nineteen0" />
+                     
+                                PINCODE TO RMMAPPING</label>
+                                     <label for="nineteen0">
+    
+                                      <input type="checkbox" id="twenty0" />
+                      
+                                      ARN+PINCODE TO RM MAPPING</label>
+                                      <label for="twenty0">
+    
+                                        <input type="checkbox" id="twentyone0" />
+                        
+                                        DIRECT+SINGLE CITY TO RM MAPPING</label>
+                                        <label for="twentyone0">
+                                          
+               <label for="one0">
+ 
+                <input type="checkbox" id="one0" />
+
+                DIRECT+GROUP OF CITIES TO RM MAPPING</label>
+                                          
+               <label for="one0">
+ 
+                <input type="checkbox" id="one0" />
+
+    PRM MAPPING</label>
+                
+               <label for="one0">
+ 
+                <input type="checkbox" id="one0" />
+
+                TEAM SAT MAPPING</label>
+                <label for="one0">
+ 
+                  <input type="checkbox" id="one0" />
+  
+                  VYMO DISTRIBUTOR MAPPING</label>
+                  <label for="one0">
+ 
+                    <input type="checkbox" id="one0" />
+    
+                    TEAM SET MAPPING</label>
+                    <label for="one0">
+ 
+                      <input type="checkbox" id="one0" />
+      
+                      TEAM SET MAPPING</label>
+
+ 
+             </div>
+ 
+           </div>
+          
+    
+       <!-- <div class="col-md-3">
+
+      <h6>Alternate Checker Id</h6>
+      <input type="text"/>
+       </div> -->
+     
+        </div>
+        <a href="../mapping_edit/auto_updatee_record1.html" class="btn btn-primary"
+        style=" width: 106px;
+        border: none;
+        position: relative;
+        bottom: -38px;
+         ">Submit</a>
+           
+           
+
+
+
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+        cPrev = -1;
+
+        function sortBy(c) {
+          rows = document.getElementById("sortable").rows.length;
+          columns = document.getElementById("sortable").rows[0].cells.length;
+          arrTable = [...Array(rows)].map(e => Array(columns));
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+            }
+          }
+
+          th = arrTable.shift();
+
+          if (c !== cPrev) {
+            arrTable.sort(
+              function (a, b) {
+                if (a[c] === b[c]) {
+                  return 0;
+                } else {
+                  return (a[c] < b[c]) ? -1 : 1;
+                }
+              }
+            );
+          } else {
+            arrTable.reverse();
+          }
+
+          cPrev = c;
+
+          arrTable.unshift(th);
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+            }
+          }
+        }
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <script src="../assets/js_1/jquery.multi-select.js"></script>
+  <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script>
+    var onClick = function() {
+    };
+
+// $('#button').click(onClick);
+
+$('#button2').click(function() {
+  alert('Are you sure to proceed?');
+});
+  </script>
+   <script>
+
+    var expanded = false;
+
+
+
+
+    function showCheckboxes() {
+
+      var checkboxes = document.getElementById("checkboxes");
+
+      if (!expanded) {
+
+        checkboxes.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }
+
+
+
+
+    function showCheckboxes1() {
+
+      var checkboxes = document.getElementById("checkboxes1");
+
+      if (!expanded) {
+
+        checkboxes.style.display = "grid";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }
+
+  </script>
+  <script>
+
+    var expanded = false;
+
+
+
+
+    function showCheckboxes() {
+
+      var checkboxes = document.getElementById("checkboxes");
+
+      if (!expanded) {
+
+        checkboxes.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+
+
+
+    // FOR 2ND
+    <script>
+
+var expanded = false;
+
+
+
+function showCheckboxes2() {
+
+  var checkboxes = document.getElementById("checkboxes2");
+
+  if (!expanded) {
+
+    checkboxes2.style.display = "block";
+
+    expanded = true;
+
+  } else {
+
+    checkboxes2.style.display = "none";
+
+    expanded = false;
+
+  }
+
+}</script>
+
+<script>
+
+$(function () {
+
+  $("#example1").DataTable({
+
+    "responsive": true, "lengthChange": false, "autoWidth": false,
+
+    "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+  }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+  $('#example2').DataTable({
+
+    "paging": true,
+
+    "lengthChange": false,
+
+    "searching": false,
+
+    "ordering": true,
+
+    "info": true,
+
+    "autoWidth": false,
+
+    "responsive": true,
+
+  });
+
+});
+
+</script>
+
+
+
+
+
+     <!-- FOR 2ND -->
+
+
+
+
+ 
+
+ <script>    
+ 
+
+    (function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+<script>
+  // toggle script
+var  innerSidebar = function(){
+ $('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+// toggle script
+
+</script>
+<script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+
+
+</body>
+
+</html>

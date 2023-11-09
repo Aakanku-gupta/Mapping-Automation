@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>UTI</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+	<link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+	<link href="../assets/css_1/main.css" rel="stylesheet">
+	<link href="../assets/css_1/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between"><i class="toggle-sidebar-btn pe-2" onclick="innerSidebar()">
+    
+      <span class="fa fa-align-justify text-white"></span> </i><img src="../mis_vpay/assets/images_1/logo_1.png" alt=""
+    
+      width="130px"></div>
+    
+    <div class="col-md-7">
+    
+      <div class="row">
+    
+      <div class="col-md-3"></div>
+    
+       <div class="col-md-3"> <div class="text-white" style="margin: 5px;">
+    
+        <label style="font-size: 12px;" >ROLE : </label>
+    
+        <select class="form-select" style="padding: 0px 10px;">
+    
+        <option>ROLE</option>
+    
+        <option>CM</option>
+    
+        <option>RH</option>
+    
+        <option>ZH</option>
+    
+        <option>CH</option>
+    
+        </select>
+    
+      </div></div> 
+    
+    
+    
+      <div class="col-md-3">   <div class="text-white" style="margin: 5px;" >
+    
+        <label style="font-size: 12px;">UFC NAME : </label>
+    
+        <select class="form-select" style="padding: 0px 10px;">
+    
+        <option>UFC NAME</option>
+    
+        <option>132, MUZAFFARPUR</option>
+    
+        <option>549, PATNA</option>
+    
+        <option>548, BHAGALPUR</option>
+    
+        <option>218, DARBHANGA</option>
+    
+        <option>147, AURANGABAD</option>
+    
+        </select>
+    
+      </div>
+       <div class="row">
+      <div class="col-md-6"><button  class=" btn-primary " >Approved</button></div>
+      <div class="col-md-6">
+       <button class=" btn-primary" onclick="myFunction2()">Reject</button> 
+      </div>
+     
+       </div>   </div>
+      
+      <div class="col-md-3"><div class="text-white" style="margin: 5px;" >
+    
+        <label style="font-size: 12px;">CASE ID : </label>
+    
+        <select class="form-select" style="padding: 0px 10px;">
+    
+        <option>CASE ID</option>
+    
+        <option>3445</option>
+    
+        <option>3553</option>
+    
+        <option>3534</option>
+    
+        <option>3645</option>
+    
+        <option>3745</option>
+    
+        </select>
+    
+      </div></div>
+    
+      </div>
+    
+     
+    
+      <div class="pb-2" style="justify-content: center; display: flex;">
+    
+       
+    
+       
+    
+       
+    
+     
+    
+      </div>
+    
+    </div>
+    
+    <div class="col-md-4">
+    
+      <div class="col-md-12" style="margin-left: 5px;">
+    
+      <span class="text-white">Welcome : Santosh Chipte | Last Login : Jun 19th 12:00pm</span></div>
+    
+      <div class="col-md-12">
+    
+      <div class="row">
+    
+      <div class="col-md-4"></div>
+    
+      <div class="col-md-4"></div>
+    
+      <div class="col-md-4 mt-2"> <a href="../login.html" class="text-white">Log Out</a></div>
+    
+      </div>
+    
+     </div>
+    
+    </div>
+    
+    </header>
+	<!-- sidebar start -->
+	<div uti-include-html="../includes/sidebar.html"></div>
+	<!-- sidebar end -->
+  <main id="main" class="main">
+		<section class="section dashboard">
+  <div class="bg-white p-3 border">
+  <div class="row">
+    <div class="col-md-12">
+        <h5>Mapping Status Report</h5>
+        <form>
+            <hr>
+            <div class="row pt-3">
+              <div class="form-group col-md-3 mb-3">
+                <form class="demo-example">
+                <label>Channel Code</label>
+                <td>
+                  <select class="form-select">
+                    <option>--select--</option>
+                    <option>RTL</option>
+                    <option>INST</option>
+                  </select>
+                </td>
+              </select>
+            </form>
+          </div>
+                <div class="form-group col-md-3 mb-3">
+                  <label>From Date</label>
+                  <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+                </div>
+                <div class="form-group col-md-3 mb-3">
+                  <label>To Date</label>
+                  <input type="datetime-local" id="startDate" name="start_Date" class="form-control"/>
+                </div>
+                <div class="col-md-3 mt-3"><a href="#" id="btn_search" name="btnsearch" class="btn btn-primary w-50">Search</a></div> 
+            </div>
+          </form>
+          <hr>
+          <div class="overflow-auto">
+            <table class="table small border">
+            <tr class="bg-primary text-white">
+                <th scope="col">Region</th>
+                <th scope="col">From Date</th>
+                <th scope="col">To Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">UFC Count</th>
+              </tr>
+              <tbody>
+                <tr ng-repeat="item in rolegridData" class="ng-scope">
+                <td class="ng-binding">MUMB</td>
+                <td class="ng-binding">01/09/2022</td>
+                <td class="ng-binding">12/09/2022</td>
+                <td class="ng-binding">Not Completed</td>
+                <td><a href="../Reports/ufcdetails/1.html" class="ng-binding">3</a></td>
+                </tr>
+                <tr ng-repeat="item in rolegridData" class="ng-scope">
+                <td class="ng-binding">MUMB</td>
+                <td class="ng-binding">01/09/2022</td>
+                <td class="ng-binding">12/09/2022</td>
+                <td class="ng-binding">Completed</td>
+                <td><a href="../Reports/ufcdetails/2.html" class="ng-binding">3</a></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+    </div>
+    </div>
+</section>
+</main>
+<footer id="footer" class="footer">
+  <div class="copyright">
+    &copy; Copyright <strong><span>UTI</span></strong>
+    <script type="text/javascript">
+      var d = new Date();
+      yr = d.getFullYear();
+      document.write(yr);      cPrev = -1;
+function sortBy(c) {
+rows = document.getElementById("sortable").rows.length;
+columns = document.getElementById("sortable").rows[0].cells.length;
+arrTable = [...Array(rows)].map(e => Array(columns));
+
+for (ro=0; ro<rows; ro++) {
+    for (co=0; co<columns; co++) {
+        arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+    }
+}
+
+th = arrTable.shift();
+
+if (c !== cPrev) {
+    arrTable.sort(
+        function (a, b) {
+            if (a[c] === b[c]) {
+                return 0;
+            } else {
+                return (a[c] < b[c]) ? -1 : 1;
+            }
+        }
+    );
+} else {
+    arrTable.reverse();
+}
+
+cPrev = c;
+
+arrTable.unshift(th);
+
+for (ro=0; ro<rows; ro++) {
+    for (co=0; co<columns; co++) {
+        document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+    }
+}
+}
+    </script>
+    . All Rights Reserved
+  </div>
+</footer>
+<script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+<script src="../assets/js_1/main.js"></script>
+<script src="../assets/js_1/uti.js"></script>
+<script src="../assets/js_1/custom.js"></script>>
+</body>
+<script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+</html>

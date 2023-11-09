@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>UTI</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css_1/main.css" rel="stylesheet">
+    <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+    <link href="../assets/css_1/style.css" rel="stylesheet">
+    <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+<style>
+    p,
+    label {
+        font: 15px 'Exo 2', sans-serif;
+    }
+
+    input {
+        margin: 6px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 2 2;
+        font: 15px 'Exo 2', sans-serif;
+    }
+</style>
+
+<body id="sidebar">
+    <!-- header start -->
+    <div uti-include-html="../includes/header1.html"></div>
+    <!-- header end -->
+
+    <!-- sidebar start -->
+    <div uti-include-html="../includes/sidebar.html"></div>
+    <!-- sidebar end -->
+    <main id="main" class="main">
+
+        <section class="section dashboard bg-white">
+
+            <h5>USER MANAGEMENT</h5>
+            <a href="../master/maker-checker-for-configuration.html"> <i class="bi bi-arrow-return-left"
+                    style="position: relative;top: -37px;left: 800px;font-size: 40px;"></i></a>
+            <br><br>
+            <div class="bg-white p-3 border">
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <h6>CASE ID</h6>
+                        <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-75">
+                         
+                            <option>C1058</option>
+                            <option>C1059</option>
+                            <option >C1060</option>
+                            <option>C1061</option>
+                            <option>C1062</option>
+                            <option>C1063</option>
+                            <option>C1064</option>
+                            <option>C1065</option>
+                            <option>C1066</option>
+
+
+
+
+                        </select>
+                        </div>
+                    <div class="col-md-3">
+                        <h6>Masters</h6>
+                        <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-75">
+                            <option id="onem" name="master2" onclick="myFunction()">ARN_MASTER</option>
+                            <option>EXCEPTION_MASTER</option>
+                            <option>PAN_MASTER</option>
+                            <option>RIA_MASTER</option>
+                            <option>SUBBROKER_MASTER</option>
+                            <option>SCHEME_MASTER</option>
+                            <option>MFDEX ARN CITY UFWISE SHARING_MASTER</option>
+                            <option>UFC MASTER</option>
+                            <option>REGION MASTER</option>
+                            <option>ZONE MASTER</option>
+                            <option>USER MASTER</option>
+                              <option>MAP DETAG SUB ARN MASTER</option>
+                              
+                              <option>RIA MASTER</option>
+                              <option>SCHEME CATEGORY CONVERSION MASTER</option>
+                              <option>KRA MASTER</option>
+                              <option>KRA APPLICABILITY MASTER</option>
+                              <option>CAMS CITY UFC MASTER</option>
+                              <option>VIRTUAL RMCODE MASTER</option>
+                              <option>CHANNEL MASTER</option>
+                              <option>FINTECH MASTER</option>
+                              <option>REASON MASTER</option>
+                              
+
+                        </select>
+                        </div>
+
+            
+                  
+
+                        <div class="col-md-3">
+
+                            <h6>Mapping</h6>
+                            <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-75">
+
+                            
+                                
+                                <option value="INST">MFD TO RM MAPPING</option>
+                                <option value="DSTH">PINCODE TO RM MAPPING</option>
+                                <option value="PSUC">ARN+EUIN/SUB ARN/BRANCH CODE MAPPING</option>
+                                <option value="DSA">ARN+UFC TO RM MAPPING</option>
+                                <option value="DSTH">ARN+CITY TO RM MAPPING</option>
+                                <option value="PSUC">PAN MAPPING</option>
+                                <option value="DSA">RIA TO RM MAPPING</option>
+                                <option>EXCEPTIONS MAPPING</option>
+                                <option>ARN + PINCODE TO RM MAPPING</option>
+                                <option>RIA+CITY MAPPING</option>
+                                <option>ARN+ SUB ARN+PIN TO RM MAPPING</option>
+                                <option>CAMS MFDEX_ARN+SINGLE CITY TO RM MAPPING</option>
+                                <option>CAMS MFDEX_DIRECT+SINGLE CITY TO RM MAPPING</option>
+                                <option>CAMS MFDEX_ARN+GROUP OF CITIES TO RM MAPPING</option>
+                                <option>CAMS MFDEX_DIRECT+GROUP OF CITIES TO RM MAPPING</option>
+                                <option>TEAM SAT MAPPING</option>
+                                <option>BDACA ARN MULTICITY
+                                </option>
+                                <option>BDACA PINCODE MAPPING</option>
+                                <option>BDACA_ARN_MAPPING</option>
+                                
+    
+    
+    
+    
+                            </select>
+                            </div>
+
+                        
+                            
+
+            <a href="#" class="btn btn-primary " style=" height: 34px;
+            width: 66px;  border: none;     position: relative;
+        left: 15px; top: 19px; ">Submit</a>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+            <script type="text/javascript">
+                var d = new Date();
+                yr = d.getFullYear();
+                document.write(yr);
+                cPrev = -1;
+
+                function sortBy(c) {
+                    rows = document.getElementById("sortable").rows.length;
+                    columns = document.getElementById("sortable").rows[0].cells.length;
+                    arrTable = [...Array(rows)].map(e => Array(columns));
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                        }
+                    }
+
+                    th = arrTable.shift();
+
+                    if (c !== cPrev) {
+                        arrTable.sort(
+                            function (a, b) {
+                                if (a[c] === b[c]) {
+                                    return 0;
+                                } else {
+                                    return (a[c] < b[c]) ? -1 : 1;
+                                }
+                            }
+                        );
+                    } else {
+                        arrTable.reverse();
+                    }
+
+                    cPrev = c;
+
+                    arrTable.unshift(th);
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                        }
+                    }
+                }
+            </script>. All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+    <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+    <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+    <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+    <script src="../assets/js_1/jquery.multi-select.js"></script>
+    <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+    <script src="../assets/js_1/main.js"></script>
+    <!-- <script src="../assets/js/main.js"></script> -->
+    <script src="../assets/js_1/uti.js"></script>
+    <!-- <script src="../assets/js/uti.js"></script> -->
+    <script src="../assets/js_1/custom.js"></script>
+    <!-- <script src="../assets/js/custom.js"></script> -->
+
+    <script>
+        var onClick = function () {
+        };
+
+        // $('#button').click(onClick);
+
+        $('#button2').click(function () {
+            alert('Are you sure to proceed?');
+        });
+    </script>
+
+
+
+
+    <!-- 1st -->
+
+    <script>
+
+        var expanded = false;
+
+
+
+        function showCheckboxes() {
+
+            var checkboxes = document.getElementById("checkboxes");
+
+            if (!expanded) {
+
+                checkboxes.style.display = "block";
+
+                expanded = true;
+
+            } else {
+
+                checkboxes.style.display = "none";
+
+                expanded = false;
+
+            }
+
+        }</script>
+    <script>
+
+        $(function () {
+
+            $("#example1").DataTable({
+
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+            $('#example2').DataTable({
+
+                "paging": true,
+
+                "lengthChange": false,
+
+                "searching": false,
+
+                "ordering": true,
+
+                "info": true,
+
+                "autoWidth": false,
+
+                "responsive": true,
+
+            });
+
+        });
+
+    </script>
+
+
+
+
+
+    <!-- <script>
+    document.getElementById('select-all1').onclick = function() {
+  var checkboxes = document.getElementsByName('master');
+  for (var checkbox of checkboxes) {
+    checkbox.checked = this.checked;
+  }
+}
+</script> -->
+    <script>
+        document.getElementById('select-all').onclick = function () {
+            var checkboxes = document.getElementsByName('master');
+            for (var checkbox of checkboxes) {
+                checkbox.checked = this.checked;
+            }
+        }
+    </script>
+
+
+
+    <!-- maker -->
+    <script>
+
+        var expanded = false;
+
+
+
+
+        function showCheckboxes1() {
+
+            var checkboxes1 = document.getElementById("checkboxes1");
+
+            if (!expanded) {
+
+                checkboxes1.style.display = "block";
+
+                expanded = true;
+
+            } else {
+
+                checkboxes1.style.display = "none";
+
+                expanded = false;
+
+            }
+
+        }</script>
+
+    <script>
+
+        $(function () {
+
+            $("#example1").DataTable({
+
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+            $('#example2').DataTable({
+
+                "paging": true,
+
+                "lengthChange": false,
+
+                "searching": false,
+
+                "ordering": true,
+
+                "info": true,
+
+                "autoWidth": false,
+
+                "responsive": true,
+
+            });
+
+        });
+
+    </script>
+
+    <script>
+        document.getElementById('select-all2').onclick = function () {
+            var checkboxes1 = document.getElementsByName('master2');
+            for (var checkbox of checkboxes1) {
+                checkbox.checked = this.checked;
+            }
+        }
+    </script>
+    <!-- checker -->
+    <script>
+
+        var expanded = false;
+
+
+
+
+        function showCheckboxes2() {
+
+            var checkboxes2 = document.getElementById("checkboxes2");
+
+            if (!expanded) {
+
+                checkboxes2.style.display = "block";
+
+                expanded = true;
+
+            } else {
+
+                checkboxes2.style.display = "none";
+
+                expanded = false;
+
+            }
+
+        }</script>
+
+    <script>
+
+        $(function () {
+
+            $("#example1").DataTable({
+
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+            $('#example2').DataTable({
+
+                "paging": true,
+
+                "lengthChange": false,
+
+                "searching": false,
+
+                "ordering": true,
+
+                "info": true,
+
+                "autoWidth": false,
+
+                "responsive": true,
+
+            });
+
+        });
+
+    </script>
+
+    <script>
+        document.getElementById('select-all3').onclick = function () {
+            var checkboxes2 = document.getElementsByName('checker');
+            for (var checkbox of checkboxes2) {
+                checkbox.checked = this.checked;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

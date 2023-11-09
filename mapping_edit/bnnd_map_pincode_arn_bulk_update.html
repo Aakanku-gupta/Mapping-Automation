@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>UTI</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css_1/main.css" rel="stylesheet">
+    <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+    <link href="../assets/css_1/style.css" rel="stylesheet">
+    <script href="popup_prm.html">
+    </script>
+    <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+
+<body id="sidebar">
+    <!-- header start -->
+    <div uti-include-html="../includes/header1.html"></div>
+    <!-- header end -->
+    
+    <!-- sidebar start -->
+    <div uti-include-html="../includes/sidebar.html"></div>
+    <!-- sidebar end -->
+    <main id="main" class="main">
+        <section class="section dashboard bg-white">
+            <div>
+                <h5>ARN+PINCODE TO RM Mapping Bulk Update</h5>
+            </div><hr>
+            
+            
+            <div>
+              <a href="../mapping_edit/bnnd_map_pincode_arn.html">
+                <i
+                  class="bi bi-arrow-return-left"
+                  style="float: right; position: relative; top: -70px; font-size: 40px; right: 50px;"></i></a>
+            </div>
+            <div id="left">
+                <div id="sidebar">
+                    <div id="accordian">
+                        <h1 class="serchtitle">
+                            <span id="ContentPlaceHolder1_spnMobCategoryName" class="category-name"></span>
+                        </h1>
+                       
+                        <p class="filter-option-heading">Update Records (Bulk Update On Basis Of RM To New RM)</p>
+                       
+                        <div class="row pt-3 filter-option-content" id="step1">
+                            <table class="">
+                                <tr>
+                                    <td><select class="form-select">
+                                            <option>Old RM_Code</option>
+                                        </select></td>
+                                    <td>
+                                        <select class="form-select">
+                                            <option>Replace with New RM_Code</option>
+                                            <option> 4546,Sakshi Hinge</option>
+                                            <option>4251,Jigar Chandulal Bhanushali</option>
+                                            <option>D-PRM-115</option>
+                                            <option>NORM</option>
+                                        </select>
+                                    </td>
+                                    <td><a href="#" id="" name="" class="btn btn-primary w-100">Save</a></td>
+                                    <td><button class="btn btn-primary dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-solid fa-download"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><button class="dropdown-item" type="button">PDF</button></li>
+                                            <li><button class="dropdown-item" type="button">Excel</button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+            <script type="text/javascript">
+                var d = new Date();
+                yr = d.getFullYear();
+                document.write(yr);
+                cPrev = -1;
+
+                function sortBy(c) {
+                    rows = document.getElementById("sortable").rows.length;
+                    columns = document.getElementById("sortable").rows[0].cells.length;
+                    arrTable = [...Array(rows)].map(e => Array(columns));
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                        }
+                    }
+
+                    th = arrTable.shift();
+
+                    if (c !== cPrev) {
+                        arrTable.sort(
+                            function (a, b) {
+                                if (a[c] === b[c]) {
+                                    return 0;
+                                } else {
+                                    return (a[c] < b[c]) ? -1 : 1;
+                                }
+                            }
+                        );
+                    } else {
+                        arrTable.reverse();
+                    }
+
+                    cPrev = c;
+
+                    arrTable.unshift(th);
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                        }
+                    }
+                }
+            </script>. All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+    <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+    <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+    <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+    <script src="../assets/js_1/jquery.multi-select.js"></script>
+    <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+    <script src="../assets/js_1/main.js"></script>
+    <!-- <script src="../assets/js/main.js"></script> -->
+    <script src="../assets/js_1/uti.js"></script>
+    <!-- <script src="../assets/js/uti.js"></script> -->
+    <script src="../assets/js_1/custom.js"></script>
+    <!-- <script src="../assets/js/custom.js"></script> -->
+
+    <script>
+        var onClick = function () {
+        };
+
+        // $('#button').click(onClick);
+
+        $('#button2').click(function () {
+            alert('Are you sure to proceed?');
+        });
+    </script>
+ <script>
+    // toggle script
+var  innerSidebar = function(){
+   $('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+ // toggle script
+
+</script><script>
+    function myFunction2() {
+      alert("Wrong Data Found Please Check Again");
+    }
+    </script>
+</body>
+
+</html>

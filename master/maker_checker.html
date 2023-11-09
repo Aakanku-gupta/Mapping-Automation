@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+<style>
+    p, label {
+  font: 15px 'Exo 2', sans-serif;
+}
+
+input {
+  margin: 6px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 2 2;
+  font: 15px 'Exo 2', sans-serif;
+}
+
+</style>
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    
+    <section class="section dashboard bg-white">
+
+      <h5>MAKER CHECKER FOR APPLICATION</h5>
+      <a href="../master/maker_checker-for-application.html"> <i class="bi bi-arrow-return-left"
+          style="position: relative;top: -37px;left: 800px;font-size: 40px;"></i></a>
+      <br><br>
+      <div class="bg-white p-3 border">
+      <div class="row">
+        <div class="col-md-3">
+
+          <h6>Masters</h6>
+
+          <div class="selectBox form-control" onclick="showCheckboxes()">
+
+            <select class="custom-select border-bottom form-control-plaintext">
+
+              <option>Masters Dropdown</option>
+
+            </select>
+
+            <div class="overSelect"></div>
+
+          </div>
+
+          <div id="checkboxes" class="checkstyle">
+            
+            <label ><input type="checkbox" id="select-all1">Select All</label>
+            <label for="onem">
+            
+              <input type="checkbox" id="onem" name="master"/>
+
+              ARN MASTER</label>
+
+            <label for="twom">
+               <input type="checkbox" id="twom" name="master" />
+
+              PAN MASTER</label>
+
+            <label for="threem">
+
+              <input type="checkbox" id="threem" name="master" />
+
+              RIA MASTER</label>
+
+            <label for="fourm">
+
+              <input type="checkbox" id="fourm" name="master" />
+
+              SUBBROKER MASTER</label>
+
+            <label for="fivem">
+
+              <input type="checkbox" id="fivem" name="master" />
+
+              SCHEME MASTER</label>
+
+            <label for="sixm">
+
+              <input type="checkbox" id="sixm" name="master"/>
+
+              MFDEX ARN CITY UFWISE SHARING MASTER</label>
+
+            <label for="sevenm">
+
+              <input type="checkbox" id="sevenm" name="master"/>
+
+              UFC MASTER</label>
+
+            <label for="eightm">
+
+              <input type="checkbox" id="eightm" name="master"/>
+
+              PINCODE MASTER</label>
+            <label for="ninem">
+
+              <input type="checkbox" id="ninem" name="master"/>
+
+              BDA/CA MASTER</label>
+            <label for="tenm">
+
+              <input type="checkbox" id="tenm" name="master"/>
+
+              UFC MASTER</label>
+            <label for="elevenm">
+
+              <input type="checkbox" id="elevenm" name="master"/>
+
+              PINCODE MASTER</label>
+            <label for="twelvem">
+
+              <input type="checkbox" id="twelvem" name="master"/>
+
+              CAMS CITY UFC MASTER</label>
+            <label for="thirteenm">
+
+              <input type="checkbox" id="thirteenm" name="master"/>
+
+              CHANNEL MASTER</label>
+            <label for="fourteenm">
+
+              <input type="checkbox" id="fourteenm" name="master"/>
+
+              FINTECH MASTER</label>
+            <label for="fifteenm">
+
+              <input type="checkbox" id="fifteenm" name="master"/>
+
+              UFC MASTER</label>
+            <label for="sixteenm">
+
+              <input type="checkbox" id="sixteenm" name="master"/>
+
+              ZONE MASTER</label>
+            <label for="seventeenm">
+
+              <input type="checkbox" id="seventeenm" name="master"/>
+
+              SCHEME CATEGORY CONVERSION MASTER</label>
+            <label for="sixteenm">
+
+              <input type="checkbox" id="sixteenm" name="master"/>
+
+              USER MASTER</label>
+            <label for="sixteenm">
+
+              <input type="checkbox" id="sixteenm" name="master"/>
+
+              REGION MASTER</label>
+            <label for="sixteenm">
+
+              <input type="checkbox" id="sixteenm" name="master"/>
+
+              KRA MASTER</label>
+            <label for="sixteenm">
+
+              <input type="checkbox" id="sixteenm" name="master"/>
+
+              CRCA-EXCLUSIVE MASTER</label>
+            <label for="sixteenm">
+
+              <input type="checkbox" id="sixteenm" name="master"/>
+
+              VIRTUAL RM MASTER</label>
+            <label for="sixteenm">
+
+              <input type="checkbox" id="sixteenm" name="master"/>
+
+              MAP DE TAG SUBARN MASTER</label>
+
+          </div>
+          <!-- <div class="col-md-3">
+            
+           <h6>Masters</h6>
+           <select  name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-75">
+               <option selected="selected" value="Select">Select</option>
+               <option value="INST">ARN_MASTER</option>
+               <option value="DSTH">EXCEPTION_MASTER</option>
+               <option value="PSUC">PAN_MASTER</option>
+               <option value="DSA">RIA_MASTER</option>
+               <option value="DSTH">SUBBROKER_MASTER</option>
+               <option value="PSUC">SCHEME_MASTER</option>
+               <option value="DSA">MFDEX ARN CITY UFWISE SHARING_MASTER</option>
+
+              
+               
+               
+           </select> -->
+
+        </div>
+        <!-- <div class="col-md-3">
+            
+            <h6 style="    position: relative;
+            left: -16px;">Mappings </h6>
+            <select  name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-75" style="    position: relative;
+            left: -21px;">
+                <option selected="selected" value="Select">Select</option>
+                <option value="INST">MFD TO RM MAPPING</option>
+                <option value="DSTH">PINCODE TO RM MAPPING</option>
+                <option value="PSUC">ARN+EUIN/SUB-ARN/BRANCH CODE MAPPING</option>
+                <option value="DSA">ARN+UFC TO RM MAPPING</option>
+                <option value="DSTH">ARN+CITY TO RM MAPPING</option>
+                <option value="PSUC">PAN MAPPING</option>
+                <option value="DSA">RIA TO RM MAPPING</option>
+                <option value="PSUC">EXCEPTION MAPPING</option>
+                <option value="DSA">ARN+PINCODE TO RM MAPPING</option>
+                <option value="DSTH">RIA+PINCODE TO RM MAPPING</option>
+                <option value="PSUC">ARN+SUB ARN+PIN TO RM MAPPING</option>
+                <option value="DSA">DIRECT+SINGLE CITY TO RM MAPPING</option>
+                <option value="DSTH">ARN+GROUP OF CITIES TO RM MAPPING</option>
+                <option value="PSUC">DIRECT +SINGLE CITY TO RM MAPPING</option>
+                <option value="DSA">ARN+GROUP OF CITIES TO RM MAPPING</option>
+                <option value="DSTH">TEAM SAT MAPPING</option>
+                <option value="PSUC">TEAM SAT</option>
+                <option value="DSA">VYMO DISTRIBUTOR MAPPING</option>
+                <option value="DSTH">BDACA-ARN MULTICITY</option>
+                <option value="PSUC">BDACA PINCODE MAPPING</option>
+                <option value="DSA">BDACA ARN MAPPING</option>
+               
+                
+                
+            </select>
+           
+           </div> -->
+        <div class="col-md-3">
+
+          <h6>Mapping</h6>
+          <div class="selectBox form-control" onclick="showCheckboxes1()">
+
+            <select class="custom-select border-bottom form-control-plaintext">
+
+              <option>Mapping Dropdown</option>
+
+            </select>
+
+            <div class="overSelect"></div>
+
+          </div>
+
+          <div id="checkboxes1" class="checkstyle"> 
+         
+            <label><input type="checkbox" id="select-all">Select All</label>
+            <label for="one0">
+
+              <input type="checkbox" id="one0" name="master1"/>ARN+EUIN OR SUB_ARN OR BRANCH CODE MAPPING</label>
+
+           
+
+            <label for="six0">
+
+              <input type="checkbox" id="six0" name="master1"/>
+
+              ARN+ SUB ARN+PIN TO RM MAPPING</label>
+
+            <label for="seven0">
+
+              <input type="checkbox" id="seven0" name="master1"/>
+
+              ARN+UFC TO RM MAPPING</label>
+
+            <label for="eight0">
+
+              <input type="checkbox" id="eight0" name="master1"/>
+
+              ARN+SINGLE CITY TO RM MAPPING</label>
+            <label for="nine0">
+
+              <input type="checkbox" id="nine0" name="master1"/>
+
+              ARN+GROUP OF CITIES TO RM MAPPING</label>
+            <label for="ten0">
+
+              <input type="checkbox" id="ten0" name="master1"/>
+
+              ARN+UFC TO RM MAPPING</label>
+            <label for="eleven0">
+
+              <input type="checkbox" id="eleven0" name="master1"/>
+
+              PINCODE TO RM MAPPING</label>
+            <label for="twelve0">
+
+              <input type="checkbox" id="twelve0" name="master1"/>
+
+              RIA TO RM MAPPING</label>
+            <label for="thirteen0">
+
+              <input type="checkbox" id="thirteen0" name="master1"/>
+
+              RIA+CITY MAPPING</label>
+            <label for="thirteen0">
+
+              <input type="checkbox" id="forteen0" name="master1"/>
+
+              PAN MAPPING</label>
+            <label for="forteen0">
+
+              <input type="checkbox" id="fifteen0" name="master1"/>
+
+              BDACA_PINCODE_MAPPING</label>
+            <label for="fifteen0">
+
+              <input type="checkbox" id="sixteen0" name="master1"/>
+
+              BDACA_ARN_MAPPING</label>
+            <label for="sixteen">
+
+              <input type="checkbox" id="seventeen0" name="master1"/>
+
+              EXCEPTIONS MAPPING</label>
+            <label for="seventeen0">
+
+              <input type="checkbox" id="eightteen0" name="master1"/>
+
+              MFC TO RM MAPPING</label>
+            <label for="eightteen0">
+
+              <input type="checkbox" id="nineteen0" name="master1"/>
+
+              PINCODE TO RMMAPPING</label>
+            <label for="nineteen0">
+
+              <input type="checkbox" id="twenty0" name="master1"/>
+
+              ARN+PINCODE TO RM MAPPING</label>
+            <label for="twenty0">
+
+              <input type="checkbox" id="twenty0" name="master1"/>
+
+              DIRECT+SINGLE CITY TO RM MAPPING</label>
+          
+
+              <label for="forteen0">
+
+                <input type="checkbox" id="forteen0" name="master1"/>
+
+                DIRECT+GROUP OF CITIES TO RM MAPPING</label>
+
+              <label for="fifteen0">
+
+                <input type="checkbox" id="fifteen0" name="master1"/>
+
+                PRM MAPPING</label>
+
+              <label for="sixteen0">
+
+                <input type="checkbox" id="one0" name="master1"/>
+
+                TEAM SAT MAPPING</label>
+              <label for="one0">
+
+                <input type="checkbox" id="one0" name="master1"/>
+
+                VYMO DISTRIBUTOR MAPPING</label>
+              <label for="one0">
+
+                <input type="checkbox" id="one0" name="master1"/>
+
+                TEAM SET MAPPING</label>
+             
+               
+
+
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h6 style="       position: relative;
+            left: -4px;">Makers</h6>
+          <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-auto" style="     position: relative;
+           left: -11px;  
+           ">
+            <option selected="selected" value="Select" style="    position: relative;
+               left: -12px;">Select Maker</option>
+            <option value="INST">Sumit Mehta</option>
+            <option value="DSTH">Santosh Chipte</option>
+
+
+          </select><br>
+        </div>
+
+
+        <div class="col-md-2">
+          <h6 style="       position: relative;
+            left: -4px;">Checkers</h6>
+          <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-auto" style="     position: relative;
+           left: -11px;  
+           ">
+            <option selected="selected" value="Select" style="    position: relative;
+               left: -12px;">Select Checkers</option>
+            <option value="INST">Sumit Mehta</option>
+            <option value="DSTH">Santosh Chipte</option>
+
+
+          </select><br>
+        </div>
+        <!-- makers -->
+        <!-- <div class="col-md-2">
+
+          <h6>Makers</h6>
+          <div class="selectBox form-control" onclick="showCheckboxes2()">
+
+            <select class="custom-select border-bottom form-control-plaintext">
+
+              <option>Makers Dropdown</option>
+
+            </select>
+
+            <div class="overSelect"></div>
+
+          </div>
+
+          <div id="checkboxes2" class="checkstyle">
+
+            <label for="one0">
+
+              <input type="checkbox" id="one0" />
+
+              Santosh Chipte</label>
+
+            <label for="two0">
+
+              <input type="checkbox" id="two0" />
+
+              Sumit Mehta</label>
+
+          </div>
+        </div> -->
+        <!-- chrecker -->
+
+        <!-- <div class="col-md-2">
+
+          <h6>Checkers</h6>
+
+          <div class="selectBox form-control" onclick="showCheckboxes3()">
+
+            <select class="custom-select border-bottom form-control-plaintext">
+
+              <option>Checkers Dropdown</option>
+
+            </select>
+
+            <div class="overSelect"></div>
+
+          </div>
+
+          <div id="checkboxes3" class="checkstyle">
+
+            <label for="one0">
+
+              <input type="checkbox" id="one0" />
+
+              Santosh Chipte</label>
+
+            <label for="two0">
+
+              <input type="checkbox" id="two0" />
+
+              Sumit Mehta</label>
+
+
+
+
+          </div>
+
+
+        </div> -->
+        <div class="col-md-2">
+
+          <h6>Alternate Checker</h6>
+          <input type="text" style="    width: 150px;
+      position: relative;
+      top: 4px;">
+        </div>
+        <div id="checkboxes" class="checkstyle">
+
+
+        </div>
+        
+        <a href="../master/maker_checker-for-application.html" class="btn btn-primary mb-2" style=" width: 160px;  border: none;     position: relative;
+        left: 15px; top: 19px; ">Submit</a>
+        </div></div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+        cPrev = -1;
+
+        function sortBy(c) {
+          rows = document.getElementById("sortable").rows.length;
+          columns = document.getElementById("sortable").rows[0].cells.length;
+          arrTable = [...Array(rows)].map(e => Array(columns));
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+            }
+          }
+
+          th = arrTable.shift();
+
+          if (c !== cPrev) {
+            arrTable.sort(
+              function (a, b) {
+                if (a[c] === b[c]) {
+                  return 0;
+                } else {
+                  return (a[c] < b[c]) ? -1 : 1;
+                }
+              }
+            );
+          } else {
+            arrTable.reverse();
+          }
+
+          cPrev = c;
+
+          arrTable.unshift(th);
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+            }
+          }
+        }
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <script src="../assets/js_1/jquery.multi-select.js"></script>
+  <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+  </script>
+
+
+
+
+  <!-- 1st -->
+
+  <script>
+
+    var expanded = false;
+
+
+
+    function showCheckboxes() {
+
+      var checkboxes = document.getElementById("checkboxes");
+
+      if (!expanded) {
+
+        checkboxes.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+  <script>
+
+    $(function () {
+
+      $("#example1").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+  <!-- 2nd -->
+  <script>
+
+    var expanded = false;
+
+
+
+    function showCheckboxes1() {
+
+      var checkboxes = document.getElementById("checkboxes1");
+
+      if (!expanded) {
+
+        checkboxes.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+  <script>
+
+    $(function () {
+
+      $("#example2").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example2').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+  <!-- 3rd -->
+  <script>
+
+    var expanded = false;
+
+
+
+    function showCheckboxes2() {
+
+      var checkboxes = document.getElementById("checkboxes2");
+
+      if (!expanded) {
+
+        checkboxes.style.display = "block";
+
+        expanded = true;
+
+      } else {
+
+        checkboxes.style.display = "none";
+
+        expanded = false;
+
+      }
+
+    }</script>
+  <script>
+
+    $(function () {
+
+      $("#example3").DataTable({
+
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+      $('#example3').DataTable({
+
+        "paging": true,
+
+        "lengthChange": false,
+
+        "searching": false,
+
+        "ordering": true,
+
+        "info": true,
+
+        "autoWidth": false,
+
+        "responsive": true,
+
+      });
+
+    });
+
+  </script>
+
+<script>
+    document.getElementById('select-all1').onclick = function() {
+  var checkboxes = document.getElementsByName('master');
+  for (var checkbox of checkboxes) {
+    checkbox.checked = this.checked;
+  }
+}
+</script>
+<script>
+    document.getElementById('select-all').onclick = function() {
+  var checkboxes = document.getElementsByName('master1');
+  for (var checkbox of checkboxes) {
+    checkbox.checked = this.checked;
+  }
+}
+</script>
+
+</body>
+
+</html>

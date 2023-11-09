@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard bg-white">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-8">
+            <!-- <h5>ARN RIA CITY</h5> -->
+            <h5>RIA+CITY MAPPING</h5>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-12">
+              <a href="../mapping_view/add-record-arn-ria-city.html" class="btn btn-primary"
+                style=" width: 160px;  border: none ">Add
+                Record +</a>
+            </div>
+          </div><br><br>
+          <!-- <div class="col-md-4 text-end text-danger">
+            Access Valid Till : 01/09/2022 to 12/09/2022
+          </div> -->
+
+
+
+        </div>
+        <!-- <hr id="third-hr"/> -->
+        <table>
+          <!-- 1-10 of 500 <i class="fa fa-solid fa-angle-left"></i> <a href=""><i class="fa fa-solid fa-angle-right"></i></a> -->
+          <tr>
+            <!-- <th scope="col">Records <i class="fa fa-solid"></i></th> -->
+
+            <td>
+              <label>Quarter</label>
+              <select class="form-select" id="quaterSearchFilter" name="SelectQuarter" style="width:200px;">
+                <option value="1">2023-24-Q1</option>
+                <option value="2">2022-23-Q4</option>
+                <option value="3">2022-23-Q3</option>
+                <option value="4">2022-23-Q2</option>
+                <option value="5">2022-23-Q1</option>
+              </select>
+            </td>
+            <td style="padding-left:10px">
+              <label>Zone</label>
+              <select class="form-select" id="zoneSearchFilter" style="width:101px;">
+                <option value="">ALL</option>
+                <option value="CORP"> CORP</option>
+                <option value="EAST"> EAST</option>
+                <option value="GULF"> GULF</option>
+                <option value="NORTH"> NORTH</option>
+                <option value="SOUTH"> SOUTH</option>
+                <option value="WEST"> WEST</option>
+              </select>
+            </td>
+            <td style="padding-left:10px">
+              <label>Region</label>
+              <select class="form-select" id="regionSearchFilter">
+                <option value="">All</option>
+                <option value="AP"> ANDHRA PRADESH</option>
+                <option value="BNND_BANG"> B&ND BANGALORE</option>
+                <option value="BNND_DELH"> B&ND DELHI</option>
+                <option value="BNND_KOLK"> B&ND KOLKATA</option>
+                <option value="BNND_MUMB"> B&ND MUMBAI</option>
+                <option value="BIHR"> BIHAR</option>
+                <option value="CHAN"> CHANDIGARH</option>
+                <option value="CORP"> CORPORATE OFFICE</option>
+                <option value="DELH"> DELHI</option>
+                <option value="GUJR"> GUJARAT</option>
+                <option value="GULF"> GULF</option>
+                <option value="KRTK"> KARNATAKA</option>
+                <option value="MUMB"> MUMBAI</option>
+                <option value="NAGP"> NAGPUR</option>
+                <option value="NEAST"> NORTH EAST</option>
+                <option value="ORJK"> ORISSA & JHARKHAND</option>
+                <option value="RAJS"> RAJASTHAN</option>
+                <option value="ROMH"> REST OF MAHARASHTRA & GOA</option>
+                <option value="TNNK"> TAMIL NADU & KERALA</option>
+                <option value="UP"> UTTAR PRADESH</option>
+                <option value="WB"> WEST BENGAL</option>
+              </select>
+            </td>
+            <td style="padding-left:10px">
+              <label>UFC</label>
+              <select class="form-select" id="ufcNameSearchFilter">
+                <option value="">ALL</option>
+                <option value="1">B&ND MUMBAI-RM(RH Reporting)</option>
+                <option value="2">B&ND BANGLORE-RM(RH Reporting)</option>
+                <option value="3">B&ND KOLKOTA-RM(RH Reporting)</option>
+                <option value="4">HITECHCITY UFC</option>
+                <option value="5">VALSAD </option>
+                <option value="6">PONDICHERRY</option>
+                <option value="7">ASANSOL</option>
+                <option value="8">JHANSI</option>
+                <option value="9">B&ND MUMBAI-01</option>
+                <option value="10">B&ND MUMBAI-02</option>
+                <option value="11">B&ND MUMBAI-02</option>
+                <option value="12">B&ND MUMBAI-03</option>
+                <option value="13">B&ND AHMEDABAD-01</option>
+              </select>
+            </td>
+            <td style="padding-left:10px">
+              <label>Search Text</label>
+              <input type="text" class="form-control" id="txtsearch" style="margin-left:5px;">
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top:20px;padding-left:0px">
+              <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary w-100">Search <img
+                  src="/Content/images/btn-spinner.gif" style="display:none"></a>
+            </td>
+            <td style="padding-top: 20px;">
+              <div class="dropdown pull-right" style="margin-left:20px">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa fa-solid fa-download"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" id="btnExport" type="button">Excel</button></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-6 row mb-3">
+        <!-- <tr>
+                  <th scope="col"><b>Show</b> <i class="fa fa-solid"></i></th>
+                  <td>
+                    
+                    </td> -->
+        <div class="col-md-3" style="display: flex; margin-top: 30px;">
+          <label>Show</label>
+          <select class="form-select" id="records" style="margin-left: 10px;">
+            <option>50</option>
+            <option>100</option>
+            <option>200</option>
+            <option>All</option>
+          </select> <b> entries</b>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-6" style=" margin-top: 30px;">
+          <!-- <label>Maker</label> -->
+
+          <div class="selectBox form-control" style="    position: relative;
+                top: -12px;" onclick="showCheckboxes1()">
+
+            <select class="custom-select border-bottom form-control-plaintext">
+
+              <option>Column </option>
+
+            </select>
+
+            <div class="overSelect"></div>
+
+          </div>
+
+          <div id="checkboxes1" class="checkstyle">
+
+            <label><input type="checkbox" id="select-all2">Select All</label>
+            <label for="onem">
+
+              <input type="checkbox" id="onem" name="master2" onclick="myFunction()" />
+
+             
+ARNNO_REF</label>
+
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              RIA</label>
+            <label for="threem">
+              <input type="checkbox" id="threem" name="master2" onclick="myFunction2()" />
+
+              CITY</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+              DISTRIBUTOR NAME </label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              RM_CODE</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+            	REGION_CODE</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              REGION_NAME</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              UFC_CODE</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              UFC_NAME</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              ZONE</label>
+            <label for="twom">
+              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+
+              CHANNEL_CODE</label>
+              <label for="twom">
+                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+  
+                KRV_VALID_FROM</label>
+                
+  
+
+
+                
+                      </div>
+                      
+        </div>
+      </div>
+      <br>
+      <div class="overflow-auto" id="margin">
+        <table class="table small border table-hover" id="sortable">
+          <thead>
+            <tr class="bg-primary text-white">
+              <!-- <th scope="col"><input type="checkbox" class="form-check-input" /></th> -->
+              <th scope="col">ARNNO_REF <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+              <!-- <th scope="col">RIACODE <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th> -->
+              <th scope="col">RIA <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+              <th scope="col">CITY <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+              <!-- <th scope="col">RIA_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th> -->
+              <th scope="col">DISTRIBUTOR NAME <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th>
+              <!-- <th scope="col">EMPLID <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th> -->
+              <th scope="col" class="bg-danger">RM_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+              <!-- <th scope="col">EMPNAME <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th> -->
+              <!-- <th scope="col">RM_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th> -->
+              <th scope="col">REGION_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i></th>
+              <th scope="col">REGION_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+              <!-- <th scope="col">UFC_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th> -->
+              
+             
+              <th scope="col">UFC_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+              <th scope="col">UFC_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+              <th scope="col">ZONE <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+              <!-- <th scope="col">SAP_REGION_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(13)"></i></th>
+                  <th scope="col">SAP_ZONE_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(14)"></i></th> -->
+              <th scope="col">CHANNEL_CODE <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <th scope="col">KRV_VALID_FROM<i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <th scope="col">KRV_VALID_UPTO <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <th scope="col">CREATION_SERV_REQ <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <th scope="col">LSTUPD_SERV_REQ <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <th scope="col">LSTUPDUSER<i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <th scope="col">CREATION_TICKET_ID<i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <th scope="col">LSTUPD_TICKET_ID<i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <th scope="col">LSTUPDDT<i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <th scope="col">CREATION_DT
+                <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th>
+              <!--new added-->
+              <!-- <th scope="col">KRA_VALID_FROM <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+                  <th scope="col">KRA_VALID_UPTO <i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th> -->
+              <th scope="col">ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ARN-0002</td>
+              <td>INA000012351</td>
+              <td>BANGALORE</td>
+              <td>J M Financial Services Ltd</td>
+              <td><span title="Vinod Jha">
+                4499
+            </span></td>
+              <td>BNND_BANG</td>
+              <td>B&ND BANGALORE</td>
+              <td>BAN01</td>
+              <td>BNND BANGALORE-01</td>
+              <td>SOUTH</td>
+              <td></td>
+              <td>12-05-2019</td>
+              <td>18-08-2022</td>
+              <td>MAA-25052623</td>
+              <td></td>
+              <td></td>
+              <td>EMMAP041023409</td>
+              <td></td>
+              <td>26-03-2019</td>
+              <td>26-03-2021</td>
+            
+              
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../mapping_view/edit-arn-ria-city.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../mapping_view/close-arn-ria-city.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>ARN-0018</td>
+              <td>INA200001959</td>
+              <td>BANGALORE</td>
+              <td>KARVYINVESTMENTADVISORY</td>
+              <td><span title="Anshu Kumar">
+                4486
+            </span></td>
+              <td>BNND_BANG</td>
+              <td>B&ND BANGALORE</td>
+              <td>BAN01</td>
+              <td>BNND BANGALORE-01</td>
+              <td>SOUTH</td>
+              <td></td>
+              <td>11-02-2019</td>
+              <td>16-08-2022</td>
+              <td>MAA-25856365</td>
+              <td></td>
+              <td></td>
+              <td>EMMAP29261016212</td>
+
+              <td></td>
+              <td>21-03-2019</td>
+              <td>16-09-2022</td>
+             
+              
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../mapping_view/edit-arn-ria-city.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../mapping_view/close-arn-ria-city.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            </tr>
+            <tr>
+              <td>DIRECT</td>
+              <td>INA000000094</td>
+              <td>VASHI</td>
+              <td>ICICISECURITESWEALTH</td>
+              <td><span title="Aftab Warsi">
+                4064
+            </span></td>
+              <td>BNND_MUMB</td>
+              <td>	B&ND BANGALORE</td>
+              <td>BAN01	</td>
+              <td></td>
+              <td>WEST</td>
+              <td></td>
+              <td>20-06-2019</td>
+              <td>25-08-2022</td>
+
+              
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+
+              <td></td>
+              <td></td>
+              <td></td>
+             
+              
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../mapping_view/edit-arn-ria-city.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../mapping_view/close-arn-ria-city.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>DIRECT</td>
+              <td>INA000003130</td>
+              <td>MUMBAI</td>
+              <td>MERRILL LYNCH WEALTH ADVISORS PRIVATE LIMITED</td>
+              <td><span title="Roy,Sourav">
+                3393
+            </span></td>
+              <td>BNND_MUMB</td>
+              
+              <td>MUM-RH</td>
+              <td>BAN01</td>
+            
+              <td></td>
+              <td>WEST</td>
+              <td></td>
+              <td>12-05-2019</td>
+              <td>18-08-2022</td>
+              <td>MAA-65356546</td>
+              <td></td>
+              <td></td>
+              <td></td>
+
+              <td></td>
+              <td>21-03-2019</td>
+              <td>16-09-2022</td>
+         
+              
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../mapping_view/edit-arn-ria-city.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../mapping_view/close-arn-ria-city.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <div class="col-md-12 mt-3"> 
+              <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary">Update </a><p>(Update Selected Record Only As Per Above Search Criteria)</p>
+              </div>  -->
+        <!-- <table>
+ <tr>
+     <td><input type="button" id="button"  class="btn btn-primary" value="Update" /></td>
+    <td><input type="button" id="button2"  class="btn btn-primary" value="Activity Completed" /></td>
+     <td><input type="text" class="form-control" id="txtsearch" placeholder="Remark" style="margin-left: 0px;"/></td>
+     </tr>
+      </table> -->
+        <br>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr);
+        cPrev = -1;
+
+        function sortBy(c) {
+          rows = document.getElementById("sortable").rows.length;
+          columns = document.getElementById("sortable").rows[0].cells.length;
+          arrTable = [...Array(rows)].map(e => Array(columns));
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+            }
+          }
+
+          th = arrTable.shift();
+
+          if (c !== cPrev) {
+            arrTable.sort(
+              function (a, b) {
+                if (a[c] === b[c]) {
+                  return 0;
+                } else {
+                  return (a[c] < b[c]) ? -1 : 1;
+                }
+              }
+            );
+          } else {
+            arrTable.reverse();
+          }
+
+          cPrev = c;
+
+          arrTable.unshift(th);
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+            }
+          }
+        }
+        // toggle script
+        var innerSidebar = function () {
+          $('#sidebar').toggleClass('toggle-sidebar');
+
+        }
+
+    // toggle script
+
+      </script>. All Rights Reserved
+    </div>
+  </footer>
+
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script src="../assets/js_1/jquery.multi-select.js"></script>
+  <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script>
+    var onClick = function () {
+    };
+
+    // $('#button').click(onClick);
+
+    $('#button2').click(function () {
+      alert('Are you sure to proceed?');
+    });
+  </script>
+ 
+    <!-- columns -->
+    <script>
+
+      var expanded = false;
+  
+  
+  
+  
+      function showCheckboxes1() {
+  
+        var checkboxes1 = document.getElementById("checkboxes1");
+  
+        if (!expanded) {
+  
+          checkboxes1.style.display = "block";
+  
+          expanded = true;
+  
+        } else {
+  
+          checkboxes1.style.display = "none";
+  
+          expanded = false;
+  
+        }
+  
+      }</script>
+  
+    <script>
+  
+      $(function () {
+  
+        $("#example1").DataTable({
+  
+          "responsive": true, "lengthChange": false, "autoWidth": false,
+  
+          "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+  
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+  
+        $('#example2').DataTable({
+  
+          "paging": true,
+  
+          "lengthChange": false,
+  
+          "searching": false,
+  
+          "ordering": true,
+  
+          "info": true,
+  
+          "autoWidth": false,
+  
+          "responsive": true,
+  
+        });
+  
+      });
+  
+    </script>
+  
+    <script>
+      document.getElementById('select-all2').onclick = function () {
+        var checkboxes1 = document.getElementsByName('master2');
+        for (var checkbox of checkboxes1) {
+          checkbox.checked = this.checked;
+        }
+      }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+
+  <link rel="stylesheet" type="text/css" href="../assets/css/multis-styles.css">
+</head>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-12">
+            <h5>BDA/CA MASTER</h5>
+            <a href="../master/all_master_bulk_upload.html"> <i class="bi bi-arrow-return-left" style="position: relative;
+              top: -52px;
+              float: right;
+              font-size: 40px;
+          "></i></a>
+            <hr>
+            <div class="mt-2">
+              <h3 class="mb-4" style="text-align: center;">Upload File </h3>
+              <div style="display: flex; justify-content: center;">
+                <div style="margin: 5px;"> <button type="button" class="btn btn-primary "><a
+                      href="../Templates/BDACA-Master.xlsx" style="color:white">Download BDA-CA Master
+                      Template<br> <i class="fa fa-file-excel-o"></i></a></button></div>
+                <div style="margin: 5px;">
+                  <input type="file" accept=".csv"
+                    style="background-color: #193984; padding: 14px; border-radius: 5px; color: white;" />
+                </div>
+                <div style="margin: 5px;" class="upload_btn">
+
+                  <a href="#" id="btn_search" name="btnsearch" class="btn btn-primary" style="padding: 14px;"
+                    onclick="displaydetails();">Preview</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <hr mt-3>
+        <div class="overflow-auto" id="empgrddetails" style="display:none">
+          <div class="row">
+            <div class="col-md-9">
+              <p>No of Records - 02</p>
+              <p>No of Column - 44</p>
+              <p>Selected UFC- 549 - Patna </p>
+
+            </div>
+
+
+            <div class="col-md-3">
+              <p> Upload Date - 24/06/2023 </p>
+              <p>File Name - BDA Bulk Upload </p>
+
+              <p>File Type - .csv</p>
+
+
+
+            </div>
+          </div>
+          <table class="table small border">
+            <tr class="bg-primary text-white">
+
+              <th scope="col">CRCACODE</th>
+              <th scope="col">REGION</th>
+              <!-- <th scope="col">REGION_CODE</th> -->
+              <th scope="col">UFC</th>
+              <th scope="col">UFC_CODE</th>
+              <th scope="col">DIST_CODE</th>
+              <th scope="col">CRCODE</th>
+              <th scope="col">DISTRICT_NAME</th>
+              <th scope="col">CACODE</th>
+              <th scope="col">UFC_HQ</th>
+              <th scope="col">NAME_CR</th>
+              <th scope="col">STATUS</th>
+              <th scope="col">DATE_OF_APP</th>
+              <th scope="col">ADDRESS1</th>
+              <th scope="col">ADDRESS2</th>
+              <th scope="col">ADDRESS3</th>
+              <th scope="col">ADDRESS4</th>
+              <th scope="col">PHONENO</th>
+              <th scope="col">MOBILENO</th>
+              <th scope="col">EMAIL</th>
+              <th scope="col">DATE_OF_BIRTH</th>
+              <th scope="col">DRAWEEBANK_BRCODE</th>
+              <th scope="col">ACNO_ALTBRANCHCODE</th>
+              <th scope="col">VALID_FROM</th>
+              <th scope="col">VALID_UPTO</th>
+              <th scope="col">PAYBEL_LOC</th>
+              <th scope="col">BRANCH_NAME</th>
+              <th scope="col">IFSC_CODE</th>
+              <th scope="col">STATUS_DOSM</th>
+              <th scope="col">FIXED_PAY</th>
+              <th scope="col">ZONE</th>
+              <th scope="col">UFC_CODE</th>
+              <th scope="col">SAP_REGION_CODE</th>
+              <th scope="col">SAP_ZONE_CODE</th>
+              <th scope="col">ARN_NUMBER</th>
+              <th scope="col">ARN_VALIDITY</th>
+              <th scope="col">GST_NUMBER</th>
+              <th scope="col">PAN_NO</th>
+              <th scope="col">GST_VALID</th>
+              <th scope="col">MAHARASHTRA</th>
+              <th scope="col">RBP</th>
+              <th scope="col">ETSP</th>
+              <th scope="col">UTI_INFRA_FUND</th>
+              <th scope="col">BDACA_UTI_EMAIL</th>
+              <!-- <th scope="col">SELF_ARN_NO</th>
+                      <th scope="col">SELF_ARN_NAME</th>
+                      <th scope="col">REMARKS</th>
+                      <th scope="col">PRODUCT</th>
+                      <th scope="col">STRENGTH</th>
+                      <th scope="col">WEAKNESS</th>
+                      <th scope="col">ADD_DISPATCH</th> -->
+              <!-- <th scope="col">ACTION</th> -->
+            </tr>
+            <tr>
+
+              <td>446C008</td>
+              <td>BIHAR</td>
+              <td>MUZAFFARPUR</td>
+              <td>446</td>
+              <td>304</td>
+              <td></td>
+              <td>EAST CHAMPARAN</td>
+              <td></td>
+              <td>NO</td>
+              <td>MD RIZWAN</td>
+              <td>CA</td>
+              <td>01-02-2020</td>
+              <td>WHITE HOUSE, LAMBODAR GALI</td>
+              <td>MEENA BAZAR</td>
+              <td>MOTIHARI</td>
+              <td>EAST CHAMPARAN</td>
+              <td>0</td>
+              <td>9835479344</td>
+              <td>rizwan_utimf@yahoo.co.in</td>
+              <td>25-04-1974</td>
+              <td>STATE BANK OF INDIA</td>
+              <td>SB A/C 10063221478</td>
+              <td>01-04-2021</td>
+              <td>30-12-9999</td>
+              <td>MUZAFFARPUR</td>
+              <td>CHANDWARA</td>
+              <td>SBIN0003557</td>
+              <td>Chief Agent</td>
+              <td>7000</td>
+              <td>East</td>
+              <td>446</td>
+              <td></td>
+              <td></td>
+              <td>ARN-7594</td>
+              <td>25-11-2021</td>
+              <td>NA</td>
+              <td>AGEPR1495E</td>
+              <td>N</td>
+              <td>N</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>Eastchamparan_446C008@sa.utimf.com</td>
+              <!-- <td>
+                        <select class="form-select">
+                        <option>Select</option>
+                        <option>Edit</option>
+                        <option>Save</option>
+                        <option>Delete</option>
+                      </select>
+                    </td> -->
+            </tr>
+            <tr>
+
+              <td>431B001</td>
+              <td>BIHAR</td>
+              <td>BHAGALPUR</td>
+              <td>431</td>
+              <td>318</td>
+              <td></td>
+              <td>KATIHAR</td>
+              <td></td>
+              <td></td>
+              <td>SHRI RABINDRA KUMAR SAH</td>
+              <td>CR</td>
+              <td>18-05-1989</td>
+              <td>KESHRI MARKET, BANIA TOLA CHOWK</td>
+              <td>M G ROAD</td>
+              <td>P.O. & DIST. KATIHAR</td>
+              <td></td>
+              <td>244155</td>
+              <td>9431096365</td>
+              <td>rksahktr@rediffmail.com</td>
+              <td>08-09-1950</td>
+              <td>AXIS BANK,PATNA</td>
+              <td>SB A/C 142010100004916</td>
+              <td>01-04-2021</td>
+              <td>30-12-9999</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>Business Development Associate</td>
+              <td>25000</td>
+              <td>East</td>
+              <td>431</td>
+              <td></td>
+              <td></td>
+              <td>ARN-7001</td>
+              <td>10-08-2021</td>
+              <td>NA</td>
+              <td>AQWPS3510K</td>
+              <td>N</td>
+              <td>N</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>Katihar_431B001@sa.utimf.com</td>
+              <!-- <td>
+                        <select class="form-select">
+                        <option>Select</option>
+                        <option>Edit</option>
+                        <option>Save</option>
+                        <option>Delete</option>
+                      </select>
+                    </td> -->
+            </tr>
+          </table>
+
+
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+          <div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">BDA Master</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <center>
+                      <h5>BDA Master File Successfully Uploaded</h5>
+                    </center>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p>No of Records - 2</p><br>
+                        <p>Case Id - 3445</p>
+                      </div>
+                      <div class="col-md-6">
+                        <p>No of Column - 17</p>
+
+                            
+                        <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-auto mt-4">
+
+                          <option selected="selected" value="Select">Select Checker</option>
+
+                          <option value="INST">Sumit Mehta</option>
+
+                          <option value="DSTH">Santosh Chipte</option>
+
+
+
+
+
+
+
+
+
+                        </select></div>
+                          </div>
+                         
+                         
+                          </div>
+             
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary"><a href="../master/all_master_bulk_upload.html" style="color:white">Ok</a></button>
+                            
+                          </div>
+
+                 
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Start Upload
+            </button>
+
+          </div> <br>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>UTI</span></strong>
+      <script type="text/javascript">
+        var d = new Date();
+        yr = d.getFullYear();
+        document.write(yr); cPrev = -1;
+        function sortBy(c) {
+          rows = document.getElementById("sortable").rows.length;
+          columns = document.getElementById("sortable").rows[0].cells.length;
+          arrTable = [...Array(rows)].map(e => Array(columns));
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+            }
+          }
+
+          th = arrTable.shift();
+
+          if (c !== cPrev) {
+            arrTable.sort(
+              function (a, b) {
+                if (a[c] === b[c]) {
+                  return 0;
+                } else {
+                  return (a[c] < b[c]) ? -1 : 1;
+                }
+              }
+            );
+          } else {
+            arrTable.reverse();
+          }
+
+          cPrev = c;
+
+          arrTable.unshift(th);
+
+          for (ro = 0; ro < rows; ro++) {
+            for (co = 0; co < columns; co++) {
+              document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+            }
+          }
+        }
+        // toggle script
+
+
+        var innerSidebar = function () {
+
+          $('#sidebar').toggleClass('toggle-sidebar');
+
+        }
+
+// toggle script
+      </script>
+      . All Rights Reserved
+    </div>
+  </footer>
+
+
+  <!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script type="text/javascript">
+    function displaydetails() {
+      document.getElementById("empgrddetails").style.display = "block";
+      document.getElementsByClassName("upload_btn")[0].style.display = "none";  //new
+
+    }
+  </script>
+  <script>
+    function myFunction() {
+      let text = "Do you want to proceed";
+      if (confirm(text) == true) {
+        text = "You pressed OK!";
+      } else {
+        text = "You canceled!";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+  </script>
+ <script>
+  function myFunction2() {
+    alert("Wrong Data Found Please Check Again");
+  }
+  </script>
+
+</body>
+
+</html>

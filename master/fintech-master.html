@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>UTI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+  <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css_1/main.css" rel="stylesheet">
+  <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+  <link href="../assets/css_1/style.css" rel="stylesheet">
+  <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+</head>
+
+<body id="sidebar">
+  <!-- header start -->
+  <div uti-include-html="../includes/header1.html"></div>
+  <!-- header end -->
+  
+  <!-- sidebar start -->
+  <div uti-include-html="../includes/sidebar.html"></div>
+  <!-- sidebar end -->
+  <main id="main" class="main">
+
+
+    <section class="section dashboard">
+      <div class="bg-white p-3 border">
+        <div class="row">
+          <div class="col-md-12">
+            <h5>FINTECH MASTER</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <!-- <a href="../master/bulk-upload-fintect.html" class="btn btn-primary "
+              style=" width: auto; border: none;">Bulk Upload + </a> -->
+            <a href="../master/add-record-fintach.html" class="btn btn-primary"
+              style=" width: auto;  border: none ">Add Record +</a>
+          </div>
+        </div>
+        <hr id="arn-master-firsthr">
+        <div class="row">
+          <div class="col-md-12">
+            <table>
+              <tr>
+                <td>
+                  <table class="row pt-3 id=" step1">
+                    <tr>
+                      <td><input type="text" class="form-control" id="select3" /></td>
+                      <td>
+                        <select class="form-select" id="select1">
+                          <option>Select Quarter</option>
+                          <option value="202353">2022-23-Q1</option>
+                          <option value="202354">2022-23-Q2</option>
+                          <option value="202355">2022-23-Q3</option>
+                          <option value="202356">2022-23-Q4</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="form-select" id="select2">
+                          <option>Select ARN RIA Code</option>
+                          <option value="1">ARN-104096</option>
+                          <option value="2">ARN-106881</option>
+                          <option value="3">ARN-103141</option>
+                          <option value="4">ARN-187821</option>
+                          <option value="5">ARN-107930</option>
+                          <option value="6">ARN-108102</option>
+                          <option value="7">ARN-109940</option>
+                          <option value="8">ARN-110027</option>
+                          <option value="9">ARN-110558</option>
+                        </select>
+                      </td>
+                      <td><a href="#" id="btn_search1" name="btnsearch" class="btn btn-primary w-30">Search</a></td>
+                     
+                        <td><button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="margin-left: 220px;"><i class="fa fa-solid fa-download"></i></button>
+                          <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button">Excel</button></li>
+                          </ul>
+                        </td>
+                     
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <hr id="arn-master-secondhr">
+        <div class="row pt-2">
+
+          <div class="col-md-6 row mb-3" >
+            <!-- <tr>
+                <th scope="col"><b>Show</b> <i class="fa fa-solid"></i></th>
+                <td>
+                  
+                  </td> -->
+            <div class="col-md-3" style="display: flex; margin-top: 30px;">
+              <label>Show</label>
+              <select class="form-select" id="records" style="margin-left: 10px;">
+                <option>50</option>
+                <option>100</option>
+                <option>200</option>
+                <option>All</option>
+              </select> <b> entries</b>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-6" style=" margin-top: 30px;">
+              <!-- <label>Maker</label> -->
+      
+              <div class="selectBox form-control" style="    position: relative;
+              top: -12px;" onclick="showCheckboxes1()">
+      
+                <select class="custom-select border-bottom form-control-plaintext">
+      
+                  <option>Column </option>
+      
+                </select>
+      
+                <div class="overSelect"></div>
+      
+              </div>
+      
+              <div id="checkboxes1" class="checkstyle">
+      
+                <label><input type="checkbox" id="select-all2">Select All</label>
+                <label for="onem">
+      
+                  <input type="checkbox" id="onem" name="master2" onclick="myFunction()" />
+      
+                  ARN_RIA_CODE </label>
+      
+                <label for="twom">
+                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+      
+                  MULTICITY_FLAG_AM</label>
+                  <label for="twom">
+                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+      
+                    CHANNEL</label>
+                    <label for="twom">
+                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+        
+                      FAMILY_ARN_CODE</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        FAMILY_ARN_NAME</label>
+                        <label for="twom">
+                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+            
+                          GROUPTYPE</label>
+                          <label for="twom">
+                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+              
+                            MFDGROUP </label>
+                            <label for="twom">
+                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                
+                              ARNTYPE </label>
+                              <label for="twom">
+                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                  
+                                STRATEGICTEAMRM</label>
+                                <label for="twom">
+                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                    
+                                  FINTECH_TYPE</label>
+                                  <label for="twom">
+                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                      
+                                    FINTECH_RMCODE</label>
+                                    <label for="twom">
+                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                        
+                                      VALID_FROM</label>
+                                      <label for="twom">
+                                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                          
+                                        VALID_UPTO</label>
+                                                                                           
+              </div>
+            </div>
+      </div>
+          
+        </div>
+        <div class="overflow-auto">
+          <table class="table small border">
+            <tr class="bg-primary text-white">
+            
+              <!-- <th scope="col">SRNO</th> -->
+              <th scope="col">ARN_RIA_CODE</th>
+              <!-- <th scope="col">DISTRIBUTORSNAME</th> -->
+              <th scope="col">MULTICITY_FLAG_AM</th>
+              <th scope="col">CHANNEL</th>
+              <th scope="col">FAMILY_ARN_CODE</th>
+              <th scope="col">FAMILY_ARN_NAME</th>
+              <th scope="col">GROUPTYPE</th>
+              <th scope="col">MFDGROUP</th>
+              <th scope="col">ARNTYPE</th>
+              <th scope="col">STRATEGICTEAMRM</th>
+              <th scope="col">FINTECH_TYPE</th>
+              <th scope="col">FINTECH_RMCODE</th>
+            
+              <th scope="col">VALID_UPTO</th>
+              <th scope="col">VALID_FROM</th>
+              <th scope="col">CREATION_SERV_REQ</th>
+              <th scope="col">LSTUPD_SERV_REQ</th>
+              <th scope="col">LSTUPDUSER</th>
+              <th scope="col">CREATION_TICKET_ID</th>
+              <th scope="col">LSTUPD_TICKET_ID</th>
+              <th scope="col">LSTUPDDT</th>
+              <th scope="col">CREATION_DT</th>
+              <th scope="col">ACTION</th>
+              
+            </tr>
+            <tr>
+          
+              <td>ARN-187821</td>              
+              <td></td>
+              <td>BNND</td>
+              <td>ARN-187821</td>
+              <td>PHONEPE WEALTH BROKING PRIVATE LIMITED</td>
+              <td>NA</td>
+              <td>NA</td>
+              <td>FINTECH</td>
+              <td></td>
+              <td>ARN</td>
+              <td>NORM</td>
+              <td>01-04-2022</td>
+              <td>30-12-9999</td>
+              <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-fintach.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-fintech.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+            
+             
+              <td>ARN-103141</td>
+            
+              <td>Y</td>
+              <td>BND</td>
+              <td>ARN-103141</td>
+              <td>ALPHAFRONT FINSERV PVT LTD</td>
+              <td>NA</td>
+              <td>NA</td>
+              <td>FINTECH</td>
+              <td></td>
+              <td>ARN</td>
+              <td>3904</td>
+              <td>01-04-2022</td>
+              <td>30-12-9999</td>
+              <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-fintach.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-fintech.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+           
+              <!-- <td>3</td> -->
+              <td>ARN-104096</td>
+              <!-- <td>5Paisa Capital Limited</td> -->
+              <td>N</td>
+              <td>BND</td>
+              <td>ARN-104096</td>
+              <td>5Paisa Capital Limited</td>
+              <td>Clubbed</td>
+              <td>NA</td>
+              <td>FINTECH</td>
+              <td></td>
+              <td>ARN</td>
+              <td>3904</td>
+              <td>01-04-2022</td>
+              <td>30-12-9999</td>
+              <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-fintach.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-fintech.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+            
+              <!-- <td>5</td> -->
+              <td>ARN-106881</td>
+              <!-- <td>COGNUS TECHNOLOGY</td> -->
+              <td>N</td>
+              <td>BND</td>
+              <td>ARN-106881</td>
+              <td>COGNUS TECHNOLOGY</td>
+              <td>Family</td>
+              <td>NA</td>
+              <td>FINTECH</td>
+              <td></td>
+              <td>ARN</td>
+              <td>3904</td>
+              <td>01-04-2022</td>
+              <td>30-12-9999</td>
+              <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+              <td>
+                <div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="../master/edit-fintach.html">Edit</a></li>
+                    <li><a class="dropdown-item" href="../master/close-fintech.html">Close</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">
+        &copy; Copyright <strong><span>UTI</span></strong>
+        <script type="text/javascript">
+            var d = new Date();
+            yr = d.getFullYear();
+            document.write(yr); cPrev = -1;
+            function sortBy(c) {
+                rows = document.getElementById("sortable").rows.length;
+                columns = document.getElementById("sortable").rows[0].cells.length;
+                arrTable = [...Array(rows)].map(e => Array(columns));
+
+                for (ro = 0; ro < rows; ro++) {
+                    for (co = 0; co < columns; co++) {
+                        arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                    }
+                }
+
+                th = arrTable.shift();
+
+                if (c !== cPrev) {
+                    arrTable.sort(
+                        function (a, b) {
+                            if (a[c] === b[c]) {
+                                return 0;
+                            } else {
+                                return (a[c] < b[c]) ? -1 : 1;
+                            }
+                        }
+                    );
+                } else {
+                    arrTable.reverse();
+                }
+
+                cPrev = c;
+
+                arrTable.unshift(th);
+
+                for (ro = 0; ro < rows; ro++) {
+                    for (co = 0; co < columns; co++) {
+                        document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                    }
+                }
+            }
+                  // toggle script
+
+
+var  innerSidebar = function(){
+
+$('#sidebar').toggleClass('toggle-sidebar');
+
+}
+
+// toggle script
+        </script>
+        . All Rights Reserved
+    </div>
+</footer>
+
+
+  <!-- <script type="text/javascript" src="../assets/js/jquery-2.2.4.min.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery-2.2.4.min.js"></script>
+  <!-- <script type="text/javascript" src="../assets/js/jquery.multi-select.js"></script> -->
+  <script type="text/javascript" src="../assets/js_1/jquery.multi-select.js"></script>
+  <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+  <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+  <script src="../assets/js_1/main.js"></script>
+  <!-- <script src="../assets/js/main.js"></script> -->
+  <script src="../assets/js_1/uti.js"></script>
+  <!-- <script src="../assets/js/uti.js"></script> -->
+  <script src="../assets/js_1/custom.js"></script>
+  <!-- <script src="../assets/js/custom.js"></script> -->
+
+  <script type="text/javascript">
+    function displaydetails() {
+        document.getElementById("empgrddetails").style.display = "block";
+        document.getElementsByClassName("upload_btn")[0].style.display = "none";  //new
+
+    }
+</script>
+  <!-- <script>
+      function myFunction() {
+          let text = "Do you want to proceed";
+          if (confirm(text) == true) {
+              text = "You pressed OK!";
+          } else {
+              text = "You canceled!";
+          }
+          document.getElementById("demo").innerHTML = text;
+      }
+  </script>  -->
+  <!-- <script>
+    function myFunction2() {
+      alert("Wrong Data Found Please Check Again");
+    }
+    </script>  -->
+      <!-- columns -->
+   <script>
+
+    var expanded = false;
+  
+  
+  
+  
+    function showCheckboxes1() {
+  
+      var checkboxes1 = document.getElementById("checkboxes1");
+  
+      if (!expanded) {
+  
+        checkboxes1.style.display = "block";
+  
+        expanded = true;
+  
+      } else {
+  
+        checkboxes1.style.display = "none";
+  
+        expanded = false;
+  
+      }
+  
+    }</script>
+  
+  <script>
+  
+    $(function () {
+  
+      $("#example1").DataTable({
+  
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+  
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+  
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+  
+      $('#example2').DataTable({
+  
+        "paging": true,
+  
+        "lengthChange": false,
+  
+        "searching": false,
+  
+        "ordering": true,
+  
+        "info": true,
+  
+        "autoWidth": false,
+  
+        "responsive": true,
+  
+      });
+  
+    });
+  
+  </script>
+  
+  <script>
+    document.getElementById('select-all2').onclick = function () {
+      var checkboxes1 = document.getElementsByName('master2');
+      for (var checkbox of checkboxes1) {
+        checkbox.checked = this.checked;
+      }
+    }
+  </script>
+</body>
+
+</html>

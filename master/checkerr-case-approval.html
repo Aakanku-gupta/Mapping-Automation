@@ -1,0 +1,2157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>UTI</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/css_1/main.css" rel="stylesheet">
+    <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+    <link href="../assets/css_1/style.css" rel="stylesheet">
+    <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+    <!-- <link href="../assets/css/bootstrap-n.css" rel="stylesheet"/> -->
+    <link href="../assets/css_1/bootstrap-n.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <style>
+        .show {
+            display: block !important;
+
+        }
+
+        .popup-content {
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            font-weight: bolder;
+            border: 1px solid;
+            border-radius: 10px;
+
+        }
+
+        .popup {
+            top: 150px;
+            z-index: 999;
+            display: none;
+            background: none;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        p,
+        label {
+            font: 15px 'Exo 2', sans-serif;
+        }
+
+        input {
+            margin: 6px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 2 2;
+            font: 15px 'Exo 2', sans-serif;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+<body id="sidebar">
+    <!-- header start -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="d-flex align-items-center justify-content-between">
+            <i class="toggle-sidebar-btn pe-2" onclick="innerSidebar()">
+                <span class="fa fa-align-justify text-white"></span> </i><img src="../assets/images_1/logo_1.png" alt=""
+                width="130px" />
+        </div>
+
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="pb-2" style="justify-content: center; display: flex"></div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="col-md-12" style="margin-left: 5px">
+                <span class="text-white">Welcome : Santosh Chipte | Last Login : Jun 19th 12:00pm</span>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4"></div>
+
+                    <div class="col-md-4"></div>
+
+                    <div class="col-md-4 mt-2">
+                        <a href="../login.html" class="text-white">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- sidebar start -->
+    <div uti-include-html="../includes/sidebar.html"></div>
+    <!-- sidebar end -->
+    <main id="main" class="main">
+
+        <section class="section dashboard bg-white">
+
+            <h4>CHECKER CASE APPROVAL(MASTER/MAPPING) </h4>
+            <!-- <a href="#"> <i class="bi bi-arrow-return-left"
+          style="position: relative;top: -37px;left: 800px;font-size: 40px;"></i></a> -->
+            <br>
+            <div class="bg-white p-3 border">
+                <div class="row">
+                    <div class="col-md-3" >
+
+                        <h6>CASE ID</h6>
+                        <select name="ddlChannelCode" id="ddlChannelCode" class="form-select  w-100">
+                            <option>Select</option>
+                            <option>C1058(BKC-121)</option>
+                            <option>C1059(AGRA-407)</option>
+                            <option>C1060(BORIVALE-113)</option>
+                            <option>C1061(JAIPUR-403)</option>
+                            <option>C1062(LOTUS COURT-119)</option>
+                            <option>C1063(BORIVALE-113)</option>
+                            <option>C1064(AGRA-407)</option>
+                            <option>C1065(JAIPUR-403)</option>
+                            <option>C1066(LOTUS COURT-119)</option>
+
+
+
+
+                        </select>
+                    </div>
+
+
+                    <!-- master -->
+                    <div class="col-md-3">
+                        <h6>Master</h6>
+                        <select name="ddlMaster" id="ddlMaster" class="form-select  w-100">
+                            <option value="0">select</option>
+                            <option value="1">ARN MASTER</option>
+                            <option value="2">EXCEPTION MASTER</option>
+                            <option value="3">PAN MASTER</option>
+                            <option value="4">RIA MASTER</option>
+                            <option>SUBBROKER MASTER</option>
+                            <option>SCHEME MASTER</option>
+                            <option>MFDEX ARN CITY UFWISE SHARING SCHEME MASTER</option>
+                            <option>UFC MASTER</option>
+                            <option>REGION MASTER</option>
+                            <option> ZONE MASTER</option>
+                            <option>USER MASTER</option>
+                            <option>MAP DETAG SUB ARN MASTER</option>
+                            <option>RIA MASTER</option>
+                            <option>SCHEME CATEGORY CONVERSION MASTER</option>
+                            <option>KRA MASTER</option>
+                            <option>KRA APPLICABILITY MASTER</option>
+                            <option>CAMS CITY UFC MASTER</option>
+                            <option>VIRTUAL RMCODE MASTER</option>
+                            <option>CHANNEL MASTER</option>
+                            <option>FINTECH MASTER</option>
+                            <option>REASON MASTER</option>
+
+
+
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- mapping -->
+                    <div class="col-md-3">
+                        <h6>Mapping</h6>
+                        <select name="ddlMapping" id="ddlMapping" class="form-select  w-100">
+                            <option>Select</option>
+                            <option>MFD TO RM MAPPING</option>
+                            <option>PINCODE TO RM MAPPING</option>
+                            <option>MFD TO RM MAPPING</option>
+                            <option>ARN+EUIN/SUB ARN/BRANCH CODE MAPPING</option>
+                            <option>ARN+UFC TO RM MAPPING</option>
+                            <option>ARN+CITY TO RM MAPPING</option>
+                            <option>PAN MAPPING</option>
+                            <option>RIA TO RM MAPPING</option>
+                            <option>EXCEPTIONS MAPPING</option>
+                            <option>ARN + PINCODE TO RM MAPPING</option>
+                            <option>RIA+CITY MAPPING</option>
+                            <option>ARN+ SUB ARN+PIN TO RM MAPPING</option>
+                            <option>CAMS MFDEX_ARN+SINGLE CITY TO RM MAPPING</option>
+                            <option>CAMS MFDEX_DIRECT+SINGLE CITY TO RM MAPPING</option>
+                            <option>CAMS MFDEX_ARN+GROUP OF CITIES TO RM MAPPING</option>
+                            <option>CAMS MFDEX_DIRECT+GROUP OF CITIES TO RM MAPPING</option>
+                            <option>TEAM SAT MAPPING</option>
+                            <option>BDACA ARN MULTICITY</option>
+                            <option>BDACA PINCODE MAPPING</option>
+                            <option>BDACA_ARN_MAPPING</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-2">
+                        <a href="#">
+                            <button class="btn btn-primary" onclick="myFunction()">Show</button>
+                        </a>
+
+                    </div>
+
+                    <div class="col-md-1">
+                        <!-- <div class="dropdown pull-right"> -->
+                        <button class="btn btn-primary dropdown-toggle" style="    position: relative;
+                        left: -84px;" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa fa-solid fa-download"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+
+                            <li><button class="dropdown-item" type="button">Excel</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+            </div>
+
+            <!-- 1st data -->
+            <div class="Arn_mastre" id="myDIV" style="display: none;">
+                <div class="row">
+                    <div class="col-md-6"><button class=" btn btn-primary" id="myBtn">Approve</button></div>
+                    <div class="col-md-6">
+                        <!-- <button class=" btn-primary" onclick="myFunction2()">Reject</button>  -->
+                        <!-- Button trigger modal -->
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+
+                            <div class="popup-content  mx-lg-auto" style="width: 35rem;">
+                                <h5>
+                                    Changes are approved for CASE ID 3445
+                                </h5>
+                                <hr>
+                                <p style="text-align: left;">Checker's Comment</p>
+                                <input type="text" class="form-control" name="" id="">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h5 class="mt-3"> Send this notification to </h5>
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        <select name="ddlChannelCode" id="ddlChannelCode"
+                                            class="form-select  w-auto mt-3">
+                                            <option selected="selected" value="Select" style="position: relative;
+                                             left: -12px;">Select Maker</option>
+                                            <option value="INST">Sumit Mehta</option>
+                                            <option value="DSTH">Santosh Chipte</option>
+
+
+                                        </select><br>
+                                    </div>
+                                    <div class="col-md-2"></div>
+
+                                    <div class="col-md-6">
+
+                                        <button class="btn btn-primary w-100" data-bs-dismiss="closePopup2"
+                                            style="color: white;" id="closePopup2">
+                                            Submit
+                                        </button>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <button type="button" class="btn btn-primary reject w-100"
+                                            data-bs-dismiss="closePopup3" id="closePopup3"
+                                            style="color: white;">Close</button>
+
+                                   
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <button id="myButton" type="button" class="btn btn-primary" style="position: relative;
+                          left: -432px;">
+
+                            Reject
+                        </button>
+
+                        <!-- Modal -->
+                        <div id="myPopup" class="popup">
+                            <div class="popup-content" style="position: relative;
+                                        left: -388px;
+                                          top: -144px;
+                                    width: 345px;
+                                      height: 318px;">
+                                <h5>
+                                    Changes are not approved for CASE ID 3445
+                                </h5>
+                                <hr>
+                                <p style="    text-align: left;">Checker's Comment</p>
+                                <input type="text" class="form-control" name="" id="">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h5 class="mt-3"> Send this notification to </h5>
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        <select name="ddlChannelCode" id="ddlChannelCode1"
+                                            class="form-select  w-auto mt-3">
+                                            <option selected="selected" value="Select" style="    position: relative;
+                           left: -12px;">Select Maker</option>
+                                            <option value="INST">Sumit Mehta</option>
+                                            <option value="DSTH">Santosh Chipte</option>
+
+
+                                        </select><br>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                                <button class="btn btn-primary" data-bs-dismiss="closePopup" style="color: white;"
+                                    id="closePopup">
+                                    Submit
+                                </button>
+
+                                <button type="button" class="btn btn-primary reject" data-bs-dismiss="closePopup1"
+                                    id="cPopup1" style="color: white;">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div><br>
+                <div class="overflow-auto" id="text">
+                    <div class="overflow-auto">
+                        <table class="table small border" id="myTable">
+                            <tr class="bg-primary text-white">
+
+                                <th scope="col">KRV_CODE</th>
+                                <th scope="col">CHANNEL_CODE</th>
+                                <th scope="col">NEW_BR_CODE</th>
+                                <th scope="col">REGION_CODE</th>
+                                <th scope="col">NAME</th>
+                                <!-- <th scope="col">DIST</th> not required-->
+                                <!-- <th scope="col">ALLOCATION</th> -->
+                                <th scope="col">MULTICITY FLAG</th>
+                                <!--changed label from Allocation to Multicity Flag-->
+                                <th scope="col">CATEGORY</th>
+                                <!-- <th scope="col">GROUPCD</th> not required-->
+                                <!-- <th scope="col">RM_CODE</th>  not required, will be part of mapping-->
+                                <th scope="col">ZONE</th>
+                                <th scope="col">ARN_GROUP_NAME</th>
+                                <th scope="col">SUB_CHANNEL</th>
+                                <!-- <th scope="col">ARN_TYPE</th> not required-->
+                                <th scope="col">VALID_FROM</th>
+                                <th scope="col">VALID_UPTO</th>
+                                <th scope="col">CREATION_DT</th>
+                                <th scope="col">LSTUPDDT</th>
+                                <th scope="col">ACTIVE_FLAG</th>
+                                <th scope="col">OWNER_TYPE</th>
+                                <th scope="col">UFC_CODE</th>
+                                <th scope="col">PRM_CODE</th>
+                                <th scope="col">CHANNEL_GROUP</th>
+                                <!-- <th scope="col">ACTION</th>              -->
+                                <!-- <th scope="col">SAP_REGION_CODE</th>
+                    <th scope="col">SAP_ZONE_CODE</th> -->
+                                <!-- <th scope="col">ACTION</th> -->
+                            </tr>
+                            <tr class="a">
+                                <td>ARN-29742</td>
+                                <td>RTL</td>
+                                <td>119</td>
+                                <td>NORH</td>
+                                <td>DEUTSCHE BANK</td>
+                                <!-- <td></td> -->
+                                <td>E</td>
+                                <td>BANKS</td>
+                                <!-- <td>NAM-1</td> -->
+                                <!-- <td>NORM</td> -->
+                                <td style="background-color: #ADD8E6" title="OLD VALUE: EAST">WEST</td>
+
+
+
+                                <td>Deutsche Bank</td>
+                                <td>E-ARN</td>
+                                <!-- <td>BANK (GROUP)</td> -->
+                                <td>01-10-2021</td>
+                                <td>30-12-9999</td>
+                                <td>01-07-2019</td>
+                                <td>25-07-2019</td>
+                                <td>Y</td>
+                                <td></td>
+                                <td>119</td>
+                                <td></td>
+                                <td>BNND</td>
+
+                            </tr>
+                            <tr>
+                                <td>ARN-47629</td>
+                                <td>RTL</td>
+                                <td>119</td>
+                                <td>MUMB</td>
+                                <td>BARCLAYS BANK PLC</td>
+                                <td>Y</td>
+                                <td>ND</td>
+                                <td>WEST</td>
+                                <td>Barclays</td>
+                                <td>M-ARN</td>
+                                <td>01-10-2021</td>
+                                <td>30-12-9999</td>
+                                <td>16-11-2021 17:46:42</td>
+                                <td>08-12-2021</td>
+                                <td>Y</td>
+                                <td></td>
+                                <td>119</td>
+                                <td></td>
+                                <td>BNND</td>
+
+                            </tr>
+                            <tr>
+                                <td>ARN-49707</td>
+                                <td>RTL</td>
+                                <td>117</td>
+                                <td>NORH</td>
+                                <td>RELIGARE WEALTH MANAGEMENT LIMITED</td>
+                                <!-- <td></td> -->
+                                <td>E</td>
+                                <td>ND</td>
+                                <!-- <td>NAM-3</td> -->
+                                <!-- <td>NORM</td> -->
+                                <td></td>
+                                <td>Religare</td>
+                                <td>E-ARN</td>
+                                <!-- <td>DSTH</td> -->
+                                <td>01-10-2021</td>
+                                <td>30-12-9999</td>
+                                <td>01-07-2019</td>
+                                <td>25-07-2019</td>
+                                <td>Y</td>
+                                <td></td>
+                                <td>117</td>
+                                <td></td>
+                                <td>BNND</td>
+
+                            <tr>
+                                <td>ARN-79711</td>
+                                <td>RTL</td>
+                                <td>400</td>
+                                <td>NORH</td>
+                                <td>RELIGARE MARKETINGS SERVICES PVT LTD</td>
+                                <!-- <td></td> -->
+                                <td>E</td>
+                                <td>ND</td>
+                                <!-- <td>NAM-2</td> -->
+                                <!-- <td>NORM</td> -->
+                                <td class="tool" style="background-color:#ADD8E6;" title="OLD VALUE: SOUTH">NORTH</td>
+
+                                <td>Religare</td>
+                                <td>E-ARN</td>
+                                <!-- <td>MISVPAY-BANK</td> -->
+                                <td>01-10-2021</td>
+                                <td>30-12-9999</td>
+                                <td>01-07-2019</td>
+                                <td>25-07-2019</td>
+                                <td>Y</td>
+                                <td></td>
+                                <td>400</td>
+                                <td></td>
+                                <td>BNND</td>
+
+                            </tr>
+                            <tr>
+                                <td>AAB-1000</td>
+                                <td>RTL</td>
+                                <td>400</td>
+                                <td>NORH</td>
+                                <td>THE ROYAL BANK OF SCOTLAND N V</td>
+                                <!-- <td></td> -->
+                                <td>E</td>
+                                <td>ND</td>
+                                <!-- <td>NAM-3</td> -->
+                                <!-- <td>NORM</td> -->
+                                <td></td>
+                                <td>Sanctum Wealth</td>
+                                <td>E-ARN</td>
+                                <!-- <td>BANK</td> -->
+                                <td>01-10-2021</td>
+                                <td>30-12-9999</td>
+                                <td>01-07-2019</td>
+                                <td>25-07-2019</td>
+                                <td>Y</td>
+                                <td></td>
+                                <td>400</td>
+                                <td></td>
+                                <td>BNND</td>
+
+                            </tr>
+                        </table>
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+
+                    <div id="checkboxes" class="checkstyle">
+
+
+                    </div>
+
+                    <!-- <a href="../master/maker-checker-for-applicationn.html" class="btn btn-primary mb-2" style=" width: 160px;  border: none;     position: relative;
+        left: 15px; top: 19px; ">Transfer -->
+
+                </div>
+            </div>
+            <!-- exception -->
+
+            <div class="overflow-auto" id="exception_mastre" style="display: none;">
+                <table class="table small border table-hover" id="sortable">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <!-- <th scope="col"><input type="checkbox" class="form-check-input" /></th> -->
+
+                            <th scope="col">CASE ID <i class="fa fa-solid fa-sort" onclick="sortBy(1)"></i></th>
+                            <th scope="col">REMARKS <i class="fa fa-solid fa-sort" onclick="sortBy(2)"></i></th>
+                            <th scope="col">CASE_NAME <i class="fa fa-solid fa-sort" onclick="sortBy(3)"></i></th>
+                            <!-- <th scope="col">FIELDS <i class="fa fa-solid fa-sort" onclick="sortBy(4)"></i></th> not required-->
+                            <th scope="col">ATTRIBUTE <i class="fa fa-solid fa-sort" onclick="sortBy(5)"></i></th>
+                            <th scope="col">P_SEQ <i class="fa fa-solid fa-sort" onclick="sortBy(6)"></i></th>
+                            <th scope="col">EXCEPTION_ATTRIBUTE <i class="fa fa-solid fa-sort" onclick="sortBy(7)"></i>
+                            </th>
+                            <th scope="col">SRNO <i class="fa fa-solid fa-sort" onclick="sortBy(8)"></i></th>
+                            <th scope="col">VALID_FROM <i class="fa fa-solid fa-sort" onclick="sortBy(9)"></i></th>
+                            <th scope="col">VALID_UPTO <i class="fa fa-solid fa-sort" onclick="sortBy(10)"></i></th>
+                            <th scope="col">CASENO <i class="fa fa-solid fa-sort" onclick="sortBy(11)"></i></th>
+                            <th scope="col">CASE_TYPE <i class="fa fa-solid fa-sort" onclick="sortBy(12)"></i></th>
+                            <th scope="col">APPLICABILITY <i class="fa fa-solid fa-sort" onclick="sortBy(13)"></i></th>
+                            <!-- <th scope="col">FLAG_RETROSPECTIVE <i class="fa fa-solid fa-sort" onclick="sortBy(14)"></i></th> not required -->
+                            <!-- <th scope="col">LSTUPDDT <i class="fa fa-solid fa-sort" onclick="sortBy(15)"></i></th> not required-->
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>C1058</td>
+                            <td></td>
+                            <td>BND-Excep-599259454896-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599259454896</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1058</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1058</td>
+                            <td></td>
+                            <td>BND-Excep-599259454896-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIEQGPCB99577070599259454896</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1058</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1059</td>
+                            <td></td>
+                            <td>BND-Excep-599259454896-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599259454896</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1059</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1059</td>
+                            <td></td>
+                            <td>BND-Excep-599259454896-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIEQGPCB99580743599259454896</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1059</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1060</td>
+                            <td></td>
+                            <td>BND-Excep-599259454896-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599259454896</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1060</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1060</td>
+                            <td></td>
+                            <td>BND-Excep-599259454896-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIEQGPCB99582442599259454896</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1060</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1061</td>
+                            <td></td>
+                            <td>BND-Excep-599331260276-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599331260276</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1061</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1061</td>
+                            <td></td>
+                            <td>BND-Excep-599331260276-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIEQGPKB99421549599331260276</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1061</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1062</td>
+                            <td></td>
+                            <td>BND-Excep-599331183076-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599331183076</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1062</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1062</td>
+                            <td></td>
+                            <td>BND-Excep-599331183076-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIEQGPKB99420996599331183076</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1062</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1063</td>
+                            <td></td>
+                            <td>BND-Excep-599329464506-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599329464506</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1063</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1063</td>
+                            <td></td>
+                            <td>BND-Excep-599329464506-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIGPGPKB99421498599329464506</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1063</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1064</td>
+                            <td></td>
+                            <td>BND-Excep-599280893681-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599280893681</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1064</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+                        </tr>
+                        <tr>
+
+                            <td>C1064</td>
+                            <td></td>
+                            <td>BND-Excep-599280893681-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIEQGPKB99415597599280893681</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1064</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1065</td>
+                            <td></td>
+                            <td>BND-Excep-599280893681-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599280893681</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1065</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C1065</td>
+                            <td></td>
+                            <td>BND-Excep-599280893681-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIEQGPKB99415770599280893681</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1065</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1066</td>
+                            <td></td>
+                            <td>BND-Excep-599332578671-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599332578671</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1066</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1066</td>
+                            <td></td>
+                            <td>BND-Excep-599332578671-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIEQGPST99222709599332578671</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1066</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1067</td>
+                            <td></td>
+                            <td>BND-Excep-599321858295-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599321858295</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1067</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C1067</td>
+                            <td></td>
+                            <td>BND-Excep-599321858295-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIEQGPST99222274599321858295</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1067</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1068</td>
+                            <td></td>
+                            <td>BND-Excep-577330259806-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>577330259806</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1068</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1068</td>
+                            <td></td>
+                            <td>BND-Excep-577330259806-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTICPD2BS771785867577330259806</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1068</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1069</td>
+                            <td></td>
+                            <td>BND-Excep-577328548123-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>577328548123</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1069</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1069</td>
+                            <td></td>
+                            <td>BND-Excep-577328548123-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTICPD2BS771785868577328548123</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1069</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C1119</td>
+                            <td></td>
+                            <td>AGSPP5291J--Suraj Ramchand Popley</td>
+                            <!-- <td></td> -->
+                            <td>AGSPP5291J</td>
+                            <td>A</td>
+                            <td>PANNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1119</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C1120</td>
+                            <td></td>
+                            <td>AAACS5154L-Popley Diamond and Gold Plaza Pvt Ltd</td>
+                            <!-- <td></td> -->
+                            <td>AAACS5154L</td>
+                            <td>A</td>
+                            <td>PANNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>1120</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2086</td>
+                            <td></td>
+                            <td>AZHAAN SALEEM MERCHANT-599333868576</td>
+                            <!-- <td></td> -->
+                            <td>599333868576</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2086</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C2087</td>
+                            <td></td>
+                            <td>GAURI MOONDRA-599259454896</td>
+                            <!-- <td></td> -->
+                            <td>599259454896</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2087</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2088</td>
+                            <td></td>
+                            <td>ABHIJIT DATTANAND KUMTA-599333286276</td>
+                            <!-- <td></td> -->
+                            <td>599333286276</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2088</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2089</td>
+                            <td></td>
+                            <td>RAKSHIT HARGAVE-599280893681</td>
+                            <!-- <td></td> -->
+                            <td>599280893681</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2089</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2090</td>
+                            <td></td>
+                            <td>RAKSHIT HARGAVE-599333636254</td>
+                            <!-- <td></td> -->
+                            <td>599333636254</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2090</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2091</td>
+                            <td></td>
+                            <td>RAJSEKAR KUPPUSWAMI MITTA-599333290121</td>
+                            <!-- <td></td> -->
+                            <td>599333290121</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2091</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2092</td>
+                            <td></td>
+                            <td>RAMNIKLAL H PARBHOO-599333187721</td>
+                            <!-- <td></td> -->
+                            <td>599333187721</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2092</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2093</td>
+                            <td></td>
+                            <td>MANISHA DINESH MULANI-599333777061</td>
+                            <!-- <td></td> -->
+                            <td>599333777061</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2093</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2094</td>
+                            <td></td>
+                            <td>ASHISH AVINASH BAKRE-599333187716</td>
+                            <!-- <td></td> -->
+                            <td>599333187716</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2094</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2095</td>
+                            <td></td>
+                            <td>ANIL P MEHTA-599333402492</td>
+                            <!-- <td></td> -->
+                            <td>599333402492</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2095</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2096</td>
+                            <td></td>
+                            <td>AHMED SARFRAZ KHAN-599333960062</td>
+                            <!-- <td></td> -->
+                            <td>599333960062</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2096</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2097</td>
+                            <td></td>
+                            <td>RAJAT SAPRA-599333455646</td>
+                            <!-- <td></td> -->
+                            <td>599333455646</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2097</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2098</td>
+                            <td></td>
+                            <td>HARILAL KANJI RAGHWANI-599333212105</td>
+                            <!-- <td></td> -->
+                            <td>599333212105</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2098</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2099</td>
+                            <td></td>
+                            <td>ARPAN RAJNEESH DAVID-599333208856</td>
+                            <!-- <td></td> -->
+                            <td>599333208856</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2099</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2100</td>
+                            <td></td>
+                            <td>SUNANDO MUKHOPADHYAY-599333289873</td>
+                            <!-- <td></td> -->
+                            <td>599333289873</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2100</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2101</td>
+                            <td></td>
+                            <td>SUNANDO MUKHOPADHYAY-599333239557</td>
+                            <!-- <td></td> -->
+                            <td>599333239557</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2101</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2102</td>
+                            <td></td>
+                            <td>S A PATEL-599333908757</td>
+                            <!-- <td></td> -->
+                            <td>599333908757</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2102</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2103</td>
+                            <td></td>
+                            <td>N SUDHAKAR-599325839905</td>
+                            <!-- <td></td> -->
+                            <td>599325839905</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2103</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+                            <td>C2104</td>
+                            <td></td>
+                            <td>SATISH RAMESH LALWANI-599333442765</td>
+                            <!-- <td></td> -->
+                            <td>599333442765</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>2104</td>
+                            <td>B</td>
+                            <td>Sales-NetSales/AAUM</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C991</td>
+                            <td></td>
+                            <td>BND-Excep-599330230196-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599330230196</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>991</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C991</td>
+                            <td></td>
+                            <td>BND-Excep-599330230196-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTIEQGPST99215879599330230196</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>991</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C992</td>
+                            <td></td>
+                            <td>BND-Excep-599321858295-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>599321858295</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>992</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C997</td>
+                            <td></td>
+                            <td>BND-Excep-577328440664-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTINYG1BS771375530577328440664</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>997</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C998</td>
+                            <td></td>
+                            <td>BND-Excep-577328440664-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>577328440664</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>998</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C998</td>
+                            <td></td>
+                            <td>BND-Excep-577328440664-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTINYG1BS771396841577328440664</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>998</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C999</td>
+                            <td></td>
+                            <td>BND-Excep-577328440664-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>577328440664</td>
+                            <td>C</td>
+                            <td>FOLIO NUMBER</td>
+                            <td>2</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>999</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                        <tr>
+
+                            <td>C999</td>
+                            <td></td>
+                            <td>BND-Excep-577328440664-RMCODE3907</td>
+                            <!-- <td></td> -->
+                            <td>UTINYG1BS771462346577328440664</td>
+                            <td>F</td>
+                            <td>TRANSACTION REFNO</td>
+                            <td>1</td>
+                            <td>01-JUL-2022</td>
+                            <td>30-DEC-9999</td>
+                            <td>999</td>
+                            <td>S</td>
+                            <td>Sales-NetSales</td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- 2nd data -->
+
+            <div class="overflow-auto" id="empgrddetails" style="display:none">
+                <table class="table small border table-hover" id="sortable">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th scope="col" id="colall">All<input type="checkbox" class="form-check-input"
+                                    id="alltxt" /> </th>
+                            <th scope="col">KRV_CODE</th>
+                            <th scope="col">CHANNEL_CODE</th>
+                            <th scope="col">NEW_BR_CODE</th>
+                            <th scope="col">REGION_CODE</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">MULTICITY FLAG</th> <!--changed label from Allocation to Multicity Flag-->
+                            <th scope="col">CATEGORY</th>
+                            <th scope="col">ZONE</th>
+                            <th scope="col">ARN_GROUP_NAME</th>
+                            <th scope="col">SUB_CHANNEL</th>
+                            <th scope="col">VALID_FROM</th>
+                            <th scope="col">VALID_UPTO</th>
+                            <th scope="col">CREATION_DT</th>
+                            <th scope="col">LSTUPDDT</th>
+                            <th scope="col">ACTIVE_FLAG</th>
+                            <th scope="col">OWNER_TYPE</th>
+                            <th scope="col">UFC_CODE</th>
+                            <th scope="col">PRM_CODE</th>
+                            <th scope="col">CHANNEL_GROUP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input" /></td>
+                            <td>ARN-29742</td>
+                            <td>RTL</td>
+                            <td>119</td>
+                            <td>NORH</td>
+                            <td>DEUTSCHE BANK</td>
+                            <td>E</td>
+                            <td>BANKS</td>
+                            <td style="background-color: #ADD8E6" title="OLD VALUE: SOUTH">WEST</td>
+                            <td>Deutsche Bank</td>
+                            <td>E-ARN</td>
+                            <td>01-10-2021</td>
+                            <td>30-12-9999</td>
+                            <td>01-07-2019</td>
+                            <td>25-07-2019</td>
+                            <td>Y</td>
+                            <td></td>
+                            <td>119</td>
+                            <td></td>
+                            <td>BNND</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input" /></td>
+                            <td>ARN-47629</td>
+                            <td>RTL</td>
+                            <td>119</td>
+                            <td>MUMB</td>
+                            <td>BARCLAYS BANK PLC</td>
+                            <td>Y</td>
+                            <td>ND</td>
+                            <td style="background-color: #ADD8E6" title="OLD VALUE: NORTH">WEST</td>
+                            <td>Barclays</td>
+                            <td>M-ARN</td>
+                            <td>01-10-2021</td>
+                            <td>30-12-9999</td>
+                            <td>16-11-2021 17:46:42</td>
+                            <td>08-12-2021</td>
+                            <td>Y</td>
+                            <td></td>
+                            <td>119</td>
+                            <td></td>
+                            <td>BNND</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <tr>
+
+                    </tr>
+                </table>
+                <br>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+
+
+            </div>
+
+
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="copyright">&copy; Copyright <strong><span>UTI</span></strong>
+            <script type="text/javascript">
+                var d = new Date();
+                yr = d.getFullYear();
+                document.write(yr);
+                cPrev = -1;
+
+                function sortBy(c) {
+                    rows = document.getElementById("sortable").rows.length;
+                    columns = document.getElementById("sortable").rows[0].cells.length;
+                    arrTable = [...Array(rows)].map(e => Array(columns));
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            arrTable[ro][co] = document.getElementById("sortable").rows[ro].cells[co].innerHTML;
+                        }
+                    }
+
+                    th = arrTable.shift();
+
+                    if (c !== cPrev) {
+                        arrTable.sort(
+                            function (a, b) {
+                                if (a[c] === b[c]) {
+                                    return 0;
+                                } else {
+                                    return (a[c] < b[c]) ? -1 : 1;
+                                }
+                            }
+                        );
+                    } else {
+                        arrTable.reverse();
+                    }
+
+                    cPrev = c;
+
+                    arrTable.unshift(th);
+
+                    for (ro = 0; ro < rows; ro++) {
+                        for (co = 0; co < columns; co++) {
+                            document.getElementById("sortable").rows[ro].cells[co].innerHTML = arrTable[ro][co];
+                        }
+                    }
+                }
+            </script>. All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+    <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+    <!-- <script src="../assets/js/jquery-2.2.4.min.js"></script> -->
+    <script src="../assets/js_1/jquery-2.2.4.min.js"></script>
+    <script src="../assets/js_1/jquery.multi-select.js"></script>
+    <!-- <script src="../assets/js/jquery.multi-select.js"></script> -->
+    <script src="../assets/js_1/main.js"></script>
+    <!-- <script src="../assets/js/main.js"></script> -->
+    <script src="../assets/js_1/uti.js"></script>
+    <!-- <script src="../assets/js/uti.js"></script> -->
+    <script src="../assets/js_1/custom.js"></script>
+    <!-- <script src="../assets/js/custom.js"></script> -->
+
+
+    <!-- 1st -->
+
+    <script>
+
+        var expanded = false;
+
+
+
+        function showCheckboxes() {
+
+            var checkboxes = document.getElementById("checkboxes");
+
+            if (!expanded) {
+
+                checkboxes.style.display = "block";
+
+                expanded = true;
+
+            } else {
+
+                checkboxes.style.display = "none";
+
+                expanded = false;
+
+            }
+
+        }</script>
+    <script>
+
+        $(function () {
+
+            $("#example1").DataTable({
+
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+            $('#example2').DataTable({
+
+                "paging": true,
+
+                "lengthChange": false,
+
+                "searching": false,
+
+                "ordering": true,
+
+                "info": true,
+
+                "autoWidth": false,
+
+                "responsive": true,
+
+            });
+
+        });
+
+    </script>
+
+
+
+
+
+    <script>
+        document.getElementById('select-all1').onclick = function () {
+            var checkboxes = document.getElementsByName('master');
+            for (var checkbox of checkboxes) {
+                checkbox.checked = this.checked;
+            }
+        }
+    </script>
+    <script>
+        document.getElementById('select-all').onclick = function () {
+            var checkboxes = document.getElementsByName('master1');
+            for (var checkbox of checkboxes) {
+                checkbox.checked = this.checked;
+            }
+        }
+    </script>
+
+
+
+    <!-- maker -->
+    <script>
+
+        var expanded = false;
+
+
+
+
+        function showCheckboxes1() {
+
+            var checkboxes1 = document.getElementById("checkboxes1");
+
+            if (!expanded) {
+
+                checkboxes1.style.display = "block";
+
+                expanded = true;
+
+            } else {
+
+                checkboxes1.style.display = "none";
+
+                expanded = false;
+
+            }
+
+        }</script>
+
+    <script>
+
+        $(function () {
+
+            $("#example1").DataTable({
+
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+            $('#example2').DataTable({
+
+                "paging": true,
+
+                "lengthChange": false,
+
+                "searching": false,
+
+                "ordering": true,
+
+                "info": true,
+
+                "autoWidth": false,
+
+                "responsive": true,
+
+            });
+
+        });
+
+    </script>
+
+    <script>
+        document.getElementById('select-all2').onclick = function () {
+            var checkboxes1 = document.getElementsByName('master2');
+            for (var checkbox of checkboxes1) {
+                checkbox.checked = this.checked;
+            }
+        }
+    </script>
+    <!-- checker -->
+    <script>
+
+        var expanded = false;
+
+
+
+
+        function showCheckboxes2() {
+
+            var checkboxes2 = document.getElementById("checkboxes2");
+
+            if (!expanded) {
+
+                checkboxes2.style.display = "block";
+
+                expanded = true;
+
+            } else {
+
+                checkboxes2.style.display = "none";
+
+                expanded = false;
+
+            }
+
+        }</script>
+
+    <script>
+
+        $(function () {
+
+            $("#example1").DataTable({
+
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+            $('#example2').DataTable({
+
+                "paging": true,
+
+                "lengthChange": false,
+
+                "searching": false,
+
+                "ordering": true,
+
+                "info": true,
+
+                "autoWidth": false,
+
+                "responsive": true,
+
+            });
+
+        });
+
+    </script>
+
+    <script>
+        document.getElementById('select-all3').onclick = function () {
+            var checkboxes2 = document.getElementsByName('checker');
+            for (var checkbox of checkboxes2) {
+                checkbox.checked = this.checked;
+            }
+        }
+    </script>
+
+    <!-- kjgxdghnvgd -->
+
+    <script>
+
+        var expanded = false;
+
+
+
+
+        function showCheckboxes5() {
+
+            var checkboxes2 = document.getElementById("checkboxes5");
+
+            if (!expanded) {
+
+                checkboxes2.style.display = "block";
+
+                expanded = true;
+
+            } else {
+
+                checkboxes2.style.display = "none";
+
+                expanded = false;
+
+            }
+
+        }</script>
+
+    <script>
+
+        $(function () {
+
+            $("#example1").DataTable({
+
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+            $('#example2').DataTable({
+
+                "paging": true,
+
+                "lengthChange": false,
+
+                "searching": false,
+
+                "ordering": true,
+
+                "info": true,
+
+                "autoWidth": false,
+
+                "responsive": true,
+
+            });
+
+        });
+
+    </script>
+
+    <script>
+        document.getElementById('select-all5').onclick = function () {
+            var checkboxes5 = document.getElementsByName('checker1');
+            for (var checkbox of checkboxes5) {
+                checkbox.checked = this.checked;
+            }
+        }
+    </script>
+    <!-- master -->
+    <script>
+        function myFunction() {
+            var checkBox = document.getElementById("one");
+            var text = document.getElementById("text");
+            if (checkBox.checked == true) {
+                $("input[name='checker']").prop("checked", false)
+                $("#text1").hide();
+                text.style.display = "block";
+            }
+            else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the "All" checkbox and all the checkboxes in the table
+            var selectAllCheckbox = document.getElementById('select-all6');
+            var checkboxes = document.querySelectorAll('#text input[type="checkbox"]');
+
+            // Add an event listener to the "All" checkbox
+            selectAllCheckbox.addEventListener('change', function () {
+                // Loop through all checkboxes and set their checked property based on the state of the "All" checkbox
+                checkboxes.forEach(function (checkbox) {
+                    checkbox.checked = selectAllCheckbox.checked;
+                });
+            });
+        });
+    </script>
+    <script>
+
+        myButton.addEventListener("click", function () {
+            myPopup.classList.add("show");
+        });
+        closePopup.addEventListener("click", function () {
+            myPopup.classList.remove("show");
+        });
+        closePopup1.addEventListener("click", function () {
+            myPopup.classList.remove("show");
+        });
+        closePopup2.addEventListener("click", function () {
+            myModal.classList.remove("show");
+        });
+        closePopup3.addEventListener("click", function () {
+            myModal.classList.remove("show");
+        });
+
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopup) {
+                myPopup.classList.remove("show");
+            }
+        });
+    </script>
+
+    <script>
+        $(document).on("click", "#myBtn", function () {
+
+            $('#myModal').css("display", "block")
+
+        })
+        $(document).on("click", "#closePopup3", function () {
+
+            $('#myModal').css("display", "none")
+
+        })
+        $(document).on("click", "#closePopup2", function () {
+
+            $('#myModal').css("display", "none")
+
+        })
+
+        $('.close').click(function () {
+
+
+
+            $('#myModal').css("display", "none")
+
+        })
+
+
+
+    </script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#ddlMaster").change(function () {
+                debugger
+
+                var selectedText = $(this).find("option:selected").text();
+
+                var selectedValue = $(this).val();
+                debugger;
+                if (selectedValue == 1) {
+                    $("#text").show();
+                    $("#exception_mastre").hide();
+                }
+                else if (selectedValue == 2) {
+                    $("#exception_mastre").show();
+                    $("#text").hide();
+                }
+
+
+
+
+            });
+
+        });
+
+    </script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

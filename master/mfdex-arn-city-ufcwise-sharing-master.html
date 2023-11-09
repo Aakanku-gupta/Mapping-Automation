@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width,initial-scale=1" name="viewport">
+      <title>UTI</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      <link href="../assets/css_1/bootstrap.min_v5.1.3.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- <link href="../assets/css/font-awesome.min.css" rel="stylesheet"> -->
+      <!-- <link href="../assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+      <link href="../assets/bootstrap-icons_1/bootstrap-icons.css" rel="stylesheet">
+      <link href="../assets/css_1/main.css" rel="stylesheet">
+      <!-- <link href="../assets/css/main.css" rel="stylesheet"> -->
+      <link href="../assets/css_1/style.css" rel="stylesheet">
+      <!-- <link href="../assets/css/style.css" rel="stylesheet">  -->
+      <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+      <style>
+         body {
+         font-family: Arial, Helvetica, sans-serif;
+         }
+         /* The Modal (background) */
+         .modal {
+         display: none;
+         /* Hidden by default */
+         position: fixed;
+         /* Stay in place */
+         z-index: 1;
+         /* Sit on top */
+         padding-top: 100px;
+         /* Location of the box */
+         left: 0;
+         top: 0;
+         width: 100%;
+         /* Full width */
+         height: 100%;
+         /* Full height */
+         overflow: auto;
+         /* Enable scroll if needed */
+         background-color: rgb(0, 0, 0);
+         /* Fallback color */
+         background-color: rgba(0, 0, 0, 0.4);
+         /* Black w/ opacity */
+         }
+         /* Modal Content */
+         .modal-content {
+         background-color: #fefefe;
+         margin: auto;
+         padding: 15px;
+         border: 1px solid #888;
+         width: 72%;
+         position: relative;
+         left: 168px;
+         font-size: 9px;
+         }
+         /* The Close Button */
+         .close {
+         color: #aaaaaa;
+         float: right;
+         font-size: 28px;
+         font-weight: bold;
+         }
+         .close:hover,
+         .close:focus {
+         color: #000;
+         text-decoration: none;
+         cursor: pointer;
+         }
+      </style>
+   </head>
+   <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+         <span class="close">&times;</span>
+         <section id="SplitPopup" class="section dashboard bg-white">
+            <form action="#" method="post">
+               <table id="emptbl">
+                  <tr>
+                     <th style="font-size: 12px; border: none; ">RM CODE</th>
+                     <th style="font-size: 12px; border: none;">AAUM EQUITY % SHARE</th>
+                     <th style="font-size: 12px; border: none;">SAAUM HYBRID % SHARE</th>
+                     <th style="font-size: 12px; border: none;">AAUM ARBITRAGE % SHARE </th>
+                     <th style="font-size: 12px; border: none;">AAUM FIXED INCOME % SHARE </th>
+                     <th style="font-size: 12px; border: none;">AAUM CASH % SHARE</th>
+                  </tr>
+                  <br>
+                  <tr>
+                     <td id="col0">
+                        <!-- <select name="department[]" id="dept">
+                           <option value="0">Select</option>
+                           
+                           <option value="1">365</option>
+                           
+                           <option value="2">985</option>
+                           
+                           <option value="3">658</option>
+                           
+                           </select>  -->
+                        <select class="form-select" id="zoneSearchFilter" style="width:101px;">
+                           <option value="">ALL</option>
+                           <option value="CORP">586</option>
+                           <option value="EAST">485</option>
+                           <option value="GULF">732</option>
+                           <option value="NORTH"> 654</option>
+                        </select>
+                     </td>
+                     <td id="col1"><input type="number" name="phone[]" value="" /></td>
+                     <td id="col2"><input type="number" name="phone[]" value="" /></td>
+                     <td id="col3"><input type="number" name="phone[]" value="" /></td>
+                     <td id="col4"><input type="number" name="phone[]" value="" /></td>
+                     <td id="col5"><input type="number" name="phone[]" value="" /></td>
+                     <td><input class="btn btn-primary" type="button" value="Add" onclick="addRows()" /></td>
+                     <td><input class="btn btn-primary" type="button" value="Delete" onclick="deleteRows()" /></td>
+                  </tr>
+               </table>
+               <br>
+               <table>
+                  <td style="font-size: 16px;">Total</td>
+                  <td><input style="position: relative;
+                         left: 67px;" type="number" name="phone[]" value="" /></td>
+                  <td><input style="    position: relative;
+                    left: 75px;
+                     " type="number" name="phone[]" value="" /></td>
+                  <td><input style="    position: relative;
+                    left: 86px;" type="number" name="phone[]" value="" /></td>
+                  <td><input style="    position: relative;
+                     left: 110px;" type="number" name="phone[]" value="" /></td>
+                  <td><input style="position: relative;
+                    left: 140px;
+                     " type="number" name="phone[]" value="" /></td>
+               </table>
+               <br>
+               <div class="row">
+               <div div style="width: auto;">
+                <h6>Checker</h6>
+                 <div class="selectBox form-control" onclick="showCheckboxes2()">
+                  <select class="custom-select border-bottom form-control-plaintext">
+                    <option>Checker Dropdown</option>
+                    <option>Sumit Mehta</option>
+                    <option>Santosh Chipte</option>
+                  </select>
+                  <div class="overSelect"></div>
+                </div>
+                <div id="checkboxes2" class="checkstyle">
+                  <label for="one0">
+                    <input type="checkbox" id="one0" />
+                    Santosh Chipte</label>
+                  <label for="two0">
+                    <input type="checkbox" id="two0" />      
+                    Sumit Mehta</label>      
+                </div>
+            </div>
+            <div style="width: auto;" class="mt-4">
+              
+                 <input class="btn btn-primary" type="button" value="Save Changes" />
+            </div>
+        </div>
+               
+            </form>
+         </section>
+      </div>
+   </div>
+
+
+      <body id="sidebar">
+         <!-- header start -->
+         <div uti-include-html="../includes/header1.html"></div>
+         <!-- header end -->
+         
+         <!-- sidebar start -->
+         <div uti-include-html="../includes/sidebar.html"></div>
+         <!-- sidebar end -->
+      <main id="main" class="main">
+         <section class="section dashboard">
+            <div class="bg-white p-3 border">
+               <div class="row">
+                  <div class="col-md-8">
+                     <h5>MFDEX ARN CITY UFCWISE SHARING MASTER</h5>
+                  </div>
+                  <hr>
+                  <!-- <div class="col-md-4"> -->
+                  <!-- <form> -->
+                  <!-- <a href="../Templates/Mfdex-ARN-City-UFCWise-Sharing-master.xlsx" download="Mfdex-ARN-City-UFCWise-Sharing-Master"><button type="button" id="templatebtn" class="btn btn-primary">Templates</button></a>  -->
+                  <!-- </form> -->
+                  <!-- </div> -->
+                  <!-- <hr id="arn-master-firsthr"> -->
+                  <div class="col-md-12">
+                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <!-- div -->
+                        <div class="row">
+                           <div class="col-md-12">
+                              <!-- <a href="../master/bulk-upload-mfdex-arn-city-ufcwise-sharing.html" class="btn btn-primary"
+                                 style=" width: 160px; border: none;">Bulk
+                              Upload + </a> -->
+                              <a href="../master/add_record_mfdex_arn_city_ufcwise.html" class="btn btn-primary"
+                                 style=" width: 160px;  border: none ">Add
+                              Record +</a>
+                           </div>
+                        </div>
+                        <div class="tab-content" id="myTabContent">
+                           <div class="tab-pane fade  " id="total" role="tabpanel" aria-labelledby="total-tab">
+                              <div class="overflowemail">
+                                 <div class="mt-2" style="width: 150px;">
+                                    <h3 class="mb-4">Upload File </h3>
+                                    <input type="file" class="hsag">
+                                    <button class="xyz " style="border-radius: 5px;">Upload</button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tab-pane fade" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+                              <div class="col-md-12 mt-2">
+                                 <div class="row">
+                                    <div class="col-md-6  ">
+                                       <label class="mt-4">KRV_Code</label>
+                                       <input type="text " placeholder="ARN-29742" class="form-control mt-2">
+                                       <label class="mt-4">Channel_code</label>
+                                       <input type="text " placeholder="RTL" class="form-control mt-2">
+                                       <label class="mt-4">NEW_BR_CODE</label>
+                                       <input type="text " placeholder="119" class="form-control mt-2">
+                                       <label class="mt-4">REGION_CODE</label>
+                                       <input type="text " placeholder="NORH" class="form-control mt-2">
+                                       <label class="mt-4">NAME</label>
+                                       <input type="text " placeholder="DEUTSCHE BANK" class="form-control mt-2">
+                                       <label class="mt-4">MULTI_CITY FLAG</label>
+                                       <input type="text " placeholder="E" class="form-control mt-2">
+                                       <label class="mt-4">CATEGORY</label>
+                                       <input type="text " placeholder="BANKS" class="form-control mt-2">
+                                       <label class="mt-4">ZONE</label>
+                                       <input type="text " placeholder="WEST" class="form-control mt-2">
+                                       <label class="mt-4">ARN_GROUP_NAME</label>
+                                       <input type="text " placeholder="Deutsche Bank" class="form-control mt-2">
+                                       <label class="mt-4">SUB_CHANNEL</label>
+                                       <input type="text " placeholder="E-ARN" class="form-control mt-2">
+                                    </div>
+                                    <div class="col-md-6 ">
+                                       <label class="mt-4">VALID_FROM</label>
+                                       <input type="text " placeholder="01-10-2021" class="form-control mt-2">
+                                       <label class="mt-4">VALID_UPTO</label>
+                                       <input type="text " placeholder="30-12-9999" class="form-control mt-2">
+                                       <label class="mt-4">CREATION_DT</label>
+                                       <input type="text " placeholder="01-07-2019" class="form-control mt-2">
+                                       <label class="mt-4">LSTUPDDT</label>
+                                       <input type="text " placeholder="25-07-2019" class="form-control mt-2">
+                                       <label class="mt-4">ACTIVE_FLAG</label>
+                                       <input type="text " placeholder="Y" class="form-control mt-2">
+                                       <label class="mt-4">OWNER_TYPE</label>
+                                       <input type="text " placeholder="" class="form-control mt-2">
+                                       <label class="mt-4">UFC_CODE</label>
+                                       <input type="text " placeholder="119" class="form-control mt-2">
+                                       <label class="mt-4">PRM_CODE</label>
+                                       <input type="text " placeholder="" class="form-control mt-2">
+                                       <label class="mt-4">CHANNEL_GROUP</label>
+                                       <input type="text " placeholder="BNND" class="form-control mt-2">
+                                       <button class="btu">submit</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-12 mt-5">
+               <div class="row">
+                  <div class="col-md-3">
+                     <input type="text" class="form-control">
+                  </div>
+                  <div class="col-md-3">
+                     <select class="form-select" id="select1">
+                        <option>Select Quarter</option>
+                        <option value="202353">2022-23-Q1</option>
+                        <option value="202354">2022-23-Q2</option>
+                        <option value="202355">2022-23-Q3</option>
+                        <option value="202356">2022-23-Q4</option>
+                     </select>
+                  </div>
+                  <div class="col-md-3">
+                     <select class="form-select" id="select2">
+                        <option>Krv Code</option>
+                        <option value="202353">ARN-29742</option>
+                        <option value="202354">ARN-47629</option>
+                        <option value="202355">ARN-49707</option>
+                        <option value="202356">ARN-79711</option>
+                        <option value="202357">AAB-1000</option>
+                        <option value="202358">ARN-251276</option>
+                        <option value="202359">ARN-69626</option>
+                        <option value="202360">ARN-94941</option>
+                        <option value="202361">ARN-132998</option>
+                        <option value="202362">ARN-60809</option>
+                        <option value="202362">ARN-60891</option>
+                        <option value="202362">ARN-60895</option>
+                     </select>
+                     <td><a href="#" id="btn_search1" name="btnsearch" class="btn btn-primary w-30" style="    position: relative;
+                        top: -34px;
+                        left: 152px;">Search</a></td>
+
+                  </div>
+                  <div class="col-md-3">
+                     <div class="dropdown pull-right">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                           aria-expanded="false"  >
+                        <i class="fa fa-solid fa-download"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                           <li><button class="dropdown-item" type="button">PDF</button></li>
+                           <li><button class="dropdown-item" type="button">Excel</button></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Modal -->
+            <!-- <div class="modal fade" id="myModal" role="dialog">
+               <div class="modal-dialog">
+                
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="position: relative; top: -22px;">File Name:ARN</h4>
+                        <h4 style="position: relative;
+                           bottom: -1px;
+                           left: -130px;
+                           ">Column Count:5</h4>
+                        <h4 style="position: relative;
+                           top: 20px;
+                           left: -263px;">Row Count:4</h4>
+                        <button
+                           style="border-radius: 9px;background-color:#193984;color: white ;">upload</button>
+                     </div>
+                     <div class="modal-body" style="overflow: scroll;">
+                        <table>
+                           <tr>
+                              <th class="abc">KRV_CODE</th>
+                              <th class="abc">CHANNEL_CODE</th>
+                              <th class="abc">NEW_BR_CODE</th>
+                              <th class="abc">REGION_CODE</th>
+                              <th class="abc">NAME</th>
+                              <th class="abc">MULTICITY FLAG</th>
+                              <th class="abc">CATEGORY</th>
+                              <th class="abc">ZONE</th>
+                              <th class="abc">ARN_GROUP_NAME</th>
+                              <th class="abc">SUB_CHANNEL</th>
+                              <th class="abc">VALID_FROM</th>
+                              <th class="abc">VALID_UPTO</th>
+                              <th class="abc">CREATION_DT</th>
+                              <th class="abc">LSTUPDDT</th>
+                              <th class="abc">ACTIVE_FLAG</th>
+                              <th class="abc">UFC_CODE</th>
+                           </tr>
+                          
+                           <tr>
+                              <td class="cde">ARN-29742</td>
+                              <td class="cde">RTL</td>
+                              <td class="cde"> 119</td>
+                              <td class="cde">NORH </td>
+                              <td class="cde">DEUTSCHE BANK</td>
+                              <td class="cde">E</td>
+                              <td class="cde">BANKS</td>
+                              <td class="cde">WEST</td>
+                              <td class="cde">Deutsche Bank</td>
+                              <td class="cde">E-ARN</td>
+                              <td class="cde">01-10-2021</td>
+                              <td class="cde">30-12-9999</td>
+                              <td class="cde">01-07-2019</td>
+                              <td class="cde">25-07-2019</td>
+                              <td class="cde">Y</td>
+                              <td class="cde">119</td>
+                           </tr>
+                           <tr>
+                              <td class="cde"> ARN-47629</td>
+                              <td class="cde">RTL</td>
+                              <td class="cde"> 119</td>
+                              <td class="cde">MUMB </td>
+                              <td class="cde">BARCLAYS BANK PLC</td>
+                              <td class="cde">Y</td>
+                              <td class="cde"> ND</td>
+                              <td class="cde">WEST</td>
+                              <td class="cde"> Barclays</td>
+                              <td class="cde">M-ARN</td>
+                              <td class="cde"> 01-10-2021</td>
+                              <td class="cde">30-12-9999</td>
+                              <td class="cde">16-11-2021</td>
+                              <td class="cde">08-12-2021</td>
+                              <td class="cde">Y</td>
+                              <td class="cde">119</td>
+                           </tr>
+                           <tr>
+                              <td class="cde"> ARN-49707</td>
+                              <td class="cde">RTL</td>
+                              <td class="cde"> 117</td>
+                              <td class="cde"> NORH </td>
+                              <td class="cde"> RELIGARE WEALTH</td>
+                              <td class="cde">E</td>
+                              <td class="cde"> ND</td>
+                              <td class="cde"></td>
+                              <td class="cde"> Religare</td>
+                              <td class="cde"> E-ARN</td>
+                              <td class="cde"> 01-10-2021</td>
+                              <td class="cde"> 30-12-9999</td>
+                              <td class="cde">01-07-2019</td>
+                              <td class="cde"> 25-07-2019</td>
+                              <td class="cde">Y</td>
+                              <td class="cde">117</td>
+                           </tr>
+                           <tr>
+                              <td class="cde"> ARN-79711</td>
+                              <td class="cde">RTL</td>
+                              <td class="cde">400 </td>
+                              <td class="cde">NORT </td>
+                              <td class="cde"> RELIGARE MARKETINGS</td>
+                              <td class="cde">Y</td>
+                              <td class="cde"> ND</td>
+                              <td class="cde">NORTH </td>
+                              <td class="cde"> Barclays</td>
+                              <td class="cde">M-ARN</td>
+                              <td class="cde"> 01-10-2021</td>
+                              <td class="cde">30-12-9999</td>
+                              <td class="cde">16-11-2021</td>
+                              <td class="cde">08-12-2021</td>
+                              <td class="cde">Y</td>
+                              <td class="cde">119</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+            <div class="row pt-2">
+               <div class="col-md-6 row mb-3">
+                  <!-- <tr>
+                      <th scope="col"><b>Show</b> <i class="fa fa-solid"></i></th>
+                      <td>
+                        
+                        </td> -->
+                  <div class="col-md-3" style="display: flex; margin-top: 30px;">
+                    <label>Show</label>
+                    <select class="form-select" id="records" style="margin-left: 10px;">
+                      <option>50</option>
+                      <option>100</option>
+                      <option>200</option>
+                      <option>All</option>
+                    </select> <b> entries</b>
+                  </div>
+                  <div class="col-md-2"></div>
+                  <div class="col-md-6" style=" margin-top: 30px;">
+                    <!-- <label>Maker</label> -->
+          
+                    <div class="selectBox form-control" style="    position: relative;
+                    top: -12px;" onclick="showCheckboxes1()">
+          
+                      <select class="custom-select border-bottom form-control-plaintext">
+          
+                        <option>Column </option>
+          
+                      </select>
+          
+                      <div class="overSelect"></div>
+          
+                    </div>
+          
+                    <div id="checkboxes1"  class="checkstyle" style="overflow: scroll;">
+          
+                      <label><input type="checkbox" id="select-all2">Select All</label>
+                      <label for="onem">
+          
+                        <input type="checkbox" id="onem" name="master2" onclick="myFunction()" />
+          
+                        KRV_CODE</label>
+          
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        NEW_CITY </label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        UFC_CODE</label>
+                      <label for="twom">
+                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+          
+                        UFC_NAME </label>
+                        <label for="twom">
+                           <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                           CITY_TYPE </label>
+                           <label for="twom">
+                              <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                
+                              MULTICITY </label>
+                              <label for="twom">
+                                 <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                   
+                                 MFDEX_CITY</label>
+                                 <label for="twom">
+                                    <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                      
+                                    ARN_CHANNEL</label>
+                                    <label for="twom">
+                                       <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                         
+                                       T5B5_STATUS</label>
+                                       <label for="twom">
+                                          <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                            
+                                          ARN_NAME</label>
+                                          <label for="twom">
+                                             <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                               
+                                             SCHANNEL</label>
+                                             <label for="twom">
+                                                <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                  
+                                                REGION_CODE</label>
+                                                <label for="twom">
+                                                   <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                     
+                                                   ZONE	</label>
+                                                   <label for="twom">
+                                                      <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                        
+                                                      SOW_INCOME_PERC_SHARE	</label>
+                                                      <label for="twom">
+                                                         <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                         SOW_LQNMM_PERC_SHARE</label>
+                                                         <label for="twom">
+                                                            <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                              
+                                                            SOW_EHS_PERC_SHARE</label>
+                                                            <label for="twom">
+                                                               <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                 
+                                                               SAAUM_HYBRID_PERS_SHARE</label>
+                                                               <label for="twom">
+                                                                  <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                    
+                                                                  AAUM_ARBITRAGE_PERS_SHARE</label>
+                                                                  <label for="twom">
+                                                                     <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                       
+                                                                     VALID_FROM</label>
+                                                                     <label for="twom">
+                                                                        <input type="checkbox" id="twom" name="master2" onclick="myFunction2()" />
+                                                          
+                                                                        VALID_UPTO</label>
+                    
+                     
+          
+          
+          
+                    </div>
+                  </div>
+                </div>
+            <div class="overflow-auto">
+               <table class="table small border">
+             
+                  <tr class="bg-primary text-white">
+                     <th  scope="col">KRV_CODE</th>
+                     <th  scope="col">NEW_CITY</th>
+                     <th  scope="col">UFC_CODE</th>
+                     <th  scope="col">UFC_NAME</th>
+                     <th  scope="col">CITY_TYPE</th>
+                     <th  scope="col">MULTICITY</th>
+                     <th  scope="col">MFDEX_CITY</th>
+                     <th  scope="col">ARN_CHANNEL</th>
+                     <th  scope="col">T5B5_STATUS</th>
+                     <th  scope="col">ARN_NAME</th>
+                     <th  scope="col">SCHANNEL</th>
+                     <th  scope="col">REGION_CODE</th>
+                     <th  scope="col">ZONE</th>
+                     <th  scope="col">SOW_INCOME_PERC_SHARE</th>
+                     <th  scope="col">SOW_LQNMM_PERC_SHARE</th>
+                     <th  scope="col">SOW_EHS_PERC_SHARE</th>
+                     <th  scope="col">SAAUM_HYBRID_PERS_SHARE</th>
+                     <th  scope="col">AAUM_ARBITRAGE_PERS_SHARE</th>
+                     <th  scope="col">VALID_FROM</th>
+                     <th  scope="col">VALID_UPTO</th>
+                     <th scope="col">CREATION_SERV_REQ</th>
+                     <th scope="col">LSTUPD_SERV_REQ</th>
+                     <th scope="col">LSTUPDUSER</th>
+                     <th scope="col">CREATION_TICKET_ID</th>
+                     <th scope="col">LSTUPD_TICKET_ID</th>
+                     <th scope="col">LSTUPDDT</th>
+                     <th scope="col">CREATION_DT</th>
+                     <th  scope="col">ACTION</th>
+                  </tr>
+                  <tr>
+                     <td>ARN-0016</td>
+                     <td>RAIGAD</td>
+                     <td>112</td>
+                     <td>MFDEX_CITY</td>
+                     <td>Y</td>
+                     <!-- <td>PREMIER</td> -->
+                     <td>BLUECHIP CORPORATE INVESTMENT CENTRE LTD</td>
+                     <td>RTL</td>
+                     <td>B5</td>
+                     <td>RAIGAD</td>
+                     <td>RTL</td>
+                     <td>MUMB</td>
+                     <td></td>
+                     <td>WEST</td>
+                     <td>25</td>
+                     <td>25</td>
+                     <td>25</td>
+                     <td></td>
+                     <td></td>
+                     <td>10-05-2021</td>
+                     <td>21-08-2022</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>
+                        <div class="dropdown">
+                          <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <i class=""></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../master/edit-mfdex-arn-city-ufcwise-sharing-master.html">Edit</a></li>
+                            <li><a class="dropdown-item" href="../master/close-mfdex-arn-city-ufcwise-sharing-master.html">Close</a></li>
+                            <li id="myBtn" style="    font-size: 14px;">Edit/Split</li>
+                          </ul>
+                        </div>
+                      </td>
+                     <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button></td> -->
+                  </tr>
+                  <tr>
+                     <td>ARN-0016</td>
+                     <td>RAIGAD</td>
+                     <td>MUM02</td>
+                     <td>MFDEX_CITY</td>
+                     <td>Y</td>
+                     <!-- <td>PREMIER</td> -->
+                     <td>BLUECHIP CORPORATE INVESTMENT CENTRE LTD</td>
+                     <td>RTL</td>
+                     <td>B5</td>
+                     <td>RAIGAD</td>
+                     <td>RTL</td>
+                     <td>BNND_MUMB</td>
+                     <td></td>
+                     <td>WEST</td>
+                     <td>75</td>
+                     <td>75</td>
+                     <td>75</td>
+                     <td></td>
+                     <td></td>
+                     <td>16-02-2021</td>
+                     <td>05-05-2022</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>
+                        <div class="dropdown">
+                          <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <i class=""></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../master/edit-mfdex-arn-city-ufcwise-sharing-master.html">Edit</a></li>
+                            <li><a class="dropdown-item" href="../master/close-mfdex-arn-city-ufcwise-sharing-master.html">Close</a></li>
+                            <li id="myBtn" style="    font-size: 14px;">Edit/Split</li>
+                          </ul>
+                        </div>
+                      </td>
+                     <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button> -->
+                  </tr>
+                  <tr>
+                     <td>ARN-0632</td>
+                     <td>RAIGAD</td>
+                     <td>112</td>
+                     <td>MFDEX_CITY</td>
+                     <td>Y</td>
+                     <!-- <td>BANK</td> -->
+                     <td>STATE BANK OF HYDERABAD</td>
+                     <td>RTL</td>
+                     <td>T5</td>
+                     <td>RAIGAD</td>
+                     <td>RTL</td>
+                     <td>MUMB</td>
+                     <td></td>
+                     <td>WEST</td>
+                     <td>25</td>
+                     <td>25</td>
+                     <td>25</td>
+                     <td></td>
+                     <td></td>
+                     <td>26-03-2021</td>
+                     <td>15-12-2022</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>
+                        <div class="dropdown">
+                          <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <i class=""></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../master/edit-mfdex-arn-city-ufcwise-sharing-master.html">Edit</a></li>
+                            <li><a class="dropdown-item" href="../master/close-mfdex-arn-city-ufcwise-sharing-master.html">Close</a></li>
+                            <li id="myBtn" style="    font-size: 14px;">Edit/Split</li>
+                          </ul>
+                        </div>
+                      </td>
+                     <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button> -->
+                  </tr>
+                  <tr>
+                     <td>ARN-0632</td>
+                     <td>RAIGAD</td>
+                     <td>MUM02</td>
+                     <td>MFDEX_CITY</td>
+                     <td>Y</td>
+                     <!-- <td>BANK</td> -->
+                     <td>STATE BANK OF HYDERABAD</td>
+                     <td>RTL</td>
+                     <td>T5</td>
+                     <td>RAIGAD</td>
+                     <td>RTL</td>
+                     <td>BNND_MUMB</td>
+                     <td></td>
+                     <td>WEST</td>
+                     <td>75</td>
+                     <td>75</td>
+                     <td>75</td>
+                     <td></td>
+                     <td></td>
+                     <td>26-03-2021</td>
+                     <td>15-12-2022</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>
+                        <div class="dropdown">
+                          <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <i class=""></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../master/edit-mfdex-arn-city-ufcwise-sharing-master.html">Edit</a></li>
+                            <li><a class="dropdown-item" href="../master/close-mfdex-arn-city-ufcwise-sharing-master.html">Close</a></li>
+                            <li id="myBtn" style="    font-size: 14px;">Edit/Split</li>
+                          </ul>
+                        </div>
+                      </td>
+                     <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button> -->
+                  </tr>
+                  <tr>
+                     
+                     
+                     <td>ARN-0893</td>
+                     <td>PALGHAR</td>
+                     <td>157</td>
+                     <td>MFDEX_CITY</td>
+                     <td>Y</td>
+                     <!-- <td>PREMIER</td> -->
+                     <td>IDBI CAPITAL MARKETS & SECURITIES LIMITED</td>
+                     <td>RTL</td>
+                     <td>B5</td>
+                     <td>PALGHAR</td>
+                     <td>RTL</td>
+                     <td>MUMB</td>
+                     <td></td>
+                     <td>WEST</td>
+                     <td>50</td>
+                     <td>50</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>26-03-2021</td>
+                     <td>15-12-2022</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>
+                        <div class="dropdown">
+                          <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <i class=""></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../master/edit-mfdex-arn-city-ufcwise-sharing-master.html">Edit</a></li>
+                            <li><a class="dropdown-item" href="../master/close-mfdex-arn-city-ufcwise-sharing-master.html">Close</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                     <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button> -->
+                  </tr>
+                  <tr>
+                     <td>ARN-0893</td>
+                     <td>PALGHAR</td>
+                     <td>MUM02</td>
+                     <td>MFDEX_CITY</td>
+                     <td>Y</td>
+                     <!-- <td>PREMIER</td> -->
+                     <td>IDBI CAPITAL MARKETS & SECURITIES LIMITED</td>
+                     <td>RTL</td>
+                     <td>B5</td>
+                     <td>PALGHAR</td>
+                     <td>RTL</td>
+                     <td>BNND_MUMB</td>
+                     <td></td>
+                     <td>WEST</td>
+                     <td>50</td>
+                     <td>50</td>
+                     <td>50</td>
+                     <td></td>
+                     <td></td>
+                     <td>26-03-2021</td>
+                     <td>15-12-2022</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>
+                        <div class="dropdown">
+                          <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <i class=""></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../master/edit-mfdex-arn-city-ufcwise-sharing-master.html">Edit</a></li>
+                            <li><a class="dropdown-item" href="../master/close-mfdex-arn-city-ufcwise-sharing-master.html">Close</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                     <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button> -->
+                  </tr>
+                  <tr>
+                     <td>ARN-124591</td>
+                     <td>SOUTH 24 PARGANAS</td>
+                     <td>KOL02</td>
+                     <td>MFDEX_CITY</td>
+                     <td>Y</td>
+                     <!-- <td>BANK</td> -->
+                     <td>AU SMALL FINANCE BANK LIMITED</td>
+                     <td>RTL</td>
+                     <td>T5</td>
+                     <td>SOUTH 24 PARGANAS</td>
+                     <td>RTL</td>
+                     <td>BNND_KOLK</td>
+                     <td></td>
+                     <td>EAST</td>
+                     <td>60</td>
+                     <td>60</td>
+                     <td>60</td>
+                     <td></td>
+                     <td></td>
+                     <td>26-03-2021</td>
+                     <td>15-12-2022</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>
+                        <div class="dropdown">
+                          <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <i class=""></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../master/edit-mfdex-arn-city-ufcwise-sharing-master.html">Edit</a></li>
+                            <li><a class="dropdown-item" href="../master/close-mfdex-arn-city-ufcwise-sharing-master.html">Close</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                     <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button> -->
+                  </tr>
+                  <tr>
+                     <td>ARN-124591</td>
+                     <td>SOUTH 24 PARGANAS</td>
+                     <td>KOL02</td>
+                     <td>MFDEX_CITY</td>
+                     <td>Y</td>
+                     <!-- <td>OTHERS</td> -->
+                     <td>AU SMALL FINANCE BANK LIMITED</td>
+                     <td>RTL</td>
+                     <td>T5</td>
+                     <td>SOUTH 24 PARGANAS</td>
+                     <td>RTL</td>
+                     <td>BNND_KOLK</td>
+                     <td></td>
+                     <td>EAST</td>
+                     <td>40</td>
+                     <td>40</td>
+                     <td>40</td>
+                     <td></td>
+                     <td></td>
+                     <td>26-03-2021</td>
+                     <td>15-12-2022</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>
+                        <div class="dropdown">
+                          <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <i class=""></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../master/edit-mfdex-arn-city-ufcwise-sharing-master.html">Edit</a></li>
+                            <li><a class="dropdown-item" href="../master/close-mfdex-arn-city-ufcwise-sharing-master.html">Close</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                     <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button> -->
+                  </tr>
+                  <tr>
+                     <td>ARN-77995</td>
+                     <td>RAIGAD</td>
+                     <td>112</td>
+                     <td>MFDEX_CITY</td>
+                     <td>Y</td>
+                     <!-- <td>PRIORITY</td> -->
+                     <td>PRUDENT BROKING SERVICES PVT LTD</td>
+                     <td>RTL</td>
+                     <td>B5</td>
+                     <td>RAIGAD</td>
+                     <td>RTL</td>
+                     <td>MUMB</td>
+                     <td></td>
+                     <td>WEST</td>
+                     <td>33.33</td>
+                     <td>33.33</td>
+                     <td>33.33</td>
+                     <td></td>
+                     <td></td>
+                     <td>26-03-2021</td>
+                     <td>15-12-2022</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>
+                        <div class="dropdown">
+                          <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <i class=""></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../master/edit-mfdex-arn-city-ufcwise-sharing-master.html">Edit</a></li>
+                            <li><a class="dropdown-item" href="../master/close-mfdex-arn-city-ufcwise-sharing-master.html">Close</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                     <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button> -->
+                  </tr>
+                  <tr>
+                     <td>ARN-77995</td>
+                     <td>RAIGAD</td>
+                     <td>MUM02</td>
+                     <td>MFDEX_CITY</td>
+                     <td>Y</td>
+                     <!-- <td>PRIORITY</td> -->
+                     <td>PRUDENT BROKING SERVICES PVT LTD</td>
+                     <td>RTL</td>
+                     <td>B5</td>
+                     <td>RAIGAD</td>
+                     <td>RTL</td>
+                     <td>BNND_MUMB</td>
+                     <td></td>
+                     <td>WEST</td>
+                     <td>66.67</td>
+                     <td>66.67</td>
+                     <td>66.67</td>
+                     <td></td>
+                     <td></td>
+                     <td>26-03-2021</td>
+                     <td>15-12-2022</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>
+                        <div class="dropdown">
+                          <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <i class=""></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../master/edit-mfdex-arn-city-ufcwise-sharing-master.html">Edit</a></li>
+                            <li><a class="dropdown-item" href="../master/close-mfdex-arn-city-ufcwise-sharing-master.html">Close</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                     <!-- <td><button class="btn btn-primary" id="myBtn">Edit/Split</button> -->
+                  </tr>
+               </table>
+            </div>
+            </div>
+            </div>
+            </div>
+         </section>
+      </main>
+      <footer id="footer" class="footer">
+         <div class="copyright">
+            &copy; Copyright <strong><span>UTI</span></strong>
+            <script type="text/javascript">
+               var d = new Date();
+               
+               yr = d.getFullYear();
+               
+               document.write(yr);
+               
+               
+               
+               
+               $(document).ready(function () {
+               
+                 $('#action').multiselect();
+               
+               });  
+               
+            </script>. All Rights Reserved
+         </div>
+      </footer>
+      <!-- <script src="../assets/js/bootstrap.bundle.min_v5.1.3.js"></script> -->
+      <script src="../assets/js_1/bootstrap.bundle.min_v5.1.3.js"></script>
+      <script src="../assets/js_1/main.js"></script>
+      <!-- <script src="../assets/js/main.js"></script> -->
+      <script src="../assets/js_1/uti.js"></script>
+      <!-- <script src="../assets/js/uti.js"></script> -->
+      <script src="../assets/js_1/custom.js"></script>
+      <!-- <script src="../assets/js/custom.js"></script> -->
+      <script type="text/javascript">
+         function addRows() {
+         
+           var table = document.getElementById('emptbl');
+         
+           var rowCount = table.rows.length;
+         
+           var cellCount = table.rows[0].cells.length;
+         
+           var row = table.insertRow(rowCount);
+         
+           for (var i = 0; i <= cellCount; i++) {
+         
+             var cell = 'cell' + i;
+         
+             cell = row.insertCell(i);
+         
+             var copycel = document.getElementById('col' + i).innerHTML;
+         
+             cell.innerHTML = copycel;
+         
+             if (i == 6) {
+         
+               var radioinput = document.getElementById('col3').getElementsByTagName('input');
+         
+               for (var j = 0; j <= radioinput.length; j++) {
+         
+                 if (radioinput[j].type == 'radio') {
+         
+                   var rownum = rowCount;
+         
+                   radioinput[j].name = 'gender[' + rownum + ']';
+         
+                 }
+         
+               }
+         
+             }
+         
+           }
+         
+         }
+         
+         function deleteRows() {
+         
+           var table = document.getElementById('emptbl');
+         
+           var rowCount = table.rows.length;
+         
+           if (rowCount > '2') {
+         
+             var row = table.deleteRow(rowCount - 1);
+         
+             rowCount--;
+         
+           }
+         
+           // else{
+         
+           //     alert('There should be atleast one row');
+         
+           // }
+         
+         }
+         
+         function PopupShow() {
+         
+           document.getElementById('SplitPopup').style.display = "block";
+         
+         }
+         
+         function PopupHide() {
+         
+           document.getElementById('SplitPopup').style.display = "none";
+         
+         }
+         
+      </script>
+      <script>
+         $(document).on("click", "#myBtn", function () {
+         
+         
+         
+         
+           $('#myModal').css("display", "block")
+         
+         })
+         
+         
+         
+         
+         // $(document).on("click", ".close", function () {
+         
+         
+         
+         
+         //   // $('#myModal').css("display", "block")
+         
+         // })
+         
+         
+         
+         
+         
+         $('.close').click(function () {
+         
+          
+         
+           $('#myModal').css("display", "none")
+         
+         })
+         
+         
+         
+         
+         // // Get the modal
+         
+         // var modal = document.getElementById("myModal");
+         
+         
+         
+         
+         // // Get the button that opens the modal
+         
+         // var btn = document.getElementById("myBtn");
+         
+         
+         
+         
+         // // Get the <span> element that closes the modal
+         
+         // var span = document.getElementsByClassName("close")[0];
+         
+         
+         
+         
+         // // When the user clicks the button, open the modal
+         
+         // btn.onclick = function () {
+         
+         //   modal.style.display = "block";
+         
+         // }
+         
+         
+         
+         
+         // // When the user clicks on <span> (x), close the modal
+         
+         // span.onclick = function () {
+         
+         //   modal.style.display = "none";
+         
+         // }
+         
+         
+         
+         
+         // // When the user clicks anywhere outside of the modal, close it
+         
+         // window.onclick = function (event) {
+         
+         //   if (event.target == modal) {
+         
+         //     modal.style.display = "none";
+         
+         //   }
+         
+         // }
+         
+      </script>
+        <!-- columns -->
+  <script>
+
+   var expanded = false;
+
+
+
+
+   function showCheckboxes1() {
+
+     var checkboxes1 = document.getElementById("checkboxes1");
+
+     if (!expanded) {
+
+       checkboxes1.style.display = "block";
+
+       expanded = true;
+
+     } else {
+
+       checkboxes1.style.display = "none";
+
+       expanded = false;
+
+     }
+
+   }</script>
+
+ <script>
+
+   $(function () {
+
+     $("#example1").DataTable({
+
+       "responsive": true, "lengthChange": false, "autoWidth": false,
+
+       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+
+     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+     $('#example2').DataTable({
+
+       "paging": true,
+
+       "lengthChange": false,
+
+       "searching": false,
+
+       "ordering": true,
+
+       "info": true,
+
+       "autoWidth": false,
+
+       "responsive": true,
+
+     });
+
+   });
+
+ </script>
+
+ <script>
+   document.getElementById('select-all2').onclick = function () {
+     var checkboxes1 = document.getElementsByName('master2');
+     for (var checkbox of checkboxes1) {
+       checkbox.checked = this.checked;
+     }
+   }
+ </script>
+      </body>
+</html>
